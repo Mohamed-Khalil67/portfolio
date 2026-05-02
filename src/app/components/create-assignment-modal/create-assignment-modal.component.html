@@ -7,7 +7,8 @@
         <span class="modal-icon">✨</span>
         <div>
           <h2 class="modal-title">{{ assignmentToEdit ? 'Edit Assignment' : 'New Assignment' }}</h2>
-          <p class="modal-subtitle">{{ assignmentToEdit ? 'Update your code — changes are saved locally.' : 'Paste your code below — it will be saved locally in your browser.' }}</p>
+          <p class="modal-subtitle">{{ assignmentToEdit ? 'Update your code — changes are saved locally.' : 'Paste your
+            code below — it will be saved locally in your browser.' }}</p>
         </div>
       </div>
       <button class="btn-icon-close" (click)="close()" aria-label="Close">✕</button>
@@ -22,48 +23,29 @@
         <div class="form-row two-col">
           <div class="field">
             <label>Title <span class="required">*</span></label>
-            <input
-              type="text"
-              [(ngModel)]="form.title"
-              placeholder="e.g. CSS Grid Layout"
-              maxlength="80"
-            />
+            <input type="text" [(ngModel)]="form.title" placeholder="e.g. CSS Grid Layout" maxlength="80" />
           </div>
           <div class="field">
             <label>Week</label>
-            <input
-              type="number"
-              [(ngModel)]="form.week"
-              placeholder="3"
-              min="1"
-              max="52"
-            />
+            <input type="number" [(ngModel)]="form.week" placeholder="3" min="1" max="52" />
           </div>
         </div>
 
         <div class="field">
           <label>Description</label>
-          <input
-            type="text"
-            [(ngModel)]="form.description"
-            placeholder="Short sentence about what this assignment demonstrates."
-            maxlength="200"
-          />
+          <input type="text" [(ngModel)]="form.description"
+            placeholder="Short sentence about what this assignment demonstrates." maxlength="200" />
         </div>
 
         <div class="field">
           <label>Tags <span class="hint">(comma separated)</span></label>
-          <input
-            type="text"
-            [(ngModel)]="form.tagsRaw"
-            placeholder="HTML, CSS, JavaScript"
-          />
+          <input type="text" [(ngModel)]="form.tagsRaw" placeholder="HTML, CSS, JavaScript" />
           @if (parsedTags.length) {
-            <div class="tag-preview">
-              @for (tag of parsedTags; track tag) {
-                <span class="tag-chip">{{ tag }}</span>
-              }
-            </div>
+          <div class="tag-preview">
+            @for (tag of parsedTags; track tag) {
+            <span class="tag-chip">{{ tag }}</span>
+            }
+          </div>
           }
         </div>
       </section>
@@ -73,42 +55,27 @@
         <h3 class="section-title">🎨 Card Color</h3>
         <div class="color-presets">
           @for (preset of colorPresets; track preset.value) {
-            <button
-              class="color-swatch"
-              [class.active]="form.color === preset.value"
-              [style.background]="'linear-gradient(135deg,' + preset.value + ')'"
-              [title]="preset.label"
-              (click)="setColor(preset.value)"
-            ></button>
+          <button class="color-swatch" [class.active]="form.color === preset.value"
+            [style.background]="'linear-gradient(135deg,' + preset.value + ')'" [title]="preset.label"
+            (click)="setColor(preset.value)"></button>
           }
         </div>
       </section>
 
       <!-- ── Section 3: Code editor ── -->
+      @if (!assignmentToEdit || assignmentToEdit.isLocal) {
       <section class="form-section code-section">
         <h3 class="section-title">💻 Source Code</h3>
 
         <!-- Tab bar -->
         <div class="tab-bar">
-          <button
-            class="tab-btn"
-            [class.active]="activeTab() === 'html'"
-            (click)="setTab('html')"
-          >
+          <button class="tab-btn" [class.active]="activeTab() === 'html'" (click)="setTab('html')">
             🌐 HTML
           </button>
-          <button
-            class="tab-btn"
-            [class.active]="activeTab() === 'css'"
-            (click)="setTab('css')"
-          >
+          <button class="tab-btn" [class.active]="activeTab() === 'css'" (click)="setTab('css')">
             🎨 CSS
           </button>
-          <button
-            class="tab-btn"
-            [class.active]="activeTab() === 'js'"
-            (click)="setTab('js')"
-          >
+          <button class="tab-btn" [class.active]="activeTab() === 'js'" (click)="setTab('js')">
             ⚡ JavaScript
           </button>
         </div>
@@ -116,28 +83,16 @@
         <!-- Code textareas -->
         <div class="code-editor">
           @if (activeTab() === 'html') {
-            <textarea
-              [(ngModel)]="form.html"
-              spellcheck="false"
-              placeholder="<!-- Your HTML body content -->"
-              class="code-textarea"
-            ></textarea>
+          <textarea [(ngModel)]="form.html" spellcheck="false" placeholder="<!-- Your HTML body content -->"
+            class="code-textarea"></textarea>
           }
           @if (activeTab() === 'css') {
-            <textarea
-              [(ngModel)]="form.css"
-              spellcheck="false"
-              placeholder="/* Your CSS styles */"
-              class="code-textarea"
-            ></textarea>
+          <textarea [(ngModel)]="form.css" spellcheck="false" placeholder="/* Your CSS styles */"
+            class="code-textarea"></textarea>
           }
           @if (activeTab() === 'js') {
-            <textarea
-              [(ngModel)]="form.js"
-              spellcheck="false"
-              placeholder="// Your JavaScript code"
-              class="code-textarea"
-            ></textarea>
+          <textarea [(ngModel)]="form.js" spellcheck="false" placeholder="// Your JavaScript code"
+            class="code-textarea"></textarea>
           }
         </div>
 
@@ -146,18 +101,15 @@
           You don't need <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> tags in the HTML tab.
         </p>
       </section>
+      }
 
     </div>
 
     <!-- Footer -->
     <div class="modal-footer">
       <button class="btn btn-ghost" (click)="close()">Cancel</button>
-      <button
-        class="btn btn-save"
-        [disabled]="!isValid || saving"
-        (click)="save()"
-        [style.background]="'linear-gradient(135deg,' + form.color + ')'"
-      >
+      <button class="btn btn-save" [disabled]="!isValid || saving" (click)="save()"
+        [style.background]="'linear-gradient(135deg,' + form.color + ')'">
         {{ saving ? 'Saving…' : (assignmentToEdit ? '✓ Update Assignment' : '✓ Save Assignment') }}
       </button>
     </div>

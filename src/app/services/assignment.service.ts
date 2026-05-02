@@ -5,13 +5,17 @@ import { ASSIGNMENTS } from '../data/assignments.data';
 @Injectable({ providedIn: 'root' })
 export class AssignmentService {
   private readonly STORAGE_KEY = 'portfolio_local_assignments';
+  private readonly OVERRIDES_KEY = 'portfolio_assignment_overrides';
 
   /** Reactive list — combines static data file assignments + localStorage ones */
   readonly assignments = signal<Assignment[]>(this.loadAll());
 
   // ── Read ────────────────────────────────────────────────────────
   private loadAll(): Assignment[] {
-    return [...ASSIGNMENTS, ...this.getLocal()];
+    const overrides = this.getOverrides();
+    return [...ASSIGNMENTS, ...this.getLocal()].map((a) =>
+      overrides[a.id] ? { ...a, ...overrides[a.id] } : a,
+    );
   }
 
   private getLocal(): Assignment[] {
@@ -20,6 +24,17 @@ export class AssignmentService {
       return raw ? (JSON.parse(raw) as Assignment[]) : [];
     } catch {
       return [];
+    }
+  }
+
+  private getOverrides(): Record<string, Partial<Assignment>> {
+    try {
+      const raw = localStorage.getItem(this.OVERRIDES_KEY);
+      return raw
+        ? (JSON.parse(raw) as Record<string, Partial<Assignment>>)
+        : {};
+    } catch {
+      return {};
     }
   }
 
@@ -32,16 +47,39 @@ export class AssignmentService {
   }
 
   remove(id: string): void {
-    const locals = this.getLocal().filter(a => a.id !== id);
+    const locals = this.getLocal().filter((a) => a.id !== id);
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(locals));
     this.assignments.set(this.loadAll());
   }
 
-  update(id: string, changes: Partial<Omit<Assignment, 'id' | 'isLocal'>>): void {
-    const locals = this.getLocal().map(a =>
-      a.id === id ? { ...a, ...changes } : a
+  update(
+    id: string,
+    changes: Partial<Omit<Assignment, 'id' | 'isLocal'>>,
+  ): void {
+    const locals = this.getLocal().map((a) =>
+      a.id === id ? { ...a, ...changes } : a,
     );
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(locals));
+    this.assignments.set(this.loadAll());
+  }
+
+  setOverride(
+    id: string,
+    changes: Partial<Omit<Assignment, 'id' | 'isLocal'>>,
+  ): void {
+    const overrides = this.getOverrides();
+    overrides[id] = { ...(overrides[id] ?? {}), ...changes };
+    localStorage.setItem(this.OVERRIDES_KEY, JSON.stringify(overrides));
+
+    // Also patch localStorage record if it's a local assignment
+    const locals = this.getLocal();
+    if (locals.some((a) => a.id === id)) {
+      const updated = locals.map((a) =>
+        a.id === id ? { ...a, ...changes } : a,
+      );
+      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(updated));
+    }
+
     this.assignments.set(this.loadAll());
   }
 
@@ -75,7 +113,7 @@ ${html}${js ? `\n<script>\n${js}\n</script>` : ''}
       const url = this.createBlobUrl(
         assignment.sourceCode.html,
         assignment.sourceCode.css,
-        assignment.sourceCode.js
+        assignment.sourceCode.js,
       );
       const tab = window.open(url, '_blank');
       // Revoke blob URL after the new tab has had time to load

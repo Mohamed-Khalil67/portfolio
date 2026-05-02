@@ -2,71 +2,14 @@
 
   <div class="card-accent-bar"></div>
 
-  <!-- Preview / Code tab switcher -->
-  <div class="view-tabs">
-    <button class="view-tab" [class.active]="viewMode === 'preview'" (click)="setView('preview')">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-      </svg>
-      Preview
-    </button>
-    <button class="view-tab" [class.active]="viewMode === 'code'" (click)="setView('code')">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-      </svg>
-      Code
-    </button>
-  </div>
-
-  <!-- Live preview thumbnail -->
-  @if (viewMode === 'preview') {
-    <div class="card-preview" (click)="openInNewTab($event)">
-      <div class="preview-loader" [class.hidden]="iframeLoaded">
-        <div class="spinner"></div>
-      </div>
-      <iframe
-        [src]="safePreviewUrl"
-        sandbox="allow-scripts allow-same-origin"
-        scrolling="no"
-        tabindex="-1"
-        (load)="onIframeLoad()"
-        [class.loaded]="iframeLoaded"
-        title="{{ assignment.title }} preview"
-      ></iframe>
-      <div class="preview-overlay">
-        <span class="preview-cta">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-          Open in new tab
-        </span>
-      </div>
-    </div>
-  }
-
-  <!-- Syntax-highlighted code view -->
-  @if (viewMode === 'code') {
-    <div class="card-code">
-      @if (codeLoading) {
-        <div class="code-loader">
-          <div class="spinner"></div>
-          <span>Loading source…</span>
-        </div>
-      } @else {
-        <pre class="code-pre language-markup"><code #codeBlock class="language-markup">{{ codeContent }}</code></pre>
-      }
-    </div>
-  }
-
   <!-- Card body -->
   <div class="card-body">
     <div class="card-tags">
       @if (assignment.week) {
-        <span class="tag tag-week">Week {{ assignment.week }}</span>
+      <span class="tag tag-week">Week {{ assignment.week }}</span>
       }
       @for (tag of assignment.tags; track tag) {
-        <span class="tag">{{ tag }}</span>
+      <span class="tag">{{ tag }}</span>
       }
     </div>
 
@@ -74,44 +17,13 @@
     <p class="card-description">{{ assignment.description }}</p>
 
     <div class="card-actions">
-      @if (assignment.isLocal) {
-        <button class="btn btn-edit" (click)="onEdit($event)" aria-label="Edit assignment">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-          </svg>
-          Edit
-        </button>
-      }
-      <button class="btn btn-primary" (click)="openInNewTab($event)">
+      <button class="btn btn-edit" (click)="onEdit($event)" aria-label="Edit assignment">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
         </svg>
-        Open Preview
+        Edit
       </button>
-
-      <div class="download-wrapper">
-        <button class="btn btn-secondary" (click)="toggleDownloadMenu($event)" [class.active]="showDownloadMenu">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-          Download
-          <span class="chevron" [class.open]="showDownloadMenu">▾</span>
-        </button>
-
-        @if (showDownloadMenu) {
-          <div class="download-menu" (click)="$event.stopPropagation()">
-            @for (file of assignment.downloadFiles; track file.name) {
-              <button class="download-item" (click)="downloadFile(file, $event)">
-                <span class="file-icon">{{ getFileIcon(file.name) }}</span>
-                {{ file.name }}
-              </button>
-            }
-          </div>
-        }
-      </div>
     </div>
   </div>
 
