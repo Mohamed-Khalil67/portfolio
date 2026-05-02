@@ -1,0 +1,81 @@
+<section class="grid-section">
+
+  <!-- Section heading -->
+  <div class="grid-header">
+    <h2 class="grid-heading">
+      All Assignments
+      <span class="count-badge">{{ filteredAssignments().length }}</span>
+    </h2>
+  </div>
+
+  <!-- Search + filter bar -->
+  <div class="search-bar">
+    <div class="search-input-wrap">
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search assignments…"
+        [value]="searchQuery()"
+        (input)="onSearch($event)"
+      />
+      @if (searchQuery()) {
+        <button class="search-clear" (click)="searchQuery.set('')" aria-label="Clear search">✕</button>
+      }
+    </div>
+
+    <div class="tag-filter-row">
+      @for (tag of allTags(); track tag) {
+        <button
+          class="filter-tag"
+          [class.active]="selectedTags().has(tag)"
+          (click)="toggleTag(tag)"
+        >{{ tag }}</button>
+      }
+      @if (hasActiveFilters) {
+        <button class="filter-clear" (click)="clearFilters()">Clear all</button>
+      }
+    </div>
+  </div>
+
+  <!-- Grid -->
+  @if (filteredAssignments().length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">🔍</div>
+      <h3>No matches</h3>
+      <p>Try a different search term or tag filter.</p>
+      <button class="btn-clear-filters" (click)="clearFilters()">Clear filters</button>
+    </div>
+  } @else {
+    <div class="assignments-grid">
+      @for (assignment of filteredAssignments(); track assignment.id; let i = $index) {
+        <app-assignment-card [assignment]="assignment" [index]="i" (editRequested)="onEditRequested($event)" />
+      }
+
+      <!-- Ghost add card -->
+      <div class="add-card" (click)="showCreateModal.set(true)">
+        <div class="add-card-inner">
+          <div class="add-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+          <span class="add-label">Add assignment</span>
+        </div>
+      </div>
+    </div>
+  }
+
+</section>
+
+@if (showCreateModal()) {
+  <app-create-assignment-modal
+    [assignmentToEdit]="assignmentToEdit()"
+    (closed)="onModalClosed()"
+    (created)="onModalClosed()"
+    (updated)="onModalClosed()"
+  />
+}

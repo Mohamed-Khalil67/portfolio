@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.scss"],
+  "sourcesContent": [".app-footer {\n  text-align: center;\n  padding: 32px 24px;\n  border-top: 1px solid rgba(255, 255, 255, 0.06);\n\n  p {\n    color: rgba(255, 255, 255, 0.3);\n    font-size: 0.85rem;\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;AACA,WAAA,KAAA;AACA,cAAA,IAAA,MAAA,KAAA,GAAA,EAAA,GAAA,EAAA,GAAA,EAAA;;AAEA,CALF,WAKE;AACE,SAAA,KAAA,GAAA,EAAA,GAAA,EAAA,GAAA,EAAA;AACA,aAAA;;",
+  "names": []
+}

@@ -1,0 +1,208 @@
+.grid-section {
+  padding: 48px 24px 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Heading ───────────────────────────
+.grid-header { margin-bottom: 24px; text-align: center; }
+
+.grid-heading {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+// ── Search + filter bar ───────────────
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.search-input-wrap {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 600px) { max-width: 100%; }
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 11px 40px 11px 42px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+
+  &::placeholder { color: rgba(255, 255, 255, 0.3); }
+  &:focus {
+    border-color: rgba(240, 147, 251, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.search-clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  &:hover { color: #fff; background: rgba(255,255,255,0.1); }
+}
+
+.tag-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.filter-tag {
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.18s;
+
+  &:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.85); }
+
+  &.active {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 3px 12px rgba(240,147,251,0.35);
+  }
+}
+
+.filter-clear {
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  &:hover { border-color: #ff6b6b; color: #ff6b6b; }
+}
+
+// ── Grid ─────────────────────────────
+.assignments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
+}
+
+// ── Ghost add card ────────────────────
+.add-card {
+  border-radius: 20px;
+  border: 2px dashed rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s, transform 0.25s;
+
+  &:hover {
+    border-color: rgba(240, 147, 251, 0.5);
+    background: rgba(240, 147, 251, 0.05);
+    transform: translateY(-6px);
+    .add-icon { background: rgba(240,147,251,0.2); color: #f093fb; transform: scale(1.1) rotate(90deg); }
+    .add-label { color: rgba(255,255,255,0.85); }
+  }
+}
+
+.add-card-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+
+.add-icon {
+  width: 64px; height: 64px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.25);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.add-label {
+  font-size: 0.92rem; font-weight: 600;
+  color: rgba(255,255,255,0.3); transition: color 0.2s;
+}
+
+// ── Empty / no-match state ────────────
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 24px;
+  border: 2px dashed rgba(255,255,255,0.08);
+
+  .empty-icon { font-size: 3.5rem; margin-bottom: 16px; }
+  h3 { font-size: 1.3rem; font-weight: 700; color: #fff; margin: 0 0 8px; }
+  p  { color: rgba(255,255,255,0.45); font-size: 0.92rem; margin: 0 0 20px; }
+}
+
+.btn-clear-filters {
+  padding: 9px 22px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.87rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  &:hover { background: rgba(255,255,255,0.15); color: #fff; }
+}
