@@ -5,6 +5,18 @@ import { Assignment } from '../../models/assignment.model';
 import { AssignmentCardComponent } from '../assignment-card/assignment-card.component';
 import { CreateAssignmentModalComponent } from '../create-assignment-modal/create-assignment-modal.component';
 
+interface Section {
+  key: string;
+  label: string;
+  assignments: Assignment[];
+}
+
+const SECTION_ORDER: { key: string; label: string }[] = [
+  { key: 'route-assignments', label: 'Route Assignments' },
+  { key: 'frontend',          label: 'Front End Projects' },
+  { key: 'fullstack',         label: 'Full Stack Projects' },
+];
+
 @Component({
   selector: 'app-assignment-grid',
   standalone: true,
@@ -17,48 +29,38 @@ import { CreateAssignmentModalComponent } from '../create-assignment-modal/creat
   styleUrls: ['./assignment-grid.component.scss'],
 })
 export class AssignmentGridComponent {
-  showEditModal = signal(false);
+  showEditModal    = signal(false);
   assignmentToEdit = signal<Assignment | null>(null);
-  searchQuery = signal('');
-  selectedTags = signal<Set<string>>(new Set());
+  searchQuery      = signal('');
 
-  readonly allTags = computed(() => {
-    const tags = new Set<string>();
-    this.assignmentService
-      .assignments()
-      .forEach((a) => a.tags.forEach((t) => tags.add(t)));
-    return Array.from(tags).sort();
-  });
-
-  readonly filteredAssignments = computed(() => {
+  private readonly filtered = computed(() => {
     const q = this.searchQuery().toLowerCase().trim();
-    const tags = this.selectedTags();
-    return this.assignmentService.assignments().filter((a) => {
-      const matchesSearch =
-        !q ||
-        a.title.toLowerCase().includes(q) ||
-        a.description.toLowerCase().includes(q) ||
-        a.tags.some((t) => t.toLowerCase().includes(q));
-      const matchesTags = tags.size === 0 || a.tags.some((t) => tags.has(t));
-      return matchesSearch && matchesTags;
-    });
+    return this.assignmentService.assignments().filter((a) =>
+      !q ||
+      a.title.toLowerCase().includes(q) ||
+      a.description.toLowerCase().includes(q) ||
+      a.tags.some((t) => t.toLowerCase().includes(q)),
+    );
   });
+
+  readonly sections = computed<Section[]>(() => {
+    const items = this.filtered();
+    return SECTION_ORDER
+      .map((s) => ({
+        ...s,
+        assignments: items.filter(
+          (a) => (a.category ?? 'route-assignments') === s.key,
+        ),
+      }))
+      .filter((s) => s.assignments.length > 0);
+  });
+
+  readonly totalCount = computed(() => this.filtered().length);
 
   constructor(readonly assignmentService: AssignmentService) {}
 
   onSearch(event: Event): void {
     this.searchQuery.set((event.target as HTMLInputElement).value);
-  }
-
-  toggleTag(tag: string): void {
-    const next = new Set(this.selectedTags());
-    next.has(tag) ? next.delete(tag) : next.add(tag);
-    this.selectedTags.set(next);
-  }
-
-  clearFilters(): void {
-    this.searchQuery.set('');
-    this.selectedTags.set(new Set());
   }
 
   onEditRequested(assignment: Assignment): void {
@@ -69,9 +71,5 @@ export class AssignmentGridComponent {
   onEditModalClosed(): void {
     this.showEditModal.set(false);
     this.assignmentToEdit.set(null);
-  }
-
-  get hasActiveFilters(): boolean {
-    return this.searchQuery().trim().length > 0 || this.selectedTags().size > 0;
   }
 }

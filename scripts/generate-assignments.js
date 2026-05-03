@@ -8,8 +8,12 @@
  *     "description": "Short description.",
  *     "week":        1,
  *     "tags":        ["HTML", "CSS"],
- *     "color":       "#f093fb, #f5576c"
+ *     "color":       "#f093fb, #f5576c",
+ *     "category":    "route-assignments"
  *   }
+ *
+ * Valid category values: "route-assignments" | "frontend" | "fullstack"
+ * Defaults to "route-assignments" when omitted.
  *
  * Folders without an index.html are skipped. Folders without a meta.json
  * still appear with sensible defaults derived from the folder name.
@@ -69,6 +73,7 @@ const scanFolder = (folderName, index) => {
   const week        = meta.week        ?? parseWeek(folderName);
   const tags        = Array.isArray(meta.tags) && meta.tags.length ? meta.tags : ['HTML'];
   const color       = meta.color       ?? COLOR_PALETTE[index % COLOR_PALETTE.length];
+  const category    = meta.category    ?? 'route-assignments';
 
   const previewUrl  = `assets/assignments/${folderName}/index.html`;
 
@@ -82,7 +87,7 @@ const scanFolder = (folderName, index) => {
     downloadFiles.push({ name: 'script.js', url: `assets/assignments/${folderName}/script.js` });
   }
 
-  return { id, title, description, week, tags, previewUrl, downloadFiles, color };
+  return { id, title, description, week, tags, previewUrl, downloadFiles, color, category };
 };
 
 const renderAssignment = (a) => {
@@ -101,6 +106,7 @@ const renderAssignment = (a) => {
   }
   lines.push('    ],');
   lines.push(`    color: ${JSON.stringify(a.color)},`);
+  lines.push(`    category: ${JSON.stringify(a.category)},`);
   lines.push('  },');
   return lines.join('\n');
 };
@@ -138,4 +144,18 @@ ${body}
   console.log(`[generate-assignments] Wrote ${assignments.length} assignment(s) → ${path.relative(ROOT, OUTPUT_FILE)}`);
 };
 
-main();
+if (process.argv.includes('--watch')) {
+  main();
+  console.log('[generate-assignments] Watching src/assets/assignments/ for changes…');
+
+  let debounce = null;
+  fs.watch(ASSIGNMENTS_DIR, { recursive: true }, (_event, filename) => {
+    if (debounce) clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      console.log(`[generate-assignments] Change detected (${filename ?? '?'}) — rescanning…`);
+      main();
+    }, 300);
+  });
+} else {
+  main();
+}

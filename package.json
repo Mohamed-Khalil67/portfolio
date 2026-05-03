@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "generate-assignments": "node scripts/generate-assignments.js",
+    "prebuild": "node scripts/generate-assignments.js",
+    "start": "concurrently --kill-others-on-fail -n scan,ng -c cyan,green \"node scripts/generate-assignments.js --watch\" \"ng serve --open\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -25,6 +27,7 @@
     "@angular/build": "^21.2.7",
     "@angular/cli": "^21.2.7",
     "@angular/compiler-cli": "^21.2.0",
+    "concurrently": "^9.2.1",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",

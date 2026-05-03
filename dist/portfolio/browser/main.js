@@ -28450,41 +28450,29 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 23, vars: 0, consts: [[1, "portfolio-header"], [1, "header-bg"], [1, "header-content"], [1, "author-row"], [1, "author-photo-wrap"], ["src", "assets/images/self-photo.jpg", "alt", "Mohamed Khalil", 1, "author-photo"], [1, "author-text"], [1, "author-name"], [1, "author-role"], [1, "header-title"], [1, "gradient-text"], [1, "header-subtitle"], [1, "header-socials"], ["href", "#", "title", "LinkedIn", 1, "social-link"], ["src", "assets/images/linkedin.png", "alt", "LinkedIn"], ["href", "#", "title", "GitHub", 1, "social-link"], ["src", "assets/images/github.png", "alt", "GitHub"], ["href", "#", "title", "Instagram", 1, "social-link"], ["src", "assets/images/instagram.png", "alt", "Instagram"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 12, vars: 0, consts: [[1, "portfolio-header"], [1, "header-bg"], [1, "header-content"], [1, "author-name"], [1, "author-role"], [1, "header-title"], [1, "gradient-text"], [1, "header-subtitle"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "header", 0);
       \u0275\u0275domElement(1, "div", 1);
-      \u0275\u0275domElementStart(2, "div", 2)(3, "div", 3)(4, "div", 4);
-      \u0275\u0275domElement(5, "img", 5);
+      \u0275\u0275domElementStart(2, "div", 2)(3, "h1", 3);
+      \u0275\u0275text(4, "Mohamed Khalil");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(6, "div", 6)(7, "h1", 7);
-      \u0275\u0275text(8, "Mohamed Khalil");
+      \u0275\u0275domElementStart(5, "p", 4);
+      \u0275\u0275text(6, "Full Stack Developer");
       \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(9, "p", 8);
-      \u0275\u0275text(10, "Full Stack Developer");
-      \u0275\u0275domElementEnd()()();
-      \u0275\u0275domElementStart(11, "h2", 9)(12, "span", 10);
-      \u0275\u0275text(13, "Portfolio");
+      \u0275\u0275domElementStart(7, "h2", 5)(8, "span", 6);
+      \u0275\u0275text(9, "Portfolio");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(14, "p", 11);
-      \u0275\u0275text(15, " A collection of hands-on projects built throughout the full-stack development course. ");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(16, "div", 12)(17, "a", 13);
-      \u0275\u0275domElement(18, "img", 14);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(19, "a", 15);
-      \u0275\u0275domElement(20, "img", 16);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(21, "a", 17);
-      \u0275\u0275domElement(22, "img", 18);
-      \u0275\u0275domElementEnd()()()();
+      \u0275\u0275domElementStart(10, "p", 7);
+      \u0275\u0275text(11, " A collection of hands-on projects built throughout the full-stack development course. ");
+      \u0275\u0275domElementEnd()()();
     }
-  }, dependencies: [CommonModule], styles: ['\n.portfolio-header[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  z-index: 0;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%]::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-row[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n}\n@media (max-width: 480px) {\n  .author-row[_ngcontent-%COMP%] {\n    flex-direction: column;\n    gap: 12px;\n  }\n}\n.author-photo-wrap[_ngcontent-%COMP%] {\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  padding: 3px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  flex-shrink: 0;\n}\n.author-photo[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  object-fit: cover;\n  display: block;\n  background: #1a1a2e;\n}\n.author-text[_ngcontent-%COMP%] {\n  text-align: left;\n}\n@media (max-width: 480px) {\n  .author-text[_ngcontent-%COMP%] {\n    text-align: center;\n  }\n}\n.author-name[_ngcontent-%COMP%] {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.02em;\n}\n.author-role[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  margin: 3px 0 0;\n}\n.header-title[_ngcontent-%COMP%] {\n  font-size: clamp(2.8rem, 8vw, 5rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.gradient-text[_ngcontent-%COMP%] {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n.header-socials[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 10px;\n}\n.social-link[_ngcontent-%COMP%] {\n  width: 36px;\n  height: 36px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: background 0.2s, transform 0.2s;\n  overflow: hidden;\n}\n.social-link[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 18px;\n  height: 18px;\n  object-fit: contain;\n  filter: brightness(0) invert(1);\n  opacity: 0.7;\n}\n.social-link[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.16);\n  transform: translateY(-2px);\n}\n.social-link[_ngcontent-%COMP%]:hover   img[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n/*# sourceMappingURL=header.component.css.map */'] });
+  }, dependencies: [CommonModule], styles: ['\n.portfolio-header[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  z-index: 0;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%]::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-name[_ngcontent-%COMP%] {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.02em;\n}\n.author-role[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  margin: 3px 0 0;\n  text-align: center;\n}\n.header-title[_ngcontent-%COMP%] {\n  font-size: clamp(2.8rem, 8vw, 5rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.gradient-text[_ngcontent-%COMP%] {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n/*# sourceMappingURL=header.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HeaderComponent, [{
     type: Component,
-    args: [{ selector: "app-header", standalone: true, imports: [CommonModule], template: '<header class="portfolio-header">\n  <div class="header-bg"></div>\n  <div class="header-content">\n\n    <div class="author-row">\n      <div class="author-photo-wrap">\n        <img src="assets/images/self-photo.jpg" alt="Mohamed Khalil" class="author-photo" />\n      </div>\n      <div class="author-text">\n        <h1 class="author-name">Mohamed Khalil</h1>\n        <p class="author-role">Full Stack Developer</p>\n      </div>\n    </div>\n\n    <h2 class="header-title"><span class="gradient-text">Portfolio</span></h2>\n\n    <p class="header-subtitle">\n      A collection of hands-on projects built throughout the full-stack development course.\n    </p>\n\n    <div class="header-socials">\n      <a href="#" class="social-link" title="LinkedIn">\n        <img src="assets/images/linkedin.png" alt="LinkedIn" />\n      </a>\n      <a href="#" class="social-link" title="GitHub">\n        <img src="assets/images/github.png" alt="GitHub" />\n      </a>\n      <a href="#" class="social-link" title="Instagram">\n        <img src="assets/images/instagram.png" alt="Instagram" />\n      </a>\n    </div>\n\n  </div>\n</header>\n', styles: ['/* src/app/components/header/header.component.scss */\n.portfolio-header {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header .header-bg {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  z-index: 0;\n}\n.portfolio-header .header-bg::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header .header-content {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-row {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n}\n@media (max-width: 480px) {\n  .author-row {\n    flex-direction: column;\n    gap: 12px;\n  }\n}\n.author-photo-wrap {\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  padding: 3px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  flex-shrink: 0;\n}\n.author-photo {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  object-fit: cover;\n  display: block;\n  background: #1a1a2e;\n}\n.author-text {\n  text-align: left;\n}\n@media (max-width: 480px) {\n  .author-text {\n    text-align: center;\n  }\n}\n.author-name {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.02em;\n}\n.author-role {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  margin: 3px 0 0;\n}\n.header-title {\n  font-size: clamp(2.8rem, 8vw, 5rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.gradient-text {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n.header-socials {\n  display: flex;\n  gap: 10px;\n}\n.social-link {\n  width: 36px;\n  height: 36px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: background 0.2s, transform 0.2s;\n  overflow: hidden;\n}\n.social-link img {\n  width: 18px;\n  height: 18px;\n  object-fit: contain;\n  filter: brightness(0) invert(1);\n  opacity: 0.7;\n}\n.social-link:hover {\n  background: rgba(255, 255, 255, 0.16);\n  transform: translateY(-2px);\n}\n.social-link:hover img {\n  opacity: 1;\n}\n/*# sourceMappingURL=header.component.css.map */\n'] }]
+    args: [{ selector: "app-header", standalone: true, imports: [CommonModule], template: '<header class="portfolio-header">\r\n  <div class="header-bg"></div>\r\n  <div class="header-content">\r\n\r\n    <h1 class="author-name">Mohamed Khalil</h1>\r\n    <p class="author-role">Full Stack Developer</p>\r\n\r\n    <h2 class="header-title"><span class="gradient-text">Portfolio</span></h2>\r\n\r\n    <p class="header-subtitle">\r\n      A collection of hands-on projects built throughout the full-stack development course.\r\n    </p>\r\n\r\n  </div>\r\n</header>', styles: ['/* src/app/components/header/header.component.scss */\n.portfolio-header {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header .header-bg {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  z-index: 0;\n}\n.portfolio-header .header-bg::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header .header-content {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-name {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.02em;\n}\n.author-role {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  margin: 3px 0 0;\n  text-align: center;\n}\n.header-title {\n  font-size: clamp(2.8rem, 8vw, 5rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.gradient-text {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n/*# sourceMappingURL=header.component.css.map */\n'] }]
   }], null, null);
 })();
 (() => {
@@ -28504,7 +28492,8 @@ var ASSIGNMENTS = [
       { name: "index.html", url: "assets/assignments/assignment-01/index.html" },
       { name: "style.css", url: "assets/assignments/assignment-01/style.css" }
     ],
-    color: "#f093fb, #f5576c"
+    color: "#f093fb, #f5576c",
+    category: "route-assignments"
   },
   {
     id: "assignment-02",
@@ -28515,29 +28504,57 @@ var ASSIGNMENTS = [
     previewUrl: "assets/assignments/assignment-02/index.html",
     downloadFiles: [
       { name: "index.html", url: "assets/assignments/assignment-02/index.html" },
-      { name: "style.css", url: "assets/assignments/assignment-02/style.css" },
-      { name: "script.js", url: "assets/assignments/assignment-02/script.js" }
+      { name: "style.css", url: "assets/assignments/assignment-02/style.css" }
     ],
-    color: "#4facfe, #00f2fe"
+    color: "#4facfe, #00f2fe",
+    category: "route-assignments"
+  },
+  {
+    id: "assignment-03",
+    title: "Assignment 03",
+    description: "",
+    week: 3,
+    tags: ["HTML", "CSS"],
+    previewUrl: "assets/assignments/assignment-03/index.html",
+    downloadFiles: [
+      { name: "index.html", url: "assets/assignments/assignment-03/index.html" },
+      { name: "style.css", url: "assets/assignments/assignment-03/style.css" }
+    ],
+    color: "#43e97b, #38f9d7",
+    category: "route-assignments"
+  },
+  {
+    id: "assignment-04",
+    title: "Assignment 04",
+    description: "",
+    week: 4,
+    tags: ["HTML"],
+    previewUrl: "assets/assignments/assignment-04/index.html",
+    downloadFiles: [
+      { name: "index.html", url: "assets/assignments/assignment-04/index.html" }
+    ],
+    color: "#fa709a, #fee140",
+    category: "route-assignments"
+  },
+  {
+    id: "assignment-05",
+    title: "Assignment 05",
+    description: "",
+    week: 5,
+    tags: ["HTML"],
+    previewUrl: "assets/assignments/assignment-05/index.html",
+    downloadFiles: [
+      { name: "index.html", url: "assets/assignments/assignment-05/index.html" }
+    ],
+    color: "#a18cd1, #fbc2eb",
+    category: "route-assignments"
   }
-  // ── Add your next assignment below this line ──────────────────
-  // {
-  //   id: 'assignment-03',
-  //   title: 'My Next Assignment',
-  //   description: 'What this assignment demonstrates.',
-  //   week: 3,
-  //   tags: ['HTML', 'CSS', 'JavaScript'],
-  //   previewUrl: 'assets/assignments/assignment-03/index.html',
-  //   downloadFiles: [
-  //     { name: 'index.html', url: 'assets/assignments/assignment-03/index.html' },
-  //   ],
-  //   color: '#43e97b, #38f9d7',
-  // },
 ];
 
 // src/app/services/assignment.service.ts
 var AssignmentService = class _AssignmentService {
   STORAGE_KEY = "portfolio_local_assignments";
+  OVERRIDES_KEY = "portfolio_assignment_overrides";
   /** Reactive list — combines static data file assignments + localStorage ones */
   assignments = signal(this.loadAll(), ...ngDevMode ? [{ debugName: "assignments" }] : (
     /* istanbul ignore next */
@@ -28545,7 +28562,8 @@ var AssignmentService = class _AssignmentService {
   ));
   // ── Read ────────────────────────────────────────────────────────
   loadAll() {
-    return [...ASSIGNMENTS, ...this.getLocal()];
+    const overrides = this.getOverrides();
+    return [...ASSIGNMENTS, ...this.getLocal()].map((a) => overrides[a.id] ? __spreadValues(__spreadValues({}, a), overrides[a.id]) : a);
   }
   getLocal() {
     try {
@@ -28553,6 +28571,14 @@ var AssignmentService = class _AssignmentService {
       return raw ? JSON.parse(raw) : [];
     } catch {
       return [];
+    }
+  }
+  getOverrides() {
+    try {
+      const raw = localStorage.getItem(this.OVERRIDES_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch {
+      return {};
     }
   }
   // ── Write ───────────────────────────────────────────────────────
@@ -28570,6 +28596,17 @@ var AssignmentService = class _AssignmentService {
   update(id, changes) {
     const locals = this.getLocal().map((a) => a.id === id ? __spreadValues(__spreadValues({}, a), changes) : a);
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(locals));
+    this.assignments.set(this.loadAll());
+  }
+  setOverride(id, changes) {
+    const overrides = this.getOverrides();
+    overrides[id] = __spreadValues(__spreadValues({}, overrides[id] ?? {}), changes);
+    localStorage.setItem(this.OVERRIDES_KEY, JSON.stringify(overrides));
+    const locals = this.getLocal();
+    if (locals.some((a) => a.id === id)) {
+      const updated = locals.map((a) => a.id === id ? __spreadValues(__spreadValues({}, a), changes) : a);
+      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(updated));
+    }
     this.assignments.set(this.loadAll());
   }
   // ── HTML generation ─────────────────────────────────────────────
@@ -28628,31 +28665,31 @@ ${js}
 // src/app/components/assignment-card/assignment-card.component.ts
 var _c0 = ["codeBlock"];
 var _forTrack0 = ($index, $item) => $item.name;
-function AssignmentCardComponent_Conditional_14_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_13_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 33);
-    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_14_Template_div_click_0_listener($event) {
+    \u0275\u0275elementStart(0, "div", 29);
+    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_13_Template_div_click_0_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.openInNewTab($event));
     });
-    \u0275\u0275elementStart(1, "div", 34);
-    \u0275\u0275element(2, "div", 35);
+    \u0275\u0275elementStart(1, "div", 30);
+    \u0275\u0275element(2, "div", 31);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "iframe", 36);
-    \u0275\u0275listener("load", function AssignmentCardComponent_Conditional_14_Template_iframe_load_3_listener() {
+    \u0275\u0275elementStart(3, "iframe", 32);
+    \u0275\u0275listener("load", function AssignmentCardComponent_Conditional_13_Template_iframe_load_3_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onIframeLoad());
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 37)(5, "span", 38);
+    \u0275\u0275elementStart(4, "div", 33)(5, "span", 34);
     \u0275\u0275namespaceSVG();
-    \u0275\u0275elementStart(6, "svg", 22);
-    \u0275\u0275element(7, "path", 23)(8, "polyline", 24)(9, "line", 25);
+    \u0275\u0275elementStart(6, "svg", 24);
+    \u0275\u0275element(7, "path", 25)(8, "polyline", 26)(9, "line", 27);
     \u0275\u0275elementEnd();
-    \u0275\u0275text(10, " Open in new tab ");
+    \u0275\u0275text(10, " Open full page ");
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -28661,34 +28698,36 @@ function AssignmentCardComponent_Conditional_14_Template(rf, ctx) {
     \u0275\u0275classProp("hidden", ctx_r1.iframeLoaded);
     \u0275\u0275advance(2);
     \u0275\u0275classProp("loaded", ctx_r1.iframeLoaded);
-    \u0275\u0275property("title", \u0275\u0275interpolate1("", ctx_r1.assignment.title, " preview"))("src", ctx_r1.safePreviewUrl, \u0275\u0275sanitizeResourceUrl);
+    \u0275\u0275property("src", ctx_r1.safePreviewUrl, \u0275\u0275sanitizeResourceUrl);
   }
 }
-function AssignmentCardComponent_Conditional_15_Conditional_1_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_14_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 39);
-    \u0275\u0275element(1, "div", 35);
+    \u0275\u0275elementStart(0, "div", 35);
+    \u0275\u0275element(1, "div", 31);
     \u0275\u0275elementStart(2, "span");
     \u0275\u0275text(3, "Loading source\u2026");
     \u0275\u0275elementEnd()();
   }
 }
-function AssignmentCardComponent_Conditional_15_Conditional_2_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_14_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "pre", 40)(1, "code", 41, 0);
+    \u0275\u0275elementStart(0, "pre", 36)(1, "code", null, 0);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext(2);
-    \u0275\u0275advance(3);
+    \u0275\u0275advance();
+    \u0275\u0275classMap("language-" + ctx_r1.codeLanguage);
+    \u0275\u0275advance(2);
     \u0275\u0275textInterpolate(ctx_r1.codeContent);
   }
 }
-function AssignmentCardComponent_Conditional_15_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_14_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 12);
-    \u0275\u0275conditionalCreate(1, AssignmentCardComponent_Conditional_15_Conditional_1_Template, 4, 0, "div", 39)(2, AssignmentCardComponent_Conditional_15_Conditional_2_Template, 4, 1, "pre", 40);
+    \u0275\u0275elementStart(0, "div", 11);
+    \u0275\u0275conditionalCreate(1, AssignmentCardComponent_Conditional_14_Conditional_1_Template, 4, 0, "div", 35)(2, AssignmentCardComponent_Conditional_14_Conditional_2_Template, 4, 3, "pre", 36);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -28697,9 +28736,9 @@ function AssignmentCardComponent_Conditional_15_Template(rf, ctx) {
     \u0275\u0275conditional(ctx_r1.codeLoading ? 1 : 2);
   }
 }
-function AssignmentCardComponent_Conditional_18_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_17_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "span", 15);
+    \u0275\u0275elementStart(0, "span", 14);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -28709,9 +28748,9 @@ function AssignmentCardComponent_Conditional_18_Template(rf, ctx) {
     \u0275\u0275textInterpolate1("Week ", ctx_r1.assignment.week);
   }
 }
-function AssignmentCardComponent_For_20_Template(rf, ctx) {
+function AssignmentCardComponent_For_19_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "span", 16);
+    \u0275\u0275elementStart(0, "span", 15);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -28721,33 +28760,16 @@ function AssignmentCardComponent_For_20_Template(rf, ctx) {
     \u0275\u0275textInterpolate(tag_r3);
   }
 }
-function AssignmentCardComponent_Conditional_26_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 42);
-    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_26_Template_button_click_0_listener($event) {
-      \u0275\u0275restoreView(_r4);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onEdit($event));
-    });
-    \u0275\u0275namespaceSVG();
-    \u0275\u0275elementStart(1, "svg", 22);
-    \u0275\u0275element(2, "path", 43)(3, "path", 44);
-    \u0275\u0275elementEnd();
-    \u0275\u0275text(4, " Edit ");
-    \u0275\u0275elementEnd();
-  }
-}
-function AssignmentCardComponent_Conditional_42_For_2_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_36_Conditional_9_For_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 47);
-    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_42_For_2_Template_button_click_0_listener($event) {
+    \u0275\u0275elementStart(0, "button", 44);
+    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_36_Conditional_9_For_2_Template_button_click_0_listener($event) {
       const file_r6 = \u0275\u0275restoreView(_r5).$implicit;
-      const ctx_r1 = \u0275\u0275nextContext(2);
+      const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.downloadFile(file_r6, $event));
     });
-    \u0275\u0275elementStart(1, "span", 48);
+    \u0275\u0275elementStart(1, "span", 45);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
     \u0275\u0275text(3);
@@ -28755,26 +28777,52 @@ function AssignmentCardComponent_Conditional_42_For_2_Template(rf, ctx) {
   }
   if (rf & 2) {
     const file_r6 = ctx.$implicit;
-    const ctx_r1 = \u0275\u0275nextContext(2);
+    const ctx_r1 = \u0275\u0275nextContext(3);
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate(ctx_r1.getFileIcon(file_r6.name));
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1(" ", file_r6.name, " ");
   }
 }
-function AssignmentCardComponent_Conditional_42_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_36_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 45);
-    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_42_Template_div_click_0_listener($event) {
-      return $event.stopPropagation();
+    \u0275\u0275elementStart(0, "div", 42);
+    \u0275\u0275repeaterCreate(1, AssignmentCardComponent_Conditional_36_Conditional_9_For_2_Template, 4, 2, "button", 43, _forTrack0);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance();
+    \u0275\u0275repeater(ctx_r1.assignment.downloadFiles);
+  }
+}
+function AssignmentCardComponent_Conditional_36_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r4 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "div", 28)(1, "button", 37);
+    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_36_Template_button_click_1_listener($event) {
+      \u0275\u0275restoreView(_r4);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.toggleDownloadMenu($event));
     });
-    \u0275\u0275repeaterCreate(1, AssignmentCardComponent_Conditional_42_For_2_Template, 4, 2, "button", 46, _forTrack0);
+    \u0275\u0275namespaceSVG();
+    \u0275\u0275elementStart(2, "svg", 24);
+    \u0275\u0275element(3, "path", 38)(4, "polyline", 39)(5, "line", 40);
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(6, " Files ");
+    \u0275\u0275namespaceHTML();
+    \u0275\u0275elementStart(7, "span", 41);
+    \u0275\u0275text(8, "\u2304");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275conditionalCreate(9, AssignmentCardComponent_Conditional_36_Conditional_9_Template, 3, 0, "div", 42);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance();
-    \u0275\u0275repeater(ctx_r1.assignment.downloadFiles);
+    \u0275\u0275advance(7);
+    \u0275\u0275classProp("open", ctx_r1.showDownloadMenu);
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(ctx_r1.showDownloadMenu ? 9 : -1);
   }
 }
 var AssignmentCardComponent = class _AssignmentCardComponent {
@@ -28788,10 +28836,8 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
   iframeLoaded = false;
   showDownloadMenu = false;
   viewMode = "preview";
-  // Code view state
   codeContent = "";
   codeLanguage = "markup";
-  // Prism language token
   codeLoading = false;
   codeError = false;
   needsHighlight = false;
@@ -28827,7 +28873,6 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
       }
     }
   }
-  // ── Gradient helpers ──────────────────
   get accentGradient() {
     if (this.assignment.color)
       return this.assignment.color;
@@ -28840,7 +28885,6 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
       "--i": String(this.index)
     };
   }
-  // ── View toggle ───────────────────────
   setView(mode) {
     this.viewMode = mode;
     if (mode === "code" && !this.codeContent && !this.codeLoading) {
@@ -28867,7 +28911,6 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
     this.codeLoading = false;
     this.needsHighlight = true;
   }
-  // ── Preview (new tab) ─────────────────
   openInNewTab(event) {
     event.stopPropagation();
     this.assignmentService.openInNewTab(this.assignment);
@@ -28879,7 +28922,6 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
     event.stopPropagation();
     this.editRequested.emit(this.assignment);
   }
-  // ── Download ──────────────────────────
   toggleDownloadMenu(event) {
     event.stopPropagation();
     this.showDownloadMenu = !this.showDownloadMenu;
@@ -28917,7 +28959,7 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
       let _t;
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.codeBlock = _t.first);
     }
-  }, inputs: { assignment: "assignment", index: "index" }, outputs: { editRequested: "editRequested" }, decls: 43, vars: 16, consts: [["codeBlock", ""], [1, "assignment-card", 3, "ngStyle"], [1, "card-accent-bar"], [1, "view-tabs"], [1, "view-tab", 3, "click"], ["width", "11", "height", "11", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["x", "2", "y", "3", "width", "20", "height", "14", "rx", "2"], ["x1", "8", "y1", "21", "x2", "16", "y2", "21"], ["x1", "12", "y1", "17", "x2", "12", "y2", "21"], ["points", "16 18 22 12 16 6"], ["points", "8 6 2 12 8 18"], [1, "card-preview"], [1, "card-code"], [1, "card-body"], [1, "card-tags"], [1, "tag", "tag-week"], [1, "tag"], [1, "card-title"], [1, "card-description"], [1, "card-actions"], ["aria-label", "Edit assignment", 1, "btn", "btn-edit"], [1, "btn", "btn-primary", 3, "click"], ["width", "12", "height", "12", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["d", "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"], ["points", "15 3 21 3 21 9"], ["x1", "10", "y1", "14", "x2", "21", "y2", "3"], [1, "download-wrapper"], [1, "btn", "btn-secondary", 3, "click"], ["d", "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"], ["points", "7 10 12 15 17 10"], ["x1", "12", "y1", "15", "x2", "12", "y2", "3"], [1, "chevron"], [1, "download-menu"], [1, "card-preview", 3, "click"], [1, "preview-loader"], [1, "spinner"], ["sandbox", "allow-scripts allow-same-origin", "scrolling", "no", "tabindex", "-1", 3, "load", "src", "title"], [1, "preview-overlay"], [1, "preview-cta"], [1, "code-loader"], [1, "code-pre", "language-markup"], [1, "language-markup"], ["aria-label", "Edit assignment", 1, "btn", "btn-edit", 3, "click"], ["d", "M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"], ["d", "M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"], [1, "download-menu", 3, "click"], [1, "download-item"], [1, "download-item", 3, "click"], [1, "file-icon"]], template: function AssignmentCardComponent_Template(rf, ctx) {
+  }, inputs: { assignment: "assignment", index: "index" }, outputs: { editRequested: "editRequested" }, decls: 37, vars: 11, consts: [["codeBlock", ""], [1, "assignment-card", 3, "ngStyle"], [1, "card-accent-bar"], [1, "view-tabs"], [1, "view-tab", 3, "click"], ["width", "13", "height", "13", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2"], ["x", "2", "y", "3", "width", "20", "height", "14", "rx", "2"], ["d", "M8 21h8M12 17v4"], ["points", "16 18 22 12 16 6"], ["points", "8 6 2 12 8 18"], [1, "card-preview"], [1, "card-code"], [1, "card-body"], [1, "card-tags"], [1, "tag", "tag-week"], [1, "tag"], [1, "card-title"], [1, "card-description"], [1, "card-actions"], ["aria-label", "Edit assignment", 1, "btn", "btn-edit", 3, "click"], ["width", "12", "height", "12", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["d", "M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"], ["d", "M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"], [1, "btn", "btn-primary", 3, "click"], ["width", "13", "height", "13", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["d", "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"], ["points", "15 3 21 3 21 9"], ["x1", "10", "y1", "14", "x2", "21", "y2", "3"], [1, "download-wrapper"], [1, "card-preview", 3, "click"], [1, "preview-loader"], [1, "spinner"], ["title", "Assignment preview", 3, "load", "src"], [1, "preview-overlay"], [1, "preview-cta"], [1, "code-loader"], [1, "code-pre"], [1, "btn", "btn-secondary", 3, "click"], ["d", "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"], ["points", "7 10 12 15 17 10"], ["x1", "12", "y1", "15", "x2", "12", "y2", "3"], [1, "chevron"], [1, "download-menu"], [1, "download-item"], [1, "download-item", 3, "click"], [1, "file-icon"]], template: function AssignmentCardComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1);
       \u0275\u0275element(1, "div", 2);
@@ -28927,91 +28969,80 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
       });
       \u0275\u0275namespaceSVG();
       \u0275\u0275elementStart(4, "svg", 5);
-      \u0275\u0275element(5, "rect", 6)(6, "line", 7)(7, "line", 8);
+      \u0275\u0275element(5, "rect", 6)(6, "path", 7);
       \u0275\u0275elementEnd();
-      \u0275\u0275text(8, " Preview ");
+      \u0275\u0275text(7, " Preview ");
       \u0275\u0275elementEnd();
       \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(9, "button", 4);
-      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_9_listener() {
+      \u0275\u0275elementStart(8, "button", 4);
+      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_8_listener() {
         return ctx.setView("code");
       });
       \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(10, "svg", 5);
-      \u0275\u0275element(11, "polyline", 9)(12, "polyline", 10);
+      \u0275\u0275elementStart(9, "svg", 5);
+      \u0275\u0275element(10, "polyline", 8)(11, "polyline", 9);
       \u0275\u0275elementEnd();
-      \u0275\u0275text(13, " Code ");
+      \u0275\u0275text(12, " Code ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(14, AssignmentCardComponent_Conditional_14_Template, 11, 7, "div", 11);
-      \u0275\u0275conditionalCreate(15, AssignmentCardComponent_Conditional_15_Template, 3, 1, "div", 12);
+      \u0275\u0275conditionalCreate(13, AssignmentCardComponent_Conditional_13_Template, 11, 5, "div", 10);
+      \u0275\u0275conditionalCreate(14, AssignmentCardComponent_Conditional_14_Template, 3, 1, "div", 11);
       \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(16, "div", 13)(17, "div", 14);
-      \u0275\u0275conditionalCreate(18, AssignmentCardComponent_Conditional_18_Template, 2, 1, "span", 15);
-      \u0275\u0275repeaterCreate(19, AssignmentCardComponent_For_20_Template, 2, 1, "span", 16, \u0275\u0275repeaterTrackByIdentity);
+      \u0275\u0275elementStart(15, "div", 12)(16, "div", 13);
+      \u0275\u0275conditionalCreate(17, AssignmentCardComponent_Conditional_17_Template, 2, 1, "span", 14);
+      \u0275\u0275repeaterCreate(18, AssignmentCardComponent_For_19_Template, 2, 1, "span", 15, \u0275\u0275repeaterTrackByIdentity);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(21, "h2", 17);
-      \u0275\u0275text(22);
+      \u0275\u0275elementStart(20, "h2", 16);
+      \u0275\u0275text(21);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(23, "p", 18);
-      \u0275\u0275text(24);
+      \u0275\u0275elementStart(22, "p", 17);
+      \u0275\u0275text(23);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(25, "div", 19);
-      \u0275\u0275conditionalCreate(26, AssignmentCardComponent_Conditional_26_Template, 5, 0, "button", 20);
-      \u0275\u0275elementStart(27, "button", 21);
-      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_27_listener($event) {
+      \u0275\u0275elementStart(24, "div", 18)(25, "button", 19);
+      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_25_listener($event) {
+        return ctx.onEdit($event);
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275elementStart(26, "svg", 20);
+      \u0275\u0275element(27, "path", 21)(28, "path", 22);
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(29, " Edit ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275elementStart(30, "button", 23);
+      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_30_listener($event) {
         return ctx.openInNewTab($event);
       });
       \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(28, "svg", 22);
-      \u0275\u0275element(29, "path", 23)(30, "polyline", 24)(31, "line", 25);
+      \u0275\u0275elementStart(31, "svg", 24);
+      \u0275\u0275element(32, "path", 25)(33, "polyline", 26)(34, "line", 27);
       \u0275\u0275elementEnd();
-      \u0275\u0275text(32, " Open Preview ");
+      \u0275\u0275text(35, " Open ");
       \u0275\u0275elementEnd();
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(33, "div", 26)(34, "button", 27);
-      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_34_listener($event) {
-        return ctx.toggleDownloadMenu($event);
-      });
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(35, "svg", 22);
-      \u0275\u0275element(36, "path", 28)(37, "polyline", 29)(38, "line", 30);
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(39, " Download ");
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(40, "span", 31);
-      \u0275\u0275text(41, "\u25BE");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(42, AssignmentCardComponent_Conditional_42_Template, 3, 0, "div", 32);
-      \u0275\u0275elementEnd()()()();
+      \u0275\u0275conditionalCreate(36, AssignmentCardComponent_Conditional_36_Template, 10, 3, "div", 28);
+      \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
       \u0275\u0275property("ngStyle", ctx.cardStyle);
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.viewMode === "preview");
-      \u0275\u0275advance(6);
+      \u0275\u0275advance(5);
       \u0275\u0275classProp("active", ctx.viewMode === "code");
       \u0275\u0275advance(5);
-      \u0275\u0275conditional(ctx.viewMode === "preview" ? 14 : -1);
+      \u0275\u0275conditional(ctx.viewMode === "preview" ? 13 : -1);
       \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.viewMode === "code" ? 15 : -1);
+      \u0275\u0275conditional(ctx.viewMode === "code" ? 14 : -1);
       \u0275\u0275advance(3);
-      \u0275\u0275conditional(ctx.assignment.week ? 18 : -1);
+      \u0275\u0275conditional(ctx.assignment.week ? 17 : -1);
       \u0275\u0275advance();
       \u0275\u0275repeater(ctx.assignment.tags);
       \u0275\u0275advance(3);
       \u0275\u0275textInterpolate(ctx.assignment.title);
       \u0275\u0275advance(2);
       \u0275\u0275textInterpolate(ctx.assignment.description);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx.assignment.isLocal ? 26 : -1);
-      \u0275\u0275advance(8);
-      \u0275\u0275classProp("active", ctx.showDownloadMenu);
-      \u0275\u0275advance(6);
-      \u0275\u0275classProp("open", ctx.showDownloadMenu);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx.showDownloadMenu ? 42 : -1);
+      \u0275\u0275advance(13);
+      \u0275\u0275conditional(ctx.assignment.downloadFiles.length ? 36 : -1);
     }
-  }, dependencies: [CommonModule, NgStyle], styles: ['\n[_nghost-%COMP%] {\n  display: block;\n}\n@keyframes _ngcontent-%COMP%_fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card[_ngcontent-%COMP%] {\n  background: #1a1a2e;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;\n  animation: _ngcontent-%COMP%_fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card[_ngcontent-%COMP%]:hover {\n  transform: translateY(-8px) scale(1.01);\n  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .preview-overlay[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .card-accent-bar[_ngcontent-%COMP%] {\n  height: 5px;\n}\n.card-accent-bar[_ngcontent-%COMP%] {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs[_ngcontent-%COMP%] {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.view-tab[_ngcontent-%COMP%]    + .view-tab[_ngcontent-%COMP%] {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%]:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active[_ngcontent-%COMP%] {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview[_ngcontent-%COMP%] {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview[_ngcontent-%COMP%]   iframe.loaded[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%]   .preview-cta[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader.hidden[_ngcontent-%COMP%] {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code[_ngcontent-%COMP%] {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader[_ngcontent-%COMP%] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre[_ngcontent-%COMP%]   code[_ngcontent-%COMP%] {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body[_ngcontent-%COMP%] {\n  padding: 18px 20px 20px;\n}\n.card-tags[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-bottom: 11px;\n}\n.tag[_ngcontent-%COMP%] {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title[_ngcontent-%COMP%] {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 7px;\n  line-height: 1.3;\n}\n.card-description[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  line-height: 1.6;\n  margin: 0 0 18px;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn[_ngcontent-%COMP%]   .chevron[_ngcontent-%COMP%] {\n  font-size: 0.9rem;\n  transition: transform 0.2s;\n}\n.btn[_ngcontent-%COMP%]   .chevron.open[_ngcontent-%COMP%] {\n  transform: rotate(180deg);\n}\n.btn.btn-primary[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary[_ngcontent-%COMP%]:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary[_ngcontent-%COMP%]:hover, \n.btn.btn-secondary.active[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit[_ngcontent-%COMP%]:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.download-wrapper[_ngcontent-%COMP%] {\n  position: relative;\n}\n.download-menu[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: calc(100% + 8px);\n  left: 0;\n  background: #1e1e3a;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  overflow: hidden;\n  min-width: 155px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);\n  z-index: 50;\n  animation: _ngcontent-%COMP%_slideUp 0.14s ease;\n}\n@keyframes _ngcontent-%COMP%_slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.download-item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  text-align: left;\n  transition: background 0.14s;\n}\n.download-item[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.07);\n  color: #fff;\n}\n.download-item[_ngcontent-%COMP%]   .file-icon[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 0.8s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions[_ngcontent-%COMP%] {\n    gap: 6px;\n  }\n  .btn[_ngcontent-%COMP%] {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */'] });
+  }, dependencies: [CommonModule, NgStyle], styles: ['\n[_nghost-%COMP%] {\n  display: block;\n}\n@keyframes _ngcontent-%COMP%_fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  background: #1a1a2e;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;\n  animation: _ngcontent-%COMP%_fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card[_ngcontent-%COMP%]:hover {\n  transform: translateY(-8px) scale(1.01);\n  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .preview-overlay[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .card-accent-bar[_ngcontent-%COMP%] {\n  height: 5px;\n}\n.card-accent-bar[_ngcontent-%COMP%] {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs[_ngcontent-%COMP%] {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.view-tab[_ngcontent-%COMP%]    + .view-tab[_ngcontent-%COMP%] {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%]:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active[_ngcontent-%COMP%] {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview[_ngcontent-%COMP%] {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview[_ngcontent-%COMP%]   iframe.loaded[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%]   .preview-cta[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader.hidden[_ngcontent-%COMP%] {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code[_ngcontent-%COMP%] {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader[_ngcontent-%COMP%] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre[_ngcontent-%COMP%]   code[_ngcontent-%COMP%] {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  padding: 18px 20px 20px;\n  overflow: hidden;\n}\n.card-tags[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-bottom: 11px;\n}\n.tag[_ngcontent-%COMP%] {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title[_ngcontent-%COMP%] {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 7px;\n  line-height: 1.3;\n}\n.card-description[_ngcontent-%COMP%] {\n  flex: 1;\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  line-height: 1.6;\n  margin: 0 0 18px;\n  display: -webkit-box;\n  -webkit-line-clamp: 4;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn[_ngcontent-%COMP%]   .chevron[_ngcontent-%COMP%] {\n  font-size: 0.9rem;\n  transition: transform 0.2s;\n}\n.btn[_ngcontent-%COMP%]   .chevron.open[_ngcontent-%COMP%] {\n  transform: rotate(180deg);\n}\n.btn.btn-primary[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary[_ngcontent-%COMP%]:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary[_ngcontent-%COMP%]:hover, \n.btn.btn-secondary.active[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit[_ngcontent-%COMP%]:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.download-wrapper[_ngcontent-%COMP%] {\n  position: relative;\n}\n.download-menu[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: calc(100% + 8px);\n  left: 0;\n  background: #1e1e3a;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  overflow: hidden;\n  min-width: 155px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);\n  z-index: 50;\n  animation: _ngcontent-%COMP%_slideUp 0.14s ease;\n}\n@keyframes _ngcontent-%COMP%_slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.download-item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  text-align: left;\n  transition: background 0.14s;\n}\n.download-item[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.07);\n  color: #fff;\n}\n.download-item[_ngcontent-%COMP%]   .file-icon[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 0.8s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions[_ngcontent-%COMP%] {\n    gap: 6px;\n  }\n  .btn[_ngcontent-%COMP%] {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AssignmentCardComponent, [{
@@ -29023,68 +29054,60 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
   <!-- Preview / Code tab switcher -->
   <div class="view-tabs">
     <button class="view-tab" [class.active]="viewMode === 'preview'" (click)="setView('preview')">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
       </svg>
       Preview
     </button>
     <button class="view-tab" [class.active]="viewMode === 'code'" (click)="setView('code')">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
       </svg>
       Code
     </button>
   </div>
 
-  <!-- Live preview thumbnail -->
+  <!-- Live preview -->
   @if (viewMode === 'preview') {
-    <div class="card-preview" (click)="openInNewTab($event)">
-      <div class="preview-loader" [class.hidden]="iframeLoaded">
-        <div class="spinner"></div>
-      </div>
-      <iframe
-        [src]="safePreviewUrl"
-        sandbox="allow-scripts allow-same-origin"
-        scrolling="no"
-        tabindex="-1"
-        (load)="onIframeLoad()"
-        [class.loaded]="iframeLoaded"
-        title="{{ assignment.title }} preview"
-      ></iframe>
-      <div class="preview-overlay">
-        <span class="preview-cta">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-          Open in new tab
-        </span>
-      </div>
+  <div class="card-preview" (click)="openInNewTab($event)">
+    <div class="preview-loader" [class.hidden]="iframeLoaded">
+      <div class="spinner"></div>
     </div>
+    <iframe [src]="safePreviewUrl" (load)="onIframeLoad()" [class.loaded]="iframeLoaded" title="Assignment preview"></iframe>
+    <div class="preview-overlay">
+      <span class="preview-cta">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        Open full page
+      </span>
+    </div>
+  </div>
   }
 
-  <!-- Syntax-highlighted code view -->
+  <!-- Syntax code view -->
   @if (viewMode === 'code') {
-    <div class="card-code">
-      @if (codeLoading) {
-        <div class="code-loader">
-          <div class="spinner"></div>
-          <span>Loading source\u2026</span>
-        </div>
-      } @else {
-        <pre class="code-pre language-markup"><code #codeBlock class="language-markup">{{ codeContent }}</code></pre>
-      }
+  <div class="card-code">
+    @if (codeLoading) {
+    <div class="code-loader">
+      <div class="spinner"></div>
+      <span>Loading source\u2026</span>
     </div>
+    } @else {
+    <pre class="code-pre"><code #codeBlock [class]="'language-' + codeLanguage">{{ codeContent }}</code></pre>
+    }
+  </div>
   }
 
   <!-- Card body -->
   <div class="card-body">
     <div class="card-tags">
       @if (assignment.week) {
-        <span class="tag tag-week">Week {{ assignment.week }}</span>
+      <span class="tag tag-week">Week {{ assignment.week }}</span>
       }
       @for (tag of assignment.tags; track tag) {
-        <span class="tag">{{ tag }}</span>
+      <span class="tag">{{ tag }}</span>
       }
     </div>
 
@@ -29092,49 +29115,53 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
     <p class="card-description">{{ assignment.description }}</p>
 
     <div class="card-actions">
-      @if (assignment.isLocal) {
-        <button class="btn btn-edit" (click)="onEdit($event)" aria-label="Edit assignment">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-          </svg>
-          Edit
-        </button>
-      }
-      <button class="btn btn-primary" (click)="openInNewTab($event)">
+      <!-- Edit -->
+      <button class="btn btn-edit" (click)="onEdit($event)" aria-label="Edit assignment">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+        </svg>
+        Edit
+      </button>
+
+      <!-- Open preview -->
+      <button class="btn btn-primary" (click)="openInNewTab($event)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
           <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
         </svg>
-        Open Preview
+        Open
       </button>
 
+      <!-- Download -->
+      @if (assignment.downloadFiles.length) {
       <div class="download-wrapper">
-        <button class="btn btn-secondary" (click)="toggleDownloadMenu($event)" [class.active]="showDownloadMenu">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <button class="btn btn-secondary" (click)="toggleDownloadMenu($event)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Download
-          <span class="chevron" [class.open]="showDownloadMenu">\u25BE</span>
+          Files
+          <span class="chevron" [class.open]="showDownloadMenu">&#8964;</span>
         </button>
 
         @if (showDownloadMenu) {
-          <div class="download-menu" (click)="$event.stopPropagation()">
-            @for (file of assignment.downloadFiles; track file.name) {
-              <button class="download-item" (click)="downloadFile(file, $event)">
-                <span class="file-icon">{{ getFileIcon(file.name) }}</span>
-                {{ file.name }}
-              </button>
-            }
-          </div>
+        <div class="download-menu">
+          @for (file of assignment.downloadFiles; track file.name) {
+          <button class="download-item" (click)="downloadFile(file, $event)">
+            <span class="file-icon">{{ getFileIcon(file.name) }}</span>
+            {{ file.name }}
+          </button>
+          }
+        </div>
         }
       </div>
+      }
     </div>
   </div>
 
 </div>
-`, styles: ['/* src/app/components/assignment-card/assignment-card.component.scss */\n:host {\n  display: block;\n}\n@keyframes fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card {\n  background: #1a1a2e;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;\n  animation: fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card:hover {\n  transform: translateY(-8px) scale(1.01);\n  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);\n}\n.assignment-card:hover .preview-overlay {\n  opacity: 1;\n}\n.assignment-card:hover .card-accent-bar {\n  height: 5px;\n}\n.card-accent-bar {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab svg {\n  flex-shrink: 0;\n}\n.view-tab + .view-tab {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview iframe {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview iframe.loaded {\n  opacity: 1;\n}\n.card-preview .preview-overlay {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview .preview-overlay .preview-cta {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview .preview-loader {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview .preview-loader.hidden {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre code {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body {\n  padding: 18px 20px 20px;\n}\n.card-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-bottom: 11px;\n}\n.tag {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 7px;\n  line-height: 1.3;\n}\n.card-description {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  line-height: 1.6;\n  margin: 0 0 18px;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.btn {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn .chevron {\n  font-size: 0.9rem;\n  transition: transform 0.2s;\n}\n.btn .chevron.open {\n  transform: rotate(180deg);\n}\n.btn.btn-primary {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary:hover,\n.btn.btn-secondary.active {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.download-wrapper {\n  position: relative;\n}\n.download-menu {\n  position: absolute;\n  bottom: calc(100% + 8px);\n  left: 0;\n  background: #1e1e3a;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  overflow: hidden;\n  min-width: 155px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);\n  z-index: 50;\n  animation: slideUp 0.14s ease;\n}\n@keyframes slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.download-item {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  text-align: left;\n  transition: background 0.14s;\n}\n.download-item:hover {\n  background: rgba(255, 255, 255, 0.07);\n  color: #fff;\n}\n.download-item .file-icon {\n  font-size: 0.95rem;\n}\n.spinner {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: spin 0.8s linear infinite;\n}\n@keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions {\n    gap: 6px;\n  }\n  .btn {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */\n'] }]
+`, styles: ['/* src/app/components/assignment-card/assignment-card.component.scss */\n:host {\n  display: block;\n}\n@keyframes fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  background: #1a1a2e;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;\n  animation: fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card:hover {\n  transform: translateY(-8px) scale(1.01);\n  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);\n}\n.assignment-card:hover .preview-overlay {\n  opacity: 1;\n}\n.assignment-card:hover .card-accent-bar {\n  height: 5px;\n}\n.card-accent-bar {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab svg {\n  flex-shrink: 0;\n}\n.view-tab + .view-tab {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview iframe {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview iframe.loaded {\n  opacity: 1;\n}\n.card-preview .preview-overlay {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview .preview-overlay .preview-cta {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview .preview-loader {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview .preview-loader.hidden {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre code {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  padding: 18px 20px 20px;\n  overflow: hidden;\n}\n.card-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-bottom: 11px;\n}\n.tag {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 7px;\n  line-height: 1.3;\n}\n.card-description {\n  flex: 1;\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  line-height: 1.6;\n  margin: 0 0 18px;\n  display: -webkit-box;\n  -webkit-line-clamp: 4;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.btn {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn .chevron {\n  font-size: 0.9rem;\n  transition: transform 0.2s;\n}\n.btn .chevron.open {\n  transform: rotate(180deg);\n}\n.btn.btn-primary {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary:hover,\n.btn.btn-secondary.active {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.download-wrapper {\n  position: relative;\n}\n.download-menu {\n  position: absolute;\n  bottom: calc(100% + 8px);\n  left: 0;\n  background: #1e1e3a;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  overflow: hidden;\n  min-width: 155px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);\n  z-index: 50;\n  animation: slideUp 0.14s ease;\n}\n@keyframes slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.download-item {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  text-align: left;\n  transition: background 0.14s;\n}\n.download-item:hover {\n  background: rgba(255, 255, 255, 0.07);\n  color: #fff;\n}\n.download-item .file-icon {\n  font-size: 0.95rem;\n}\n.spinner {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: spin 0.8s linear infinite;\n}\n@keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions {\n    gap: 6px;\n  }\n  .btn {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */\n'] }]
   }], () => [{ type: DomSanitizer }, { type: AssignmentService }], { assignment: [{
     type: Input
   }], index: [{
@@ -33783,7 +33810,7 @@ var ReactiveFormsModule = class _ReactiveFormsModule {
 var _forTrack02 = ($index, $item) => $item.value;
 function CreateAssignmentModalComponent_Conditional_38_For_2_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "span", 33);
+    \u0275\u0275elementStart(0, "span", 26);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -33796,7 +33823,7 @@ function CreateAssignmentModalComponent_Conditional_38_For_2_Template(rf, ctx) {
 function CreateAssignmentModalComponent_Conditional_38_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 19);
-    \u0275\u0275repeaterCreate(1, CreateAssignmentModalComponent_Conditional_38_For_2_Template, 2, 1, "span", 33, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(1, CreateAssignmentModalComponent_Conditional_38_For_2_Template, 2, 1, "span", 26, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -33808,7 +33835,7 @@ function CreateAssignmentModalComponent_Conditional_38_Template(rf, ctx) {
 function CreateAssignmentModalComponent_For_44_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 34);
+    \u0275\u0275elementStart(0, "button", 27);
     \u0275\u0275listener("click", function CreateAssignmentModalComponent_For_44_Template_button_click_0_listener() {
       const preset_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext();
@@ -33824,55 +33851,118 @@ function CreateAssignmentModalComponent_For_44_Template(rf, ctx) {
     \u0275\u0275property("title", preset_r4.label);
   }
 }
-function CreateAssignmentModalComponent_Conditional_56_Template(rf, ctx) {
+function CreateAssignmentModalComponent_Conditional_45_Conditional_11_Template(rf, ctx) {
   if (rf & 1) {
-    const _r5 = \u0275\u0275getCurrentView();
+    const _r6 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "textarea", 35);
-    \u0275\u0275twoWayListener("ngModelChange", function CreateAssignmentModalComponent_Conditional_56_Template_textarea_ngModelChange_0_listener($event) {
-      \u0275\u0275restoreView(_r5);
-      const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275twoWayListener("ngModelChange", function CreateAssignmentModalComponent_Conditional_45_Conditional_11_Template_textarea_ngModelChange_0_listener($event) {
+      \u0275\u0275restoreView(_r6);
+      const ctx_r1 = \u0275\u0275nextContext(2);
       \u0275\u0275twoWayBindingSet(ctx_r1.form.html, $event) || (ctx_r1.form.html = $event);
       return \u0275\u0275resetView($event);
     });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
+    const ctx_r1 = \u0275\u0275nextContext(2);
     \u0275\u0275twoWayProperty("ngModel", ctx_r1.form.html);
   }
 }
-function CreateAssignmentModalComponent_Conditional_57_Template(rf, ctx) {
+function CreateAssignmentModalComponent_Conditional_45_Conditional_12_Template(rf, ctx) {
   if (rf & 1) {
-    const _r6 = \u0275\u0275getCurrentView();
+    const _r7 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "textarea", 36);
-    \u0275\u0275twoWayListener("ngModelChange", function CreateAssignmentModalComponent_Conditional_57_Template_textarea_ngModelChange_0_listener($event) {
-      \u0275\u0275restoreView(_r6);
-      const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275twoWayListener("ngModelChange", function CreateAssignmentModalComponent_Conditional_45_Conditional_12_Template_textarea_ngModelChange_0_listener($event) {
+      \u0275\u0275restoreView(_r7);
+      const ctx_r1 = \u0275\u0275nextContext(2);
       \u0275\u0275twoWayBindingSet(ctx_r1.form.css, $event) || (ctx_r1.form.css = $event);
       return \u0275\u0275resetView($event);
     });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
+    const ctx_r1 = \u0275\u0275nextContext(2);
     \u0275\u0275twoWayProperty("ngModel", ctx_r1.form.css);
   }
 }
-function CreateAssignmentModalComponent_Conditional_58_Template(rf, ctx) {
+function CreateAssignmentModalComponent_Conditional_45_Conditional_13_Template(rf, ctx) {
   if (rf & 1) {
-    const _r7 = \u0275\u0275getCurrentView();
+    const _r8 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "textarea", 37);
-    \u0275\u0275twoWayListener("ngModelChange", function CreateAssignmentModalComponent_Conditional_58_Template_textarea_ngModelChange_0_listener($event) {
-      \u0275\u0275restoreView(_r7);
-      const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275twoWayListener("ngModelChange", function CreateAssignmentModalComponent_Conditional_45_Conditional_13_Template_textarea_ngModelChange_0_listener($event) {
+      \u0275\u0275restoreView(_r8);
+      const ctx_r1 = \u0275\u0275nextContext(2);
       \u0275\u0275twoWayBindingSet(ctx_r1.form.js, $event) || (ctx_r1.form.js = $event);
       return \u0275\u0275resetView($event);
     });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
+    const ctx_r1 = \u0275\u0275nextContext(2);
     \u0275\u0275twoWayProperty("ngModel", ctx_r1.form.js);
+  }
+}
+function CreateAssignmentModalComponent_Conditional_45_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r5 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "section", 22)(1, "h3", 10);
+    \u0275\u0275text(2, "\u{1F4BB} Source Code");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 28)(4, "button", 29);
+    \u0275\u0275listener("click", function CreateAssignmentModalComponent_Conditional_45_Template_button_click_4_listener() {
+      \u0275\u0275restoreView(_r5);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.setTab("html"));
+    });
+    \u0275\u0275text(5, " \u{1F310} HTML ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(6, "button", 29);
+    \u0275\u0275listener("click", function CreateAssignmentModalComponent_Conditional_45_Template_button_click_6_listener() {
+      \u0275\u0275restoreView(_r5);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.setTab("css"));
+    });
+    \u0275\u0275text(7, " \u{1F3A8} CSS ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(8, "button", 29);
+    \u0275\u0275listener("click", function CreateAssignmentModalComponent_Conditional_45_Template_button_click_8_listener() {
+      \u0275\u0275restoreView(_r5);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.setTab("js"));
+    });
+    \u0275\u0275text(9, " \u26A1 JavaScript ");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(10, "div", 30);
+    \u0275\u0275conditionalCreate(11, CreateAssignmentModalComponent_Conditional_45_Conditional_11_Template, 1, 1, "textarea", 31);
+    \u0275\u0275conditionalCreate(12, CreateAssignmentModalComponent_Conditional_45_Conditional_12_Template, 1, 1, "textarea", 32);
+    \u0275\u0275conditionalCreate(13, CreateAssignmentModalComponent_Conditional_45_Conditional_13_Template, 1, 1, "textarea", 33);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(14, "p", 34);
+    \u0275\u0275text(15, " \u{1F4A1} Your HTML, CSS, and JS will be combined into a single page when previewed. You don't need ");
+    \u0275\u0275elementStart(16, "code");
+    \u0275\u0275text(17, "<html>");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(18, " or ");
+    \u0275\u0275elementStart(19, "code");
+    \u0275\u0275text(20, "<body>");
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(21, " tags in the HTML tab. ");
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance(4);
+    \u0275\u0275classProp("active", ctx_r1.activeTab() === "html");
+    \u0275\u0275advance(2);
+    \u0275\u0275classProp("active", ctx_r1.activeTab() === "css");
+    \u0275\u0275advance(2);
+    \u0275\u0275classProp("active", ctx_r1.activeTab() === "js");
+    \u0275\u0275advance(3);
+    \u0275\u0275conditional(ctx_r1.activeTab() === "html" ? 11 : -1);
+    \u0275\u0275advance();
+    \u0275\u0275conditional(ctx_r1.activeTab() === "css" ? 12 : -1);
+    \u0275\u0275advance();
+    \u0275\u0275conditional(ctx_r1.activeTab() === "js" ? 13 : -1);
   }
 }
 var COLOR_PRESETS = [
@@ -33966,10 +34056,14 @@ console.log('Assignment loaded!');`
         week: weekNum,
         tags,
         color: this.form.color,
-        sourceCode: { html: this.form.html, css: this.form.css, js: this.form.js },
-        downloadFiles
+        sourceCode: this.assignmentToEdit.isLocal ? { html: this.form.html, css: this.form.css, js: this.form.js } : void 0,
+        downloadFiles: this.assignmentToEdit.isLocal ? downloadFiles : void 0
       };
-      this.assignmentService.update(this.assignmentToEdit.id, changes);
+      if (this.assignmentToEdit.isLocal) {
+        this.assignmentService.update(this.assignmentToEdit.id, changes);
+      } else {
+        this.assignmentService.setOverride(this.assignmentToEdit.id, changes);
+      }
       this.updated.emit(__spreadValues(__spreadValues({}, this.assignmentToEdit), changes));
     } else {
       const newAssignment = {
@@ -33981,7 +34075,11 @@ console.log('Assignment loaded!');`
         previewUrl: "__local__",
         color: this.form.color,
         isLocal: true,
-        sourceCode: { html: this.form.html, css: this.form.css, js: this.form.js },
+        sourceCode: {
+          html: this.form.html,
+          css: this.form.css,
+          js: this.form.js
+        },
         downloadFiles
       };
       this.assignmentService.add(newAssignment);
@@ -33999,7 +34097,7 @@ console.log('Assignment loaded!');`
         return ctx.onEscape();
       }, \u0275\u0275resolveDocument);
     }
-  }, inputs: { assignmentToEdit: "assignmentToEdit" }, outputs: { closed: "closed", created: "created", updated: "updated" }, features: [\u0275\u0275NgOnChangesFeature], decls: 72, vars: 20, consts: [[1, "modal-backdrop", 3, "click"], [1, "modal-box", 3, "click"], [1, "modal-header"], [1, "modal-header-left"], [1, "modal-icon"], [1, "modal-title"], [1, "modal-subtitle"], ["aria-label", "Close", 1, "btn-icon-close", 3, "click"], [1, "modal-body"], [1, "form-section"], [1, "section-title"], [1, "form-row", "two-col"], [1, "field"], [1, "required"], ["type", "text", "placeholder", "e.g. CSS Grid Layout", "maxlength", "80", 3, "ngModelChange", "ngModel"], ["type", "number", "placeholder", "3", "min", "1", "max", "52", 3, "ngModelChange", "ngModel"], ["type", "text", "placeholder", "Short sentence about what this assignment demonstrates.", "maxlength", "200", 3, "ngModelChange", "ngModel"], [1, "hint"], ["type", "text", "placeholder", "HTML, CSS, JavaScript", 3, "ngModelChange", "ngModel"], [1, "tag-preview"], [1, "color-presets"], [1, "color-swatch", 3, "active", "background", "title"], [1, "form-section", "code-section"], [1, "tab-bar"], [1, "tab-btn", 3, "click"], [1, "code-editor"], ["spellcheck", "false", "placeholder", "<!-- Your HTML body content -->", 1, "code-textarea", 3, "ngModel"], ["spellcheck", "false", "placeholder", "/* Your CSS styles */", 1, "code-textarea", 3, "ngModel"], ["spellcheck", "false", "placeholder", "// Your JavaScript code", 1, "code-textarea", 3, "ngModel"], [1, "code-hint"], [1, "modal-footer"], [1, "btn", "btn-ghost", 3, "click"], [1, "btn", "btn-save", 3, "click", "disabled"], [1, "tag-chip"], [1, "color-swatch", 3, "click", "title"], ["spellcheck", "false", "placeholder", "<!-- Your HTML body content -->", 1, "code-textarea", 3, "ngModelChange", "ngModel"], ["spellcheck", "false", "placeholder", "/* Your CSS styles */", 1, "code-textarea", 3, "ngModelChange", "ngModel"], ["spellcheck", "false", "placeholder", "// Your JavaScript code", 1, "code-textarea", 3, "ngModelChange", "ngModel"]], template: function CreateAssignmentModalComponent_Template(rf, ctx) {
+  }, inputs: { assignmentToEdit: "assignmentToEdit" }, outputs: { closed: "closed", created: "created", updated: "updated" }, features: [\u0275\u0275NgOnChangesFeature], decls: 51, vars: 12, consts: [[1, "modal-backdrop", 3, "click"], [1, "modal-box", 3, "click"], [1, "modal-header"], [1, "modal-header-left"], [1, "modal-icon"], [1, "modal-title"], [1, "modal-subtitle"], ["aria-label", "Close", 1, "btn-icon-close", 3, "click"], [1, "modal-body"], [1, "form-section"], [1, "section-title"], [1, "form-row", "two-col"], [1, "field"], [1, "required"], ["type", "text", "placeholder", "e.g. CSS Grid Layout", "maxlength", "80", 3, "ngModelChange", "ngModel"], ["type", "number", "placeholder", "3", "min", "1", "max", "52", 3, "ngModelChange", "ngModel"], ["type", "text", "placeholder", "Short sentence about what this assignment demonstrates.", "maxlength", "200", 3, "ngModelChange", "ngModel"], [1, "hint"], ["type", "text", "placeholder", "HTML, CSS, JavaScript", 3, "ngModelChange", "ngModel"], [1, "tag-preview"], [1, "color-presets"], [1, "color-swatch", 3, "active", "background", "title"], [1, "form-section", "code-section"], [1, "modal-footer"], [1, "btn", "btn-ghost", 3, "click"], [1, "btn", "btn-save", 3, "click", "disabled"], [1, "tag-chip"], [1, "color-swatch", 3, "click", "title"], [1, "tab-bar"], [1, "tab-btn", 3, "click"], [1, "code-editor"], ["spellcheck", "false", "placeholder", "<!-- Your HTML body content -->", 1, "code-textarea", 3, "ngModel"], ["spellcheck", "false", "placeholder", "/* Your CSS styles */", 1, "code-textarea", 3, "ngModel"], ["spellcheck", "false", "placeholder", "// Your JavaScript code", 1, "code-textarea", 3, "ngModel"], [1, "code-hint"], ["spellcheck", "false", "placeholder", "<!-- Your HTML body content -->", 1, "code-textarea", 3, "ngModelChange", "ngModel"], ["spellcheck", "false", "placeholder", "/* Your CSS styles */", 1, "code-textarea", 3, "ngModelChange", "ngModel"], ["spellcheck", "false", "placeholder", "// Your JavaScript code", 1, "code-textarea", 3, "ngModelChange", "ngModel"]], template: function CreateAssignmentModalComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0);
       \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_div_click_0_listener() {
@@ -34075,54 +34173,19 @@ console.log('Assignment loaded!');`
       \u0275\u0275elementStart(42, "div", 20);
       \u0275\u0275repeaterCreate(43, CreateAssignmentModalComponent_For_44_Template, 1, 5, "button", 21, _forTrack02);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(45, "section", 22)(46, "h3", 10);
-      \u0275\u0275text(47, "\u{1F4BB} Source Code");
+      \u0275\u0275conditionalCreate(45, CreateAssignmentModalComponent_Conditional_45_Template, 22, 9, "section", 22);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(48, "div", 23)(49, "button", 24);
-      \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_button_click_49_listener() {
-        return ctx.setTab("html");
-      });
-      \u0275\u0275text(50, " \u{1F310} HTML ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(51, "button", 24);
-      \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_button_click_51_listener() {
-        return ctx.setTab("css");
-      });
-      \u0275\u0275text(52, " \u{1F3A8} CSS ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(53, "button", 24);
-      \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_button_click_53_listener() {
-        return ctx.setTab("js");
-      });
-      \u0275\u0275text(54, " \u26A1 JavaScript ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(55, "div", 25);
-      \u0275\u0275conditionalCreate(56, CreateAssignmentModalComponent_Conditional_56_Template, 1, 1, "textarea", 26);
-      \u0275\u0275conditionalCreate(57, CreateAssignmentModalComponent_Conditional_57_Template, 1, 1, "textarea", 27);
-      \u0275\u0275conditionalCreate(58, CreateAssignmentModalComponent_Conditional_58_Template, 1, 1, "textarea", 28);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(59, "p", 29);
-      \u0275\u0275text(60, " \u{1F4A1} Your HTML, CSS, and JS will be combined into a single page when previewed. You don't need ");
-      \u0275\u0275elementStart(61, "code");
-      \u0275\u0275text(62, "<html>");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(63, " or ");
-      \u0275\u0275elementStart(64, "code");
-      \u0275\u0275text(65, "<body>");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(66, " tags in the HTML tab. ");
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(67, "div", 30)(68, "button", 31);
-      \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_button_click_68_listener() {
+      \u0275\u0275elementStart(46, "div", 23)(47, "button", 24);
+      \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_button_click_47_listener() {
         return ctx.close();
       });
-      \u0275\u0275text(69, "Cancel");
+      \u0275\u0275text(48, "Cancel");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(70, "button", 32);
-      \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_button_click_70_listener() {
+      \u0275\u0275elementStart(49, "button", 25);
+      \u0275\u0275listener("click", function CreateAssignmentModalComponent_Template_button_click_49_listener() {
         return ctx.save();
       });
-      \u0275\u0275text(71);
+      \u0275\u0275text(50);
       \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
@@ -34142,19 +34205,9 @@ console.log('Assignment loaded!');`
       \u0275\u0275conditional(ctx.parsedTags.length ? 38 : -1);
       \u0275\u0275advance(5);
       \u0275\u0275repeater(ctx.colorPresets);
-      \u0275\u0275advance(6);
-      \u0275\u0275classProp("active", ctx.activeTab() === "html");
       \u0275\u0275advance(2);
-      \u0275\u0275classProp("active", ctx.activeTab() === "css");
-      \u0275\u0275advance(2);
-      \u0275\u0275classProp("active", ctx.activeTab() === "js");
-      \u0275\u0275advance(3);
-      \u0275\u0275conditional(ctx.activeTab() === "html" ? 56 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.activeTab() === "css" ? 57 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.activeTab() === "js" ? 58 : -1);
-      \u0275\u0275advance(12);
+      \u0275\u0275conditional(!ctx.assignmentToEdit || ctx.assignmentToEdit.isLocal ? 45 : -1);
+      \u0275\u0275advance(4);
       \u0275\u0275styleProp("background", "linear-gradient(135deg," + ctx.form.color + ")");
       \u0275\u0275property("disabled", !ctx.isValid || ctx.saving);
       \u0275\u0275advance();
@@ -34165,173 +34218,124 @@ console.log('Assignment loaded!');`
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CreateAssignmentModalComponent, [{
     type: Component,
-    args: [{ selector: "app-create-assignment-modal", standalone: true, imports: [CommonModule, FormsModule], template: `<div class="modal-backdrop" (click)="close()">
-  <div class="modal-box" (click)="$event.stopPropagation()">
-
-    <!-- Header -->
-    <div class="modal-header">
-      <div class="modal-header-left">
-        <span class="modal-icon">\u2728</span>
-        <div>
-          <h2 class="modal-title">{{ assignmentToEdit ? 'Edit Assignment' : 'New Assignment' }}</h2>
-          <p class="modal-subtitle">{{ assignmentToEdit ? 'Update your code \u2014 changes are saved locally.' : 'Paste your code below \u2014 it will be saved locally in your browser.' }}</p>
-        </div>
-      </div>
-      <button class="btn-icon-close" (click)="close()" aria-label="Close">\u2715</button>
-    </div>
-
-    <!-- Body -->
-    <div class="modal-body">
-
-      <!-- \u2500\u2500 Section 1: Basic info \u2500\u2500 -->
-      <section class="form-section">
-        <h3 class="section-title">\u{1F4CB} Details</h3>
-        <div class="form-row two-col">
-          <div class="field">
-            <label>Title <span class="required">*</span></label>
-            <input
-              type="text"
-              [(ngModel)]="form.title"
-              placeholder="e.g. CSS Grid Layout"
-              maxlength="80"
-            />
-          </div>
-          <div class="field">
-            <label>Week</label>
-            <input
-              type="number"
-              [(ngModel)]="form.week"
-              placeholder="3"
-              min="1"
-              max="52"
-            />
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Description</label>
-          <input
-            type="text"
-            [(ngModel)]="form.description"
-            placeholder="Short sentence about what this assignment demonstrates."
-            maxlength="200"
-          />
-        </div>
-
-        <div class="field">
-          <label>Tags <span class="hint">(comma separated)</span></label>
-          <input
-            type="text"
-            [(ngModel)]="form.tagsRaw"
-            placeholder="HTML, CSS, JavaScript"
-          />
-          @if (parsedTags.length) {
-            <div class="tag-preview">
-              @for (tag of parsedTags; track tag) {
-                <span class="tag-chip">{{ tag }}</span>
-              }
-            </div>
-          }
-        </div>
-      </section>
-
-      <!-- \u2500\u2500 Section 2: Color \u2500\u2500 -->
-      <section class="form-section">
-        <h3 class="section-title">\u{1F3A8} Card Color</h3>
-        <div class="color-presets">
-          @for (preset of colorPresets; track preset.value) {
-            <button
-              class="color-swatch"
-              [class.active]="form.color === preset.value"
-              [style.background]="'linear-gradient(135deg,' + preset.value + ')'"
-              [title]="preset.label"
-              (click)="setColor(preset.value)"
-            ></button>
-          }
-        </div>
-      </section>
-
-      <!-- \u2500\u2500 Section 3: Code editor \u2500\u2500 -->
-      <section class="form-section code-section">
-        <h3 class="section-title">\u{1F4BB} Source Code</h3>
-
-        <!-- Tab bar -->
-        <div class="tab-bar">
-          <button
-            class="tab-btn"
-            [class.active]="activeTab() === 'html'"
-            (click)="setTab('html')"
-          >
-            \u{1F310} HTML
-          </button>
-          <button
-            class="tab-btn"
-            [class.active]="activeTab() === 'css'"
-            (click)="setTab('css')"
-          >
-            \u{1F3A8} CSS
-          </button>
-          <button
-            class="tab-btn"
-            [class.active]="activeTab() === 'js'"
-            (click)="setTab('js')"
-          >
-            \u26A1 JavaScript
-          </button>
-        </div>
-
-        <!-- Code textareas -->
-        <div class="code-editor">
-          @if (activeTab() === 'html') {
-            <textarea
-              [(ngModel)]="form.html"
-              spellcheck="false"
-              placeholder="<!-- Your HTML body content -->"
-              class="code-textarea"
-            ></textarea>
-          }
-          @if (activeTab() === 'css') {
-            <textarea
-              [(ngModel)]="form.css"
-              spellcheck="false"
-              placeholder="/* Your CSS styles */"
-              class="code-textarea"
-            ></textarea>
-          }
-          @if (activeTab() === 'js') {
-            <textarea
-              [(ngModel)]="form.js"
-              spellcheck="false"
-              placeholder="// Your JavaScript code"
-              class="code-textarea"
-            ></textarea>
-          }
-        </div>
-
-        <p class="code-hint">
-          \u{1F4A1} Your HTML, CSS, and JS will be combined into a single page when previewed.
-          You don't need <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> tags in the HTML tab.
-        </p>
-      </section>
-
-    </div>
-
-    <!-- Footer -->
-    <div class="modal-footer">
-      <button class="btn btn-ghost" (click)="close()">Cancel</button>
-      <button
-        class="btn btn-save"
-        [disabled]="!isValid || saving"
-        (click)="save()"
-        [style.background]="'linear-gradient(135deg,' + form.color + ')'"
-      >
-        {{ saving ? 'Saving\u2026' : (assignmentToEdit ? '\u2713 Update Assignment' : '\u2713 Save Assignment') }}
-      </button>
-    </div>
-
-  </div>
-</div>
-`, styles: ['/* src/app/components/create-assignment-modal/create-assignment-modal.component.scss */\n.modal-backdrop {\n  position: fixed;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.82);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  z-index: 2000;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  animation: fadeIn 0.18s ease;\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n.modal-box {\n  background: #13132a;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 24px;\n  width: 100%;\n  max-width: 720px;\n  max-height: 92vh;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);\n  animation: scaleIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n@keyframes scaleIn {\n  from {\n    opacity: 0;\n    transform: scale(0.94) translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1) translateY(0);\n  }\n}\n.modal-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 20px 24px;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.07);\n  flex-shrink: 0;\n  background:\n    linear-gradient(\n      180deg,\n      rgba(240, 147, 251, 0.06) 0%,\n      transparent 100%);\n}\n.modal-header-left {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n}\n.modal-icon {\n  font-size: 1.8rem;\n  line-height: 1;\n}\n.modal-title {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 2px;\n}\n.modal-subtitle {\n  font-size: 0.8rem;\n  color: rgba(255, 255, 255, 0.45);\n  margin: 0;\n}\n.btn-icon-close {\n  width: 36px;\n  height: 36px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 0.95rem;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  transition: all 0.2s;\n}\n.btn-icon-close:hover {\n  background: rgba(255, 73, 73, 0.2);\n  border-color: rgba(255, 73, 73, 0.4);\n  color: #ff6b6b;\n}\n.modal-body {\n  flex: 1;\n  overflow-y: auto;\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 28px;\n}\n.modal-body::-webkit-scrollbar {\n  width: 6px;\n}\n.modal-body::-webkit-scrollbar-track {\n  background: transparent;\n}\n.modal-body::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.form-section {\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n}\n.section-title {\n  font-size: 0.82rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  color: rgba(255, 255, 255, 0.4);\n  margin: 0;\n}\n.form-row {\n  display: flex;\n  gap: 14px;\n}\n.form-row.two-col .field {\n  flex: 1;\n}\n.field {\n  display: flex;\n  flex-direction: column;\n  gap: 7px;\n}\n.field label {\n  font-size: 0.82rem;\n  font-weight: 600;\n  color: rgba(255, 255, 255, 0.7);\n}\n.field label .required {\n  color: #f5576c;\n  margin-left: 2px;\n}\n.field label .hint {\n  font-weight: 400;\n  color: rgba(255, 255, 255, 0.35);\n}\n.field input[type=text],\n.field input[type=number] {\n  padding: 10px 14px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 10px;\n  color: #fff;\n  font-size: 0.9rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.field input[type=text]::placeholder,\n.field input[type=number]::placeholder {\n  color: rgba(255, 255, 255, 0.25);\n}\n.field input[type=text]:focus,\n.field input[type=number]:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.08);\n}\n.field input[type=number] {\n  width: 100%;\n  -moz-appearance: textfield;\n}\n.field input[type=number]::-webkit-outer-spin-button,\n.field input[type=number]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n}\n.tag-preview {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-top: 2px;\n}\n.tag-chip {\n  font-size: 0.72rem;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border: 1px solid rgba(240, 147, 251, 0.3);\n}\n.color-presets {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n.color-swatch {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  border: 3px solid transparent;\n  cursor: pointer;\n  transition:\n    transform 0.15s,\n    border-color 0.15s,\n    box-shadow 0.15s;\n  outline: none;\n}\n.color-swatch:hover {\n  transform: scale(1.12);\n}\n.color-swatch.active {\n  border-color: #fff;\n  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);\n  transform: scale(1.15);\n}\n.code-section {\n  gap: 0;\n}\n.tab-bar {\n  display: flex;\n  gap: 0;\n  background: rgba(255, 255, 255, 0.04);\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 12px 12px 0 0;\n  overflow: hidden;\n  border-bottom: none;\n}\n.tab-btn {\n  flex: 1;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.82rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.15s;\n  letter-spacing: 0.02em;\n}\n.tab-btn:hover {\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.75);\n}\n.tab-btn.active {\n  background: #1e1e40;\n  color: #fff;\n  box-shadow: inset 0 -2px 0 #f093fb;\n}\n.tab-btn + .tab-btn {\n  border-left: 1px solid rgba(255, 255, 255, 0.07);\n}\n.code-editor {\n  background: #0d0d1e;\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 0 0 12px 12px;\n  overflow: hidden;\n}\n.code-textarea {\n  width: 100%;\n  height: 220px;\n  padding: 16px;\n  background: transparent;\n  border: none;\n  color: #e2e8f0;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.82rem;\n  line-height: 1.65;\n  resize: vertical;\n  outline: none;\n  caret-color: #f093fb;\n  tab-size: 2;\n}\n.code-textarea::placeholder {\n  color: rgba(255, 255, 255, 0.2);\n}\n.code-hint {\n  font-size: 0.78rem;\n  color: rgba(255, 255, 255, 0.35);\n  line-height: 1.6;\n  margin-top: 10px;\n}\n.code-hint code {\n  background: rgba(255, 255, 255, 0.08);\n  padding: 1px 6px;\n  border-radius: 4px;\n  font-family: "Fira Code", monospace;\n  font-size: 0.85em;\n  color: #f093fb;\n}\n.modal-footer {\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  gap: 10px;\n  padding: 16px 24px;\n  border-top: 1px solid rgba(255, 255, 255, 0.07);\n  flex-shrink: 0;\n  background: rgba(0, 0, 0, 0.2);\n}\n.btn {\n  padding: 10px 22px;\n  border-radius: 12px;\n  font-size: 0.88rem;\n  font-weight: 700;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n}\n.btn.btn-ghost {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.btn.btn-ghost:hover {\n  background: rgba(255, 255, 255, 0.12);\n  color: #fff;\n}\n.btn.btn-save {\n  color: #fff;\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);\n  min-width: 160px;\n}\n.btn.btn-save:hover:not(:disabled) {\n  filter: brightness(1.12);\n  transform: translateY(-1px);\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);\n}\n.btn.btn-save:disabled {\n  opacity: 0.45;\n  cursor: not-allowed;\n  filter: none;\n  transform: none;\n}\n/*# sourceMappingURL=create-assignment-modal.component.css.map */\n'] }]
+    args: [{ selector: "app-create-assignment-modal", standalone: true, imports: [CommonModule, FormsModule], template: `<div class="modal-backdrop" (click)="close()">\r
+  <div class="modal-box" (click)="$event.stopPropagation()">\r
+\r
+    <!-- Header -->\r
+    <div class="modal-header">\r
+      <div class="modal-header-left">\r
+        <span class="modal-icon">\u2728</span>\r
+        <div>\r
+          <h2 class="modal-title">{{ assignmentToEdit ? 'Edit Assignment' : 'New Assignment' }}</h2>\r
+          <p class="modal-subtitle">{{ assignmentToEdit ? 'Update your code \u2014 changes are saved locally.' : 'Paste your\r
+            code below \u2014 it will be saved locally in your browser.' }}</p>\r
+        </div>\r
+      </div>\r
+      <button class="btn-icon-close" (click)="close()" aria-label="Close">\u2715</button>\r
+    </div>\r
+\r
+    <!-- Body -->\r
+    <div class="modal-body">\r
+\r
+      <!-- \u2500\u2500 Section 1: Basic info \u2500\u2500 -->\r
+      <section class="form-section">\r
+        <h3 class="section-title">\u{1F4CB} Details</h3>\r
+        <div class="form-row two-col">\r
+          <div class="field">\r
+            <label>Title <span class="required">*</span></label>\r
+            <input type="text" [(ngModel)]="form.title" placeholder="e.g. CSS Grid Layout" maxlength="80" />\r
+          </div>\r
+          <div class="field">\r
+            <label>Week</label>\r
+            <input type="number" [(ngModel)]="form.week" placeholder="3" min="1" max="52" />\r
+          </div>\r
+        </div>\r
+\r
+        <div class="field">\r
+          <label>Description</label>\r
+          <input type="text" [(ngModel)]="form.description"\r
+            placeholder="Short sentence about what this assignment demonstrates." maxlength="200" />\r
+        </div>\r
+\r
+        <div class="field">\r
+          <label>Tags <span class="hint">(comma separated)</span></label>\r
+          <input type="text" [(ngModel)]="form.tagsRaw" placeholder="HTML, CSS, JavaScript" />\r
+          @if (parsedTags.length) {\r
+          <div class="tag-preview">\r
+            @for (tag of parsedTags; track tag) {\r
+            <span class="tag-chip">{{ tag }}</span>\r
+            }\r
+          </div>\r
+          }\r
+        </div>\r
+      </section>\r
+\r
+      <!-- \u2500\u2500 Section 2: Color \u2500\u2500 -->\r
+      <section class="form-section">\r
+        <h3 class="section-title">\u{1F3A8} Card Color</h3>\r
+        <div class="color-presets">\r
+          @for (preset of colorPresets; track preset.value) {\r
+          <button class="color-swatch" [class.active]="form.color === preset.value"\r
+            [style.background]="'linear-gradient(135deg,' + preset.value + ')'" [title]="preset.label"\r
+            (click)="setColor(preset.value)"></button>\r
+          }\r
+        </div>\r
+      </section>\r
+\r
+      <!-- \u2500\u2500 Section 3: Code editor \u2500\u2500 -->\r
+      @if (!assignmentToEdit || assignmentToEdit.isLocal) {\r
+      <section class="form-section code-section">\r
+        <h3 class="section-title">\u{1F4BB} Source Code</h3>\r
+\r
+        <!-- Tab bar -->\r
+        <div class="tab-bar">\r
+          <button class="tab-btn" [class.active]="activeTab() === 'html'" (click)="setTab('html')">\r
+            \u{1F310} HTML\r
+          </button>\r
+          <button class="tab-btn" [class.active]="activeTab() === 'css'" (click)="setTab('css')">\r
+            \u{1F3A8} CSS\r
+          </button>\r
+          <button class="tab-btn" [class.active]="activeTab() === 'js'" (click)="setTab('js')">\r
+            \u26A1 JavaScript\r
+          </button>\r
+        </div>\r
+\r
+        <!-- Code textareas -->\r
+        <div class="code-editor">\r
+          @if (activeTab() === 'html') {\r
+          <textarea [(ngModel)]="form.html" spellcheck="false" placeholder="<!-- Your HTML body content -->"\r
+            class="code-textarea"></textarea>\r
+          }\r
+          @if (activeTab() === 'css') {\r
+          <textarea [(ngModel)]="form.css" spellcheck="false" placeholder="/* Your CSS styles */"\r
+            class="code-textarea"></textarea>\r
+          }\r
+          @if (activeTab() === 'js') {\r
+          <textarea [(ngModel)]="form.js" spellcheck="false" placeholder="// Your JavaScript code"\r
+            class="code-textarea"></textarea>\r
+          }\r
+        </div>\r
+\r
+        <p class="code-hint">\r
+          \u{1F4A1} Your HTML, CSS, and JS will be combined into a single page when previewed.\r
+          You don't need <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> tags in the HTML tab.\r
+        </p>\r
+      </section>\r
+      }\r
+\r
+    </div>\r
+\r
+    <!-- Footer -->\r
+    <div class="modal-footer">\r
+      <button class="btn btn-ghost" (click)="close()">Cancel</button>\r
+      <button class="btn btn-save" [disabled]="!isValid || saving" (click)="save()"\r
+        [style.background]="'linear-gradient(135deg,' + form.color + ')'">\r
+        {{ saving ? 'Saving\u2026' : (assignmentToEdit ? '\u2713 Update Assignment' : '\u2713 Save Assignment') }}\r
+      </button>\r
+    </div>\r
+\r
+  </div>\r
+</div>`, styles: ['/* src/app/components/create-assignment-modal/create-assignment-modal.component.scss */\n.modal-backdrop {\n  position: fixed;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.82);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  z-index: 2000;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n  animation: fadeIn 0.18s ease;\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n.modal-box {\n  background: #13132a;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 24px;\n  width: 100%;\n  max-width: 720px;\n  max-height: 92vh;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);\n  animation: scaleIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n@keyframes scaleIn {\n  from {\n    opacity: 0;\n    transform: scale(0.94) translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: scale(1) translateY(0);\n  }\n}\n.modal-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 20px 24px;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.07);\n  flex-shrink: 0;\n  background:\n    linear-gradient(\n      180deg,\n      rgba(240, 147, 251, 0.06) 0%,\n      transparent 100%);\n}\n.modal-header-left {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n}\n.modal-icon {\n  font-size: 1.8rem;\n  line-height: 1;\n}\n.modal-title {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 2px;\n}\n.modal-subtitle {\n  font-size: 0.8rem;\n  color: rgba(255, 255, 255, 0.45);\n  margin: 0;\n}\n.btn-icon-close {\n  width: 36px;\n  height: 36px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 0.95rem;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  transition: all 0.2s;\n}\n.btn-icon-close:hover {\n  background: rgba(255, 73, 73, 0.2);\n  border-color: rgba(255, 73, 73, 0.4);\n  color: #ff6b6b;\n}\n.modal-body {\n  flex: 1;\n  overflow-y: auto;\n  padding: 24px;\n  display: flex;\n  flex-direction: column;\n  gap: 28px;\n}\n.modal-body::-webkit-scrollbar {\n  width: 6px;\n}\n.modal-body::-webkit-scrollbar-track {\n  background: transparent;\n}\n.modal-body::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.form-section {\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n}\n.section-title {\n  font-size: 0.82rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  color: rgba(255, 255, 255, 0.4);\n  margin: 0;\n}\n.form-row {\n  display: flex;\n  gap: 14px;\n}\n.form-row.two-col .field {\n  flex: 1;\n}\n.field {\n  display: flex;\n  flex-direction: column;\n  gap: 7px;\n}\n.field label {\n  font-size: 0.82rem;\n  font-weight: 600;\n  color: rgba(255, 255, 255, 0.7);\n}\n.field label .required {\n  color: #f5576c;\n  margin-left: 2px;\n}\n.field label .hint {\n  font-weight: 400;\n  color: rgba(255, 255, 255, 0.35);\n}\n.field input[type=text],\n.field input[type=number] {\n  padding: 10px 14px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 10px;\n  color: #fff;\n  font-size: 0.9rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.field input[type=text]::placeholder,\n.field input[type=number]::placeholder {\n  color: rgba(255, 255, 255, 0.25);\n}\n.field input[type=text]:focus,\n.field input[type=number]:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.08);\n}\n.field input[type=number] {\n  width: 100%;\n  -moz-appearance: textfield;\n}\n.field input[type=number]::-webkit-outer-spin-button,\n.field input[type=number]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n}\n.tag-preview {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-top: 2px;\n}\n.tag-chip {\n  font-size: 0.72rem;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border: 1px solid rgba(240, 147, 251, 0.3);\n}\n.color-presets {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n.color-swatch {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  border: 3px solid transparent;\n  cursor: pointer;\n  transition:\n    transform 0.15s,\n    border-color 0.15s,\n    box-shadow 0.15s;\n  outline: none;\n}\n.color-swatch:hover {\n  transform: scale(1.12);\n}\n.color-swatch.active {\n  border-color: #fff;\n  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);\n  transform: scale(1.15);\n}\n.code-section {\n  gap: 0;\n}\n.tab-bar {\n  display: flex;\n  gap: 0;\n  background: rgba(255, 255, 255, 0.04);\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 12px 12px 0 0;\n  overflow: hidden;\n  border-bottom: none;\n}\n.tab-btn {\n  flex: 1;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.82rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.15s;\n  letter-spacing: 0.02em;\n}\n.tab-btn:hover {\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.75);\n}\n.tab-btn.active {\n  background: #1e1e40;\n  color: #fff;\n  box-shadow: inset 0 -2px 0 #f093fb;\n}\n.tab-btn + .tab-btn {\n  border-left: 1px solid rgba(255, 255, 255, 0.07);\n}\n.code-editor {\n  background: #0d0d1e;\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 0 0 12px 12px;\n  overflow: hidden;\n}\n.code-textarea {\n  width: 100%;\n  height: 220px;\n  padding: 16px;\n  background: transparent;\n  border: none;\n  color: #e2e8f0;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.82rem;\n  line-height: 1.65;\n  resize: vertical;\n  outline: none;\n  caret-color: #f093fb;\n  tab-size: 2;\n}\n.code-textarea::placeholder {\n  color: rgba(255, 255, 255, 0.2);\n}\n.code-hint {\n  font-size: 0.78rem;\n  color: rgba(255, 255, 255, 0.35);\n  line-height: 1.6;\n  margin-top: 10px;\n}\n.code-hint code {\n  background: rgba(255, 255, 255, 0.08);\n  padding: 1px 6px;\n  border-radius: 4px;\n  font-family: "Fira Code", monospace;\n  font-size: 0.85em;\n  color: #f093fb;\n}\n.modal-footer {\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  gap: 10px;\n  padding: 16px 24px;\n  border-top: 1px solid rgba(255, 255, 255, 0.07);\n  flex-shrink: 0;\n  background: rgba(0, 0, 0, 0.2);\n}\n.btn {\n  padding: 10px 22px;\n  border-radius: 12px;\n  font-size: 0.88rem;\n  font-weight: 700;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n}\n.btn.btn-ghost {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.btn.btn-ghost:hover {\n  background: rgba(255, 255, 255, 0.12);\n  color: #fff;\n}\n.btn.btn-save {\n  color: #fff;\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);\n  min-width: 160px;\n}\n.btn.btn-save:hover:not(:disabled) {\n  filter: brightness(1.12);\n  transform: translateY(-1px);\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);\n}\n.btn.btn-save:disabled {\n  opacity: 0.45;\n  cursor: not-allowed;\n  filter: none;\n  transform: none;\n}\n/*# sourceMappingURL=create-assignment-modal.component.css.map */\n'] }]
   }], () => [{ type: AssignmentService }], { assignmentToEdit: [{
     type: Input
   }], closed: [{
@@ -34350,11 +34354,12 @@ console.log('Assignment loaded!');`
 })();
 
 // src/app/components/assignment-grid/assignment-grid.component.ts
-var _forTrack03 = ($index, $item) => $item.id;
+var _forTrack03 = ($index, $item) => $item.key;
+var _forTrack1 = ($index, $item) => $item.id;
 function AssignmentGridComponent_Conditional_12_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 17);
+    \u0275\u0275elementStart(0, "button", 13);
     \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_12_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -34364,121 +34369,87 @@ function AssignmentGridComponent_Conditional_12_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-function AssignmentGridComponent_For_15_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_13_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 18);
-    \u0275\u0275listener("click", function AssignmentGridComponent_For_15_Template_button_click_0_listener() {
-      const tag_r4 = \u0275\u0275restoreView(_r3).$implicit;
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.toggleTag(tag_r4));
-    });
-    \u0275\u0275text(1);
-    \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    const tag_r4 = ctx.$implicit;
-    const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275classProp("active", ctx_r1.selectedTags().has(tag_r4));
-    \u0275\u0275advance();
-    \u0275\u0275textInterpolate(tag_r4);
-  }
-}
-function AssignmentGridComponent_Conditional_16_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 19);
-    \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_16_Template_button_click_0_listener() {
-      \u0275\u0275restoreView(_r5);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.clearFilters());
-    });
-    \u0275\u0275text(1, "Clear all");
-    \u0275\u0275elementEnd();
-  }
-}
-function AssignmentGridComponent_Conditional_17_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r6 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 14)(1, "div", 20);
+    \u0275\u0275elementStart(0, "div", 11)(1, "div", 14);
     \u0275\u0275text(2, "\u{1F50D}");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "h3");
     \u0275\u0275text(4, "No matches");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "p");
-    \u0275\u0275text(6, "Try a different search term or tag filter.");
+    \u0275\u0275text(6, "Try a different search term.");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "button", 21);
-    \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_17_Template_button_click_7_listener() {
-      \u0275\u0275restoreView(_r6);
+    \u0275\u0275elementStart(7, "button", 15);
+    \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_13_Template_button_click_7_listener() {
+      \u0275\u0275restoreView(_r3);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.clearFilters());
+      return \u0275\u0275resetView(ctx_r1.searchQuery.set(""));
     });
-    \u0275\u0275text(8, "Clear filters");
+    \u0275\u0275text(8, "Clear search");
     \u0275\u0275elementEnd()();
   }
 }
-function AssignmentGridComponent_Conditional_18_For_2_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_14_For_1_For_5_Template(rf, ctx) {
   if (rf & 1) {
-    const _r8 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-assignment-card", 30);
-    \u0275\u0275listener("editRequested", function AssignmentGridComponent_Conditional_18_For_2_Template_app_assignment_card_editRequested_0_listener($event) {
-      \u0275\u0275restoreView(_r8);
-      const ctx_r1 = \u0275\u0275nextContext(2);
+    const _r4 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-assignment-card", 20);
+    \u0275\u0275listener("editRequested", function AssignmentGridComponent_Conditional_14_For_1_For_5_Template_app_assignment_card_editRequested_0_listener($event) {
+      \u0275\u0275restoreView(_r4);
+      const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.onEditRequested($event));
     });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const assignment_r9 = ctx.$implicit;
-    const \u0275$index_55_r10 = ctx.$index;
-    \u0275\u0275property("assignment", assignment_r9)("index", \u0275$index_55_r10);
+    const assignment_r5 = ctx.$implicit;
+    const \u0275$index_51_r6 = ctx.$index;
+    \u0275\u0275property("assignment", assignment_r5)("index", \u0275$index_51_r6);
   }
 }
-function AssignmentGridComponent_Conditional_18_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_14_For_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r7 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 15);
-    \u0275\u0275repeaterCreate(1, AssignmentGridComponent_Conditional_18_For_2_Template, 1, 2, "app-assignment-card", 22, _forTrack03);
-    \u0275\u0275elementStart(3, "div", 23);
-    \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_18_Template_div_click_3_listener() {
-      \u0275\u0275restoreView(_r7);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.showCreateModal.set(true));
-    });
-    \u0275\u0275elementStart(4, "div", 24)(5, "div", 25);
-    \u0275\u0275namespaceSVG();
-    \u0275\u0275elementStart(6, "svg", 26);
-    \u0275\u0275element(7, "line", 27)(8, "line", 28);
+    \u0275\u0275elementStart(0, "div", 16)(1, "h3", 17);
+    \u0275\u0275text(2);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 18);
+    \u0275\u0275repeaterCreate(4, AssignmentGridComponent_Conditional_14_For_1_For_5_Template, 1, 2, "app-assignment-card", 19, _forTrack1);
     \u0275\u0275elementEnd()();
-    \u0275\u0275namespaceHTML();
-    \u0275\u0275elementStart(9, "span", 29);
-    \u0275\u0275text(10, "Add assignment");
-    \u0275\u0275elementEnd()()()();
+  }
+  if (rf & 2) {
+    const section_r7 = ctx.$implicit;
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(section_r7.label);
+    \u0275\u0275advance(2);
+    \u0275\u0275repeater(section_r7.assignments);
+  }
+}
+function AssignmentGridComponent_Conditional_14_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275repeaterCreate(0, AssignmentGridComponent_Conditional_14_For_1_Template, 6, 1, "div", 16, _forTrack03);
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance();
-    \u0275\u0275repeater(ctx_r1.filteredAssignments());
+    \u0275\u0275repeater(ctx_r1.sections());
   }
 }
-function AssignmentGridComponent_Conditional_19_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_15_Template(rf, ctx) {
   if (rf & 1) {
-    const _r11 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-create-assignment-modal", 31);
-    \u0275\u0275listener("closed", function AssignmentGridComponent_Conditional_19_Template_app_create_assignment_modal_closed_0_listener() {
-      \u0275\u0275restoreView(_r11);
+    const _r8 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-create-assignment-modal", 21);
+    \u0275\u0275listener("closed", function AssignmentGridComponent_Conditional_15_Template_app_create_assignment_modal_closed_0_listener() {
+      \u0275\u0275restoreView(_r8);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onModalClosed());
-    })("created", function AssignmentGridComponent_Conditional_19_Template_app_create_assignment_modal_created_0_listener() {
-      \u0275\u0275restoreView(_r11);
+      return \u0275\u0275resetView(ctx_r1.onEditModalClosed());
+    })("created", function AssignmentGridComponent_Conditional_15_Template_app_create_assignment_modal_created_0_listener() {
+      \u0275\u0275restoreView(_r8);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onModalClosed());
-    })("updated", function AssignmentGridComponent_Conditional_19_Template_app_create_assignment_modal_updated_0_listener() {
-      \u0275\u0275restoreView(_r11);
+      return \u0275\u0275resetView(ctx_r1.onEditModalClosed());
+    })("updated", function AssignmentGridComponent_Conditional_15_Template_app_create_assignment_modal_updated_0_listener() {
+      \u0275\u0275restoreView(_r8);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onModalClosed());
+      return \u0275\u0275resetView(ctx_r1.onEditModalClosed());
     });
     \u0275\u0275elementEnd();
   }
@@ -34487,9 +34458,14 @@ function AssignmentGridComponent_Conditional_19_Template(rf, ctx) {
     \u0275\u0275property("assignmentToEdit", ctx_r1.assignmentToEdit());
   }
 }
+var SECTION_ORDER = [
+  { key: "route-assignments", label: "Route Assignments" },
+  { key: "frontend", label: "Front End Projects" },
+  { key: "fullstack", label: "Full Stack Projects" }
+];
 var AssignmentGridComponent = class _AssignmentGridComponent {
   assignmentService;
-  showCreateModal = signal(false, ...ngDevMode ? [{ debugName: "showCreateModal" }] : (
+  showEditModal = signal(false, ...ngDevMode ? [{ debugName: "showEditModal" }] : (
     /* istanbul ignore next */
     []
   ));
@@ -34501,27 +34477,23 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
     /* istanbul ignore next */
     []
   ));
-  selectedTags = signal(/* @__PURE__ */ new Set(), ...ngDevMode ? [{ debugName: "selectedTags" }] : (
-    /* istanbul ignore next */
-    []
-  ));
-  allTags = computed(() => {
-    const tags = /* @__PURE__ */ new Set();
-    this.assignmentService.assignments().forEach((a) => a.tags.forEach((t) => tags.add(t)));
-    return Array.from(tags).sort();
-  }, ...ngDevMode ? [{ debugName: "allTags" }] : (
-    /* istanbul ignore next */
-    []
-  ));
-  filteredAssignments = computed(() => {
+  filtered = computed(() => {
     const q = this.searchQuery().toLowerCase().trim();
-    const tags = this.selectedTags();
-    return this.assignmentService.assignments().filter((a) => {
-      const matchesSearch = !q || a.title.toLowerCase().includes(q) || a.description.toLowerCase().includes(q) || a.tags.some((t) => t.toLowerCase().includes(q));
-      const matchesTags = tags.size === 0 || a.tags.some((t) => tags.has(t));
-      return matchesSearch && matchesTags;
-    });
-  }, ...ngDevMode ? [{ debugName: "filteredAssignments" }] : (
+    return this.assignmentService.assignments().filter((a) => !q || a.title.toLowerCase().includes(q) || a.description.toLowerCase().includes(q) || a.tags.some((t) => t.toLowerCase().includes(q)));
+  }, ...ngDevMode ? [{ debugName: "filtered" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  sections = computed(() => {
+    const items = this.filtered();
+    return SECTION_ORDER.map((s) => __spreadProps(__spreadValues({}, s), {
+      assignments: items.filter((a) => (a.category ?? "route-assignments") === s.key)
+    })).filter((s) => s.assignments.length > 0);
+  }, ...ngDevMode ? [{ debugName: "sections" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  totalCount = computed(() => this.filtered().length, ...ngDevMode ? [{ debugName: "totalCount" }] : (
     /* istanbul ignore next */
     []
   ));
@@ -34531,33 +34503,21 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
   onSearch(event) {
     this.searchQuery.set(event.target.value);
   }
-  toggleTag(tag) {
-    const next = new Set(this.selectedTags());
-    next.has(tag) ? next.delete(tag) : next.add(tag);
-    this.selectedTags.set(next);
-  }
-  clearFilters() {
-    this.searchQuery.set("");
-    this.selectedTags.set(/* @__PURE__ */ new Set());
-  }
   onEditRequested(assignment) {
     this.assignmentToEdit.set(assignment);
-    this.showCreateModal.set(true);
+    this.showEditModal.set(true);
   }
-  onModalClosed() {
-    this.showCreateModal.set(false);
+  onEditModalClosed() {
+    this.showEditModal.set(false);
     this.assignmentToEdit.set(null);
-  }
-  get hasActiveFilters() {
-    return this.searchQuery().trim().length > 0 || this.selectedTags().size > 0;
   }
   static \u0275fac = function AssignmentGridComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AssignmentGridComponent)(\u0275\u0275directiveInject(AssignmentService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssignmentGridComponent, selectors: [["app-assignment-grid"]], decls: 20, vars: 6, consts: [[1, "grid-section"], [1, "grid-header"], [1, "grid-heading"], [1, "count-badge"], [1, "search-bar"], [1, "search-input-wrap"], ["width", "16", "height", "16", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.2", 1, "search-icon"], ["cx", "11", "cy", "11", "r", "8"], ["x1", "21", "y1", "21", "x2", "16.65", "y2", "16.65"], ["type", "text", "placeholder", "Search assignments\u2026", 1, "search-input", 3, "input", "value"], ["aria-label", "Clear search", 1, "search-clear"], [1, "tag-filter-row"], [1, "filter-tag", 3, "active"], [1, "filter-clear"], [1, "empty-state"], [1, "assignments-grid"], [3, "assignmentToEdit"], ["aria-label", "Clear search", 1, "search-clear", 3, "click"], [1, "filter-tag", 3, "click"], [1, "filter-clear", 3, "click"], [1, "empty-icon"], [1, "btn-clear-filters", 3, "click"], [3, "assignment", "index"], [1, "add-card", 3, "click"], [1, "add-card-inner"], [1, "add-icon"], ["width", "28", "height", "28", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2"], ["x1", "12", "y1", "5", "x2", "12", "y2", "19"], ["x1", "5", "y1", "12", "x2", "19", "y2", "12"], [1, "add-label"], [3, "editRequested", "assignment", "index"], [3, "closed", "created", "updated", "assignmentToEdit"]], template: function AssignmentGridComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssignmentGridComponent, selectors: [["app-assignment-grid"]], decls: 16, vars: 5, consts: [[1, "grid-section"], [1, "grid-header"], [1, "grid-heading"], [1, "count-badge"], [1, "search-bar"], [1, "search-input-wrap"], ["width", "16", "height", "16", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.2", 1, "search-icon"], ["cx", "11", "cy", "11", "r", "8"], ["x1", "21", "y1", "21", "x2", "16.65", "y2", "16.65"], ["type", "text", "placeholder", "Search projects\u2026", 1, "search-input", 3, "input", "value"], ["aria-label", "Clear search", 1, "search-clear"], [1, "empty-state"], [3, "assignmentToEdit"], ["aria-label", "Clear search", 1, "search-clear", 3, "click"], [1, "empty-icon"], [1, "btn-clear-filters", 3, "click"], [1, "section-block"], [1, "section-heading"], [1, "assignments-grid"], [3, "assignment", "index"], [3, "editRequested", "assignment", "index"], [3, "closed", "created", "updated", "assignmentToEdit"]], template: function AssignmentGridComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "h2", 2);
-      \u0275\u0275text(3, " All Assignments ");
+      \u0275\u0275text(3, " My Work ");
       \u0275\u0275elementStart(4, "span", 3);
       \u0275\u0275text(5);
       \u0275\u0275elementEnd()()();
@@ -34573,122 +34533,95 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
       });
       \u0275\u0275elementEnd();
       \u0275\u0275conditionalCreate(12, AssignmentGridComponent_Conditional_12_Template, 2, 0, "button", 10);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(13, "div", 11);
-      \u0275\u0275repeaterCreate(14, AssignmentGridComponent_For_15_Template, 2, 3, "button", 12, \u0275\u0275repeaterTrackByIdentity);
-      \u0275\u0275conditionalCreate(16, AssignmentGridComponent_Conditional_16_Template, 2, 0, "button", 13);
       \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(17, AssignmentGridComponent_Conditional_17_Template, 9, 0, "div", 14)(18, AssignmentGridComponent_Conditional_18_Template, 11, 0, "div", 15);
+      \u0275\u0275conditionalCreate(13, AssignmentGridComponent_Conditional_13_Template, 9, 0, "div", 11)(14, AssignmentGridComponent_Conditional_14_Template, 2, 0);
       \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(19, AssignmentGridComponent_Conditional_19_Template, 1, 1, "app-create-assignment-modal", 16);
+      \u0275\u0275conditionalCreate(15, AssignmentGridComponent_Conditional_15_Template, 1, 1, "app-create-assignment-modal", 12);
     }
     if (rf & 2) {
       \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate(ctx.filteredAssignments().length);
+      \u0275\u0275textInterpolate(ctx.totalCount());
       \u0275\u0275advance(6);
       \u0275\u0275property("value", ctx.searchQuery());
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.searchQuery() ? 12 : -1);
-      \u0275\u0275advance(2);
-      \u0275\u0275repeater(ctx.allTags());
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx.hasActiveFilters ? 16 : -1);
       \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.filteredAssignments().length === 0 ? 17 : 18);
+      \u0275\u0275conditional(ctx.sections().length === 0 ? 13 : 14);
       \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx.showCreateModal() ? 19 : -1);
+      \u0275\u0275conditional(ctx.showEditModal() ? 15 : -1);
     }
-  }, dependencies: [CommonModule, AssignmentCardComponent, CreateAssignmentModalComponent], styles: ["\n.grid-section[_ngcontent-%COMP%] {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.grid-header[_ngcontent-%COMP%] {\n  margin-bottom: 24px;\n  text-align: center;\n}\n.grid-heading[_ngcontent-%COMP%] {\n  font-size: clamp(1.5rem, 4vw, 2.1rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.count-badge[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 10px;\n  border-radius: 999px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  color: #fff;\n  font-size: 0.95rem;\n  font-weight: 700;\n}\n.search-bar[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 36px;\n}\n.search-input-wrap[_ngcontent-%COMP%] {\n  position: relative;\n  max-width: 480px;\n  margin: 0 auto;\n  width: 100%;\n}\n@media (max-width: 600px) {\n  .search-input-wrap[_ngcontent-%COMP%] {\n    max-width: 100%;\n  }\n}\n.search-icon[_ngcontent-%COMP%] {\n  position: absolute;\n  left: 14px;\n  top: 50%;\n  transform: translateY(-50%);\n  color: rgba(255, 255, 255, 0.35);\n  pointer-events: none;\n}\n.search-input[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: 11px 40px 11px 42px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  color: #fff;\n  font-size: 0.92rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.search-input[_ngcontent-%COMP%]::placeholder {\n  color: rgba(255, 255, 255, 0.3);\n}\n.search-input[_ngcontent-%COMP%]:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.1);\n}\n.search-clear[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 12px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  cursor: pointer;\n  padding: 2px 6px;\n  border-radius: 6px;\n  transition: color 0.15s, background 0.15s;\n}\n.search-clear[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.1);\n}\n.tag-filter-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n  justify-content: center;\n}\n.filter-tag[_ngcontent-%COMP%] {\n  padding: 5px 14px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.13);\n  background: transparent;\n  color: rgba(255, 255, 255, 0.55);\n  font-size: 0.78rem;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.filter-tag[_ngcontent-%COMP%]:hover {\n  border-color: rgba(255, 255, 255, 0.3);\n  color: rgba(255, 255, 255, 0.85);\n}\n.filter-tag.active[_ngcontent-%COMP%] {\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  border-color: transparent;\n  color: #fff;\n  box-shadow: 0 3px 12px rgba(240, 147, 251, 0.35);\n}\n.filter-clear[_ngcontent-%COMP%] {\n  padding: 5px 14px;\n  border-radius: 999px;\n  border: 1px dashed rgba(255, 255, 255, 0.2);\n  background: transparent;\n  color: rgba(255, 255, 255, 0.35);\n  font-size: 0.78rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.filter-clear[_ngcontent-%COMP%]:hover {\n  border-color: #ff6b6b;\n  color: #ff6b6b;\n}\n.assignments-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n}\n.add-card[_ngcontent-%COMP%] {\n  border-radius: 20px;\n  border: 2px dashed rgba(255, 255, 255, 0.12);\n  cursor: pointer;\n  min-height: 320px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition:\n    border-color 0.2s,\n    background 0.2s,\n    transform 0.25s;\n}\n.add-card[_ngcontent-%COMP%]:hover {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(240, 147, 251, 0.05);\n  transform: translateY(-6px);\n}\n.add-card[_ngcontent-%COMP%]:hover   .add-icon[_ngcontent-%COMP%] {\n  background: rgba(240, 147, 251, 0.2);\n  color: #f093fb;\n  transform: scale(1.1) rotate(90deg);\n}\n.add-card[_ngcontent-%COMP%]:hover   .add-label[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.85);\n}\n.add-card-inner[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n}\n.add-icon[_ngcontent-%COMP%] {\n  width: 64px;\n  height: 64px;\n  border-radius: 20px;\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.25);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n.add-label[_ngcontent-%COMP%] {\n  font-size: 0.92rem;\n  font-weight: 600;\n  color: rgba(255, 255, 255, 0.3);\n  transition: color 0.2s;\n}\n.empty-state[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state[_ngcontent-%COMP%]   .empty-icon[_ngcontent-%COMP%] {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters[_ngcontent-%COMP%] {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */"] });
+  }, dependencies: [
+    CommonModule,
+    AssignmentCardComponent,
+    CreateAssignmentModalComponent
+  ], styles: ["\n.grid-section[_ngcontent-%COMP%] {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.grid-header[_ngcontent-%COMP%] {\n  margin-bottom: 24px;\n  text-align: center;\n}\n.grid-heading[_ngcontent-%COMP%] {\n  font-size: clamp(1.5rem, 4vw, 2.1rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.count-badge[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 10px;\n  border-radius: 999px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  color: #fff;\n  font-size: 0.95rem;\n  font-weight: 700;\n}\n.search-bar[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 36px;\n}\n.search-input-wrap[_ngcontent-%COMP%] {\n  position: relative;\n  max-width: 480px;\n  margin: 0 auto;\n  width: 100%;\n}\n@media (max-width: 600px) {\n  .search-input-wrap[_ngcontent-%COMP%] {\n    max-width: 100%;\n  }\n}\n.search-icon[_ngcontent-%COMP%] {\n  position: absolute;\n  left: 14px;\n  top: 50%;\n  transform: translateY(-50%);\n  color: rgba(255, 255, 255, 0.35);\n  pointer-events: none;\n}\n.search-input[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: 11px 40px 11px 42px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  color: #fff;\n  font-size: 0.92rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.search-input[_ngcontent-%COMP%]::placeholder {\n  color: rgba(255, 255, 255, 0.3);\n}\n.search-input[_ngcontent-%COMP%]:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.1);\n}\n.search-clear[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 12px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  cursor: pointer;\n  padding: 2px 6px;\n  border-radius: 6px;\n  transition: color 0.15s, background 0.15s;\n}\n.search-clear[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.1);\n}\n.section-block[_ngcontent-%COMP%] {\n  margin-bottom: 56px;\n}\n.section-block[_ngcontent-%COMP%]:last-child {\n  margin-bottom: 0;\n}\n.section-heading[_ngcontent-%COMP%] {\n  font-size: clamp(1.1rem, 3vw, 1.4rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 24px;\n  padding-left: 16px;\n  border-left: 3px solid;\n  border-image:\n    linear-gradient(\n      180deg,\n      #f093fb,\n      #f5576c) 1;\n  letter-spacing: -0.01em;\n}\n.assignments-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  grid-auto-rows: 480px;\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n}\n.empty-state[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state[_ngcontent-%COMP%]   .empty-icon[_ngcontent-%COMP%] {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters[_ngcontent-%COMP%] {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AssignmentGridComponent, [{
     type: Component,
-    args: [{ selector: "app-assignment-grid", standalone: true, imports: [CommonModule, AssignmentCardComponent, CreateAssignmentModalComponent], template: `<section class="grid-section">
+    args: [{ selector: "app-assignment-grid", standalone: true, imports: [
+      CommonModule,
+      AssignmentCardComponent,
+      CreateAssignmentModalComponent
+    ], template: `<section class="grid-section">
 
-  <!-- Section heading -->
+  <!-- Heading -->
   <div class="grid-header">
     <h2 class="grid-heading">
-      All Assignments
-      <span class="count-badge">{{ filteredAssignments().length }}</span>
+      My Work
+      <span class="count-badge">{{ totalCount() }}</span>
     </h2>
   </div>
 
-  <!-- Search + filter bar -->
+  <!-- Search bar -->
   <div class="search-bar">
     <div class="search-input-wrap">
       <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
       </svg>
-      <input
-        type="text"
-        class="search-input"
-        placeholder="Search assignments\u2026"
-        [value]="searchQuery()"
-        (input)="onSearch($event)"
-      />
+      <input type="text" class="search-input" placeholder="Search projects\u2026"
+        [value]="searchQuery()" (input)="onSearch($event)" />
       @if (searchQuery()) {
         <button class="search-clear" (click)="searchQuery.set('')" aria-label="Clear search">\u2715</button>
       }
     </div>
-
-    <div class="tag-filter-row">
-      @for (tag of allTags(); track tag) {
-        <button
-          class="filter-tag"
-          [class.active]="selectedTags().has(tag)"
-          (click)="toggleTag(tag)"
-        >{{ tag }}</button>
-      }
-      @if (hasActiveFilters) {
-        <button class="filter-clear" (click)="clearFilters()">Clear all</button>
-      }
-    </div>
   </div>
 
-  <!-- Grid -->
-  @if (filteredAssignments().length === 0) {
+  <!-- Sections -->
+  @if (sections().length === 0) {
     <div class="empty-state">
       <div class="empty-icon">\u{1F50D}</div>
       <h3>No matches</h3>
-      <p>Try a different search term or tag filter.</p>
-      <button class="btn-clear-filters" (click)="clearFilters()">Clear filters</button>
+      <p>Try a different search term.</p>
+      <button class="btn-clear-filters" (click)="searchQuery.set('')">Clear search</button>
     </div>
   } @else {
-    <div class="assignments-grid">
-      @for (assignment of filteredAssignments(); track assignment.id; let i = $index) {
-        <app-assignment-card [assignment]="assignment" [index]="i" (editRequested)="onEditRequested($event)" />
-      }
-
-      <!-- Ghost add card -->
-      <div class="add-card" (click)="showCreateModal.set(true)">
-        <div class="add-card-inner">
-          <div class="add-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="5" x2="12" y2="19"/>
-              <line x1="5" y1="12" x2="19" y2="12"/>
-            </svg>
-          </div>
-          <span class="add-label">Add assignment</span>
+    @for (section of sections(); track section.key) {
+      <div class="section-block">
+        <h3 class="section-heading">{{ section.label }}</h3>
+        <div class="assignments-grid">
+          @for (assignment of section.assignments; track assignment.id; let i = $index) {
+            <app-assignment-card [assignment]="assignment" [index]="i" (editRequested)="onEditRequested($event)" />
+          }
         </div>
       </div>
-    </div>
+    }
   }
 
 </section>
 
-@if (showCreateModal()) {
+@if (showEditModal()) {
   <app-create-assignment-modal
     [assignmentToEdit]="assignmentToEdit()"
-    (closed)="onModalClosed()"
-    (created)="onModalClosed()"
-    (updated)="onModalClosed()"
-  />
+    (closed)="onEditModalClosed()"
+    (created)="onEditModalClosed()"
+    (updated)="onEditModalClosed()" />
 }
-`, styles: ["/* src/app/components/assignment-grid/assignment-grid.component.scss */\n.grid-section {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.grid-header {\n  margin-bottom: 24px;\n  text-align: center;\n}\n.grid-heading {\n  font-size: clamp(1.5rem, 4vw, 2.1rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.count-badge {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 10px;\n  border-radius: 999px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  color: #fff;\n  font-size: 0.95rem;\n  font-weight: 700;\n}\n.search-bar {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 36px;\n}\n.search-input-wrap {\n  position: relative;\n  max-width: 480px;\n  margin: 0 auto;\n  width: 100%;\n}\n@media (max-width: 600px) {\n  .search-input-wrap {\n    max-width: 100%;\n  }\n}\n.search-icon {\n  position: absolute;\n  left: 14px;\n  top: 50%;\n  transform: translateY(-50%);\n  color: rgba(255, 255, 255, 0.35);\n  pointer-events: none;\n}\n.search-input {\n  width: 100%;\n  padding: 11px 40px 11px 42px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  color: #fff;\n  font-size: 0.92rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.search-input::placeholder {\n  color: rgba(255, 255, 255, 0.3);\n}\n.search-input:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.1);\n}\n.search-clear {\n  position: absolute;\n  right: 12px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  cursor: pointer;\n  padding: 2px 6px;\n  border-radius: 6px;\n  transition: color 0.15s, background 0.15s;\n}\n.search-clear:hover {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.1);\n}\n.tag-filter-row {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n  justify-content: center;\n}\n.filter-tag {\n  padding: 5px 14px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.13);\n  background: transparent;\n  color: rgba(255, 255, 255, 0.55);\n  font-size: 0.78rem;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.filter-tag:hover {\n  border-color: rgba(255, 255, 255, 0.3);\n  color: rgba(255, 255, 255, 0.85);\n}\n.filter-tag.active {\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  border-color: transparent;\n  color: #fff;\n  box-shadow: 0 3px 12px rgba(240, 147, 251, 0.35);\n}\n.filter-clear {\n  padding: 5px 14px;\n  border-radius: 999px;\n  border: 1px dashed rgba(255, 255, 255, 0.2);\n  background: transparent;\n  color: rgba(255, 255, 255, 0.35);\n  font-size: 0.78rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.filter-clear:hover {\n  border-color: #ff6b6b;\n  color: #ff6b6b;\n}\n.assignments-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid {\n    grid-template-columns: 1fr;\n  }\n}\n.add-card {\n  border-radius: 20px;\n  border: 2px dashed rgba(255, 255, 255, 0.12);\n  cursor: pointer;\n  min-height: 320px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition:\n    border-color 0.2s,\n    background 0.2s,\n    transform 0.25s;\n}\n.add-card:hover {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(240, 147, 251, 0.05);\n  transform: translateY(-6px);\n}\n.add-card:hover .add-icon {\n  background: rgba(240, 147, 251, 0.2);\n  color: #f093fb;\n  transform: scale(1.1) rotate(90deg);\n}\n.add-card:hover .add-label {\n  color: rgba(255, 255, 255, 0.85);\n}\n.add-card-inner {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n}\n.add-icon {\n  width: 64px;\n  height: 64px;\n  border-radius: 20px;\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.25);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n.add-label {\n  font-size: 0.92rem;\n  font-weight: 600;\n  color: rgba(255, 255, 255, 0.3);\n  transition: color 0.2s;\n}\n.empty-state {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state .empty-icon {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state h3 {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state p {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */\n"] }]
+`, styles: ["/* src/app/components/assignment-grid/assignment-grid.component.scss */\n.grid-section {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.grid-header {\n  margin-bottom: 24px;\n  text-align: center;\n}\n.grid-heading {\n  font-size: clamp(1.5rem, 4vw, 2.1rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.count-badge {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 10px;\n  border-radius: 999px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  color: #fff;\n  font-size: 0.95rem;\n  font-weight: 700;\n}\n.search-bar {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 36px;\n}\n.search-input-wrap {\n  position: relative;\n  max-width: 480px;\n  margin: 0 auto;\n  width: 100%;\n}\n@media (max-width: 600px) {\n  .search-input-wrap {\n    max-width: 100%;\n  }\n}\n.search-icon {\n  position: absolute;\n  left: 14px;\n  top: 50%;\n  transform: translateY(-50%);\n  color: rgba(255, 255, 255, 0.35);\n  pointer-events: none;\n}\n.search-input {\n  width: 100%;\n  padding: 11px 40px 11px 42px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  color: #fff;\n  font-size: 0.92rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.search-input::placeholder {\n  color: rgba(255, 255, 255, 0.3);\n}\n.search-input:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.1);\n}\n.search-clear {\n  position: absolute;\n  right: 12px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  cursor: pointer;\n  padding: 2px 6px;\n  border-radius: 6px;\n  transition: color 0.15s, background 0.15s;\n}\n.search-clear:hover {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.1);\n}\n.section-block {\n  margin-bottom: 56px;\n}\n.section-block:last-child {\n  margin-bottom: 0;\n}\n.section-heading {\n  font-size: clamp(1.1rem, 3vw, 1.4rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 24px;\n  padding-left: 16px;\n  border-left: 3px solid;\n  border-image:\n    linear-gradient(\n      180deg,\n      #f093fb,\n      #f5576c) 1;\n  letter-spacing: -0.01em;\n}\n.assignments-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  grid-auto-rows: 480px;\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid {\n    grid-template-columns: 1fr;\n  }\n}\n.empty-state {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state .empty-icon {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state h3 {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state p {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */\n"] }]
   }], () => [{ type: AssignmentService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssignmentGridComponent, { className: "AssignmentGridComponent", filePath: "src/app/components/assignment-grid/assignment-grid.component.ts", lineNumber: 15 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssignmentGridComponent, { className: "AssignmentGridComponent", filePath: "src/app/components/assignment-grid/assignment-grid.component.ts", lineNumber: 31 });
 })();
 
 // src/app/app.ts
