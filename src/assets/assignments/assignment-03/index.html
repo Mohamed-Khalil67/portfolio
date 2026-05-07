@@ -22,7 +22,7 @@
 
       <div class="nav-menu">
         <ul class="nav-list">
-          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#specifications" class="nav-link">Specifications</a></li>
           <li><a href="#customer-reviews" class="nav-link">Rating & Reviews</a></li>
           <li><a href="#related-products" class="nav-link">Related Products</a></li>
@@ -32,11 +32,10 @@
   </header>
 
   <main>
-    <!-- Hero / Product Landing Section -->
+    <!-- HERO -->
     <section id="home" class="hero-section">
       <div class="container">
         <div class="product-grid">
-          <!-- Product Images -->
           <div class="image-gallery">
             <div class="main-image-wrapper">
               <img id="main-product-image" src="images/hero-img-CYauTLx2.png" alt="DJI Mavic 4 Pro Drone">
@@ -44,12 +43,11 @@
             </div>
           </div>
 
-          <!-- Product Information -->
           <div class="product-details">
             <div class="tag-group">
-              <span class="tag">Professional</span>
-              <span class="tag">In Stock</span>
-              <span class="tag">Free Shipping</span>
+              <span class="tag pill-violet">Professional</span>
+              <span class="tag pill-violet">In Stock</span>
+              <span class="tag pill-violet">Free Shipping</span>
             </div>
 
             <h1 class="product-title">DJI Mavic 4 <span class="highlight">Pro</span></h1>
@@ -71,7 +69,7 @@
             </div>
 
             <div class="action-buttons">
-              <button class="btn-primary">
+              <button class="btn-primary ">
                 <i class="fa-solid fa-shopping-cart"></i> Add to Cart - $2,499
               </button>
               <button class="btn-secondary">
@@ -83,9 +81,11 @@
       </div>
     </section>
 
-    <!-- Comparison Table Section -->
+
+    <!-- SPECS TABLE -->
     <section id="specifications" class="specs-section">
       <div class="container">
+
         <div class="section-header">
           <h2>How We <span class="highlight">Compare</span></h2>
           <p>See why the DJI Mavic 4 Pro leads the professional drone market</p>
@@ -95,53 +95,135 @@
           <table class="comparison-table">
             <thead>
               <tr>
-                <th>Feature</th>
-                <th class="featured-column">
-                  <span class="model-name">DJI Mavic 4 Pro</span>
+                <th class="col-feature">Feature</th>
+                <th class="featured-column featured-top">
+                  <div class="model-name">DJI Mavic 4 Pro</div>
                   <span class="sub-label">Our Product</span>
                 </th>
                 <th>
-                  <span class="model-name">AirMaster Pro</span>
+                  <div class="model-name">AirMaster Pro</div>
                   <span class="sub-label">Competitor A</span>
                 </th>
                 <th>
-                  <span class="model-name">FlightMax 4K</span>
+                  <div class="model-name">FlightMax 4K</div>
                   <span class="sub-label">Competitor B</span>
+                </th>
+                <th>
+                  <div class="model-name">SkyHawk Elite</div>
+                  <span class="sub-label">Competitor C</span>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><i class="fa-solid fa-video"></i> Video Resolution</td>
-                <td class="featured-column"><span class="check-badge">8K/30fps</span></td>
+                <td class="row-label"><i class="fa-solid fa-video icon-cyan"></i> <span>Video Resolution</span></td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i>
+                    8K/30fps</span>
+                </td>
                 <td>4K/30fps</td>
                 <td>4K/60fps</td>
+                <td>6K/30fps</td>
               </tr>
               <tr>
-                <td><i class="fa-solid fa-battery-full"></i> Flight Time</td>
-                <td class="featured-column"><span class="check-badge">40 minutes</span></td>
+                <td class="row-label"><i class="fa-solid fa-camera icon-teal"></i> <span>Photo Resolution</span></td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i>
+                    48MP</span></td>
+                <td>20MP</td>
+                <td>24MP</td>
+                <td>32MP</td>
+              </tr>
+              <tr>
+                <td class="row-label"><i class="fa-solid fa-battery-full icon-green"></i> <span>Flight Time</span></td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i> 40
+                    minutes</span></td>
                 <td>28 minutes</td>
                 <td>34 minutes</td>
+                <td>31 minutes</td>
               </tr>
               <tr>
-                <td><i class="fa-solid fa-shield-alt"></i> Obstacle Avoidance</td>
-                <td class="featured-column"><span class="check-badge">360° AI</span></td>
+                <td class="row-label"><i class="fa-solid fa-satellite-dish icon-orange"></i> <span>Max Range</span></td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i> 10
+                    km</span>
+                </td>
+                <td>7 km</td>
+                <td>8 km</td>
+                <td>6 km</td>
+              </tr>
+              <tr>
+                <td class="row-label"><i class="fa-solid fa-gauge-high icon-red"></i> <span>Max Speed</span></td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i> 68
+                    km/h</span>
+                </td>
+                <td>58 km/h</td>
+                <td>65 km/h</td>
+                <td>60 km/h</td>
+              </tr>
+              <tr>
+                <td class="row-label"><i class="fa-solid fa-shield-alt icon-sky"></i> <span>Obstacle Avoidance</span>
+                </td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i> 360
+                    AI</span>
+                </td>
                 <td class="warning-text">Front/Back Only</td>
                 <td class="warning-text">4-Direction</td>
+                <td class="warning-text">Front/Back/Down</td>
+              </tr>
+              <tr>
+                <td class="row-label"><i class="fa-solid fa-scale-balanced icon-indigo"></i> <span>Weight</span></td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i>
+                    899g</span></td>
+                <td>1,240g</td>
+                <td>1,100g</td>
+                <td>1,350g</td>
+              </tr>
+              <tr>
+                <td class="row-label"><i class="fa-solid fa-cloud-rain icon-blue"></i> <span>Weather Resistance</span>
+                </td>
+                <td class="featured-column"><span class=" pill-violet"><i class="fa-solid fa-check"></i>
+                    IPX4</span></td>
+                <td class="warning-text"><i class="fa-solid fa-xmark"></i> None</td>
+                <td>IPX3</td>
+                <td class="warning-text"><i class="fa-solid fa-xmark"></i> None</td>
+              </tr>
+              <tr>
+                <td class="row-label"><i class="fa-solid fa-dollar-sign icon-yellow"></i> <span>Price</span></td>
+                <td class="featured-column price-featured">$2,499</td>
+                <td class="price-competitor">$2,899</td>
+                <td class="price-competitor">$2,699</td>
+                <td class="price-competitor">$3,199</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
                 <td class="rating-label">Overall Rating</td>
-                <td class="featured-column">
+                <td class="featured-column featured-bottom">
                   <div class="stars">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                   </div>
                   <span class="score">4.9/5</span>
                 </td>
-                <td>4.1/5</td>
-                <td>4.3/5</td>
+                <td>
+                  <div class="stars stars-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star star-empty"></i>
+                  </div>
+                  <span class="score-sm">4.1/5</span>
+                </td>
+                <td>
+                  <div class="stars stars-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-alt"></i>
+                  </div>
+                  <span class="score-sm">4.3/5</span>
+                </td>
+                <td>
+                  <div class="stars stars-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star star-empty"></i>
+                  </div>
+                  <span class="score-sm">3.9/5</span>
+                </td>
               </tr>
             </tfoot>
           </table>
@@ -154,42 +236,83 @@
             <p class="winner-desc">Best performance, features, and value</p>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Reviews Section -->
+    <!-- REVIEWS  -->
     <section id="customer-reviews" class="reviews-section">
       <div class="container">
+
         <div class="section-header">
           <h2>What Our <span class="highlight">Customers Say</span></h2>
           <p>Real experiences from professional pilots and creators</p>
         </div>
 
         <div class="reviews-layout">
-          <!-- Summary Card -->
+
+          <!-- Summary sidebar -->
           <aside class="reviews-summary">
             <div class="rating-big">4.9</div>
             <div class="stars-row">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p>Based on 2,847 reviews</p>
 
-            <!-- Progress Bars -->
             <div class="rating-bars">
               <div class="bar-item">
-                <span>5★</span>
+                <span>5*</span>
                 <div class="progress-bg">
                   <div class="progress-fill" style="width: 78%"></div>
                 </div>
                 <span>78%</span>
               </div>
-              <!-- Add more bars as needed -->
+              <div class="bar-item">
+                <span>4*</span>
+                <div class="progress-bg">
+                  <div class="progress-fill" style="width: 15%"></div>
+                </div>
+                <span>15%</span>
+              </div>
+              <div class="bar-item">
+                <span>3*</span>
+                <div class="progress-bg">
+                  <div class="progress-fill" style="width: 5%"></div>
+                </div>
+                <span>5%</span>
+              </div>
+              <div class="bar-item">
+                <span>2*</span>
+                <div class="progress-bg">
+                  <div class="progress-fill" style="width: 1.5%"></div>
+                </div>
+                <span>1.5%</span>
+              </div>
+              <div class="bar-item">
+                <span>1*</span>
+                <div class="progress-bg">
+                  <div class="progress-fill" style="width: 0.5%"></div>
+                </div>
+                <span>0.5%</span>
+              </div>
+            </div>
+
+            <div class="summary-stats">
+              <div class="stat-item">
+                <span class="stat-value">96%</span>
+                <span class="stat-label">Would recommend</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">4.8</span>
+                <span class="stat-label">Quality rating</span>
+              </div>
             </div>
           </aside>
 
-          <!-- User Reviews -->
+          <!-- Review cards -->
           <div class="reviews-list">
+
             <article class="review-card">
               <header class="review-meta">
                 <div class="user-info">
@@ -197,24 +320,256 @@
                   <div>
                     <h4>Marcus Chen</h4>
                     <p>Professional Photographer</p>
+                    <div class="user-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <span>5.0</span>
+                    </div>
                   </div>
                 </div>
-                <span class="verified-badge">Verified Purchase</span>
+                <div class="review-badge-group">
+                  <span class="verified-badge">Verified Purchase</span>
+                  <span class="review-date">3 months ago</span>
+                </div>
               </header>
-              <p class="review-text">
-                "The DJI Mavic 4 Pro has revolutionized my aerial photography work. The 8K video quality is absolutely
-                stunning."
-              </p>
+              <p class="review-text">"The DJI Mavic 4 Pro has revolutionized my aerial photography work. The 8K video
+                quality is absolutely stunning, and the 40-minute flight time means I can capture entire shoots without
+                battery anxiety. Best investment I've made for my business."</p>
             </article>
+
+            <article class="review-card">
+              <header class="review-meta">
+                <div class="user-info">
+                  <img src="/assets/avatar-2-DvihTPKl.jpg" alt="Thomas Anderson" class="avatar">
+                  <div>
+                    <h4>Thomas Anderson</h4>
+                    <p>Real Estate Agent</p>
+                    <div class="user-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <span>5.0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-badge-group">
+                  <span class="verified-badge">Verified Purchase</span>
+                  <span class="review-date">2 months ago</span>
+                </div>
+              </header>
+              <p class="review-text">"As a real estate professional, the DJI Mavic 4 Pro gives me the edge I need. The
+                automated flight modes make it incredibly easy to capture perfect property shots every time. My clients
+                are always impressed with the footage quality."</p>
+            </article>
+
+            <article class="review-card">
+              <header class="review-meta">
+                <div class="user-info">
+                  <img src="/assets/avatar-3-CwUcGkzI.jpg" alt="David Rodriguez" class="avatar">
+                  <div>
+                    <h4>David Rodriguez</h4>
+                    <p>Filmmaker</p>
+                    <div class="user-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <span>5.0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-badge-group">
+                  <span class="verified-badge">Verified Purchase</span>
+                  <span class="review-date">1 month ago</span>
+                </div>
+              </header>
+              <p class="review-text">"The obstacle avoidance system is a game-changer. I can focus entirely on getting
+                the perfect shot without worrying about crashes. The gimbal stabilization is incredibly smooth — my
+                footage looks like it was shot with a professional camera crew."</p>
+            </article>
+
+            <article class="review-card">
+              <header class="review-meta">
+                <div class="user-info">
+                  <img src="/assets/avatar-4-CDQD_dyw.jpg" alt="Kyle Johnson" class="avatar">
+                  <div>
+                    <h4>Kyle Johnson</h4>
+                    <p>Content Creator</p>
+                    <div class="user-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <span>5.0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-badge-group">
+                  <span class="verified-badge">Verified Purchase</span>
+                  <span class="review-date">2 weeks ago</span>
+                </div>
+              </header>
+              <p class="review-text">"The mobile app is incredibly intuitive. Even as a beginner, I was able to capture
+                professional-looking footage within hours. The automated modes are perfect for social media content. My
+                followers cannot believe the quality!"</p>
+            </article>
+
+            <div class="load-more-wrapper">
+              <button class="btn-load-more">Load More Reviews</button>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
+
+    <!-- RELATED PRODUCTS  -->
+    <section id="related-products" class="related-section">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Complete Your <span class="highlight">Setup</span></h2>
+          <p>Essential accessories and complementary products</p>
+        </div>
+
+        <div class="products-grid">
+
+          <div class="product-card">
+            <div class="product-card-image-wrapper">
+              <img src="/assets/related-products-1-D4JR6uDa.png" alt="Pro Controller">
+              <span class="card-badge badge-accessory">Accessory</span>
+            </div>
+            <h3>Pro Controller</h3>
+            <p>Enhanced remote with 7" HD display and extended battery life</p>
+            <div class="card-footer">
+              <span class="card-price">$599</span>
+              <button class="btn-card">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-image-wrapper">
+              <img src="/assets/related-products-2-OSxMogX9.png" alt="Travel Case">
+              <span class="card-badge badge-essential">Essential</span>
+            </div>
+            <h3>Travel Case</h3>
+            <p>Waterproof aluminum case with custom foam inserts for safe transport</p>
+            <div class="card-footer">
+              <span class="card-price">$299</span>
+              <button class="btn-card">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-image-wrapper">
+              <img src="/assets/related-products-3-DDld9RDW.png" alt="Battery Kit">
+              <span class="card-badge badge-power">Power</span>
+            </div>
+            <h3>Battery Kit</h3>
+            <p>3 additional batteries with charging hub for extended flights</p>
+            <div class="card-footer">
+              <span class="card-price">$449</span>
+              <button class="btn-card">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-image-wrapper">
+              <img src="/assets/related-products-4-bI1kHqI6.png" alt="Safety Kit">
+              <span class="card-badge badge-safety">Safety</span>
+            </div>
+            <h3>Safety Kit</h3>
+            <p>Propeller guards and landing gear for enhanced safety and stability</p>
+            <div class="card-footer">
+              <span class="card-price">$129</span>
+              <button class="btn-card">Add to Cart</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="view-all-wrapper">
+          <button class="btn-view-all">View All Accessories</button>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="main-footer">
-    <p>&copy; 2026 DJI Innovations. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i class="fa-solid fa-helicopter"></i></div>
+            <span class="footer-logo-text">DJI</span>
+          </div>
+          <p>Leading the future of aerial technology with innovative drone solutions for professionals and enthusiasts
+            worldwide.</p>
+          <div class="social-row">
+            <span class="social-icon fb"><i class="fab fa-facebook-f"></i></span>
+            <span class="social-icon tw"><i class="fab fa-twitter"></i></span>
+            <span class="social-icon ig"><i class="fab fa-instagram"></i></span>
+            <span class="social-icon yt"><i class="fab fa-youtube"></i></span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul>
+            <li>DJI Mavic 4 Pro</li>
+            <li>DJI Mini</li>
+            <li>DJI Enterprise</li>
+            <li>Accessories</li>
+            <li>Software</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li>Help Center</li>
+            <li>User Manual</li>
+            <li>Firmware Updates</li>
+            <li>Warranty</li>
+            <li>Contact Support</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Press</li>
+            <li>Partners</li>
+            <li>Investors</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DJI Innovations. All rights reserved. | Privacy Policy | Terms of Service</p>
+        <div class="payment-icons">
+          <div class="payment-icon">
+            <img
+              src="data:image/svg+xml,%3csvg%20height='665'%20viewBox='-.02682843%200%20123.63183286%2030.17842908'%20width='2500'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m46.211%206.749h-6.839a.95.95%200%200%200%20-.939.802l-2.766%2017.537a.57.57%200%200%200%20.564.658h3.265a.95.95%200%200%200%20.939-.803l.746-4.73a.95.95%200%200%201%20.938-.803h2.165c4.505%200%207.105-2.18%207.784-6.5.306-1.89.013-3.375-.872-4.415-.972-1.142-2.696-1.746-4.985-1.746zm.789%206.405c-.374%202.454-2.249%202.454-4.062%202.454h-1.032l.724-4.583a.57.57%200%200%201%20.563-.481h.473c1.235%200%202.4%200%203.002.704.359.42.469%201.044.332%201.906zm19.654-.079h-3.275a.57.57%200%200%200%20-.563.481l-.145.916-.229-.332c-.709-1.029-2.29-1.373-3.868-1.373-3.619%200-6.71%202.741-7.312%206.586-.313%201.918.132%203.752%201.22%205.031.998%201.176%202.426%201.666%204.125%201.666%202.916%200%204.533-1.875%204.533-1.875l-.146.91a.57.57%200%200%200%20.562.66h2.95a.95.95%200%200%200%20.939-.803l1.77-11.209a.568.568%200%200%200%20-.561-.658zm-4.565%206.374c-.316%201.871-1.801%203.127-3.695%203.127-.951%200-1.711-.305-2.199-.883-.484-.574-.668-1.391-.514-2.301.295-1.855%201.805-3.152%203.67-3.152.93%200%201.686.309%202.184.892.499.589.697%201.411.554%202.317zm22.007-6.374h-3.291a.954.954%200%200%200%20-.787.417l-4.539%206.686-1.924-6.425a.953.953%200%200%200%20-.912-.678h-3.234a.57.57%200%200%200%20-.541.754l3.625%2010.638-3.408%204.811a.57.57%200%200%200%20.465.9h3.287a.949.949%200%200%200%20.781-.408l10.946-15.8a.57.57%200%200%200%20-.468-.895z'%20fill='%23253b80'/%3e%3c/svg%3e"
+              alt="PayPal" />
+          </div>
+          <div class="payment-icon">
+            <img
+              src="data:image/svg+xml,%3csvg%20height='1524'%20viewBox='55.2%2038.3%20464.5%20287.8'%20width='2500'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m519.7%20182.2c0%2079.5-64.3%20143.9-143.6%20143.9s-143.6-64.4-143.6-143.9%2064.2-143.9%20143.5-143.9%20143.7%2064.4%20143.7%20143.9z'%20fill='%23f79f1a'/%3e%3cpath%20d='m342.4%20182.2c0%2079.5-64.3%20143.9-143.6%20143.9s-143.6-64.4-143.6-143.9%2064.3-143.9%20143.6-143.9%20143.6%2064.4%20143.6%20143.9z'%20fill='%23ea001b'/%3e%3cpath%20d='m287.4%2068.9c-33.5%2026.3-55%2067.3-55%20113.3s21.5%2087%2055%20113.3c33.5-26.3%2055-67.3%2055-113.3s-21.5-86.9-55-113.3z'%20fill='%23ff5f01'/%3e%3c/svg%3e"
+              alt="Mastercard" />
+          </div>
+          <div class="payment-icon">
+            <img
+              src="data:image/svg+xml,%3csvg%20height='812'%20viewBox='0.5%200.5%20999%20323.684'%20width='2500'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M651.185.5c-70.933%200-134.322%2036.766-134.322%20104.694%200%2077.9%20112.423%2083.28%20112.423%20122.415%200%2016.478-18.884%2031.229-51.137%2031.229-45.773%200-79.984-20.611-79.984-20.611l-14.638%2068.547s39.41%2017.41%2091.734%2017.41c77.552%200%20138.576-38.572%20138.576-107.66%200-82.316-112.89-87.537-112.89-123.86%200-12.91%2015.501-27.053%2047.662-27.053%2036.286%200%2065.892%2014.99%2065.892%2014.99l14.326-66.204S696.614.5%20651.185.5zM2.218%205.497L.5%2015.49s29.842%205.461%2056.719%2016.356c34.606%2012.492%2037.072%2019.765%2042.9%2042.353l63.51%20244.832h85.138L379.927%205.497h-84.942L210.707%20218.67l-34.39-180.696c-3.154-20.68-19.13-32.477-38.685-32.477H2.218zm411.865%200L347.449%20319.03h80.999l66.4-313.534h-80.765zm451.759%200c-19.532%200-29.88%2010.457-37.474%2028.73L709.699%20319.03h84.942l16.434-47.468h103.483l9.994%2047.468H999.5L934.115%205.497h-68.273zm11.047%2084.707l25.178%20117.653h-67.454z'%20fill='%231434cb'/%3e%3c/svg%3e"
+              alt="Visa" />
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
+
 
 </body>
 
