@@ -3,7 +3,7 @@
   padding: 0;
   /* overflow: hidden; */
   /* width: 100%; */
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-family: exo, sans-serif;
 }
 
@@ -22,7 +22,24 @@
 .highlight {
   color: #8b5cf6;
 }
-/* Start of Header */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 20px;
+}
+
+/* ENd of SHARED */
+
+/* =========================== Start of Header  =========================== */
 
 .main-header {
   /* background-color: teal; */
@@ -104,7 +121,7 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
   width: 0;
   height: 2px;
   background-color: #8b5cf6;
@@ -116,9 +133,9 @@
   width: 100%;
 }
 
-/* End of Header */
+/* =========================== End of Header =========================== */
 
-/* Start of Section Hero */
+/* =========================== Start of Section Hero =========================== */
 
 .hero-section {
   /* background-color: beige; */
@@ -137,11 +154,14 @@
 .product-grid {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  gap: 100px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .image-gallery {
+  flex: 1;
+  min-width: 200px; /* wraps below this width */
+
   padding: 20px;
   border: 2px solid #e5e7eb;
   border-radius: 24px;
@@ -152,7 +172,8 @@
   position: relative;
 }
 
-#main-product-image {
+.main-image-wrapper img {
+  width: 100%;
   height: 500px;
   object-fit: cover;
   border-radius: 15px;
@@ -173,6 +194,9 @@
 }
 
 .product-details {
+  flex: 1;
+  min-width: 400px; /* wraps below this width */
+
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -286,21 +310,8 @@
   margin: 0 auto;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-.section-header h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
-
-.section-header p {
-  font-size: 20px;
-}
-
 .table-wrapper {
+  overflow-x: auto;
   background-color: white;
   border-radius: 20px;
   border: 2px solid rgba(209, 213, 219);
@@ -498,18 +509,390 @@
 /* End of table */
 
 /* Start Reviews */
+
 .reviews-section {
-  padding-top: 80px;
+  padding: 80px 0;
+  background-color: white;
 }
+
+.reviews-section .container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.reviews-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.reviews-summary {
+  width: 30%;
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 32px;
+  position: sticky;
+  top: 100px;
+}
+
+.rating-big {
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.stars-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  color: #facc15;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.reviews-summary > p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 32px;
+}
+
+.rating-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Dimensions definitions to fill in the progress gap with flex */
+.bar-item span:first-child {
+  width: 28px;
+}
+
+.bar-item span:last-child {
+  width: 34px;
+  text-align: right;
+}
+
+/* "flex" Let all the flexible items be the same length, regardless of its content: */
+.progress-bg {
+  flex: 1;
+  background-color: #e5e7eb;
+  border-radius: 20px;
+  height: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #eab308;
+  border-radius: 20px;
+}
+
+.summary-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #d1d5db;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-label {
+  display: block;
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+.reviews-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review-card {
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #a78bfa;
+}
+
+.user-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.user-info p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.user-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #facc15;
+  font-size: 14px;
+}
+
+.user-stars span {
+  color: #4b5563;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.review-badge-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  text-align: right;
+}
+
+.verified-badge {
+  background-color: #ede9fe;
+  color: #6b21a8;
+  padding: 4px 12px;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.load-more-wrapper {
+  text-align: center;
+  padding-top: 16px;
+}
+
+.btn-load-more {
+  cursor: pointer;
+  padding: 12px 32px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #8b5cf6;
+  color: white;
+  border: 2px solid #8b5cf6;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.btn-load-more:hover {
+  background-color: white;
+  color: #7c3aed;
+  border-color: #7c3aed;
+}
+
 /* End Reviews */
 
 /* Start Related Products */
 
+.related-section {
+  padding: 80px 0;
+  background-color: rgba(245, 243, 255);
+}
+
+.related-section .container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.related-section .products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.product-card {
+  flex: 1;
+  min-width: 220px;
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
+}
+.product-card:hover {
+  border-color: #c4b5fd;
+}
+
+.product-card-image-wrapper {
+  position: relative;
+}
+
+.product-card-image-wrapper img {
+  width: 100%;
+  /* aspect-ratio: 4/3; */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.badge-accessory {
+  background-color: #14b8a6;
+}
+.badge-essential {
+  background-color: #22c55e;
+}
+.badge-power {
+  background-color: #06b6d4;
+}
+.badge-safety {
+  background-color: #f97316;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.btn-card {
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-card:hover {
+  background-color: #7c3aed;
+}
+
+.view-all-wrapper {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.btn-view-all {
+  cursor: pointer;
+  padding: 14px 36px;
+  border-radius: 40px;
+  background-color: transparent;
+  color: #6d28d9;
+  border: 2px solid #7c3aed;
+  font-size: 15px;
+  font-weight: 600;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.btn-view-all:hover {
+  background-color: #7c3aed;
+  color: white;
+}
+
 /* End of Related Products */
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
+/* Start of Footer */
+
 .main-footer {
   background-color: #111827;
   color: white;
@@ -528,7 +911,6 @@
 }
 
 .footer-brand {
-  /* flex: 2 1 240px; */
   display: flex;
   flex-direction: column;
   width: 21%;
@@ -580,10 +962,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   color: white;
   font-size: 16px;
-  transition: background-color 0.2s;
 }
 
 .social-icon.fb:hover {
@@ -597,9 +977,6 @@
 }
 .social-icon.yt:hover {
   background-color: #ff0000;
-}
-
-.footer-col {
 }
 
 .footer-col h3 {
@@ -661,3 +1038,4 @@
   height: 16px;
   width: auto;
 }
+/* End of footer */
