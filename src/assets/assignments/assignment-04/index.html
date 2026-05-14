@@ -16,10 +16,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_demo.css" />
 </head>
 
 <body>
+
+    <!-- Mobile Menu Header -->
+    <!-- Burguer Icon for checking in the check box to be make the side bar visible or not -->
+    <!-- burger id with matching attribute to label -->
+    <input type="checkbox" id="menu-toggle-cb" class="menu-toggle-cb">
+
+    <!-- Mobile Mneu is the side bar Sliding in -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-panel">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-title">MENU</span>
+                <!-- matching attribute id from burger -->
+                <label for="menu-toggle-cb" class="mobile-menu-close" aria-label="Close menu">
+                    <i class="fa-solid fa-times"></i>
+                </label>
+            </div>
+            <nav>
+                <ul class="mobile-menu-list">
+                    <li><a href="#hero">HOME</a></li>
+                    <li><a href="#latest-articles">LATEST ARTICLES</a></li>
+                    <li><a href="#authors">AUTHORS</a></li>
+                    <li><a href="#community">COMMUNITY</a></li>
+                </ul>
+            </nav>
+            <a href="#community" class="btn btn-yellow btn-block">
+                <i class="fa-solid fa-rocket"></i> SUBSCRIBE NOW
+            </a>
+        </div>
+    </div>
 
     <!-- ============ HEADER ============ -->
     <header class="site-header">
@@ -28,11 +57,9 @@
                 <a href="#hero" class="logo">
                     <span>The UX </span><span class="logo-accent">Review</span>
                 </a>
-
-                <a href="#mobile-menu" class="menu-toggle" aria-label="Open menu">
+                <label for="menu-toggle-cb" class="menu-toggle" aria-label="Open menu">
                     <i class="fa-solid fa-bars"></i>
-                </a>
-
+                </label>
                 <nav class="main-nav">
                     <ul>
                         <li><a href="#hero">HOME</a><i class="fa-solid fa-star nav-sep"></i></li>
@@ -44,33 +71,10 @@
 
                 <a href="#community" class="btn btn-yellow btn-pill nav-cta">SUBSCRIBE NOW</a>
             </div>
-
-            <!-- Mobile menu (CSS-only, opens via :target) -->
-            <div id="mobile-menu" class="mobile-menu">
-                <div class="mobile-menu-panel">
-                    <div class="mobile-menu-header">
-                        <span class="mobile-menu-title">MENU</span>
-                        <a href="#" class="mobile-menu-close" aria-label="Close menu">
-                            <i class="fa-solid fa-times"></i>
-                        </a>
-                    </div>
-                    <nav>
-                        <ul class="mobile-menu-list">
-                            <li><a href="#hero">HOME</a></li>
-                            <li><a href="#latest-articles">LATEST ARTICLES</a></li>
-                            <li><a href="#authors">AUTHORS</a></li>
-                            <li><a href="#community">COMMUNITY</a></li>
-                        </ul>
-                    </nav>
-                    <a href="#community" class="btn btn-yellow btn-block">
-                        <i class="fa-solid fa-rocket"></i> SUBSCRIBE NOW
-                    </a>
-                </div>
-            </div>
         </div>
     </header>
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ Start HERO Section ============ -->
     <section id="hero" class="hero">
         <div class="hero-shapes" aria-hidden="true">
             <div class="hero-shape shape-1"></div>
@@ -82,7 +86,7 @@
             <div class="hero-text">
                 <div class="hero-tag">🔥 TRENDING NOW</div>
                 <h1 class="hero-headline">
-                    BRUTAL<br />
+                    BRUTAL
                     <span class="text-red">THOUGHTS</span><br />
                     <span class="text-blue">BOLD IDEAS</span>
                 </h1>
@@ -128,8 +132,7 @@
                     <div class="article-list">
                         <article class="card article-card">
                             <div class="article-thumb">
-                                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=400&h=320&fit=crop"
-                                    alt="Bold website design" />
+                                <img src="./assets/article-1.png" alt="Bold website design" />
                                 <span class="ribbon ribbon-red ribbon-sm">NEW</span>
                             </div>
                             <div class="article-body">
@@ -148,8 +151,7 @@
 
                         <article class="card article-card">
                             <div class="article-thumb">
-                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b8?w=400&h=320&fit=crop"
-                                    alt="Bold typography" />
+                                <img src="./assets/article-2.png" alt="Bold typography" />
                                 <span class="ribbon ribbon-blue ribbon-sm">HOT</span>
                             </div>
                             <div class="article-body">
@@ -168,8 +170,7 @@
 
                         <article class="card article-card">
                             <div class="article-thumb">
-                                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=320&fit=crop"
-                                    alt="Anti-Instagram aesthetic" />
+                                <img src="./assets/article-3.png" alt="Anti-Instagram aesthetic" />
                                 <span class="ribbon ribbon-purple ribbon-sm">VIRAL</span>
                             </div>
                             <div class="article-body">
@@ -250,7 +251,6 @@
             <div class="section-head-center">
                 <h2 class="section-title">MEET THE AUTHORS</h2>
                 <p class="section-subtitle">The rebels behind the brutal truth</p>
-                <div class="section-rule"></div>
             </div>
 
             <div class="author-grid">
@@ -420,7 +420,9 @@
                     <p>Get brutal insights delivered weekly. No spam, just truth that cuts through the noise.</p>
                     <form onsubmit="event.preventDefault()">
                         <input type="email" placeholder="YOUR EMAIL ADDRESS" />
-                        <button type="submit" class="btn btn-yellow btn-block">SUBSCRIBE</button>
+                        <div class="btn-plate"> <button type="submit"
+                                class="btn btn-yellow btn-block">SUBSCRIBE</button>
+                        </div>
                     </form>
                 </div>
             </div>
