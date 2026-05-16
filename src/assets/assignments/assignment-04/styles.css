@@ -1,8 +1,8 @@
 /* =========================================================
-   The UX Review — Brutalist Blog
-   Plain HTML + CSS, no framework.
-   No CSS custom properties. No rem units (1rem = 16px).
-   ========================================================= */
+  The UX Review — Brutalist Blog
+  Plain HTML + CSS, no framework.
+  No CSS custom properties. No rem units (1rem = 16px).
+  ========================================================= */
 
 /* ---------- 1. Reset / base ---------- */
 * {
@@ -62,14 +62,6 @@ h5 {
 
 p {
   margin: 0;
-}
-
-/* Focus styles */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-  outline: 3px solid #f97316;
-  outline-offset: 2px;
 }
 
 /* ---------- 2. Reusable helpers ---------- */
@@ -217,7 +209,7 @@ input:focus-visible {
   color: #ffffff;
   border: 2px solid #000000;
   transform: rotate(12deg);
-  white-space: nowrap;
+  white-space: nowrap; /* Forces text to never go on second line , always single line */
 }
 .ribbon-sm {
   padding: 4px 8px;

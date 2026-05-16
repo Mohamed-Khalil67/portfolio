@@ -1035,7 +1035,9 @@
 }
 
 .payment-icon img {
-  height: 16px;
-  width: auto;
+  height: 40px;
+  width: 80px;
+  object-fit: cover;
+  object-position: center;
 }
 /* End of footer */
