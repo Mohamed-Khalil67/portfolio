@@ -6,7 +6,6 @@
  *   {
  *     "title":       "CSS Flexbox Layout",
  *     "description": "Short description.",
- *     "week":        1,
  *     "tags":        ["HTML", "CSS"],
  *     "color":       "#f093fb, #f5576c",
  *     "category":    "route-assignments"
@@ -19,14 +18,46 @@
  * still appear with sensible defaults derived from the folder name.
  *
  * Run automatically via "prestart" / "prebuild" hooks in package.json.
+ *
+ * Watch mode uses chokidar for reliable cross-platform file watching.
+ * Install it once: npm install --save-dev chokidar
  */
 
-const fs   = require('fs');
+const fs = require('fs');
 const path = require('path');
 
-const ROOT          = path.resolve(__dirname, '..');
+// ─── Constants ───────────────────────────────────────────────────────────────
+
+const ROOT = path.resolve(__dirname, '..');
 const ASSIGNMENTS_DIR = path.join(ROOT, 'src', 'assets', 'assignments');
-const OUTPUT_FILE   = path.join(ROOT, 'src', 'app', 'data', 'assignments.data.ts');
+const OUTPUT_FILE = path.join(
+  ROOT,
+  'src',
+  'app',
+  'data',
+  'assignments.data.ts',
+);
+
+const VALID_CATEGORIES = new Set([
+  'route-assignments',
+  'frontend',
+  'fullstack',
+]);
+
+/**
+ * File extensions that are automatically picked up as downloadable assets.
+ * Add more here (e.g. 'app.js', 'main.ts') without touching scanFolder().
+ */
+const KNOWN_ASSET_FILENAMES = [
+  'style.css',
+  'styles.css',
+  'script.js',
+  'scripts.js',
+  'main.js',
+  'app.js',
+  'main.ts',
+  'app.ts',
+];
 
 const COLOR_PALETTE = [
   '#f093fb, #f5576c',
@@ -39,55 +70,83 @@ const COLOR_PALETTE = [
   '#f6d365, #fda085',
 ];
 
-const titleCase = (slug) =>
-  slug.replace(/[-_]+/g, ' ')
-      .replace(/\b\w/g, (c) => c.toUpperCase());
+// ─── Helpers ─────────────────────────────────────────────────────────────────
 
-const parseWeek = (slug) => {
-  const m = slug.match(/(\d+)$/);
-  return m ? parseInt(m[1], 10) : undefined;
-};
+const titleCase = (slug) =>
+  slug.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 
 const safeReadJson = (file) => {
   try {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
-  } catch {
+  } catch (err) {
+    if (err.code !== 'ENOENT') {
+      // File exists but failed to parse — warn the developer
+      console.warn(
+        `[generate-assignments] Warning: Could not parse ${file}: ${err.message}`,
+      );
+    }
     return null;
   }
 };
 
-const scanFolder = (folderName, index) => {
+// ─── Core logic ──────────────────────────────────────────────────────────────
+
+const scanFolder = (folderName, colorIndex) => {
   const folderPath = path.join(ASSIGNMENTS_DIR, folderName);
-  const indexHtml  = path.join(folderPath, 'index.html');
+  const indexHtml = path.join(folderPath, 'index.html');
 
   if (!fs.existsSync(indexHtml)) {
-    console.warn(`[generate-assignments] Skipping ${folderName} — no index.html`);
+    console.warn(
+      `[generate-assignments] Skipping "${folderName}" — no index.html found.`,
+    );
     return null;
   }
 
   const meta = safeReadJson(path.join(folderPath, 'meta.json')) ?? {};
 
-  const id          = folderName;
-  const title       = meta.title       ?? titleCase(folderName);
+  // ── Validate category ──────────────────────────────────────────────────────
+  let category = meta.category ?? 'route-assignments';
+  if (!VALID_CATEGORIES.has(category)) {
+    console.warn(
+      `[generate-assignments] Warning: "${folderName}" has unknown category "${category}". ` +
+        `Falling back to "route-assignments". Valid values: ${[...VALID_CATEGORIES].join(', ')}.`,
+    );
+    category = 'route-assignments';
+  }
+
+  const id = folderName;
+  const title = meta.title ?? titleCase(folderName);
   const description = meta.description ?? '';
-  const week        = meta.week        ?? parseWeek(folderName);
-  const tags        = Array.isArray(meta.tags) && meta.tags.length ? meta.tags : ['HTML'];
-  const color       = meta.color       ?? COLOR_PALETTE[index % COLOR_PALETTE.length];
-  const category    = meta.category    ?? 'route-assignments';
+  const tags =
+    Array.isArray(meta.tags) && meta.tags.length ? meta.tags : ['HTML'];
+  const color = meta.color ?? COLOR_PALETTE[colorIndex % COLOR_PALETTE.length];
+  const previewUrl = `assets/assignments/${folderName}/index.html`;
 
-  const previewUrl  = `assets/assignments/${folderName}/index.html`;
-
+  // ── Collect downloadable files ─────────────────────────────────────────────
+  // Always include index.html, then scan for any known asset filenames.
   const downloadFiles = [
     { name: 'index.html', url: `assets/assignments/${folderName}/index.html` },
   ];
-  if (fs.existsSync(path.join(folderPath, 'style.css'))) {
-    downloadFiles.push({ name: 'style.css', url: `assets/assignments/${folderName}/style.css` });
-  }
-  if (fs.existsSync(path.join(folderPath, 'script.js'))) {
-    downloadFiles.push({ name: 'script.js', url: `assets/assignments/${folderName}/script.js` });
+
+  for (const filename of KNOWN_ASSET_FILENAMES) {
+    if (fs.existsSync(path.join(folderPath, filename))) {
+      downloadFiles.push({
+        name: filename,
+        url: `assets/assignments/${folderName}/${filename}`,
+      });
+    }
   }
 
-  return { id, title, description, week, tags, previewUrl, downloadFiles, color, category };
+  return {
+    id,
+    title,
+    description,
+    tags,
+    previewUrl,
+    downloadFiles,
+    color,
+    category,
+  };
 };
 
 const renderAssignment = (a) => {
@@ -97,12 +156,13 @@ const renderAssignment = (a) => {
     `    title: ${JSON.stringify(a.title)},`,
     `    description: ${JSON.stringify(a.description)},`,
   ];
-  if (a.week !== undefined) lines.push(`    week: ${a.week},`);
   lines.push(`    tags: ${JSON.stringify(a.tags)},`);
   lines.push(`    previewUrl: ${JSON.stringify(a.previewUrl)},`);
   lines.push('    downloadFiles: [');
   for (const f of a.downloadFiles) {
-    lines.push(`      { name: ${JSON.stringify(f.name)}, url: ${JSON.stringify(f.url)} },`);
+    lines.push(
+      `      { name: ${JSON.stringify(f.name)}, url: ${JSON.stringify(f.url)} },`,
+    );
   }
   lines.push('    ],');
   lines.push(`    color: ${JSON.stringify(a.color)},`);
@@ -112,23 +172,24 @@ const renderAssignment = (a) => {
 };
 
 const main = () => {
-  if (!fs.existsSync(ASSIGNMENTS_DIR)) {
-    console.error(`[generate-assignments] Missing folder: ${ASSIGNMENTS_DIR}`);
-    process.exit(1);
-  }
+  try {
+    if (!fs.existsSync(ASSIGNMENTS_DIR)) {
+      throw new Error(`Missing assignments folder: ${ASSIGNMENTS_DIR}`);
+    }
 
-  const folders = fs.readdirSync(ASSIGNMENTS_DIR, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name)
-    .sort();
+    const folders = fs
+      .readdirSync(ASSIGNMENTS_DIR, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name)
+      .sort();
 
-  const assignments = folders
-    .map((name, i) => scanFolder(name, i))
-    .filter(Boolean);
+    const assignments = folders
+      .map((name, i) => scanFolder(name, i))
+      .filter(Boolean);
 
-  const body = assignments.map(renderAssignment).join('\n');
+    const body = assignments.map(renderAssignment).join('\n');
 
-  const output = `// AUTO-GENERATED by scripts/generate-assignments.js
+    const output = `// AUTO-GENERATED by scripts/generate-assignments.js
 // Do not edit by hand — modify src/assets/assignments/<folder>/meta.json instead.
 
 import { Assignment } from '../models/assignment.model';
@@ -138,24 +199,66 @@ ${body}
 ];
 `;
 
-  fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
-  fs.writeFileSync(OUTPUT_FILE, output, 'utf8');
+    fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
+    fs.writeFileSync(OUTPUT_FILE, output, 'utf8');
 
-  console.log(`[generate-assignments] Wrote ${assignments.length} assignment(s) → ${path.relative(ROOT, OUTPUT_FILE)}`);
+    console.log(
+      `[generate-assignments] ✔ Wrote ${assignments.length} assignment(s) → ` +
+        path.relative(ROOT, OUTPUT_FILE),
+    );
+  } catch (err) {
+    console.error(`[generate-assignments] ✖ Error: ${err.message}`);
+    process.exit(1);
+  }
 };
 
-if (process.argv.includes('--watch')) {
-  main();
-  console.log('[generate-assignments] Watching src/assets/assignments/ for changes…');
+// ─── Entry point ─────────────────────────────────────────────────────────────
 
-  let debounce = null;
-  fs.watch(ASSIGNMENTS_DIR, { recursive: true }, (_event, filename) => {
-    if (debounce) clearTimeout(debounce);
-    debounce = setTimeout(() => {
-      console.log(`[generate-assignments] Change detected (${filename ?? '?'}) — rescanning…`);
-      main();
-    }, 300);
-  });
+if (process.argv.includes('--watch')) {
+  // Prefer chokidar for reliable cross-platform watching.
+  // Falls back to fs.watch with a warning if chokidar isn't installed.
+  let chokidar;
+  try {
+    chokidar = require('chokidar');
+  } catch {
+    chokidar = null;
+  }
+
+  main();
+
+  if (chokidar) {
+    console.log(
+      '[generate-assignments] Watching src/assets/assignments/ for changes… (chokidar)',
+    );
+
+    chokidar
+      .watch(ASSIGNMENTS_DIR, {
+        ignoreInitial: true,
+        awaitWriteFinish: { stabilityThreshold: 300, pollInterval: 100 },
+      })
+      .on('all', (event, filePath) => {
+        console.log(
+          `[generate-assignments] ${event}: ${path.relative(ROOT, filePath)} — rescanning…`,
+        );
+        main();
+      });
+  } else {
+    console.warn(
+      '[generate-assignments] chokidar not found — falling back to fs.watch (less reliable).\n' +
+        '  Install it for better watch support: npm install --save-dev chokidar',
+    );
+
+    let debounce = null;
+    fs.watch(ASSIGNMENTS_DIR, { recursive: true }, (_event, filename) => {
+      if (debounce) clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        console.log(
+          `[generate-assignments] Change detected (${filename ?? '?'}) — rescanning…`,
+        );
+        main();
+      }, 300);
+    });
+  }
 } else {
   main();
 }
