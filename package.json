@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "generate-assignments": "node scripts/generate-assignments.js",
-    "prebuild": "node scripts/generate-assignments.js",
     "start": "concurrently --kill-others-on-fail -n scan,ng -c cyan,green \"node scripts/generate-assignments.js --watch\" \"ng serve --open\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
