@@ -13,7 +13,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #1a1a2e;
+  background: #252338;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
@@ -189,7 +190,7 @@
   font-size: 0.81rem; font-weight: 600; border: none; cursor: pointer;
   transition: all 0.2s; white-space: nowrap;
 
-  .chevron { font-size: 0.9rem; transition: transform 0.2s; &.open { transform: rotate(180deg); } }
+  .chevron { flex-shrink: 0; transition: transform 0.2s; &.open { transform: rotate(180deg); } }
 
   &.btn-primary {
     background: var(--accent); color: #fff;

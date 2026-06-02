@@ -1,7 +1,0 @@
-{
-  "title": "JavaScript Todo App",
-  "description": "A fully interactive to-do list with add, complete, and delete functionality using vanilla JavaScript and DOM manipulation.",
-  "week": 2,
-  "tags": ["HTML", "CSS", "JavaScript"],
-  "color": "#4facfe, #00f2fe"
-}

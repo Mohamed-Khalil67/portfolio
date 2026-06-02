@@ -8,7 +8,8 @@
   .header-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background: linear-gradient(135deg, rgba(15, 12, 41, 0.85) 0%, rgba(48, 43, 99, 0.8) 50%, rgba(36, 36, 62, 0.85) 100%);
+    backdrop-filter: blur(0px);
     z-index: 0;
 
     &::after {
@@ -46,28 +47,32 @@
   }
 }
 
+// ── Avatar ────────────────────────────
+.author-avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 6px rgba(240, 147, 251, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
 .author-name {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #fff;
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-.author-role {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 3px 0 0;
-  text-align: center;
-}
-
-// ── Portfolio title ───────────────────
-.header-title {
-  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 800;
   line-height: 1;
   margin: 0;
   letter-spacing: -0.03em;
+}
+
+.author-role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-align: center;
 }
 
 .gradient-text {
@@ -84,4 +89,38 @@
   max-width: 440px;
   line-height: 1.7;
   margin: 0;
+}
+
+// ── Social links ──────────────────────
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.header-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.83rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+
+  svg { flex-shrink: 0; }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: translateY(-2px);
+  }
 }

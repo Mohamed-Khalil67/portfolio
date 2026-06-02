@@ -12,7 +12,7 @@ interface Section {
 }
 
 const SECTION_ORDER: { key: string; label: string }[] = [
-  { key: 'route-assignments', label: 'Route Assignments' },
+  { key: 'route-assignments', label: 'Landing Pages' },
   { key: 'frontend',          label: 'Front End Projects' },
   { key: 'fullstack',         label: 'Full Stack Projects' },
 ];

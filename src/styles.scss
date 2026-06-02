@@ -7,8 +7,8 @@
 *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --color-bg:       #0d0d1a;
-  --color-surface:  #1a1a2e;
+  --color-bg:       #1a1828;
+  --color-surface:  #252338;
   --font-sans:      'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:      'Fira Code', 'Courier New', monospace;
 }
@@ -22,28 +22,27 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
 // Scrollbar
 ::-webkit-scrollbar       { width: 7px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.14); border-radius: 999px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.24); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.3); }
 
 // Focus ring
 :focus-visible {
-  outline: 2px solid rgba(240,147,251,0.6);
+  outline: 2px solid rgba(200, 80, 192, 0.7);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
 // Selection
-::selection { background: rgba(240,147,251,0.28); color: #fff; }
+::selection { background: rgba(200, 80, 192, 0.3); color: #fff; }
 
 // ── Prism overrides ───────────────────
-// Make Prism's tomorrow theme blend into our dark card
 pre[class*="language-"],
 code[class*="language-"] {
   background: transparent !important;
@@ -53,6 +52,5 @@ code[class*="language-"] {
 
 // ── Global mobile baseline ────────────
 @media (max-width: 600px) {
-  // Slightly tighter spacing everywhere on phones
   body { font-size: 15px; }
 }
