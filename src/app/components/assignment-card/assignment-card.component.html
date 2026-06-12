@@ -7,31 +7,38 @@
     <div class="preview-loader" [class.hidden]="iframeLoaded">
       <div class="spinner"></div>
     </div>
-    <iframe [src]="safePreviewUrl" (load)="onIframeLoad()" [class.loaded]="iframeLoaded" title="Assignment preview"></iframe>
+    @if (iframeVisible) {
+    <iframe [src]="safePreviewUrl" (load)="onIframeLoad()" [class.loaded]="iframeLoaded"
+      loading="lazy" aria-hidden="true" tabindex="-1"></iframe>
+    }
     <div class="preview-overlay">
       <span class="preview-cta">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
           <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
         </svg>
-        Open full page
+        Open in new tab
       </span>
     </div>
   </div>
 
   <!-- Card body -->
   <div class="card-body">
+    @if (assignment.week || visibleTags.length) {
     <div class="card-tags">
       @if (assignment.week) {
       <span class="tag tag-week">Week {{ assignment.week }}</span>
       }
-      @for (tag of assignment.tags; track tag) {
+      @for (tag of visibleTags; track tag) {
       <span class="tag">{{ tag }}</span>
       }
     </div>
+    }
 
     <h2 class="card-title">{{ assignment.title }}</h2>
+    @if (assignment.description.trim()) {
     <p class="card-description">{{ assignment.description }}</p>
+    }
 
     <div class="card-actions">
 
@@ -44,31 +51,15 @@
         Open
       </button>
 
-      <!-- Download -->
+      <!-- Download all -->
       @if (assignment.downloadFiles.length) {
-      <div class="download-wrapper">
-        <button class="btn btn-secondary" (click)="toggleDownloadMenu($event)">
+        <button class="btn btn-secondary" (click)="downloadAll($event)">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Files
-          <svg class="chevron" [class.open]="showDownloadMenu" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="6 9 12 15 18 9"/>
-          </svg>
+          Download
         </button>
-
-        @if (showDownloadMenu) {
-        <div class="download-menu">
-          @for (file of assignment.downloadFiles; track file.name) {
-          <button class="download-item" (click)="downloadFile(file, $event)">
-            <span class="file-icon">{{ getFileIcon(file.name) }}</span>
-            {{ file.name }}
-          </button>
-          }
-        </div>
-        }
-      </div>
       }
     </div>
   </div>

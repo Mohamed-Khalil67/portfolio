@@ -1,7 +1,7 @@
 import {
   Component, Input, Output, EventEmitter,
-  OnInit, OnDestroy, AfterViewChecked,
-  ViewChild, ElementRef,
+  OnInit, OnDestroy, AfterViewInit, AfterViewChecked,
+  ViewChild, ElementRef, NgZone,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -19,17 +19,20 @@ type ViewMode = 'preview' | 'code';
   templateUrl: './assignment-card.component.html',
   styleUrls: ['./assignment-card.component.scss'],
 })
-export class AssignmentCardComponent implements OnInit, OnDestroy, AfterViewChecked {
+export class AssignmentCardComponent implements OnInit, OnDestroy, AfterViewInit, AfterViewChecked {
   @Input() assignment!: Assignment;
   @Input() index = 0;
   @Output() editRequested = new EventEmitter<Assignment>();
+  @Output() openDetail    = new EventEmitter<Assignment>();
 
   @ViewChild('codeBlock') codeBlock?: ElementRef<HTMLElement>;
 
   safePreviewUrl!: SafeResourceUrl;
   iframeLoaded     = false;
-  showDownloadMenu = false;
+  iframeVisible    = false;
   viewMode: ViewMode = 'preview';
+
+  private observer?: IntersectionObserver;
 
   codeContent  = '';
   codeLanguage = 'markup';
@@ -47,6 +50,8 @@ export class AssignmentCardComponent implements OnInit, OnDestroy, AfterViewChec
   constructor(
     private sanitizer: DomSanitizer,
     private assignmentService: AssignmentService,
+    private host: ElementRef<HTMLElement>,
+    private zone: NgZone,
   ) {}
 
   ngOnInit(): void {
@@ -55,8 +60,29 @@ export class AssignmentCardComponent implements OnInit, OnDestroy, AfterViewChec
     );
   }
 
+  ngAfterViewInit(): void {
+    // Lazy-load iframe only when the card enters the viewport
+    if (typeof IntersectionObserver === 'undefined') {
+      this.iframeVisible = true;
+      return;
+    }
+    this.zone.runOutsideAngular(() => {
+      this.observer = new IntersectionObserver(
+        entries => {
+          if (entries.some(e => e.isIntersecting)) {
+            this.zone.run(() => (this.iframeVisible = true));
+            this.observer?.disconnect();
+          }
+        },
+        { rootMargin: '200px' },
+      );
+      this.observer.observe(this.host.nativeElement);
+    });
+  }
+
   ngOnDestroy(): void {
     if (this.thumbBlobUrl) URL.revokeObjectURL(this.thumbBlobUrl);
+    this.observer?.disconnect();
   }
 
   ngAfterViewChecked(): void {
@@ -66,6 +92,17 @@ export class AssignmentCardComponent implements OnInit, OnDestroy, AfterViewChec
         if (typeof Prism !== 'undefined') Prism.highlightElement(this.codeBlock.nativeElement);
       } catch { /* Prism not loaded yet */ }
     }
+  }
+
+  private static readonly LANGUAGE_TAGS = new Set([
+    'html', 'html5', 'css', 'css3', 'js', 'javascript', 'ts', 'typescript',
+    'scss', 'sass', 'less', 'json', 'xml', 'svg', 'markup',
+  ]);
+
+  get visibleTags(): string[] {
+    return (this.assignment.tags ?? []).filter(
+      t => !AssignmentCardComponent.LANGUAGE_TAGS.has(t.trim().toLowerCase())
+    );
   }
 
   get accentGradient(): string {
@@ -119,31 +156,28 @@ export class AssignmentCardComponent implements OnInit, OnDestroy, AfterViewChec
 
   onIframeLoad(): void { this.iframeLoaded = true; }
 
+  requestDetail(event: MouseEvent): void {
+    event.stopPropagation();
+    this.openDetail.emit(this.assignment);
+  }
+
   onEdit(event: MouseEvent): void {
     event.stopPropagation();
     this.editRequested.emit(this.assignment);
   }
 
-  toggleDownloadMenu(event: MouseEvent): void {
+  downloadAll(event: MouseEvent): void {
     event.stopPropagation();
-    this.showDownloadMenu = !this.showDownloadMenu;
-  }
-
-  downloadFile(file: { name: string; url: string }, event: MouseEvent): void {
-    event.stopPropagation();
-    this.showDownloadMenu = false;
-    const a = document.createElement('a');
-    a.href = file.url;
-    a.download = file.name;
-    a.click();
-  }
-
-  getFileIcon(filename: string): string {
-    const ext = filename.split('.').pop()?.toLowerCase();
-    const icons: Record<string, string> = {
-      html: '🌐', css: '🎨', js: '⚡', ts: '🔷',
-      json: '📋', png: '🖼', jpg: '🖼', svg: '🖼',
-    };
-    return icons[ext ?? ''] ?? '📄';
+    this.assignment.downloadFiles.forEach((file, i) => {
+      // Stagger so the browser doesn't drop concurrent download requests
+      setTimeout(() => {
+        const a = document.createElement('a');
+        a.href = file.url;
+        a.download = file.name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }, i * 150);
+    });
   }
 }

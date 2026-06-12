@@ -1,34 +1,21 @@
 <section class="grid-section">
 
-  <!-- Heading -->
-  <div class="grid-header">
-    <h2 class="grid-heading">
-      My Work
-      <span class="count-badge">{{ totalCount() }}</span>
-    </h2>
-  </div>
-
-  <!-- Search bar -->
-  <div class="search-bar">
-    <div class="search-input-wrap">
-      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-        <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-      </svg>
-      <input type="text" class="search-input" placeholder="Search projects…"
-        [value]="searchQuery()" (input)="onSearch($event)" />
-      @if (searchQuery()) {
-        <button class="search-clear" (click)="searchQuery.set('')" aria-label="Clear search">✕</button>
-      }
-    </div>
+  <!-- Category chips -->
+  <div class="filter-chips" role="tablist">
+    <button class="chip" [class.active]="activeCategory() === 'all'"
+      (click)="setCategory('all')" role="tab">All</button>
+    @for (cat of SECTION_ORDER; track cat.key) {
+      <button class="chip" [class.active]="activeCategory() === cat.key"
+        (click)="setCategory(cat.key)" role="tab">{{ cat.label }}</button>
+    }
   </div>
 
   <!-- Sections -->
   @if (sections().length === 0) {
     <div class="empty-state">
-      <div class="empty-icon">🔍</div>
-      <h3>No matches</h3>
-      <p>Try a different search term.</p>
-      <button class="btn-clear-filters" (click)="searchQuery.set('')">Clear search</button>
+      <div class="empty-icon">📁</div>
+      <h3>No projects in this category</h3>
+      <button class="btn-clear-filters" (click)="setCategory('all')">Show all</button>
     </div>
   } @else {
     @for (section of sections(); track section.key) {
@@ -36,7 +23,9 @@
         <h3 class="section-heading">{{ section.label }}</h3>
         <div class="assignments-grid">
           @for (assignment of section.assignments; track assignment.id; let i = $index) {
-            <app-assignment-card [assignment]="assignment" [index]="i" (editRequested)="onEditRequested($event)" />
+            <app-assignment-card [assignment]="assignment" [index]="i"
+              (editRequested)="onEditRequested($event)"
+              (openDetail)="openDetail($event)" />
           }
         </div>
       </div>
@@ -51,4 +40,8 @@
     (closed)="onEditModalClosed()"
     (created)="onEditModalClosed()"
     (updated)="onEditModalClosed()" />
+}
+
+@if (detailAssignment(); as detail) {
+  <app-assignment-detail-modal [assignment]="detail" (closed)="closeDetail()" />
 }

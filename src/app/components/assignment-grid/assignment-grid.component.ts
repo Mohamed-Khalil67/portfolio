@@ -1,9 +1,10 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AssignmentService } from '../../services/assignment.service';
 import { Assignment } from '../../models/assignment.model';
 import { AssignmentCardComponent } from '../assignment-card/assignment-card.component';
 import { CreateAssignmentModalComponent } from '../create-assignment-modal/create-assignment-modal.component';
+import { AssignmentDetailModalComponent } from '../assignment-detail-modal/assignment-detail-modal.component';
 
 interface Section {
   key: string;
@@ -24,22 +25,23 @@ const SECTION_ORDER: { key: string; label: string }[] = [
     CommonModule,
     AssignmentCardComponent,
     CreateAssignmentModalComponent,
+    AssignmentDetailModalComponent,
   ],
   templateUrl: './assignment-grid.component.html',
   styleUrls: ['./assignment-grid.component.scss'],
 })
 export class AssignmentGridComponent {
+  readonly SECTION_ORDER = SECTION_ORDER;
+
   showEditModal    = signal(false);
   assignmentToEdit = signal<Assignment | null>(null);
-  searchQuery      = signal('');
+  detailAssignment = signal<Assignment | null>(null);
+  activeCategory   = signal<string>('all');
 
   private readonly filtered = computed(() => {
-    const q = this.searchQuery().toLowerCase().trim();
-    return this.assignmentService.assignments().filter((a) =>
-      !q ||
-      a.title.toLowerCase().includes(q) ||
-      a.description.toLowerCase().includes(q) ||
-      a.tags.some((t) => t.toLowerCase().includes(q)),
+    const cat = this.activeCategory();
+    return this.assignmentService.assignments().filter(
+      (a) => cat === 'all' || (a.category ?? 'route-assignments') === cat,
     );
   });
 
@@ -55,12 +57,10 @@ export class AssignmentGridComponent {
       .filter((s) => s.assignments.length > 0);
   });
 
-  readonly totalCount = computed(() => this.filtered().length);
-
   constructor(readonly assignmentService: AssignmentService) {}
 
-  onSearch(event: Event): void {
-    this.searchQuery.set((event.target as HTMLInputElement).value);
+  setCategory(key: string): void {
+    this.activeCategory.set(key);
   }
 
   onEditRequested(assignment: Assignment): void {
@@ -71,5 +71,18 @@ export class AssignmentGridComponent {
   onEditModalClosed(): void {
     this.showEditModal.set(false);
     this.assignmentToEdit.set(null);
+  }
+
+  openDetail(assignment: Assignment): void {
+    this.detailAssignment.set(assignment);
+  }
+
+  closeDetail(): void {
+    this.detailAssignment.set(null);
+  }
+
+  @HostListener('window:keydown.escape')
+  onEsc(): void {
+    if (this.detailAssignment()) this.closeDetail();
   }
 }

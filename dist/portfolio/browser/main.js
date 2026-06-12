@@ -28450,29 +28450,51 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 12, vars: 0, consts: [[1, "portfolio-header"], [1, "header-bg"], [1, "header-content"], [1, "author-name"], [1, "author-role"], [1, "header-title"], [1, "gradient-text"], [1, "header-subtitle"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 25, vars: 0, consts: [[1, "portfolio-header"], [1, "header-bg"], [1, "header-content"], ["src", "assets/avatar.jpg", "alt", "Mohamed Khalil", 1, "author-avatar"], [1, "author-name"], [1, "gradient-text"], [1, "author-role"], [1, "header-subtitle"], [1, "header-links"], ["href", "https://github.com/Mohamed-Khalil67", "target", "_blank", "rel", "noopener", "aria-label", "GitHub", 1, "header-link"], ["width", "18", "height", "18", "viewBox", "0 0 24 24", "fill", "currentColor"], ["d", "M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"], ["href", "https://www.linkedin.com/in/mohamed-khalil-ucbl", "target", "_blank", "rel", "noopener", "aria-label", "LinkedIn", 1, "header-link"], ["d", "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"], ["href", "mailto:mohamed.khalil.ucbl@gmail.com", "aria-label", "Email", 1, "header-link"], ["width", "18", "height", "18", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2"], ["x", "2", "y", "4", "width", "20", "height", "16", "rx", "2"], ["d", "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275domElementStart(0, "header", 0);
       \u0275\u0275domElement(1, "div", 1);
-      \u0275\u0275domElementStart(2, "div", 2)(3, "h1", 3);
-      \u0275\u0275text(4, "Mohamed Khalil");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(5, "p", 4);
-      \u0275\u0275text(6, "Full Stack Developer");
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElementStart(7, "h2", 5)(8, "span", 6);
-      \u0275\u0275text(9, "Portfolio");
+      \u0275\u0275domElementStart(2, "div", 2);
+      \u0275\u0275domElement(3, "img", 3);
+      \u0275\u0275domElementStart(4, "h1", 4)(5, "span", 5);
+      \u0275\u0275text(6, "Mohamed Khalil");
       \u0275\u0275domElementEnd()();
-      \u0275\u0275domElementStart(10, "p", 7);
-      \u0275\u0275text(11, " A collection of hands-on projects built throughout the full-stack development course. ");
-      \u0275\u0275domElementEnd()()();
+      \u0275\u0275domElementStart(7, "p", 6);
+      \u0275\u0275text(8, "Frontend Developer");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(9, "p", 7);
+      \u0275\u0275text(10, " Crafting clean, responsive interfaces and landing pages. ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275domElementStart(11, "div", 8)(12, "a", 9);
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275domElementStart(13, "svg", 10);
+      \u0275\u0275domElement(14, "path", 11);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(15, " GitHub ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275domElementStart(16, "a", 12);
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275domElementStart(17, "svg", 10);
+      \u0275\u0275domElement(18, "path", 13);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(19, " LinkedIn ");
+      \u0275\u0275domElementEnd();
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275domElementStart(20, "a", 14);
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275domElementStart(21, "svg", 15);
+      \u0275\u0275domElement(22, "rect", 16)(23, "path", 17);
+      \u0275\u0275domElementEnd();
+      \u0275\u0275text(24, " Email ");
+      \u0275\u0275domElementEnd()()()();
     }
-  }, dependencies: [CommonModule], styles: ['\n.portfolio-header[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  z-index: 0;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%]::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-name[_ngcontent-%COMP%] {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.02em;\n}\n.author-role[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  margin: 3px 0 0;\n  text-align: center;\n}\n.header-title[_ngcontent-%COMP%] {\n  font-size: clamp(2.8rem, 8vw, 5rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.gradient-text[_ngcontent-%COMP%] {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n/*# sourceMappingURL=header.component.css.map */'] });
+  }, dependencies: [CommonModule], styles: ['\n.portfolio-header[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      rgba(15, 12, 41, 0.85) 0%,\n      rgba(48, 43, 99, 0.8) 50%,\n      rgba(36, 36, 62, 0.85) 100%);\n  -webkit-backdrop-filter: blur(0px);\n  backdrop-filter: blur(0px);\n  z-index: 0;\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-bg[_ngcontent-%COMP%]::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header[_ngcontent-%COMP%]   .header-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-avatar[_ngcontent-%COMP%] {\n  width: 170px;\n  height: 170px;\n  border-radius: 50%;\n  object-fit: cover;\n  object-position: center 15%;\n  border: 3px solid rgba(255, 255, 255, 0.15);\n  box-shadow: 0 0 0 6px rgba(240, 147, 251, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);\n}\n.author-name[_ngcontent-%COMP%] {\n  font-size: clamp(2rem, 5vw, 3.2rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.author-role[_ngcontent-%COMP%] {\n  font-size: 1.1rem;\n  font-weight: 500;\n  color: rgba(255, 255, 255, 0.55);\n  margin: 0;\n  letter-spacing: 0.01em;\n  text-align: center;\n}\n.gradient-text[_ngcontent-%COMP%] {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n.header-links[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin-top: 4px;\n}\n.header-link[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 7px;\n  padding: 8px 16px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.14);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.83rem;\n  font-weight: 600;\n  text-decoration: none;\n  transition:\n    background 0.2s,\n    color 0.2s,\n    border-color 0.2s,\n    transform 0.2s;\n}\n.header-link[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.header-link[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.15);\n  border-color: rgba(255, 255, 255, 0.3);\n  color: #fff;\n  transform: translateY(-2px);\n}\n/*# sourceMappingURL=header.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HeaderComponent, [{
     type: Component,
-    args: [{ selector: "app-header", standalone: true, imports: [CommonModule], template: '<header class="portfolio-header">\r\n  <div class="header-bg"></div>\r\n  <div class="header-content">\r\n\r\n    <h1 class="author-name">Mohamed Khalil</h1>\r\n    <p class="author-role">Full Stack Developer</p>\r\n\r\n    <h2 class="header-title"><span class="gradient-text">Portfolio</span></h2>\r\n\r\n    <p class="header-subtitle">\r\n      A collection of hands-on projects built throughout the full-stack development course.\r\n    </p>\r\n\r\n  </div>\r\n</header>', styles: ['/* src/app/components/header/header.component.scss */\n.portfolio-header {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header .header-bg {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      #0f0c29 0%,\n      #302b63 50%,\n      #24243e 100%);\n  z-index: 0;\n}\n.portfolio-header .header-bg::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header .header-content {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-name {\n  font-size: 1.25rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.02em;\n}\n.author-role {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  margin: 3px 0 0;\n  text-align: center;\n}\n.header-title {\n  font-size: clamp(2.8rem, 8vw, 5rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.gradient-text {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n/*# sourceMappingURL=header.component.css.map */\n'] }]
+    args: [{ selector: "app-header", standalone: true, imports: [CommonModule], template: '<header class="portfolio-header">\n  <div class="header-bg"></div>\n  <div class="header-content">\n\n    <img class="author-avatar" src="assets/avatar.jpg" alt="Mohamed Khalil" />\n    <h1 class="author-name"><span class="gradient-text">Mohamed Khalil</span></h1>\n    <p class="author-role">Frontend Developer</p>\n\n    <p class="header-subtitle">\n      Crafting clean, responsive interfaces and landing pages.\n    </p>\n\n    <div class="header-links">\n      <a href="https://github.com/Mohamed-Khalil67" target="_blank" rel="noopener" class="header-link" aria-label="GitHub">\n        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">\n          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>\n        </svg>\n        GitHub\n      </a>\n      <a href="https://www.linkedin.com/in/mohamed-khalil-ucbl" target="_blank" rel="noopener" class="header-link" aria-label="LinkedIn">\n        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">\n          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>\n        </svg>\n        LinkedIn\n      </a>\n      <a href="mailto:mohamed.khalil.ucbl@gmail.com" class="header-link" aria-label="Email">\n        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\n          <rect x="2" y="4" width="20" height="16" rx="2"/>\n          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>\n        </svg>\n        Email\n      </a>\n    </div>\n\n  </div>\n</header>\n', styles: ['/* src/app/components/header/header.component.scss */\n.portfolio-header {\n  position: relative;\n  overflow: hidden;\n  padding: 64px 24px 56px;\n  text-align: center;\n  color: #fff;\n}\n.portfolio-header .header-bg {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      135deg,\n      rgba(15, 12, 41, 0.85) 0%,\n      rgba(48, 43, 99, 0.8) 50%,\n      rgba(36, 36, 62, 0.85) 100%);\n  -webkit-backdrop-filter: blur(0px);\n  backdrop-filter: blur(0px);\n  z-index: 0;\n}\n.portfolio-header .header-bg::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    radial-gradient(\n      ellipse at 20% 50%,\n      rgba(240, 147, 251, 0.25) 0%,\n      transparent 60%),\n    radial-gradient(\n      ellipse at 80% 20%,\n      rgba(79, 172, 254, 0.2) 0%,\n      transparent 50%),\n    radial-gradient(\n      ellipse at 60% 80%,\n      rgba(67, 233, 123, 0.15) 0%,\n      transparent 50%);\n}\n.portfolio-header .header-content {\n  position: relative;\n  z-index: 1;\n  max-width: 680px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 20px;\n}\n.author-avatar {\n  width: 170px;\n  height: 170px;\n  border-radius: 50%;\n  object-fit: cover;\n  object-position: center 15%;\n  border: 3px solid rgba(255, 255, 255, 0.15);\n  box-shadow: 0 0 0 6px rgba(240, 147, 251, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);\n}\n.author-name {\n  font-size: clamp(2rem, 5vw, 3.2rem);\n  font-weight: 800;\n  line-height: 1;\n  margin: 0;\n  letter-spacing: -0.03em;\n}\n.author-role {\n  font-size: 1.1rem;\n  font-weight: 500;\n  color: rgba(255, 255, 255, 0.55);\n  margin: 0;\n  letter-spacing: 0.01em;\n  text-align: center;\n}\n.gradient-text {\n  background:\n    linear-gradient(\n      90deg,\n      #f093fb,\n      #4facfe,\n      #43e97b);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}\n.header-subtitle {\n  font-size: 0.95rem;\n  color: rgba(255, 255, 255, 0.5);\n  max-width: 440px;\n  line-height: 1.7;\n  margin: 0;\n}\n.header-links {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin-top: 4px;\n}\n.header-link {\n  display: inline-flex;\n  align-items: center;\n  gap: 7px;\n  padding: 8px 16px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.14);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.83rem;\n  font-weight: 600;\n  text-decoration: none;\n  transition:\n    background 0.2s,\n    color 0.2s,\n    border-color 0.2s,\n    transform 0.2s;\n}\n.header-link svg {\n  flex-shrink: 0;\n}\n.header-link:hover {\n  background: rgba(255, 255, 255, 0.15);\n  border-color: rgba(255, 255, 255, 0.3);\n  color: #fff;\n  transform: translateY(-2px);\n}\n/*# sourceMappingURL=header.component.css.map */\n'] }]
   }], null, null);
 })();
 (() => {
@@ -28482,69 +28504,66 @@ var HeaderComponent = class _HeaderComponent {
 // src/app/data/assignments.data.ts
 var ASSIGNMENTS = [
   {
-    id: "assignment-01",
-    title: "CSS Flexbox Layout",
-    description: "A responsive page layout built entirely with CSS Flexbox \u2014 navigation bar, hero section, and a card grid.",
-    week: 1,
-    tags: ["HTML", "CSS", "Flexbox"],
-    previewUrl: "assets/assignments/assignment-01/index.html",
+    id: "FitCoreGymLanding",
+    title: "FitCoreGymLanding",
+    description: "",
+    tags: ["HTML"],
+    previewUrl: "assets/ALL/landing-pages/FitCoreGymLanding/index.html",
     downloadFiles: [
-      { name: "index.html", url: "assets/assignments/assignment-01/index.html" },
-      { name: "style.css", url: "assets/assignments/assignment-01/style.css" }
+      { name: "index.html", url: "assets/ALL/landing-pages/FitCoreGymLanding/index.html" },
+      { name: "style.css", url: "assets/ALL/landing-pages/FitCoreGymLanding/style.css" }
     ],
     color: "#f093fb, #f5576c",
     category: "route-assignments"
   },
   {
-    id: "assignment-02",
-    title: "JavaScript Todo App",
-    description: "A fully interactive to-do list with add, complete, and delete functionality using vanilla JavaScript and DOM manipulation.",
-    week: 2,
-    tags: ["HTML", "CSS", "JavaScript"],
-    previewUrl: "assets/assignments/assignment-02/index.html",
+    id: "Hoodizz",
+    title: "Hoodizz",
+    description: "",
+    tags: ["HTML"],
+    previewUrl: "assets/ALL/landing-pages/Hoodizz/index.html",
     downloadFiles: [
-      { name: "index.html", url: "assets/assignments/assignment-02/index.html" },
-      { name: "style.css", url: "assets/assignments/assignment-02/style.css" }
+      { name: "index.html", url: "assets/ALL/landing-pages/Hoodizz/index.html" },
+      { name: "styles.css", url: "assets/ALL/landing-pages/Hoodizz/styles.css" }
     ],
     color: "#4facfe, #00f2fe",
     category: "route-assignments"
   },
   {
-    id: "assignment-03",
-    title: "Assignment 03",
+    id: "Mudabbir",
+    title: "Mudabbir",
     description: "",
-    week: 3,
-    tags: ["HTML", "CSS"],
-    previewUrl: "assets/assignments/assignment-03/index.html",
+    tags: ["HTML"],
+    previewUrl: "assets/ALL/landing-pages/Mudabbir/index.html",
     downloadFiles: [
-      { name: "index.html", url: "assets/assignments/assignment-03/index.html" },
-      { name: "style.css", url: "assets/assignments/assignment-03/style.css" }
+      { name: "index.html", url: "assets/ALL/landing-pages/Mudabbir/index.html" },
+      { name: "style.css", url: "assets/ALL/landing-pages/Mudabbir/style.css" }
     ],
     color: "#43e97b, #38f9d7",
     category: "route-assignments"
   },
   {
-    id: "assignment-04",
-    title: "Assignment 04",
+    id: "TheDJIMavic4",
+    title: "TheDJIMavic4",
     description: "",
-    week: 4,
     tags: ["HTML"],
-    previewUrl: "assets/assignments/assignment-04/index.html",
+    previewUrl: "assets/ALL/landing-pages/TheDJIMavic4/index.html",
     downloadFiles: [
-      { name: "index.html", url: "assets/assignments/assignment-04/index.html" }
+      { name: "index.html", url: "assets/ALL/landing-pages/TheDJIMavic4/index.html" },
+      { name: "style.css", url: "assets/ALL/landing-pages/TheDJIMavic4/style.css" }
     ],
     color: "#fa709a, #fee140",
     category: "route-assignments"
   },
   {
-    id: "assignment-05",
-    title: "Assignment 05",
+    id: "TheUXReview-blogLanding",
+    title: "TheUXReview BlogLanding",
     description: "",
-    week: 5,
     tags: ["HTML"],
-    previewUrl: "assets/assignments/assignment-05/index.html",
+    previewUrl: "assets/ALL/landing-pages/TheUXReview-blogLanding/index.html",
     downloadFiles: [
-      { name: "index.html", url: "assets/assignments/assignment-05/index.html" }
+      { name: "index.html", url: "assets/ALL/landing-pages/TheUXReview-blogLanding/index.html" },
+      { name: "styles.css", url: "assets/ALL/landing-pages/TheUXReview-blogLanding/styles.css" }
     ],
     color: "#a18cd1, #fbc2eb",
     category: "route-assignments"
@@ -28664,93 +28683,38 @@ ${js}
 
 // src/app/components/assignment-card/assignment-card.component.ts
 var _c0 = ["codeBlock"];
-var _forTrack0 = ($index, $item) => $item.name;
-function AssignmentCardComponent_Conditional_13_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 29);
-    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_13_Template_div_click_0_listener($event) {
-      \u0275\u0275restoreView(_r1);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.openInNewTab($event));
-    });
-    \u0275\u0275elementStart(1, "div", 30);
-    \u0275\u0275element(2, "div", 31);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "iframe", 32);
-    \u0275\u0275listener("load", function AssignmentCardComponent_Conditional_13_Template_iframe_load_3_listener() {
+    \u0275\u0275elementStart(0, "iframe", 21);
+    \u0275\u0275listener("load", function AssignmentCardComponent_Conditional_5_Template_iframe_load_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.onIframeLoad());
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 33)(5, "span", 34);
-    \u0275\u0275namespaceSVG();
-    \u0275\u0275elementStart(6, "svg", 24);
-    \u0275\u0275element(7, "path", 25)(8, "polyline", 26)(9, "line", 27);
-    \u0275\u0275elementEnd();
-    \u0275\u0275text(10, " Open full page ");
-    \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance();
-    \u0275\u0275classProp("hidden", ctx_r1.iframeLoaded);
-    \u0275\u0275advance(2);
     \u0275\u0275classProp("loaded", ctx_r1.iframeLoaded);
     \u0275\u0275property("src", ctx_r1.safePreviewUrl, \u0275\u0275sanitizeResourceUrl);
   }
 }
-function AssignmentCardComponent_Conditional_14_Conditional_1_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_13_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 35);
-    \u0275\u0275element(1, "div", 31);
-    \u0275\u0275elementStart(2, "span");
-    \u0275\u0275text(3, "Loading source\u2026");
-    \u0275\u0275elementEnd()();
-  }
-}
-function AssignmentCardComponent_Conditional_14_Conditional_2_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "pre", 36)(1, "code", null, 0);
-    \u0275\u0275text(3);
-    \u0275\u0275elementEnd()();
-  }
-  if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext(2);
-    \u0275\u0275advance();
-    \u0275\u0275classMap("language-" + ctx_r1.codeLanguage);
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(ctx_r1.codeContent);
-  }
-}
-function AssignmentCardComponent_Conditional_14_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 11);
-    \u0275\u0275conditionalCreate(1, AssignmentCardComponent_Conditional_14_Conditional_1_Template, 4, 0, "div", 35)(2, AssignmentCardComponent_Conditional_14_Conditional_2_Template, 4, 3, "pre", 36);
-    \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r1.codeLoading ? 1 : 2);
-  }
-}
-function AssignmentCardComponent_Conditional_17_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "span", 14);
+    \u0275\u0275elementStart(0, "span", 22);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
+    const ctx_r1 = \u0275\u0275nextContext(2);
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1("Week ", ctx_r1.assignment.week);
   }
 }
-function AssignmentCardComponent_For_19_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_13_For_3_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "span", 15);
+    \u0275\u0275elementStart(0, "span", 23);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -28760,82 +28724,65 @@ function AssignmentCardComponent_For_19_Template(rf, ctx) {
     \u0275\u0275textInterpolate(tag_r3);
   }
 }
-function AssignmentCardComponent_Conditional_36_Conditional_9_For_2_Template(rf, ctx) {
+function AssignmentCardComponent_Conditional_13_Template(rf, ctx) {
   if (rf & 1) {
-    const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 44);
-    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_36_Conditional_9_For_2_Template_button_click_0_listener($event) {
-      const file_r6 = \u0275\u0275restoreView(_r5).$implicit;
-      const ctx_r1 = \u0275\u0275nextContext(3);
-      return \u0275\u0275resetView(ctx_r1.downloadFile(file_r6, $event));
-    });
-    \u0275\u0275elementStart(1, "span", 45);
-    \u0275\u0275text(2);
-    \u0275\u0275elementEnd();
-    \u0275\u0275text(3);
-    \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    const file_r6 = ctx.$implicit;
-    const ctx_r1 = \u0275\u0275nextContext(3);
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(ctx_r1.getFileIcon(file_r6.name));
-    \u0275\u0275advance();
-    \u0275\u0275textInterpolate1(" ", file_r6.name, " ");
-  }
-}
-function AssignmentCardComponent_Conditional_36_Conditional_9_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 42);
-    \u0275\u0275repeaterCreate(1, AssignmentCardComponent_Conditional_36_Conditional_9_For_2_Template, 4, 2, "button", 43, _forTrack0);
-    \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext(2);
-    \u0275\u0275advance();
-    \u0275\u0275repeater(ctx_r1.assignment.downloadFiles);
-  }
-}
-function AssignmentCardComponent_Conditional_36_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 28)(1, "button", 37);
-    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_36_Template_button_click_1_listener($event) {
-      \u0275\u0275restoreView(_r4);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.toggleDownloadMenu($event));
-    });
-    \u0275\u0275namespaceSVG();
-    \u0275\u0275elementStart(2, "svg", 24);
-    \u0275\u0275element(3, "path", 38)(4, "polyline", 39)(5, "line", 40);
-    \u0275\u0275elementEnd();
-    \u0275\u0275text(6, " Files ");
-    \u0275\u0275namespaceHTML();
-    \u0275\u0275elementStart(7, "span", 41);
-    \u0275\u0275text(8, "\u2304");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275conditionalCreate(9, AssignmentCardComponent_Conditional_36_Conditional_9_Template, 3, 0, "div", 42);
+    \u0275\u0275elementStart(0, "div", 12);
+    \u0275\u0275conditionalCreate(1, AssignmentCardComponent_Conditional_13_Conditional_1_Template, 2, 1, "span", 22);
+    \u0275\u0275repeaterCreate(2, AssignmentCardComponent_Conditional_13_For_3_Template, 2, 1, "span", 23, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance(7);
-    \u0275\u0275classProp("open", ctx_r1.showDownloadMenu);
-    \u0275\u0275advance(2);
-    \u0275\u0275conditional(ctx_r1.showDownloadMenu ? 9 : -1);
+    \u0275\u0275advance();
+    \u0275\u0275conditional(ctx_r1.assignment.week ? 1 : -1);
+    \u0275\u0275advance();
+    \u0275\u0275repeater(ctx_r1.visibleTags);
+  }
+}
+function AssignmentCardComponent_Conditional_16_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "p", 14);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(ctx_r1.assignment.description);
+  }
+}
+function AssignmentCardComponent_Conditional_24_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r4 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "button", 24);
+    \u0275\u0275listener("click", function AssignmentCardComponent_Conditional_24_Template_button_click_0_listener($event) {
+      \u0275\u0275restoreView(_r4);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.downloadAll($event));
+    });
+    \u0275\u0275namespaceSVG();
+    \u0275\u0275elementStart(1, "svg", 8);
+    \u0275\u0275element(2, "path", 25)(3, "polyline", 26)(4, "line", 27);
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(5, " Download ");
+    \u0275\u0275elementEnd();
   }
 }
 var AssignmentCardComponent = class _AssignmentCardComponent {
   sanitizer;
   assignmentService;
+  host;
+  zone;
   assignment;
   index = 0;
   editRequested = new EventEmitter();
+  openDetail = new EventEmitter();
   codeBlock;
   safePreviewUrl;
   iframeLoaded = false;
-  showDownloadMenu = false;
+  iframeVisible = false;
   viewMode = "preview";
+  observer;
   codeContent = "";
   codeLanguage = "markup";
   codeLoading = false;
@@ -28852,16 +28799,34 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
     "#a1c4fd, #c2e9fb",
     "#fd7043, #ff8a65"
   ];
-  constructor(sanitizer, assignmentService) {
+  constructor(sanitizer, assignmentService, host, zone) {
     this.sanitizer = sanitizer;
     this.assignmentService = assignmentService;
+    this.host = host;
+    this.zone = zone;
   }
   ngOnInit() {
     this.safePreviewUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.assignment.previewUrl);
   }
+  ngAfterViewInit() {
+    if (typeof IntersectionObserver === "undefined") {
+      this.iframeVisible = true;
+      return;
+    }
+    this.zone.runOutsideAngular(() => {
+      this.observer = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          this.zone.run(() => this.iframeVisible = true);
+          this.observer?.disconnect();
+        }
+      }, { rootMargin: "200px" });
+      this.observer.observe(this.host.nativeElement);
+    });
+  }
   ngOnDestroy() {
     if (this.thumbBlobUrl)
       URL.revokeObjectURL(this.thumbBlobUrl);
+    this.observer?.disconnect();
   }
   ngAfterViewChecked() {
     if (this.needsHighlight && this.codeBlock?.nativeElement) {
@@ -28872,6 +28837,26 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
       } catch {
       }
     }
+  }
+  static LANGUAGE_TAGS = /* @__PURE__ */ new Set([
+    "html",
+    "html5",
+    "css",
+    "css3",
+    "js",
+    "javascript",
+    "ts",
+    "typescript",
+    "scss",
+    "sass",
+    "less",
+    "json",
+    "xml",
+    "svg",
+    "markup"
+  ]);
+  get visibleTags() {
+    return (this.assignment.tags ?? []).filter((t) => !_AssignmentCardComponent.LANGUAGE_TAGS.has(t.trim().toLowerCase()));
   }
   get accentGradient() {
     if (this.assignment.color)
@@ -28918,38 +28903,29 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
   onIframeLoad() {
     this.iframeLoaded = true;
   }
+  requestDetail(event) {
+    event.stopPropagation();
+    this.openDetail.emit(this.assignment);
+  }
   onEdit(event) {
     event.stopPropagation();
     this.editRequested.emit(this.assignment);
   }
-  toggleDownloadMenu(event) {
+  downloadAll(event) {
     event.stopPropagation();
-    this.showDownloadMenu = !this.showDownloadMenu;
-  }
-  downloadFile(file, event) {
-    event.stopPropagation();
-    this.showDownloadMenu = false;
-    const a = document.createElement("a");
-    a.href = file.url;
-    a.download = file.name;
-    a.click();
-  }
-  getFileIcon(filename) {
-    const ext = filename.split(".").pop()?.toLowerCase();
-    const icons = {
-      html: "\u{1F310}",
-      css: "\u{1F3A8}",
-      js: "\u26A1",
-      ts: "\u{1F537}",
-      json: "\u{1F4CB}",
-      png: "\u{1F5BC}",
-      jpg: "\u{1F5BC}",
-      svg: "\u{1F5BC}"
-    };
-    return icons[ext ?? ""] ?? "\u{1F4C4}";
+    this.assignment.downloadFiles.forEach((file, i) => {
+      setTimeout(() => {
+        const a = document.createElement("a");
+        a.href = file.url;
+        a.download = file.name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }, i * 150);
+    });
   }
   static \u0275fac = function AssignmentCardComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _AssignmentCardComponent)(\u0275\u0275directiveInject(DomSanitizer), \u0275\u0275directiveInject(AssignmentService));
+    return new (__ngFactoryType__ || _AssignmentCardComponent)(\u0275\u0275directiveInject(DomSanitizer), \u0275\u0275directiveInject(AssignmentService), \u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(NgZone));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssignmentCardComponent, selectors: [["app-assignment-card"]], viewQuery: function AssignmentCardComponent_Query(rf, ctx) {
     if (rf & 1) {
@@ -28959,214 +28935,73 @@ var AssignmentCardComponent = class _AssignmentCardComponent {
       let _t;
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.codeBlock = _t.first);
     }
-  }, inputs: { assignment: "assignment", index: "index" }, outputs: { editRequested: "editRequested" }, decls: 37, vars: 11, consts: [["codeBlock", ""], [1, "assignment-card", 3, "ngStyle"], [1, "card-accent-bar"], [1, "view-tabs"], [1, "view-tab", 3, "click"], ["width", "13", "height", "13", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2"], ["x", "2", "y", "3", "width", "20", "height", "14", "rx", "2"], ["d", "M8 21h8M12 17v4"], ["points", "16 18 22 12 16 6"], ["points", "8 6 2 12 8 18"], [1, "card-preview"], [1, "card-code"], [1, "card-body"], [1, "card-tags"], [1, "tag", "tag-week"], [1, "tag"], [1, "card-title"], [1, "card-description"], [1, "card-actions"], ["aria-label", "Edit assignment", 1, "btn", "btn-edit", 3, "click"], ["width", "12", "height", "12", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["d", "M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"], ["d", "M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"], [1, "btn", "btn-primary", 3, "click"], ["width", "13", "height", "13", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["d", "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"], ["points", "15 3 21 3 21 9"], ["x1", "10", "y1", "14", "x2", "21", "y2", "3"], [1, "download-wrapper"], [1, "card-preview", 3, "click"], [1, "preview-loader"], [1, "spinner"], ["title", "Assignment preview", 3, "load", "src"], [1, "preview-overlay"], [1, "preview-cta"], [1, "code-loader"], [1, "code-pre"], [1, "btn", "btn-secondary", 3, "click"], ["d", "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"], ["points", "7 10 12 15 17 10"], ["x1", "12", "y1", "15", "x2", "12", "y2", "3"], [1, "chevron"], [1, "download-menu"], [1, "download-item"], [1, "download-item", 3, "click"], [1, "file-icon"]], template: function AssignmentCardComponent_Template(rf, ctx) {
+  }, inputs: { assignment: "assignment", index: "index" }, outputs: { editRequested: "editRequested", openDetail: "openDetail" }, decls: 25, vars: 8, consts: [[1, "assignment-card", 3, "ngStyle"], [1, "card-accent-bar"], [1, "card-preview", 3, "click"], [1, "preview-loader"], [1, "spinner"], ["loading", "lazy", "aria-hidden", "true", "tabindex", "-1", 3, "src", "loaded"], [1, "preview-overlay"], [1, "preview-cta"], ["width", "13", "height", "13", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["cx", "12", "cy", "12", "r", "3"], ["d", "M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"], [1, "card-body"], [1, "card-tags"], [1, "card-title"], [1, "card-description"], [1, "card-actions"], [1, "btn", "btn-primary", 3, "click"], ["d", "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"], ["points", "15 3 21 3 21 9"], ["x1", "10", "y1", "14", "x2", "21", "y2", "3"], [1, "btn", "btn-secondary"], ["loading", "lazy", "aria-hidden", "true", "tabindex", "-1", 3, "load", "src"], [1, "tag", "tag-week"], [1, "tag"], [1, "btn", "btn-secondary", 3, "click"], ["d", "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"], ["points", "7 10 12 15 17 10"], ["x1", "12", "y1", "15", "x2", "12", "y2", "3"]], template: function AssignmentCardComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 1);
-      \u0275\u0275element(1, "div", 2);
-      \u0275\u0275elementStart(2, "div", 3)(3, "button", 4);
-      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_3_listener() {
-        return ctx.setView("preview");
+      \u0275\u0275elementStart(0, "div", 0);
+      \u0275\u0275element(1, "div", 1);
+      \u0275\u0275elementStart(2, "div", 2);
+      \u0275\u0275listener("click", function AssignmentCardComponent_Template_div_click_2_listener($event) {
+        return ctx.requestDetail($event);
       });
+      \u0275\u0275elementStart(3, "div", 3);
+      \u0275\u0275element(4, "div", 4);
+      \u0275\u0275elementEnd();
+      \u0275\u0275conditionalCreate(5, AssignmentCardComponent_Conditional_5_Template, 1, 3, "iframe", 5);
+      \u0275\u0275elementStart(6, "div", 6)(7, "span", 7);
       \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(4, "svg", 5);
-      \u0275\u0275element(5, "rect", 6)(6, "path", 7);
+      \u0275\u0275elementStart(8, "svg", 8);
+      \u0275\u0275element(9, "circle", 9)(10, "path", 10);
       \u0275\u0275elementEnd();
-      \u0275\u0275text(7, " Preview ");
-      \u0275\u0275elementEnd();
+      \u0275\u0275text(11, " View details ");
+      \u0275\u0275elementEnd()()();
       \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(8, "button", 4);
-      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_8_listener() {
-        return ctx.setView("code");
-      });
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(9, "svg", 5);
-      \u0275\u0275element(10, "polyline", 8)(11, "polyline", 9);
+      \u0275\u0275elementStart(12, "div", 11);
+      \u0275\u0275conditionalCreate(13, AssignmentCardComponent_Conditional_13_Template, 4, 1, "div", 12);
+      \u0275\u0275elementStart(14, "h2", 13);
+      \u0275\u0275text(15);
       \u0275\u0275elementEnd();
-      \u0275\u0275text(12, " Code ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(13, AssignmentCardComponent_Conditional_13_Template, 11, 5, "div", 10);
-      \u0275\u0275conditionalCreate(14, AssignmentCardComponent_Conditional_14_Template, 3, 1, "div", 11);
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(15, "div", 12)(16, "div", 13);
-      \u0275\u0275conditionalCreate(17, AssignmentCardComponent_Conditional_17_Template, 2, 1, "span", 14);
-      \u0275\u0275repeaterCreate(18, AssignmentCardComponent_For_19_Template, 2, 1, "span", 15, \u0275\u0275repeaterTrackByIdentity);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(20, "h2", 16);
-      \u0275\u0275text(21);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "p", 17);
-      \u0275\u0275text(23);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(24, "div", 18)(25, "button", 19);
-      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_25_listener($event) {
-        return ctx.onEdit($event);
-      });
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(26, "svg", 20);
-      \u0275\u0275element(27, "path", 21)(28, "path", 22);
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(29, " Edit ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(30, "button", 23);
-      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_30_listener($event) {
+      \u0275\u0275conditionalCreate(16, AssignmentCardComponent_Conditional_16_Template, 2, 1, "p", 14);
+      \u0275\u0275elementStart(17, "div", 15)(18, "button", 16);
+      \u0275\u0275listener("click", function AssignmentCardComponent_Template_button_click_18_listener($event) {
         return ctx.openInNewTab($event);
       });
       \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(31, "svg", 24);
-      \u0275\u0275element(32, "path", 25)(33, "polyline", 26)(34, "line", 27);
+      \u0275\u0275elementStart(19, "svg", 8);
+      \u0275\u0275element(20, "path", 17)(21, "polyline", 18)(22, "line", 19);
       \u0275\u0275elementEnd();
-      \u0275\u0275text(35, " Open ");
+      \u0275\u0275text(23, " Open ");
       \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(36, AssignmentCardComponent_Conditional_36_Template, 10, 3, "div", 28);
+      \u0275\u0275conditionalCreate(24, AssignmentCardComponent_Conditional_24_Template, 6, 0, "button", 20);
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
       \u0275\u0275property("ngStyle", ctx.cardStyle);
       \u0275\u0275advance(3);
-      \u0275\u0275classProp("active", ctx.viewMode === "preview");
-      \u0275\u0275advance(5);
-      \u0275\u0275classProp("active", ctx.viewMode === "code");
-      \u0275\u0275advance(5);
-      \u0275\u0275conditional(ctx.viewMode === "preview" ? 13 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.viewMode === "code" ? 14 : -1);
-      \u0275\u0275advance(3);
-      \u0275\u0275conditional(ctx.assignment.week ? 17 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275repeater(ctx.assignment.tags);
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate(ctx.assignment.title);
+      \u0275\u0275classProp("hidden", ctx.iframeLoaded);
       \u0275\u0275advance(2);
-      \u0275\u0275textInterpolate(ctx.assignment.description);
-      \u0275\u0275advance(13);
-      \u0275\u0275conditional(ctx.assignment.downloadFiles.length ? 36 : -1);
+      \u0275\u0275conditional(ctx.iframeVisible ? 5 : -1);
+      \u0275\u0275advance(8);
+      \u0275\u0275conditional(ctx.assignment.week || ctx.visibleTags.length ? 13 : -1);
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate(ctx.assignment.title);
+      \u0275\u0275advance();
+      \u0275\u0275conditional(ctx.assignment.description.trim() ? 16 : -1);
+      \u0275\u0275advance(8);
+      \u0275\u0275conditional(ctx.assignment.downloadFiles.length ? 24 : -1);
     }
-  }, dependencies: [CommonModule, NgStyle], styles: ['\n[_nghost-%COMP%] {\n  display: block;\n}\n@keyframes _ngcontent-%COMP%_fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  background: #1a1a2e;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;\n  animation: _ngcontent-%COMP%_fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card[_ngcontent-%COMP%]:hover {\n  transform: translateY(-8px) scale(1.01);\n  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .preview-overlay[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .card-accent-bar[_ngcontent-%COMP%] {\n  height: 5px;\n}\n.card-accent-bar[_ngcontent-%COMP%] {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs[_ngcontent-%COMP%] {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.view-tab[_ngcontent-%COMP%]    + .view-tab[_ngcontent-%COMP%] {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%]:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active[_ngcontent-%COMP%] {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview[_ngcontent-%COMP%] {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview[_ngcontent-%COMP%]   iframe.loaded[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%]   .preview-cta[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader.hidden[_ngcontent-%COMP%] {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code[_ngcontent-%COMP%] {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader[_ngcontent-%COMP%] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre[_ngcontent-%COMP%]   code[_ngcontent-%COMP%] {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  padding: 18px 20px 20px;\n  overflow: hidden;\n}\n.card-tags[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-bottom: 11px;\n}\n.tag[_ngcontent-%COMP%] {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title[_ngcontent-%COMP%] {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 7px;\n  line-height: 1.3;\n}\n.card-description[_ngcontent-%COMP%] {\n  flex: 1;\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  line-height: 1.6;\n  margin: 0 0 18px;\n  display: -webkit-box;\n  -webkit-line-clamp: 4;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn[_ngcontent-%COMP%]   .chevron[_ngcontent-%COMP%] {\n  font-size: 0.9rem;\n  transition: transform 0.2s;\n}\n.btn[_ngcontent-%COMP%]   .chevron.open[_ngcontent-%COMP%] {\n  transform: rotate(180deg);\n}\n.btn.btn-primary[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary[_ngcontent-%COMP%]:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary[_ngcontent-%COMP%]:hover, \n.btn.btn-secondary.active[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit[_ngcontent-%COMP%]:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.download-wrapper[_ngcontent-%COMP%] {\n  position: relative;\n}\n.download-menu[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: calc(100% + 8px);\n  left: 0;\n  background: #1e1e3a;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  overflow: hidden;\n  min-width: 155px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);\n  z-index: 50;\n  animation: _ngcontent-%COMP%_slideUp 0.14s ease;\n}\n@keyframes _ngcontent-%COMP%_slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.download-item[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  text-align: left;\n  transition: background 0.14s;\n}\n.download-item[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.07);\n  color: #fff;\n}\n.download-item[_ngcontent-%COMP%]   .file-icon[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 0.8s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions[_ngcontent-%COMP%] {\n    gap: 6px;\n  }\n  .btn[_ngcontent-%COMP%] {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */'] });
+  }, dependencies: [CommonModule, NgStyle], styles: ['\n[_nghost-%COMP%] {\n  display: block;\n}\n@keyframes _ngcontent-%COMP%_fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card[_ngcontent-%COMP%] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  background: #252338;\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n  animation: _ngcontent-%COMP%_fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card[_ngcontent-%COMP%]:hover {\n  transform: translateY(-4px);\n  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .preview-overlay[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.assignment-card[_ngcontent-%COMP%]:hover   .card-accent-bar[_ngcontent-%COMP%] {\n  height: 5px;\n}\n.card-accent-bar[_ngcontent-%COMP%] {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs[_ngcontent-%COMP%] {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.view-tab[_ngcontent-%COMP%]    + .view-tab[_ngcontent-%COMP%] {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab[_ngcontent-%COMP%]:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active[_ngcontent-%COMP%] {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview[_ngcontent-%COMP%] {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview[_ngcontent-%COMP%]   iframe.loaded[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-overlay[_ngcontent-%COMP%]   .preview-cta[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview[_ngcontent-%COMP%]   .preview-loader.hidden[_ngcontent-%COMP%] {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code[_ngcontent-%COMP%] {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader[_ngcontent-%COMP%] {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre[_ngcontent-%COMP%] {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre[_ngcontent-%COMP%]   code[_ngcontent-%COMP%] {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  padding: 18px 20px 20px;\n  overflow: hidden;\n}\n.card-tags[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n}\n.tag[_ngcontent-%COMP%] {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title[_ngcontent-%COMP%] {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0;\n  line-height: 1.3;\n}\n.card-description[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.55);\n  line-height: 1.6;\n  margin: 0;\n  display: -webkit-box;\n  -webkit-line-clamp: 4;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n  margin-top: 4px;\n}\n.btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn.btn-primary[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary[_ngcontent-%COMP%]:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary[_ngcontent-%COMP%]:hover, \n.btn.btn-secondary.active[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit[_ngcontent-%COMP%]:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 0.8s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions[_ngcontent-%COMP%] {\n    gap: 6px;\n  }\n  .btn[_ngcontent-%COMP%] {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AssignmentCardComponent, [{
     type: Component,
-    args: [{ selector: "app-assignment-card", standalone: true, imports: [CommonModule], template: `<div class="assignment-card" [ngStyle]="cardStyle">
-
-  <div class="card-accent-bar"></div>
-
-  <!-- Preview / Code tab switcher -->
-  <div class="view-tabs">
-    <button class="view-tab" [class.active]="viewMode === 'preview'" (click)="setView('preview')">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-      </svg>
-      Preview
-    </button>
-    <button class="view-tab" [class.active]="viewMode === 'code'" (click)="setView('code')">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-      </svg>
-      Code
-    </button>
-  </div>
-
-  <!-- Live preview -->
-  @if (viewMode === 'preview') {
-  <div class="card-preview" (click)="openInNewTab($event)">
-    <div class="preview-loader" [class.hidden]="iframeLoaded">
-      <div class="spinner"></div>
-    </div>
-    <iframe [src]="safePreviewUrl" (load)="onIframeLoad()" [class.loaded]="iframeLoaded" title="Assignment preview"></iframe>
-    <div class="preview-overlay">
-      <span class="preview-cta">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-        Open full page
-      </span>
-    </div>
-  </div>
-  }
-
-  <!-- Syntax code view -->
-  @if (viewMode === 'code') {
-  <div class="card-code">
-    @if (codeLoading) {
-    <div class="code-loader">
-      <div class="spinner"></div>
-      <span>Loading source\u2026</span>
-    </div>
-    } @else {
-    <pre class="code-pre"><code #codeBlock [class]="'language-' + codeLanguage">{{ codeContent }}</code></pre>
-    }
-  </div>
-  }
-
-  <!-- Card body -->
-  <div class="card-body">
-    <div class="card-tags">
-      @if (assignment.week) {
-      <span class="tag tag-week">Week {{ assignment.week }}</span>
-      }
-      @for (tag of assignment.tags; track tag) {
-      <span class="tag">{{ tag }}</span>
-      }
-    </div>
-
-    <h2 class="card-title">{{ assignment.title }}</h2>
-    <p class="card-description">{{ assignment.description }}</p>
-
-    <div class="card-actions">
-      <!-- Edit -->
-      <button class="btn btn-edit" (click)="onEdit($event)" aria-label="Edit assignment">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-        </svg>
-        Edit
-      </button>
-
-      <!-- Open preview -->
-      <button class="btn btn-primary" (click)="openInNewTab($event)">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-        Open
-      </button>
-
-      <!-- Download -->
-      @if (assignment.downloadFiles.length) {
-      <div class="download-wrapper">
-        <button class="btn btn-secondary" (click)="toggleDownloadMenu($event)">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-          Files
-          <span class="chevron" [class.open]="showDownloadMenu">&#8964;</span>
-        </button>
-
-        @if (showDownloadMenu) {
-        <div class="download-menu">
-          @for (file of assignment.downloadFiles; track file.name) {
-          <button class="download-item" (click)="downloadFile(file, $event)">
-            <span class="file-icon">{{ getFileIcon(file.name) }}</span>
-            {{ file.name }}
-          </button>
-          }
-        </div>
-        }
-      </div>
-      }
-    </div>
-  </div>
-
-</div>
-`, styles: ['/* src/app/components/assignment-card/assignment-card.component.scss */\n:host {\n  display: block;\n}\n@keyframes fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n  background: #1a1a2e;\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;\n  animation: fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card:hover {\n  transform: translateY(-8px) scale(1.01);\n  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);\n}\n.assignment-card:hover .preview-overlay {\n  opacity: 1;\n}\n.assignment-card:hover .card-accent-bar {\n  height: 5px;\n}\n.card-accent-bar {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab svg {\n  flex-shrink: 0;\n}\n.view-tab + .view-tab {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview iframe {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview iframe.loaded {\n  opacity: 1;\n}\n.card-preview .preview-overlay {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview .preview-overlay .preview-cta {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview .preview-loader {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview .preview-loader.hidden {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre code {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  padding: 18px 20px 20px;\n  overflow: hidden;\n}\n.card-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n  margin-bottom: 11px;\n}\n.tag {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 7px;\n  line-height: 1.3;\n}\n.card-description {\n  flex: 1;\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.5);\n  line-height: 1.6;\n  margin: 0 0 18px;\n  display: -webkit-box;\n  -webkit-line-clamp: 4;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.btn {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn .chevron {\n  font-size: 0.9rem;\n  transition: transform 0.2s;\n}\n.btn .chevron.open {\n  transform: rotate(180deg);\n}\n.btn.btn-primary {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary:hover,\n.btn.btn-secondary.active {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.download-wrapper {\n  position: relative;\n}\n.download-menu {\n  position: absolute;\n  bottom: calc(100% + 8px);\n  left: 0;\n  background: #1e1e3a;\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  overflow: hidden;\n  min-width: 155px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);\n  z-index: 50;\n  animation: slideUp 0.14s ease;\n}\n@keyframes slideUp {\n  from {\n    opacity: 0;\n    transform: translateY(8px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.download-item {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n  padding: 10px 14px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  text-align: left;\n  transition: background 0.14s;\n}\n.download-item:hover {\n  background: rgba(255, 255, 255, 0.07);\n  color: #fff;\n}\n.download-item .file-icon {\n  font-size: 0.95rem;\n}\n.spinner {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: spin 0.8s linear infinite;\n}\n@keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions {\n    gap: 6px;\n  }\n  .btn {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */\n'] }]
-  }], () => [{ type: DomSanitizer }, { type: AssignmentService }], { assignment: [{
+    args: [{ selector: "app-assignment-card", standalone: true, imports: [CommonModule], template: '<div class="assignment-card" [ngStyle]="cardStyle">\r\n\r\n  <div class="card-accent-bar"></div>\r\n\r\n  <!-- Live preview -->\r\n  <div class="card-preview" (click)="requestDetail($event)">\r\n    <div class="preview-loader" [class.hidden]="iframeLoaded">\r\n      <div class="spinner"></div>\r\n    </div>\r\n    @if (iframeVisible) {\r\n    <iframe [src]="safePreviewUrl" (load)="onIframeLoad()" [class.loaded]="iframeLoaded"\r\n      loading="lazy" aria-hidden="true" tabindex="-1"></iframe>\r\n    }\r\n    <div class="preview-overlay">\r\n      <span class="preview-cta">\r\n        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">\r\n          <circle cx="12" cy="12" r="3"/>\r\n          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>\r\n        </svg>\r\n        View details\r\n      </span>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Card body -->\r\n  <div class="card-body">\r\n    @if (assignment.week || visibleTags.length) {\r\n    <div class="card-tags">\r\n      @if (assignment.week) {\r\n      <span class="tag tag-week">Week {{ assignment.week }}</span>\r\n      }\r\n      @for (tag of visibleTags; track tag) {\r\n      <span class="tag">{{ tag }}</span>\r\n      }\r\n    </div>\r\n    }\r\n\r\n    <h2 class="card-title">{{ assignment.title }}</h2>\r\n    @if (assignment.description.trim()) {\r\n    <p class="card-description">{{ assignment.description }}</p>\r\n    }\r\n\r\n    <div class="card-actions">\r\n\r\n      <!-- Open preview -->\r\n      <button class="btn btn-primary" (click)="openInNewTab($event)">\r\n        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">\r\n          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>\r\n          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>\r\n        </svg>\r\n        Open\r\n      </button>\r\n\r\n      <!-- Download all -->\r\n      @if (assignment.downloadFiles.length) {\r\n        <button class="btn btn-secondary" (click)="downloadAll($event)">\r\n          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">\r\n            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>\r\n            <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>\r\n          </svg>\r\n          Download\r\n        </button>\r\n      }\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n', styles: ['/* src/app/components/assignment-card/assignment-card.component.scss */\n:host {\n  display: block;\n}\n@keyframes fadeSlideUp {\n  from {\n    opacity: 0;\n    transform: translateY(28px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n.assignment-card {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  background: #252338;\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 20px;\n  overflow: hidden;\n  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n  animation: fadeSlideUp 0.5s ease both;\n  animation-delay: calc(var(--i, 0) * 80ms);\n}\n.assignment-card:hover {\n  transform: translateY(-4px);\n  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);\n}\n.assignment-card:hover .preview-overlay {\n  opacity: 1;\n}\n.assignment-card:hover .card-accent-bar {\n  height: 5px;\n}\n.card-accent-bar {\n  height: 4px;\n  background: var(--accent);\n  transition: height 0.2s;\n}\n.view-tabs {\n  display: flex;\n  background: rgba(0, 0, 0, 0.25);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 6px;\n  padding: 8px;\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.76rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  cursor: pointer;\n  transition: color 0.15s, background 0.15s;\n}\n.view-tab svg {\n  flex-shrink: 0;\n}\n.view-tab + .view-tab {\n  border-left: 1px solid rgba(255, 255, 255, 0.06);\n}\n.view-tab:hover {\n  color: rgba(255, 255, 255, 0.75);\n  background: rgba(255, 255, 255, 0.04);\n}\n.view-tab.active {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.07);\n  box-shadow: inset 0 -2px 0 var(--accent, #f093fb);\n}\n.card-preview {\n  position: relative;\n  height: 200px;\n  background: #0f0f1a;\n  overflow: hidden;\n  cursor: pointer;\n}\n.card-preview iframe {\n  width: 200%;\n  height: 200%;\n  border: none;\n  transform: scale(0.5);\n  transform-origin: top left;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.4s;\n}\n.card-preview iframe.loaded {\n  opacity: 1;\n}\n.card-preview .preview-overlay {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      to bottom,\n      transparent 30%,\n      rgba(0, 0, 0, 0.75) 100%);\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 14px;\n  opacity: 0;\n  transition: opacity 0.22s;\n}\n.card-preview .preview-overlay .preview-cta {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n  font-size: 0.8rem;\n  font-weight: 600;\n  color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n  -webkit-backdrop-filter: blur(6px);\n  backdrop-filter: blur(6px);\n  padding: 6px 15px;\n  border-radius: 999px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n.card-preview .preview-loader {\n  position: absolute;\n  inset: 0;\n  z-index: 2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.3s;\n}\n.card-preview .preview-loader.hidden {\n  opacity: 0;\n  pointer-events: none;\n}\n.card-code {\n  height: 200px;\n  background: #0d0d1e;\n  overflow: auto;\n  position: relative;\n}\n.card-code::-webkit-scrollbar {\n  width: 5px;\n  height: 5px;\n}\n.card-code::-webkit-scrollbar-track {\n  background: transparent;\n}\n.card-code::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.code-loader {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.82rem;\n}\n.code-pre {\n  margin: 0;\n  padding: 14px 16px;\n  background: transparent !important;\n  font-family:\n    "Fira Code",\n    "Courier New",\n    monospace;\n  font-size: 0.75rem;\n  line-height: 1.65;\n  white-space: pre;\n  overflow: visible;\n  color: #cdd6f4;\n}\n.code-pre code {\n  background: transparent !important;\n  font-size: inherit;\n}\n.card-body {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  padding: 18px 20px 20px;\n  overflow: hidden;\n}\n.card-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n}\n.tag {\n  font-size: 0.69rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 3px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.tag.tag-week {\n  background: var(--accent);\n  color: #fff;\n  border: none;\n}\n.card-title {\n  font-size: 1.08rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0;\n  line-height: 1.3;\n}\n.card-description {\n  font-size: 0.85rem;\n  color: rgba(255, 255, 255, 0.55);\n  line-height: 1.6;\n  margin: 0;\n  display: -webkit-box;\n  -webkit-line-clamp: 4;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.card-actions {\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  flex-wrap: wrap;\n  margin-top: 4px;\n}\n.btn {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 8px 14px;\n  border-radius: 10px;\n  font-size: 0.81rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.2s;\n  white-space: nowrap;\n}\n.btn.btn-primary {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary:hover {\n  filter: brightness(1.15);\n  transform: translateY(-1px);\n}\n.btn.btn-secondary {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-secondary:hover,\n.btn.btn-secondary.active {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.btn.btn-edit {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.75);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-edit:hover {\n  background: rgba(240, 147, 251, 0.15);\n  color: #f093fb;\n  border-color: rgba(240, 147, 251, 0.35);\n}\n.spinner {\n  width: 24px;\n  height: 24px;\n  border: 3px solid rgba(255, 255, 255, 0.1);\n  border-top-color: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  animation: spin 0.8s linear infinite;\n}\n@keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n@media (max-width: 480px) {\n  .card-actions {\n    gap: 6px;\n  }\n  .btn {\n    padding: 7px 12px;\n    font-size: 0.78rem;\n  }\n}\n/*# sourceMappingURL=assignment-card.component.css.map */\n'] }]
+  }], () => [{ type: DomSanitizer }, { type: AssignmentService }, { type: ElementRef }, { type: NgZone }], { assignment: [{
     type: Input
   }], index: [{
     type: Input
   }], editRequested: [{
+    type: Output
+  }], openDetail: [{
     type: Output
   }], codeBlock: [{
     type: ViewChild,
@@ -33807,7 +33642,7 @@ var ReactiveFormsModule = class _ReactiveFormsModule {
 })();
 
 // src/app/components/create-assignment-modal/create-assignment-modal.component.ts
-var _forTrack02 = ($index, $item) => $item.value;
+var _forTrack0 = ($index, $item) => $item.value;
 function CreateAssignmentModalComponent_Conditional_38_For_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "span", 26);
@@ -34171,7 +34006,7 @@ console.log('Assignment loaded!');`
       \u0275\u0275text(41, "\u{1F3A8} Card Color");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(42, "div", 20);
-      \u0275\u0275repeaterCreate(43, CreateAssignmentModalComponent_For_44_Template, 1, 5, "button", 21, _forTrack02);
+      \u0275\u0275repeaterCreate(43, CreateAssignmentModalComponent_For_44_Template, 1, 5, "button", 21, _forTrack0);
       \u0275\u0275elementEnd()();
       \u0275\u0275conditionalCreate(45, CreateAssignmentModalComponent_Conditional_45_Template, 22, 9, "section", 22);
       \u0275\u0275elementEnd();
@@ -34353,118 +34188,394 @@ console.log('Assignment loaded!');`
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CreateAssignmentModalComponent, { className: "CreateAssignmentModalComponent", filePath: "src/app/components/create-assignment-modal/create-assignment-modal.component.ts", lineNumber: 36 });
 })();
 
+// src/app/components/assignment-detail-modal/assignment-detail-modal.component.ts
+var _forTrack02 = ($index, $item) => $item.name;
+function AssignmentDetailModalComponent_Conditional_12_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "span", 11);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1("Week ", ctx_r0.assignment.week);
+  }
+}
+function AssignmentDetailModalComponent_Conditional_13_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "p", 12);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(ctx_r0.assignment.description);
+  }
+}
+function AssignmentDetailModalComponent_Conditional_14_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "p", 13);
+    \u0275\u0275text(1, "No description provided yet.");
+    \u0275\u0275elementEnd();
+  }
+}
+function AssignmentDetailModalComponent_Conditional_15_For_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "span", 25);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const tag_r2 = ctx.$implicit;
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(tag_r2);
+  }
+}
+function AssignmentDetailModalComponent_Conditional_15_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 14);
+    \u0275\u0275repeaterCreate(1, AssignmentDetailModalComponent_Conditional_15_For_2_Template, 2, 1, "span", 25, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance();
+    \u0275\u0275repeater(ctx_r0.assignment.tags);
+  }
+}
+function AssignmentDetailModalComponent_Conditional_28_For_5_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r3 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "button", 29);
+    \u0275\u0275listener("click", function AssignmentDetailModalComponent_Conditional_28_For_5_Template_button_click_0_listener() {
+      const file_r4 = \u0275\u0275restoreView(_r3).$implicit;
+      const ctx_r0 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r0.download(file_r4));
+    });
+    \u0275\u0275elementStart(1, "span", 30);
+    \u0275\u0275text(2);
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(3);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const file_r4 = ctx.$implicit;
+    const ctx_r0 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(ctx_r0.getFileIcon(file_r4.name));
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", file_r4.name, " ");
+  }
+}
+function AssignmentDetailModalComponent_Conditional_28_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 24)(1, "div", 26);
+    \u0275\u0275text(2, "Source files");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 27);
+    \u0275\u0275repeaterCreate(4, AssignmentDetailModalComponent_Conditional_28_For_5_Template, 4, 2, "button", 28, _forTrack02);
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275advance(4);
+    \u0275\u0275repeater(ctx_r0.assignment.downloadFiles);
+  }
+}
+var AssignmentDetailModalComponent = class _AssignmentDetailModalComponent {
+  sanitizer;
+  assignmentService;
+  assignment;
+  closed = new EventEmitter();
+  prevOverflow = "";
+  constructor(sanitizer, assignmentService) {
+    this.sanitizer = sanitizer;
+    this.assignmentService = assignmentService;
+  }
+  ngOnInit() {
+    this.prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+  }
+  ngOnDestroy() {
+    document.body.style.overflow = this.prevOverflow;
+  }
+  get safePreviewUrl() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.assignment.previewUrl);
+  }
+  get accentStyle() {
+    return {
+      "--accent": `linear-gradient(135deg, ${this.assignment.color ?? "#f093fb, #f5576c"})`
+    };
+  }
+  close() {
+    this.closed.emit();
+  }
+  openInNewTab() {
+    this.assignmentService.openInNewTab(this.assignment);
+  }
+  download(file) {
+    const a = document.createElement("a");
+    a.href = file.url;
+    a.download = file.name;
+    a.click();
+  }
+  copyLink() {
+    const url = new URL(this.assignment.previewUrl, location.origin).toString();
+    navigator.clipboard?.writeText(url);
+  }
+  onBackdrop(e) {
+    if (e.target.classList.contains("detail-backdrop"))
+      this.close();
+  }
+  onEsc() {
+    this.close();
+  }
+  getFileIcon(filename) {
+    const ext = filename.split(".").pop()?.toLowerCase();
+    const icons = {
+      html: "\u{1F310}",
+      css: "\u{1F3A8}",
+      js: "\u26A1",
+      ts: "\u{1F537}",
+      json: "\u{1F4CB}",
+      png: "\u{1F5BC}",
+      jpg: "\u{1F5BC}",
+      svg: "\u{1F5BC}"
+    };
+    return icons[ext ?? ""] ?? "\u{1F4C4}";
+  }
+  static \u0275fac = function AssignmentDetailModalComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _AssignmentDetailModalComponent)(\u0275\u0275directiveInject(DomSanitizer), \u0275\u0275directiveInject(AssignmentService));
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssignmentDetailModalComponent, selectors: [["app-assignment-detail-modal"]], hostBindings: function AssignmentDetailModalComponent_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275listener("keydown.escape", function AssignmentDetailModalComponent_keydown_escape_HostBindingHandler() {
+        return ctx.onEsc();
+      }, \u0275\u0275resolveDocument);
+    }
+  }, inputs: { assignment: "assignment" }, outputs: { closed: "closed" }, decls: 29, vars: 7, consts: [[1, "detail-backdrop", 3, "click"], ["role", "dialog", "aria-modal", "true", 1, "detail-modal", 3, "ngStyle"], ["aria-label", "Close", 1, "close-btn", 3, "click"], ["width", "18", "height", "18", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["x1", "18", "y1", "6", "x2", "6", "y2", "18"], ["x1", "6", "y1", "6", "x2", "18", "y2", "18"], [1, "detail-preview"], ["title", "Project preview", "loading", "lazy", 3, "src"], [1, "detail-body"], [1, "detail-head"], [1, "detail-title"], [1, "week-pill"], [1, "detail-description"], [1, "detail-description", "detail-description--muted"], [1, "detail-tags"], [1, "detail-actions"], [1, "btn", "btn-primary", 3, "click"], ["width", "14", "height", "14", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["d", "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"], ["points", "15 3 21 3 21 9"], ["x1", "10", "y1", "14", "x2", "21", "y2", "3"], [1, "btn", "btn-ghost", 3, "click"], ["d", "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"], ["d", "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"], [1, "detail-files"], [1, "detail-tag"], [1, "files-label"], [1, "files-list"], [1, "file-chip"], [1, "file-chip", 3, "click"], [1, "file-icon"]], template: function AssignmentDetailModalComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div", 0);
+      \u0275\u0275listener("click", function AssignmentDetailModalComponent_Template_div_click_0_listener($event) {
+        return ctx.onBackdrop($event);
+      });
+      \u0275\u0275elementStart(1, "div", 1)(2, "button", 2);
+      \u0275\u0275listener("click", function AssignmentDetailModalComponent_Template_button_click_2_listener() {
+        return ctx.close();
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275elementStart(3, "svg", 3);
+      \u0275\u0275element(4, "line", 4)(5, "line", 5);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275elementStart(6, "div", 6);
+      \u0275\u0275element(7, "iframe", 7);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(8, "div", 8)(9, "div", 9)(10, "h2", 10);
+      \u0275\u0275text(11);
+      \u0275\u0275elementEnd();
+      \u0275\u0275conditionalCreate(12, AssignmentDetailModalComponent_Conditional_12_Template, 2, 1, "span", 11);
+      \u0275\u0275elementEnd();
+      \u0275\u0275conditionalCreate(13, AssignmentDetailModalComponent_Conditional_13_Template, 2, 1, "p", 12)(14, AssignmentDetailModalComponent_Conditional_14_Template, 2, 0, "p", 13);
+      \u0275\u0275conditionalCreate(15, AssignmentDetailModalComponent_Conditional_15_Template, 3, 0, "div", 14);
+      \u0275\u0275elementStart(16, "div", 15)(17, "button", 16);
+      \u0275\u0275listener("click", function AssignmentDetailModalComponent_Template_button_click_17_listener() {
+        return ctx.openInNewTab();
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275elementStart(18, "svg", 17);
+      \u0275\u0275element(19, "path", 18)(20, "polyline", 19)(21, "line", 20);
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(22, " Open full page ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275namespaceHTML();
+      \u0275\u0275elementStart(23, "button", 21);
+      \u0275\u0275listener("click", function AssignmentDetailModalComponent_Template_button_click_23_listener() {
+        return ctx.copyLink();
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275elementStart(24, "svg", 17);
+      \u0275\u0275element(25, "path", 22)(26, "path", 23);
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(27, " Copy link ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275conditionalCreate(28, AssignmentDetailModalComponent_Conditional_28_Template, 6, 0, "div", 24);
+      \u0275\u0275elementEnd()()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance();
+      \u0275\u0275property("ngStyle", ctx.accentStyle);
+      \u0275\u0275advance(6);
+      \u0275\u0275property("src", ctx.safePreviewUrl, \u0275\u0275sanitizeResourceUrl);
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate(ctx.assignment.title);
+      \u0275\u0275advance();
+      \u0275\u0275conditional(ctx.assignment.week ? 12 : -1);
+      \u0275\u0275advance();
+      \u0275\u0275conditional(ctx.assignment.description.trim() ? 13 : 14);
+      \u0275\u0275advance(2);
+      \u0275\u0275conditional(ctx.assignment.tags.length ? 15 : -1);
+      \u0275\u0275advance(13);
+      \u0275\u0275conditional(ctx.assignment.downloadFiles.length ? 28 : -1);
+    }
+  }, dependencies: [CommonModule, NgStyle], styles: ['\n[_nghost-%COMP%] {\n  display: contents;\n}\n@keyframes _ngcontent-%COMP%_backdropIn {\n  from {\n    opacity: 0;\n    -webkit-backdrop-filter: blur(0);\n    backdrop-filter: blur(0);\n  }\n  to {\n    opacity: 1;\n    -webkit-backdrop-filter: blur(8px);\n    backdrop-filter: blur(8px);\n  }\n}\n@keyframes _ngcontent-%COMP%_modalIn {\n  from {\n    opacity: 0;\n    transform: translateY(20px) scale(0.96);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0) scale(1);\n  }\n}\n.detail-backdrop[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  z-index: 100;\n  background: rgba(8, 6, 18, 0.72);\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 24px;\n  animation: _ngcontent-%COMP%_backdropIn 0.25s ease both;\n}\n.detail-modal[_ngcontent-%COMP%] {\n  position: relative;\n  display: grid;\n  grid-template-columns: 1.2fr 1fr;\n  width: 100%;\n  max-width: 1080px;\n  max-height: calc(100vh - 48px);\n  background: #1c1a2e;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 24px;\n  overflow: hidden;\n  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);\n  animation: _ngcontent-%COMP%_modalIn 0.32s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n.detail-modal[_ngcontent-%COMP%]::before {\n  content: "";\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  background: var(--accent);\n}\n@media (max-width: 860px) {\n  .detail-modal[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n    grid-template-rows: 280px 1fr;\n  }\n}\n.close-btn[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 14px;\n  right: 14px;\n  width: 36px;\n  height: 36px;\n  border-radius: 50%;\n  background: rgba(0, 0, 0, 0.5);\n  border: 1px solid rgba(255, 255, 255, 0.15);\n  color: #fff;\n  display: grid;\n  place-items: center;\n  cursor: pointer;\n  z-index: 5;\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n  transition: background 0.18s, transform 0.18s;\n}\n.close-btn[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.15);\n  transform: rotate(90deg);\n}\n.detail-preview[_ngcontent-%COMP%] {\n  background: #0f0f1a;\n  overflow: hidden;\n}\n.detail-preview[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  border: none;\n  display: block;\n}\n.detail-body[_ngcontent-%COMP%] {\n  padding: 28px 30px;\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  gap: 18px;\n}\n.detail-body[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 6px;\n}\n.detail-body[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.detail-head[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n}\n.detail-title[_ngcontent-%COMP%] {\n  font-size: 1.6rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.01em;\n}\n.week-pill[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n  padding: 5px 12px;\n  border-radius: 999px;\n  font-size: 0.72rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  color: #fff;\n  background: var(--accent);\n}\n.detail-description[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.7);\n  font-size: 0.94rem;\n  line-height: 1.65;\n  margin: 0;\n}\n.detail-description--muted[_ngcontent-%COMP%] {\n  font-style: italic;\n  color: rgba(255, 255, 255, 0.4);\n}\n.detail-tags[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n}\n.detail-tag[_ngcontent-%COMP%] {\n  font-size: 0.7rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 4px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.detail-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n.btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 18px;\n  border-radius: 12px;\n  font-size: 0.88rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn.btn-primary[_ngcontent-%COMP%] {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary[_ngcontent-%COMP%]:hover {\n  filter: brightness(1.12);\n  transform: translateY(-1px);\n}\n.btn.btn-ghost[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-ghost[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.detail-files[_ngcontent-%COMP%] {\n  margin-top: 4px;\n  padding-top: 18px;\n  border-top: 1px solid rgba(255, 255, 255, 0.06);\n}\n.files-label[_ngcontent-%COMP%] {\n  font-size: 0.7rem;\n  font-weight: 700;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  color: rgba(255, 255, 255, 0.4);\n  margin-bottom: 10px;\n}\n.files-list[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n.file-chip[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 13px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.file-chip[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.1);\n  border-color: rgba(255, 255, 255, 0.2);\n  transform: translateY(-1px);\n}\n.file-chip[_ngcontent-%COMP%]   .file-icon[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n}\n/*# sourceMappingURL=assignment-detail-modal.component.css.map */'] });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AssignmentDetailModalComponent, [{
+    type: Component,
+    args: [{ selector: "app-assignment-detail-modal", standalone: true, imports: [CommonModule], template: '<div class="detail-backdrop" (click)="onBackdrop($event)">\n  <div class="detail-modal" [ngStyle]="accentStyle" role="dialog" aria-modal="true">\n\n    <button class="close-btn" (click)="close()" aria-label="Close">\n      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">\n        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>\n      </svg>\n    </button>\n\n    <div class="detail-preview">\n      <iframe [src]="safePreviewUrl" title="Project preview" loading="lazy"></iframe>\n    </div>\n\n    <div class="detail-body">\n      <div class="detail-head">\n        <h2 class="detail-title">{{ assignment.title }}</h2>\n        @if (assignment.week) {\n          <span class="week-pill">Week {{ assignment.week }}</span>\n        }\n      </div>\n\n      @if (assignment.description.trim()) {\n        <p class="detail-description">{{ assignment.description }}</p>\n      } @else {\n        <p class="detail-description detail-description--muted">No description provided yet.</p>\n      }\n\n      @if (assignment.tags.length) {\n        <div class="detail-tags">\n          @for (tag of assignment.tags; track tag) {\n            <span class="detail-tag">{{ tag }}</span>\n          }\n        </div>\n      }\n\n      <div class="detail-actions">\n        <button class="btn btn-primary" (click)="openInNewTab()">\n          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">\n            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>\n            <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>\n          </svg>\n          Open full page\n        </button>\n        <button class="btn btn-ghost" (click)="copyLink()">\n          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">\n            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>\n            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>\n          </svg>\n          Copy link\n        </button>\n      </div>\n\n      @if (assignment.downloadFiles.length) {\n        <div class="detail-files">\n          <div class="files-label">Source files</div>\n          <div class="files-list">\n            @for (file of assignment.downloadFiles; track file.name) {\n              <button class="file-chip" (click)="download(file)">\n                <span class="file-icon">{{ getFileIcon(file.name) }}</span>\n                {{ file.name }}\n              </button>\n            }\n          </div>\n        </div>\n      }\n    </div>\n\n  </div>\n</div>\n', styles: ['/* src/app/components/assignment-detail-modal/assignment-detail-modal.component.scss */\n:host {\n  display: contents;\n}\n@keyframes backdropIn {\n  from {\n    opacity: 0;\n    -webkit-backdrop-filter: blur(0);\n    backdrop-filter: blur(0);\n  }\n  to {\n    opacity: 1;\n    -webkit-backdrop-filter: blur(8px);\n    backdrop-filter: blur(8px);\n  }\n}\n@keyframes modalIn {\n  from {\n    opacity: 0;\n    transform: translateY(20px) scale(0.96);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0) scale(1);\n  }\n}\n.detail-backdrop {\n  position: fixed;\n  inset: 0;\n  z-index: 100;\n  background: rgba(8, 6, 18, 0.72);\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 24px;\n  animation: backdropIn 0.25s ease both;\n}\n.detail-modal {\n  position: relative;\n  display: grid;\n  grid-template-columns: 1.2fr 1fr;\n  width: 100%;\n  max-width: 1080px;\n  max-height: calc(100vh - 48px);\n  background: #1c1a2e;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 24px;\n  overflow: hidden;\n  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);\n  animation: modalIn 0.32s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n.detail-modal::before {\n  content: "";\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 4px;\n  background: var(--accent);\n}\n@media (max-width: 860px) {\n  .detail-modal {\n    grid-template-columns: 1fr;\n    grid-template-rows: 280px 1fr;\n  }\n}\n.close-btn {\n  position: absolute;\n  top: 14px;\n  right: 14px;\n  width: 36px;\n  height: 36px;\n  border-radius: 50%;\n  background: rgba(0, 0, 0, 0.5);\n  border: 1px solid rgba(255, 255, 255, 0.15);\n  color: #fff;\n  display: grid;\n  place-items: center;\n  cursor: pointer;\n  z-index: 5;\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(8px);\n  transition: background 0.18s, transform 0.18s;\n}\n.close-btn:hover {\n  background: rgba(255, 255, 255, 0.15);\n  transform: rotate(90deg);\n}\n.detail-preview {\n  background: #0f0f1a;\n  overflow: hidden;\n}\n.detail-preview iframe {\n  width: 100%;\n  height: 100%;\n  border: none;\n  display: block;\n}\n.detail-body {\n  padding: 28px 30px;\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  gap: 18px;\n}\n.detail-body::-webkit-scrollbar {\n  width: 6px;\n}\n.detail-body::-webkit-scrollbar-thumb {\n  background: rgba(255, 255, 255, 0.12);\n  border-radius: 999px;\n}\n.detail-head {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n}\n.detail-title {\n  font-size: 1.6rem;\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  letter-spacing: -0.01em;\n}\n.week-pill {\n  flex-shrink: 0;\n  padding: 5px 12px;\n  border-radius: 999px;\n  font-size: 0.72rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  color: #fff;\n  background: var(--accent);\n}\n.detail-description {\n  color: rgba(255, 255, 255, 0.7);\n  font-size: 0.94rem;\n  line-height: 1.65;\n  margin: 0;\n}\n.detail-description--muted {\n  font-style: italic;\n  color: rgba(255, 255, 255, 0.4);\n}\n.detail-tags {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px;\n}\n.detail-tag {\n  font-size: 0.7rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 4px 10px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.6);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.detail-actions {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n.btn {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 18px;\n  border-radius: 12px;\n  font-size: 0.88rem;\n  font-weight: 600;\n  border: none;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn.btn-primary {\n  background: var(--accent);\n  color: #fff;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);\n}\n.btn.btn-primary:hover {\n  filter: brightness(1.12);\n  transform: translateY(-1px);\n}\n.btn.btn-ghost {\n  background: rgba(255, 255, 255, 0.07);\n  color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n.btn.btn-ghost:hover {\n  background: rgba(255, 255, 255, 0.13);\n  color: #fff;\n}\n.detail-files {\n  margin-top: 4px;\n  padding-top: 18px;\n  border-top: 1px solid rgba(255, 255, 255, 0.06);\n}\n.files-label {\n  font-size: 0.7rem;\n  font-weight: 700;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  color: rgba(255, 255, 255, 0.4);\n  margin-bottom: 10px;\n}\n.files-list {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n.file-chip {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 13px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.8);\n  font-size: 0.82rem;\n  font-weight: 500;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.file-chip:hover {\n  background: rgba(255, 255, 255, 0.1);\n  border-color: rgba(255, 255, 255, 0.2);\n  transform: translateY(-1px);\n}\n.file-chip .file-icon {\n  font-size: 0.95rem;\n}\n/*# sourceMappingURL=assignment-detail-modal.component.css.map */\n'] }]
+  }], () => [{ type: DomSanitizer }, { type: AssignmentService }], { assignment: [{
+    type: Input,
+    args: [{ required: true }]
+  }], closed: [{
+    type: Output
+  }], onEsc: [{
+    type: HostListener,
+    args: ["document:keydown.escape"]
+  }] });
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssignmentDetailModalComponent, { className: "AssignmentDetailModalComponent", filePath: "src/app/components/assignment-detail-modal/assignment-detail-modal.component.ts", lineNumber: 14 });
+})();
+
 // src/app/components/assignment-grid/assignment-grid.component.ts
 var _forTrack03 = ($index, $item) => $item.key;
 var _forTrack1 = ($index, $item) => $item.id;
-function AssignmentGridComponent_Conditional_12_Template(rf, ctx) {
+function AssignmentGridComponent_For_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 13);
-    \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_12_Template_button_click_0_listener() {
-      \u0275\u0275restoreView(_r1);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.searchQuery.set(""));
+    \u0275\u0275elementStart(0, "button", 2);
+    \u0275\u0275listener("click", function AssignmentGridComponent_For_5_Template_button_click_0_listener() {
+      const cat_r2 = \u0275\u0275restoreView(_r1).$implicit;
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.setCategory(cat_r2.key));
     });
-    \u0275\u0275text(1, "\u2715");
+    \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
-}
-function AssignmentGridComponent_Conditional_13_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 11)(1, "div", 14);
-    \u0275\u0275text(2, "\u{1F50D}");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "h3");
-    \u0275\u0275text(4, "No matches");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(5, "p");
-    \u0275\u0275text(6, "Try a different search term.");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "button", 15);
-    \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_13_Template_button_click_7_listener() {
-      \u0275\u0275restoreView(_r3);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.searchQuery.set(""));
-    });
-    \u0275\u0275text(8, "Clear search");
-    \u0275\u0275elementEnd()();
+  if (rf & 2) {
+    const cat_r2 = ctx.$implicit;
+    const ctx_r2 = \u0275\u0275nextContext();
+    \u0275\u0275classProp("active", ctx_r2.activeCategory() === cat_r2.key);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(cat_r2.label);
   }
 }
-function AssignmentGridComponent_Conditional_14_For_1_For_5_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-assignment-card", 20);
-    \u0275\u0275listener("editRequested", function AssignmentGridComponent_Conditional_14_For_1_For_5_Template_app_assignment_card_editRequested_0_listener($event) {
+    \u0275\u0275elementStart(0, "div", 4)(1, "div", 7);
+    \u0275\u0275text(2, "\u{1F4C1}");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "h3");
+    \u0275\u0275text(4, "No projects in this category");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(5, "button", 8);
+    \u0275\u0275listener("click", function AssignmentGridComponent_Conditional_6_Template_button_click_5_listener() {
       \u0275\u0275restoreView(_r4);
-      const ctx_r1 = \u0275\u0275nextContext(3);
-      return \u0275\u0275resetView(ctx_r1.onEditRequested($event));
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.setCategory("all"));
+    });
+    \u0275\u0275text(6, "Show all");
+    \u0275\u0275elementEnd()();
+  }
+}
+function AssignmentGridComponent_Conditional_7_For_1_For_5_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r5 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-assignment-card", 13);
+    \u0275\u0275listener("editRequested", function AssignmentGridComponent_Conditional_7_For_1_For_5_Template_app_assignment_card_editRequested_0_listener($event) {
+      \u0275\u0275restoreView(_r5);
+      const ctx_r2 = \u0275\u0275nextContext(3);
+      return \u0275\u0275resetView(ctx_r2.onEditRequested($event));
+    })("openDetail", function AssignmentGridComponent_Conditional_7_For_1_For_5_Template_app_assignment_card_openDetail_0_listener($event) {
+      \u0275\u0275restoreView(_r5);
+      const ctx_r2 = \u0275\u0275nextContext(3);
+      return \u0275\u0275resetView(ctx_r2.openDetail($event));
     });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const assignment_r5 = ctx.$implicit;
-    const \u0275$index_51_r6 = ctx.$index;
-    \u0275\u0275property("assignment", assignment_r5)("index", \u0275$index_51_r6);
+    const assignment_r6 = ctx.$implicit;
+    const \u0275$index_33_r7 = ctx.$index;
+    \u0275\u0275property("assignment", assignment_r6)("index", \u0275$index_33_r7);
   }
 }
-function AssignmentGridComponent_Conditional_14_For_1_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_7_For_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 16)(1, "h3", 17);
+    \u0275\u0275elementStart(0, "div", 9)(1, "h3", 10);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 18);
-    \u0275\u0275repeaterCreate(4, AssignmentGridComponent_Conditional_14_For_1_For_5_Template, 1, 2, "app-assignment-card", 19, _forTrack1);
+    \u0275\u0275elementStart(3, "div", 11);
+    \u0275\u0275repeaterCreate(4, AssignmentGridComponent_Conditional_7_For_1_For_5_Template, 1, 2, "app-assignment-card", 12, _forTrack1);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
-    const section_r7 = ctx.$implicit;
+    const section_r8 = ctx.$implicit;
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(section_r7.label);
+    \u0275\u0275textInterpolate(section_r8.label);
     \u0275\u0275advance(2);
-    \u0275\u0275repeater(section_r7.assignments);
+    \u0275\u0275repeater(section_r8.assignments);
   }
 }
-function AssignmentGridComponent_Conditional_14_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275repeaterCreate(0, AssignmentGridComponent_Conditional_14_For_1_Template, 6, 1, "div", 16, _forTrack03);
+    \u0275\u0275repeaterCreate(0, AssignmentGridComponent_Conditional_7_For_1_Template, 6, 1, "div", 9, _forTrack03);
   }
   if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275repeater(ctx_r1.sections());
+    const ctx_r2 = \u0275\u0275nextContext();
+    \u0275\u0275repeater(ctx_r2.sections());
   }
 }
-function AssignmentGridComponent_Conditional_15_Template(rf, ctx) {
+function AssignmentGridComponent_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
-    const _r8 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "app-create-assignment-modal", 21);
-    \u0275\u0275listener("closed", function AssignmentGridComponent_Conditional_15_Template_app_create_assignment_modal_closed_0_listener() {
-      \u0275\u0275restoreView(_r8);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onEditModalClosed());
-    })("created", function AssignmentGridComponent_Conditional_15_Template_app_create_assignment_modal_created_0_listener() {
-      \u0275\u0275restoreView(_r8);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onEditModalClosed());
-    })("updated", function AssignmentGridComponent_Conditional_15_Template_app_create_assignment_modal_updated_0_listener() {
-      \u0275\u0275restoreView(_r8);
-      const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onEditModalClosed());
+    const _r9 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-create-assignment-modal", 14);
+    \u0275\u0275listener("closed", function AssignmentGridComponent_Conditional_8_Template_app_create_assignment_modal_closed_0_listener() {
+      \u0275\u0275restoreView(_r9);
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.onEditModalClosed());
+    })("created", function AssignmentGridComponent_Conditional_8_Template_app_create_assignment_modal_created_0_listener() {
+      \u0275\u0275restoreView(_r9);
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.onEditModalClosed());
+    })("updated", function AssignmentGridComponent_Conditional_8_Template_app_create_assignment_modal_updated_0_listener() {
+      \u0275\u0275restoreView(_r9);
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.onEditModalClosed());
     });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("assignmentToEdit", ctx_r1.assignmentToEdit());
+    const ctx_r2 = \u0275\u0275nextContext();
+    \u0275\u0275property("assignmentToEdit", ctx_r2.assignmentToEdit());
+  }
+}
+function AssignmentGridComponent_Conditional_9_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r10 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "app-assignment-detail-modal", 15);
+    \u0275\u0275listener("closed", function AssignmentGridComponent_Conditional_9_Template_app_assignment_detail_modal_closed_0_listener() {
+      \u0275\u0275restoreView(_r10);
+      const ctx_r2 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r2.closeDetail());
+    });
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    \u0275\u0275property("assignment", ctx);
   }
 }
 var SECTION_ORDER = [
-  { key: "route-assignments", label: "Route Assignments" },
+  { key: "route-assignments", label: "Landing Pages" },
   { key: "frontend", label: "Front End Projects" },
   { key: "fullstack", label: "Full Stack Projects" }
 ];
 var AssignmentGridComponent = class _AssignmentGridComponent {
   assignmentService;
+  SECTION_ORDER = SECTION_ORDER;
   showEditModal = signal(false, ...ngDevMode ? [{ debugName: "showEditModal" }] : (
     /* istanbul ignore next */
     []
@@ -34473,13 +34584,17 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
     /* istanbul ignore next */
     []
   ));
-  searchQuery = signal("", ...ngDevMode ? [{ debugName: "searchQuery" }] : (
+  detailAssignment = signal(null, ...ngDevMode ? [{ debugName: "detailAssignment" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  activeCategory = signal("all", ...ngDevMode ? [{ debugName: "activeCategory" }] : (
     /* istanbul ignore next */
     []
   ));
   filtered = computed(() => {
-    const q = this.searchQuery().toLowerCase().trim();
-    return this.assignmentService.assignments().filter((a) => !q || a.title.toLowerCase().includes(q) || a.description.toLowerCase().includes(q) || a.tags.some((t) => t.toLowerCase().includes(q)));
+    const cat = this.activeCategory();
+    return this.assignmentService.assignments().filter((a) => cat === "all" || (a.category ?? "route-assignments") === cat);
   }, ...ngDevMode ? [{ debugName: "filtered" }] : (
     /* istanbul ignore next */
     []
@@ -34493,15 +34608,11 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
     /* istanbul ignore next */
     []
   ));
-  totalCount = computed(() => this.filtered().length, ...ngDevMode ? [{ debugName: "totalCount" }] : (
-    /* istanbul ignore next */
-    []
-  ));
   constructor(assignmentService) {
     this.assignmentService = assignmentService;
   }
-  onSearch(event) {
-    this.searchQuery.set(event.target.value);
+  setCategory(key) {
+    this.activeCategory.set(key);
   }
   onEditRequested(assignment) {
     this.assignmentToEdit.set(assignment);
@@ -34511,50 +34622,59 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
     this.showEditModal.set(false);
     this.assignmentToEdit.set(null);
   }
+  openDetail(assignment) {
+    this.detailAssignment.set(assignment);
+  }
+  closeDetail() {
+    this.detailAssignment.set(null);
+  }
+  onEsc() {
+    if (this.detailAssignment())
+      this.closeDetail();
+  }
   static \u0275fac = function AssignmentGridComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AssignmentGridComponent)(\u0275\u0275directiveInject(AssignmentService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssignmentGridComponent, selectors: [["app-assignment-grid"]], decls: 16, vars: 5, consts: [[1, "grid-section"], [1, "grid-header"], [1, "grid-heading"], [1, "count-badge"], [1, "search-bar"], [1, "search-input-wrap"], ["width", "16", "height", "16", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.2", 1, "search-icon"], ["cx", "11", "cy", "11", "r", "8"], ["x1", "21", "y1", "21", "x2", "16.65", "y2", "16.65"], ["type", "text", "placeholder", "Search projects\u2026", 1, "search-input", 3, "input", "value"], ["aria-label", "Clear search", 1, "search-clear"], [1, "empty-state"], [3, "assignmentToEdit"], ["aria-label", "Clear search", 1, "search-clear", 3, "click"], [1, "empty-icon"], [1, "btn-clear-filters", 3, "click"], [1, "section-block"], [1, "section-heading"], [1, "assignments-grid"], [3, "assignment", "index"], [3, "editRequested", "assignment", "index"], [3, "closed", "created", "updated", "assignmentToEdit"]], template: function AssignmentGridComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AssignmentGridComponent, selectors: [["app-assignment-grid"]], hostBindings: function AssignmentGridComponent_HostBindings(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "h2", 2);
-      \u0275\u0275text(3, " My Work ");
-      \u0275\u0275elementStart(4, "span", 3);
-      \u0275\u0275text(5);
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(6, "div", 4)(7, "div", 5);
-      \u0275\u0275namespaceSVG();
-      \u0275\u0275elementStart(8, "svg", 6);
-      \u0275\u0275element(9, "circle", 7)(10, "line", 8);
-      \u0275\u0275elementEnd();
-      \u0275\u0275namespaceHTML();
-      \u0275\u0275elementStart(11, "input", 9);
-      \u0275\u0275listener("input", function AssignmentGridComponent_Template_input_input_11_listener($event) {
-        return ctx.onSearch($event);
+      \u0275\u0275listener("keydown.escape", function AssignmentGridComponent_keydown_escape_HostBindingHandler() {
+        return ctx.onEsc();
+      }, \u0275\u0275resolveWindow);
+    }
+  }, decls: 10, vars: 5, consts: [[1, "grid-section"], ["role", "tablist", 1, "filter-chips"], ["role", "tab", 1, "chip", 3, "click"], ["role", "tab", 1, "chip", 3, "active"], [1, "empty-state"], [3, "assignmentToEdit"], [3, "assignment"], [1, "empty-icon"], [1, "btn-clear-filters", 3, "click"], [1, "section-block"], [1, "section-heading"], [1, "assignments-grid"], [3, "assignment", "index"], [3, "editRequested", "openDetail", "assignment", "index"], [3, "closed", "created", "updated", "assignmentToEdit"], [3, "closed", "assignment"]], template: function AssignmentGridComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "section", 0)(1, "div", 1)(2, "button", 2);
+      \u0275\u0275listener("click", function AssignmentGridComponent_Template_button_click_2_listener() {
+        return ctx.setCategory("all");
       });
+      \u0275\u0275text(3, "All");
       \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(12, AssignmentGridComponent_Conditional_12_Template, 2, 0, "button", 10);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(13, AssignmentGridComponent_Conditional_13_Template, 9, 0, "div", 11)(14, AssignmentGridComponent_Conditional_14_Template, 2, 0);
+      \u0275\u0275repeaterCreate(4, AssignmentGridComponent_For_5_Template, 2, 3, "button", 3, _forTrack03);
       \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(15, AssignmentGridComponent_Conditional_15_Template, 1, 1, "app-create-assignment-modal", 12);
+      \u0275\u0275conditionalCreate(6, AssignmentGridComponent_Conditional_6_Template, 7, 0, "div", 4)(7, AssignmentGridComponent_Conditional_7_Template, 2, 0);
+      \u0275\u0275elementEnd();
+      \u0275\u0275conditionalCreate(8, AssignmentGridComponent_Conditional_8_Template, 1, 1, "app-create-assignment-modal", 5);
+      \u0275\u0275conditionalCreate(9, AssignmentGridComponent_Conditional_9_Template, 1, 1, "app-assignment-detail-modal", 6);
     }
     if (rf & 2) {
-      \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate(ctx.totalCount());
-      \u0275\u0275advance(6);
-      \u0275\u0275property("value", ctx.searchQuery());
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.searchQuery() ? 12 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.sections().length === 0 ? 13 : 14);
+      let tmp_4_0;
       \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx.showEditModal() ? 15 : -1);
+      \u0275\u0275classProp("active", ctx.activeCategory() === "all");
+      \u0275\u0275advance(2);
+      \u0275\u0275repeater(ctx.SECTION_ORDER);
+      \u0275\u0275advance(2);
+      \u0275\u0275conditional(ctx.sections().length === 0 ? 6 : 7);
+      \u0275\u0275advance(2);
+      \u0275\u0275conditional(ctx.showEditModal() ? 8 : -1);
+      \u0275\u0275advance();
+      \u0275\u0275conditional((tmp_4_0 = ctx.detailAssignment()) ? 9 : -1, tmp_4_0);
     }
   }, dependencies: [
     CommonModule,
     AssignmentCardComponent,
-    CreateAssignmentModalComponent
-  ], styles: ["\n.grid-section[_ngcontent-%COMP%] {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.grid-header[_ngcontent-%COMP%] {\n  margin-bottom: 24px;\n  text-align: center;\n}\n.grid-heading[_ngcontent-%COMP%] {\n  font-size: clamp(1.5rem, 4vw, 2.1rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.count-badge[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 10px;\n  border-radius: 999px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  color: #fff;\n  font-size: 0.95rem;\n  font-weight: 700;\n}\n.search-bar[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 36px;\n}\n.search-input-wrap[_ngcontent-%COMP%] {\n  position: relative;\n  max-width: 480px;\n  margin: 0 auto;\n  width: 100%;\n}\n@media (max-width: 600px) {\n  .search-input-wrap[_ngcontent-%COMP%] {\n    max-width: 100%;\n  }\n}\n.search-icon[_ngcontent-%COMP%] {\n  position: absolute;\n  left: 14px;\n  top: 50%;\n  transform: translateY(-50%);\n  color: rgba(255, 255, 255, 0.35);\n  pointer-events: none;\n}\n.search-input[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: 11px 40px 11px 42px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  color: #fff;\n  font-size: 0.92rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.search-input[_ngcontent-%COMP%]::placeholder {\n  color: rgba(255, 255, 255, 0.3);\n}\n.search-input[_ngcontent-%COMP%]:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.1);\n}\n.search-clear[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 12px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  cursor: pointer;\n  padding: 2px 6px;\n  border-radius: 6px;\n  transition: color 0.15s, background 0.15s;\n}\n.search-clear[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.1);\n}\n.section-block[_ngcontent-%COMP%] {\n  margin-bottom: 56px;\n}\n.section-block[_ngcontent-%COMP%]:last-child {\n  margin-bottom: 0;\n}\n.section-heading[_ngcontent-%COMP%] {\n  font-size: clamp(1.1rem, 3vw, 1.4rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 24px;\n  padding-left: 16px;\n  border-left: 3px solid;\n  border-image:\n    linear-gradient(\n      180deg,\n      #f093fb,\n      #f5576c) 1;\n  letter-spacing: -0.01em;\n}\n.assignments-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  grid-auto-rows: 480px;\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n}\n.empty-state[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state[_ngcontent-%COMP%]   .empty-icon[_ngcontent-%COMP%] {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters[_ngcontent-%COMP%] {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */"] });
+    CreateAssignmentModalComponent,
+    AssignmentDetailModalComponent
+  ], styles: ["\n.grid-section[_ngcontent-%COMP%] {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.filter-chips[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 8px;\n  margin-bottom: 36px;\n}\n.chip[_ngcontent-%COMP%] {\n  padding: 7px 16px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.65);\n  font-size: 0.82rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s ease;\n}\n.chip[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.1);\n  color: #fff;\n}\n.chip.active[_ngcontent-%COMP%] {\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  border-color: transparent;\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(245, 87, 108, 0.35);\n}\n.section-block[_ngcontent-%COMP%] {\n  margin-bottom: 56px;\n}\n.section-block[_ngcontent-%COMP%]:last-child {\n  margin-bottom: 0;\n}\n.section-heading[_ngcontent-%COMP%] {\n  font-size: clamp(1.1rem, 3vw, 1.4rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 24px;\n  padding-left: 16px;\n  border-left: 3px solid;\n  border-image:\n    linear-gradient(\n      180deg,\n      #f093fb,\n      #f5576c) 1;\n  letter-spacing: -0.01em;\n}\n.assignments-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  grid-auto-rows: min-content;\n  align-items: start;\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n}\n.empty-state[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state[_ngcontent-%COMP%]   .empty-icon[_ngcontent-%COMP%] {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters[_ngcontent-%COMP%] {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AssignmentGridComponent, [{
@@ -34562,38 +34682,26 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
     args: [{ selector: "app-assignment-grid", standalone: true, imports: [
       CommonModule,
       AssignmentCardComponent,
-      CreateAssignmentModalComponent
+      CreateAssignmentModalComponent,
+      AssignmentDetailModalComponent
     ], template: `<section class="grid-section">
 
-  <!-- Heading -->
-  <div class="grid-header">
-    <h2 class="grid-heading">
-      My Work
-      <span class="count-badge">{{ totalCount() }}</span>
-    </h2>
-  </div>
-
-  <!-- Search bar -->
-  <div class="search-bar">
-    <div class="search-input-wrap">
-      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-        <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-      </svg>
-      <input type="text" class="search-input" placeholder="Search projects\u2026"
-        [value]="searchQuery()" (input)="onSearch($event)" />
-      @if (searchQuery()) {
-        <button class="search-clear" (click)="searchQuery.set('')" aria-label="Clear search">\u2715</button>
-      }
-    </div>
+  <!-- Category chips -->
+  <div class="filter-chips" role="tablist">
+    <button class="chip" [class.active]="activeCategory() === 'all'"
+      (click)="setCategory('all')" role="tab">All</button>
+    @for (cat of SECTION_ORDER; track cat.key) {
+      <button class="chip" [class.active]="activeCategory() === cat.key"
+        (click)="setCategory(cat.key)" role="tab">{{ cat.label }}</button>
+    }
   </div>
 
   <!-- Sections -->
   @if (sections().length === 0) {
     <div class="empty-state">
-      <div class="empty-icon">\u{1F50D}</div>
-      <h3>No matches</h3>
-      <p>Try a different search term.</p>
-      <button class="btn-clear-filters" (click)="searchQuery.set('')">Clear search</button>
+      <div class="empty-icon">\u{1F4C1}</div>
+      <h3>No projects in this category</h3>
+      <button class="btn-clear-filters" (click)="setCategory('all')">Show all</button>
     </div>
   } @else {
     @for (section of sections(); track section.key) {
@@ -34601,7 +34709,9 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
         <h3 class="section-heading">{{ section.label }}</h3>
         <div class="assignments-grid">
           @for (assignment of section.assignments; track assignment.id; let i = $index) {
-            <app-assignment-card [assignment]="assignment" [index]="i" (editRequested)="onEditRequested($event)" />
+            <app-assignment-card [assignment]="assignment" [index]="i"
+              (editRequested)="onEditRequested($event)"
+              (openDetail)="openDetail($event)" />
           }
         </div>
       </div>
@@ -34617,35 +34727,183 @@ var AssignmentGridComponent = class _AssignmentGridComponent {
     (created)="onEditModalClosed()"
     (updated)="onEditModalClosed()" />
 }
-`, styles: ["/* src/app/components/assignment-grid/assignment-grid.component.scss */\n.grid-section {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.grid-header {\n  margin-bottom: 24px;\n  text-align: center;\n}\n.grid-heading {\n  font-size: clamp(1.5rem, 4vw, 2.1rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.count-badge {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 10px;\n  border-radius: 999px;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  color: #fff;\n  font-size: 0.95rem;\n  font-weight: 700;\n}\n.search-bar {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 36px;\n}\n.search-input-wrap {\n  position: relative;\n  max-width: 480px;\n  margin: 0 auto;\n  width: 100%;\n}\n@media (max-width: 600px) {\n  .search-input-wrap {\n    max-width: 100%;\n  }\n}\n.search-icon {\n  position: absolute;\n  left: 14px;\n  top: 50%;\n  transform: translateY(-50%);\n  color: rgba(255, 255, 255, 0.35);\n  pointer-events: none;\n}\n.search-input {\n  width: 100%;\n  padding: 11px 40px 11px 42px;\n  background: rgba(255, 255, 255, 0.07);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  border-radius: 12px;\n  color: #fff;\n  font-size: 0.92rem;\n  font-family: inherit;\n  outline: none;\n  transition: border-color 0.2s, background 0.2s;\n}\n.search-input::placeholder {\n  color: rgba(255, 255, 255, 0.3);\n}\n.search-input:focus {\n  border-color: rgba(240, 147, 251, 0.5);\n  background: rgba(255, 255, 255, 0.1);\n}\n.search-clear {\n  position: absolute;\n  right: 12px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: transparent;\n  border: none;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  cursor: pointer;\n  padding: 2px 6px;\n  border-radius: 6px;\n  transition: color 0.15s, background 0.15s;\n}\n.search-clear:hover {\n  color: #fff;\n  background: rgba(255, 255, 255, 0.1);\n}\n.section-block {\n  margin-bottom: 56px;\n}\n.section-block:last-child {\n  margin-bottom: 0;\n}\n.section-heading {\n  font-size: clamp(1.1rem, 3vw, 1.4rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 24px;\n  padding-left: 16px;\n  border-left: 3px solid;\n  border-image:\n    linear-gradient(\n      180deg,\n      #f093fb,\n      #f5576c) 1;\n  letter-spacing: -0.01em;\n}\n.assignments-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  grid-auto-rows: 480px;\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid {\n    grid-template-columns: 1fr;\n  }\n}\n.empty-state {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state .empty-icon {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state h3 {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state p {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */\n"] }]
-  }], () => [{ type: AssignmentService }], null);
+
+@if (detailAssignment(); as detail) {
+  <app-assignment-detail-modal [assignment]="detail" (closed)="closeDetail()" />
+}
+`, styles: ["/* src/app/components/assignment-grid/assignment-grid.component.scss */\n.grid-section {\n  padding: 48px 24px 80px;\n  max-width: 1280px;\n  margin: 0 auto;\n}\n.filter-chips {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 8px;\n  margin-bottom: 36px;\n}\n.chip {\n  padding: 7px 16px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.05);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  color: rgba(255, 255, 255, 0.65);\n  font-size: 0.82rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s ease;\n}\n.chip:hover {\n  background: rgba(255, 255, 255, 0.1);\n  color: #fff;\n}\n.chip.active {\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  border-color: transparent;\n  color: #fff;\n  box-shadow: 0 4px 14px rgba(245, 87, 108, 0.35);\n}\n.section-block {\n  margin-bottom: 56px;\n}\n.section-block:last-child {\n  margin-bottom: 0;\n}\n.section-heading {\n  font-size: clamp(1.1rem, 3vw, 1.4rem);\n  font-weight: 800;\n  color: #fff;\n  margin: 0 0 24px;\n  padding-left: 16px;\n  border-left: 3px solid;\n  border-image:\n    linear-gradient(\n      180deg,\n      #f093fb,\n      #f5576c) 1;\n  letter-spacing: -0.01em;\n}\n.assignments-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  grid-auto-rows: min-content;\n  align-items: start;\n  gap: 28px;\n}\n@media (max-width: 480px) {\n  .assignments-grid {\n    grid-template-columns: 1fr;\n  }\n}\n.empty-state {\n  text-align: center;\n  padding: 80px 24px;\n  background: rgba(255, 255, 255, 0.02);\n  border-radius: 24px;\n  border: 2px dashed rgba(255, 255, 255, 0.08);\n}\n.empty-state .empty-icon {\n  font-size: 3.5rem;\n  margin-bottom: 16px;\n}\n.empty-state h3 {\n  font-size: 1.3rem;\n  font-weight: 700;\n  color: #fff;\n  margin: 0 0 8px;\n}\n.empty-state p {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.92rem;\n  margin: 0 0 20px;\n}\n.btn-clear-filters {\n  padding: 9px 22px;\n  border-radius: 10px;\n  background: rgba(255, 255, 255, 0.08);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  color: rgba(255, 255, 255, 0.75);\n  font-size: 0.87rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: all 0.18s;\n}\n.btn-clear-filters:hover {\n  background: rgba(255, 255, 255, 0.15);\n  color: #fff;\n}\n/*# sourceMappingURL=assignment-grid.component.css.map */\n"] }]
+  }], () => [{ type: AssignmentService }], { onEsc: [{
+    type: HostListener,
+    args: ["window:keydown.escape"]
+  }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssignmentGridComponent, { className: "AssignmentGridComponent", filePath: "src/app/components/assignment-grid/assignment-grid.component.ts", lineNumber: 31 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AssignmentGridComponent, { className: "AssignmentGridComponent", filePath: "src/app/components/assignment-grid/assignment-grid.component.ts", lineNumber: 33 });
 })();
 
 // src/app/app.ts
 var App = class _App {
+  showScrollTop = signal(false, ...ngDevMode ? [{ debugName: "showScrollTop" }] : (
+    /* istanbul ignore next */
+    []
+  ));
+  onScroll() {
+    const visible = window.scrollY > 600;
+    if (visible !== this.showScrollTop())
+      this.showScrollTop.set(visible);
+  }
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   static \u0275fac = function App_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _App)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 6, vars: 0, consts: [[1, "app-footer"]], template: function App_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], hostBindings: function App_HostBindings(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275element(0, "app-header");
-      \u0275\u0275elementStart(1, "main");
-      \u0275\u0275element(2, "app-assignment-grid");
+      \u0275\u0275listener("scroll", function App_scroll_HostBindingHandler() {
+        return ctx.onScroll();
+      }, \u0275\u0275resolveWindow);
+    }
+  }, decls: 53, vars: 2, consts: [["aria-hidden", "true", 1, "starfield"], [1, "stars", "stars-sm"], [1, "stars", "stars-md"], [1, "stars", "stars-lg"], [1, "shooting", "shooting-1"], [1, "shooting", "shooting-2"], [1, "shooting", "shooting-3"], [1, "about-section"], [1, "about-content"], [1, "about-text"], [1, "about-stack"], [1, "stack-tag"], [1, "app-footer"], ["aria-label", "Scroll to top", 1, "scroll-top", 3, "click"], ["width", "20", "height", "20", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["points", "18 15 12 9 6 15"]], template: function App_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div", 0);
+      \u0275\u0275element(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "div", 5)(6, "div", 6);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "footer", 0)(4, "p");
-      \u0275\u0275text(5, "Built with Angular \xB7 Full Stack Course Portfolio");
+      \u0275\u0275element(7, "app-header");
+      \u0275\u0275elementStart(8, "section", 7)(9, "div", 8)(10, "p", 9);
+      \u0275\u0275text(11, " Hey there \u{1F44B} I started in automotive embedded systems writing C, where I developed a deep respect for clean, precise code. I shifted to frontend development to build things people can actually see and interact with, combining logic with creativity. Since then I've been learning by building: e-commerce platforms, task managers, and weather apps, each one a real attempt to improve user experience. Currently focused on Angular, TypeScript, and CSS, with the goal of crafting performant, intuitive interfaces. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(12, "div", 10)(13, "span", 11);
+      \u0275\u0275text(14, "Angular");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "span", 11);
+      \u0275\u0275text(16, "TypeScript");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(17, "span", 11);
+      \u0275\u0275text(18, "JavaScript (ES6+)");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(19, "span", 11);
+      \u0275\u0275text(20, "HTML5");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "span", 11);
+      \u0275\u0275text(22, "CSS3");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(23, "span", 11);
+      \u0275\u0275text(24, "Node.js");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(25, "span", 11);
+      \u0275\u0275text(26, "REST API");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "span", 11);
+      \u0275\u0275text(28, "Python");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(29, "span", 11);
+      \u0275\u0275text(30, "PostgreSQL");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(31, "span", 11);
+      \u0275\u0275text(32, "Oracle PL/SQL");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(33, "span", 11);
+      \u0275\u0275text(34, "Git");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(35, "span", 11);
+      \u0275\u0275text(36, "GitHub");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(37, "span", 11);
+      \u0275\u0275text(38, "GitLab");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(39, "span", 11);
+      \u0275\u0275text(40, "Docker");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(41, "span", 11);
+      \u0275\u0275text(42, "Firebase");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(43, "span", 11);
+      \u0275\u0275text(44, "Linux");
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(45, "main");
+      \u0275\u0275element(46, "app-assignment-grid");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(47, "footer", 12)(48, "p");
+      \u0275\u0275text(49, "Mohamed Khalil \xB7 Frontend Developer \xB7 Built with Angular");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(50, "button", 13);
+      \u0275\u0275listener("click", function App_Template_button_click_50_listener() {
+        return ctx.scrollToTop();
+      });
+      \u0275\u0275namespaceSVG();
+      \u0275\u0275elementStart(51, "svg", 14);
+      \u0275\u0275element(52, "polyline", 15);
       \u0275\u0275elementEnd()();
     }
-  }, dependencies: [CommonModule, HeaderComponent, AssignmentGridComponent], styles: ["\n.app-footer[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 32px 24px;\n  border-top: 1px solid rgba(255, 255, 255, 0.06);\n}\n.app-footer[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.3);\n  font-size: 0.85rem;\n}\n/*# sourceMappingURL=app.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(50);
+      \u0275\u0275classProp("visible", ctx.showScrollTop());
+    }
+  }, dependencies: [CommonModule, HeaderComponent, AssignmentGridComponent], styles: ['\n.starfield[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  z-index: -1;\n  overflow: hidden;\n  pointer-events: none;\n  background:\n    radial-gradient(\n      ellipse at 20% 10%,\n      rgba(120, 80, 200, 0.18),\n      transparent 55%),\n    radial-gradient(\n      ellipse at 85% 90%,\n      rgba(240, 90, 160, 0.14),\n      transparent 55%),\n    radial-gradient(\n      ellipse at 50% 50%,\n      #1a1828 0%,\n      #0d0c1a 100%);\n}\n.stars[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  width: 1px;\n  height: 1px;\n  background: transparent;\n  animation: _ngcontent-%COMP%_starDrift 240s linear infinite;\n}\n.stars-sm[_ngcontent-%COMP%] {\n  box-shadow:\n    20px 60px #fff,\n    140px 220px #fff,\n    310px 90px #c9d4ff,\n    480px 410px #fff,\n    660px 150px #fff,\n    820px 330px #ffd9f0,\n    980px 80px #fff,\n    1180px 270px #fff,\n    1340px 460px #fff,\n    90px 530px #c9d4ff,\n    250px 700px #fff,\n    410px 840px #fff,\n    570px 620px #fff,\n    740px 780px #ffd9f0,\n    910px 970px #fff,\n    1080px 580px #fff,\n    1250px 720px #fff,\n    1420px 880px #c9d4ff,\n    50px 950px #fff,\n    200px 1100px #fff,\n    370px 1240px #fff,\n    540px 1080px #ffd9f0,\n    700px 1310px #fff,\n    870px 1180px #fff,\n    1040px 1340px #fff,\n    1210px 1080px #c9d4ff,\n    1380px 1240px #fff,\n    1500px 50px #fff,\n    1600px 380px #fff,\n    1700px 720px #ffd9f0,\n    1820px 1050px #fff,\n    1900px 200px #c9d4ff,\n    60px 1450px #fff,\n    290px 1560px #fff,\n    480px 1390px #fff,\n    680px 1500px #ffd9f0,\n    870px 1620px #fff,\n    1060px 1450px #fff,\n    1280px 1590px #fff,\n    1480px 1410px #c9d4ff,\n    1700px 1540px #fff,\n    1880px 1430px #fff;\n  animation: _ngcontent-%COMP%_starTwinkle 5s ease-in-out infinite, _ngcontent-%COMP%_starDrift 320s linear infinite;\n}\n.stars-md[_ngcontent-%COMP%] {\n  box-shadow:\n    120px 180px 1px #fff,\n    380px 90px 1px #fff,\n    620px 340px 1px #c9d4ff,\n    900px 200px 1px #fff,\n    1150px 410px 1px #ffd9f0,\n    1400px 130px 1px #fff,\n    1650px 350px 1px #fff,\n    1850px 580px 1px #fff,\n    240px 480px 1px #fff,\n    520px 660px 1px #fff,\n    780px 820px 1px #c9d4ff,\n    1020px 700px 1px #fff,\n    1280px 880px 1px #fff,\n    1540px 740px 1px #ffd9f0,\n    1780px 920px 1px #fff,\n    150px 1020px 1px #fff,\n    420px 1180px 1px #fff,\n    680px 1340px 1px #c9d4ff,\n    940px 1240px 1px #fff,\n    1200px 1420px 1px #fff,\n    1460px 1300px 1px #ffd9f0,\n    1720px 1480px 1px #fff;\n  animation: _ngcontent-%COMP%_starTwinkle 7s ease-in-out infinite, _ngcontent-%COMP%_starDrift 260s linear infinite;\n  animation-delay: -2s, 0s;\n}\n.stars-lg[_ngcontent-%COMP%] {\n  box-shadow:\n    260px 340px 2px #fff,\n    720px 180px 2px #ffd9f0,\n    1100px 540px 2px #fff,\n    1480px 280px 2px #c9d4ff,\n    1820px 720px 2px #fff,\n    360px 880px 2px #fff,\n    840px 760px 2px #ffd9f0,\n    1240px 1020px 2px #fff,\n    1620px 920px 2px #c9d4ff,\n    180px 1280px 2px #fff,\n    640px 1180px 2px #fff,\n    1080px 1440px 2px #ffd9f0,\n    1500px 1340px 2px #fff;\n  animation: _ngcontent-%COMP%_starTwinkle 4s ease-in-out infinite, _ngcontent-%COMP%_starDrift 200s linear infinite;\n  animation-delay: -1s, 0s;\n}\n@keyframes _ngcontent-%COMP%_starTwinkle {\n  0%, 100% {\n    opacity: 0.45;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n@keyframes _ngcontent-%COMP%_starDrift {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    transform: translate3d(-200px, -120px, 0);\n  }\n}\n.shooting[_ngcontent-%COMP%] {\n  position: absolute;\n  width: 140px;\n  height: 2px;\n  background:\n    linear-gradient(\n      90deg,\n      rgba(255, 255, 255, 0) 0%,\n      rgba(255, 255, 255, 0.6) 50%,\n      #fff 100%);\n  border-radius: 999px;\n  opacity: 0;\n  transform: rotate(-22deg);\n  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));\n}\n.shooting[_ngcontent-%COMP%]::after {\n  content: "";\n  position: absolute;\n  right: -2px;\n  top: 50%;\n  width: 4px;\n  height: 4px;\n  margin-top: -2px;\n  border-radius: 50%;\n  background: #fff;\n  box-shadow: 0 0 12px 2px rgba(200, 180, 255, 0.9);\n}\n.shooting-1[_ngcontent-%COMP%] {\n  top: 12%;\n  left: -160px;\n  animation: _ngcontent-%COMP%_shoot 7s ease-in 1s infinite;\n}\n.shooting-2[_ngcontent-%COMP%] {\n  top: 38%;\n  left: -160px;\n  animation: _ngcontent-%COMP%_shoot 9s ease-in 4s infinite;\n}\n.shooting-3[_ngcontent-%COMP%] {\n  top: 64%;\n  left: -160px;\n  animation: _ngcontent-%COMP%_shoot 11s ease-in 7.5s infinite;\n}\n@keyframes _ngcontent-%COMP%_shoot {\n  0% {\n    transform: translate3d(0, 0, 0) rotate(-22deg);\n    opacity: 0;\n  }\n  6% {\n    opacity: 1;\n  }\n  60% {\n    opacity: 1;\n  }\n  100% {\n    transform: translate3d(120vw, 60vh, 0) rotate(-22deg);\n    opacity: 0;\n  }\n}\n@media (prefers-reduced-motion: reduce) {\n  .stars[_ngcontent-%COMP%], \n   .shooting[_ngcontent-%COMP%] {\n    animation: none;\n  }\n  .shooting[_ngcontent-%COMP%] {\n    opacity: 0;\n  }\n}\n.scroll-top[_ngcontent-%COMP%] {\n  position: fixed;\n  right: 22px;\n  bottom: 22px;\n  width: 46px;\n  height: 46px;\n  border-radius: 50%;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  border: none;\n  color: #fff;\n  cursor: pointer;\n  display: grid;\n  place-items: center;\n  box-shadow: 0 8px 24px rgba(245, 87, 108, 0.4);\n  opacity: 0;\n  transform: translateY(20px) scale(0.85);\n  pointer-events: none;\n  transition: opacity 0.25s, transform 0.25s;\n  z-index: 50;\n}\n.scroll-top.visible[_ngcontent-%COMP%] {\n  opacity: 1;\n  transform: translateY(0) scale(1);\n  pointer-events: auto;\n}\n.scroll-top[_ngcontent-%COMP%]:hover {\n  filter: brightness(1.12);\n  transform: translateY(-2px) scale(1.05);\n}\n.about-section[_ngcontent-%COMP%] {\n  padding: 48px 24px 36px;\n  display: flex;\n  justify-content: center;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.about-content[_ngcontent-%COMP%] {\n  max-width: 720px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n.about-text[_ngcontent-%COMP%] {\n  font-size: 1rem;\n  color: rgba(255, 255, 255, 0.6);\n  line-height: 1.8;\n  margin: 0;\n}\n.about-skills[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.skill-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.skill-group-label[_ngcontent-%COMP%] {\n  font-size: 0.72rem;\n  font-weight: 700;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  color: rgba(255, 255, 255, 0.3);\n}\n.about-stack[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n.stack-tag[_ngcontent-%COMP%] {\n  font-size: 0.75rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 5px 12px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.55);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.app-footer[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 32px 24px;\n  border-top: 1px solid rgba(255, 255, 255, 0.06);\n}\n.app-footer[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.3);\n  font-size: 0.85rem;\n}\n/*# sourceMappingURL=app.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
     type: Component,
-    args: [{ selector: "app-root", standalone: true, imports: [CommonModule, HeaderComponent, AssignmentGridComponent], template: '<app-header />\n<main>\n  <app-assignment-grid />\n</main>\n<footer class="app-footer">\n  <p>Built with Angular \xB7 Full Stack Course Portfolio</p>\n</footer>\n', styles: ["/* src/app/app.scss */\n.app-footer {\n  text-align: center;\n  padding: 32px 24px;\n  border-top: 1px solid rgba(255, 255, 255, 0.06);\n}\n.app-footer p {\n  color: rgba(255, 255, 255, 0.3);\n  font-size: 0.85rem;\n}\n/*# sourceMappingURL=app.css.map */\n"] }]
-  }], null, null);
+    args: [{ selector: "app-root", standalone: true, imports: [CommonModule, HeaderComponent, AssignmentGridComponent], template: `<div class="starfield" aria-hidden="true">
+  <div class="stars stars-sm"></div>
+  <div class="stars stars-md"></div>
+  <div class="stars stars-lg"></div>
+  <div class="shooting shooting-1"></div>
+  <div class="shooting shooting-2"></div>
+  <div class="shooting shooting-3"></div>
+</div>
+
+<app-header />
+
+<section class="about-section">
+  <div class="about-content">
+    <p class="about-text">
+      Hey there \u{1F44B} I started in automotive embedded systems writing C, where I developed a deep respect for clean, precise code.
+      I shifted to frontend development to build things people can actually see and interact with, combining logic with creativity.
+      Since then I've been learning by building: e-commerce platforms, task managers, and weather apps, each one a real attempt to improve user experience.
+      Currently focused on Angular, TypeScript, and CSS, with the goal of crafting performant, intuitive interfaces.
+    </p>
+    <div class="about-stack">
+      <span class="stack-tag">Angular</span>
+      <span class="stack-tag">TypeScript</span>
+      <span class="stack-tag">JavaScript (ES6+)</span>
+      <span class="stack-tag">HTML5</span>
+      <span class="stack-tag">CSS3</span>
+      <span class="stack-tag">Node.js</span>
+      <span class="stack-tag">REST API</span>
+      <span class="stack-tag">Python</span>
+      <span class="stack-tag">PostgreSQL</span>
+      <span class="stack-tag">Oracle PL/SQL</span>
+      <span class="stack-tag">Git</span>
+      <span class="stack-tag">GitHub</span>
+      <span class="stack-tag">GitLab</span>
+      <span class="stack-tag">Docker</span>
+      <span class="stack-tag">Firebase</span>
+      <span class="stack-tag">Linux</span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <app-assignment-grid />
+</main>
+
+<footer class="app-footer">
+  <p>Mohamed Khalil \xB7 Frontend Developer \xB7 Built with Angular</p>
+</footer>
+
+<button class="scroll-top" [class.visible]="showScrollTop()" (click)="scrollToTop()"
+  aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+`, styles: ['/* src/app/app.scss */\n.starfield {\n  position: fixed;\n  inset: 0;\n  z-index: -1;\n  overflow: hidden;\n  pointer-events: none;\n  background:\n    radial-gradient(\n      ellipse at 20% 10%,\n      rgba(120, 80, 200, 0.18),\n      transparent 55%),\n    radial-gradient(\n      ellipse at 85% 90%,\n      rgba(240, 90, 160, 0.14),\n      transparent 55%),\n    radial-gradient(\n      ellipse at 50% 50%,\n      #1a1828 0%,\n      #0d0c1a 100%);\n}\n.stars {\n  position: absolute;\n  inset: 0;\n  width: 1px;\n  height: 1px;\n  background: transparent;\n  animation: starDrift 240s linear infinite;\n}\n.stars-sm {\n  box-shadow:\n    20px 60px #fff,\n    140px 220px #fff,\n    310px 90px #c9d4ff,\n    480px 410px #fff,\n    660px 150px #fff,\n    820px 330px #ffd9f0,\n    980px 80px #fff,\n    1180px 270px #fff,\n    1340px 460px #fff,\n    90px 530px #c9d4ff,\n    250px 700px #fff,\n    410px 840px #fff,\n    570px 620px #fff,\n    740px 780px #ffd9f0,\n    910px 970px #fff,\n    1080px 580px #fff,\n    1250px 720px #fff,\n    1420px 880px #c9d4ff,\n    50px 950px #fff,\n    200px 1100px #fff,\n    370px 1240px #fff,\n    540px 1080px #ffd9f0,\n    700px 1310px #fff,\n    870px 1180px #fff,\n    1040px 1340px #fff,\n    1210px 1080px #c9d4ff,\n    1380px 1240px #fff,\n    1500px 50px #fff,\n    1600px 380px #fff,\n    1700px 720px #ffd9f0,\n    1820px 1050px #fff,\n    1900px 200px #c9d4ff,\n    60px 1450px #fff,\n    290px 1560px #fff,\n    480px 1390px #fff,\n    680px 1500px #ffd9f0,\n    870px 1620px #fff,\n    1060px 1450px #fff,\n    1280px 1590px #fff,\n    1480px 1410px #c9d4ff,\n    1700px 1540px #fff,\n    1880px 1430px #fff;\n  animation: starTwinkle 5s ease-in-out infinite, starDrift 320s linear infinite;\n}\n.stars-md {\n  box-shadow:\n    120px 180px 1px #fff,\n    380px 90px 1px #fff,\n    620px 340px 1px #c9d4ff,\n    900px 200px 1px #fff,\n    1150px 410px 1px #ffd9f0,\n    1400px 130px 1px #fff,\n    1650px 350px 1px #fff,\n    1850px 580px 1px #fff,\n    240px 480px 1px #fff,\n    520px 660px 1px #fff,\n    780px 820px 1px #c9d4ff,\n    1020px 700px 1px #fff,\n    1280px 880px 1px #fff,\n    1540px 740px 1px #ffd9f0,\n    1780px 920px 1px #fff,\n    150px 1020px 1px #fff,\n    420px 1180px 1px #fff,\n    680px 1340px 1px #c9d4ff,\n    940px 1240px 1px #fff,\n    1200px 1420px 1px #fff,\n    1460px 1300px 1px #ffd9f0,\n    1720px 1480px 1px #fff;\n  animation: starTwinkle 7s ease-in-out infinite, starDrift 260s linear infinite;\n  animation-delay: -2s, 0s;\n}\n.stars-lg {\n  box-shadow:\n    260px 340px 2px #fff,\n    720px 180px 2px #ffd9f0,\n    1100px 540px 2px #fff,\n    1480px 280px 2px #c9d4ff,\n    1820px 720px 2px #fff,\n    360px 880px 2px #fff,\n    840px 760px 2px #ffd9f0,\n    1240px 1020px 2px #fff,\n    1620px 920px 2px #c9d4ff,\n    180px 1280px 2px #fff,\n    640px 1180px 2px #fff,\n    1080px 1440px 2px #ffd9f0,\n    1500px 1340px 2px #fff;\n  animation: starTwinkle 4s ease-in-out infinite, starDrift 200s linear infinite;\n  animation-delay: -1s, 0s;\n}\n@keyframes starTwinkle {\n  0%, 100% {\n    opacity: 0.45;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n@keyframes starDrift {\n  from {\n    transform: translate3d(0, 0, 0);\n  }\n  to {\n    transform: translate3d(-200px, -120px, 0);\n  }\n}\n.shooting {\n  position: absolute;\n  width: 140px;\n  height: 2px;\n  background:\n    linear-gradient(\n      90deg,\n      rgba(255, 255, 255, 0) 0%,\n      rgba(255, 255, 255, 0.6) 50%,\n      #fff 100%);\n  border-radius: 999px;\n  opacity: 0;\n  transform: rotate(-22deg);\n  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));\n}\n.shooting::after {\n  content: "";\n  position: absolute;\n  right: -2px;\n  top: 50%;\n  width: 4px;\n  height: 4px;\n  margin-top: -2px;\n  border-radius: 50%;\n  background: #fff;\n  box-shadow: 0 0 12px 2px rgba(200, 180, 255, 0.9);\n}\n.shooting-1 {\n  top: 12%;\n  left: -160px;\n  animation: shoot 7s ease-in 1s infinite;\n}\n.shooting-2 {\n  top: 38%;\n  left: -160px;\n  animation: shoot 9s ease-in 4s infinite;\n}\n.shooting-3 {\n  top: 64%;\n  left: -160px;\n  animation: shoot 11s ease-in 7.5s infinite;\n}\n@keyframes shoot {\n  0% {\n    transform: translate3d(0, 0, 0) rotate(-22deg);\n    opacity: 0;\n  }\n  6% {\n    opacity: 1;\n  }\n  60% {\n    opacity: 1;\n  }\n  100% {\n    transform: translate3d(120vw, 60vh, 0) rotate(-22deg);\n    opacity: 0;\n  }\n}\n@media (prefers-reduced-motion: reduce) {\n  .stars,\n  .shooting {\n    animation: none;\n  }\n  .shooting {\n    opacity: 0;\n  }\n}\n.scroll-top {\n  position: fixed;\n  right: 22px;\n  bottom: 22px;\n  width: 46px;\n  height: 46px;\n  border-radius: 50%;\n  background:\n    linear-gradient(\n      135deg,\n      #f093fb,\n      #f5576c);\n  border: none;\n  color: #fff;\n  cursor: pointer;\n  display: grid;\n  place-items: center;\n  box-shadow: 0 8px 24px rgba(245, 87, 108, 0.4);\n  opacity: 0;\n  transform: translateY(20px) scale(0.85);\n  pointer-events: none;\n  transition: opacity 0.25s, transform 0.25s;\n  z-index: 50;\n}\n.scroll-top.visible {\n  opacity: 1;\n  transform: translateY(0) scale(1);\n  pointer-events: auto;\n}\n.scroll-top:hover {\n  filter: brightness(1.12);\n  transform: translateY(-2px) scale(1.05);\n}\n.about-section {\n  padding: 48px 24px 36px;\n  display: flex;\n  justify-content: center;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n.about-content {\n  max-width: 720px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n.about-text {\n  font-size: 1rem;\n  color: rgba(255, 255, 255, 0.6);\n  line-height: 1.8;\n  margin: 0;\n}\n.about-skills {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.skill-group {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.skill-group-label {\n  font-size: 0.72rem;\n  font-weight: 700;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  color: rgba(255, 255, 255, 0.3);\n}\n.about-stack {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n.stack-tag {\n  font-size: 0.75rem;\n  font-weight: 700;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  padding: 5px 12px;\n  border-radius: 999px;\n  background: rgba(255, 255, 255, 0.06);\n  color: rgba(255, 255, 255, 0.55);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n.app-footer {\n  text-align: center;\n  padding: 32px 24px;\n  border-top: 1px solid rgba(255, 255, 255, 0.06);\n}\n.app-footer p {\n  color: rgba(255, 255, 255, 0.3);\n  font-size: 0.85rem;\n}\n/*# sourceMappingURL=app.css.map */\n'] }]
+  }], null, { onScroll: [{
+    type: HostListener,
+    args: ["window:scroll"]
+  }] });
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/app/app.ts", lineNumber: 13 });

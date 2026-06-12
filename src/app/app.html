@@ -1,3 +1,12 @@
+<div class="starfield" aria-hidden="true">
+  <div class="stars stars-sm"></div>
+  <div class="stars stars-md"></div>
+  <div class="stars stars-lg"></div>
+  <div class="shooting shooting-1"></div>
+  <div class="shooting shooting-2"></div>
+  <div class="shooting shooting-3"></div>
+</div>
+
 <app-header />
 
 <section class="about-section">
@@ -36,3 +45,10 @@
 <footer class="app-footer">
   <p>Mohamed Khalil · Frontend Developer · Built with Angular</p>
 </footer>
+
+<button class="scroll-top" [class.visible]="showScrollTop()" (click)="scrollToTop()"
+  aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>

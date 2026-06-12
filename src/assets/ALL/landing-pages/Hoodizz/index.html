@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOODIZZ — Wear the warmth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!--
+  NOTE — Bootstrap & your custom styles:
+  Bootstrap is loaded BEFORE styles.css so your custom
+  variables and rules override Bootstrap's defaults where
+  needed.
+  -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="#">HOODIZZ</a>
+      <div class="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#featured">Featured</a>
+        <a href="#brand">Brand</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="nav-actions">
+        <div class="search-wrap">
+          <button class="search-toggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <input class="search-input" id="search-bar" name="search-input-text" type="text" placeholder="Search…" />
+        </div>
+        <a href="#" class="cart-btn" id="cartBtn"><i class="fa-solid fa-cart-shopping"></i> <span
+            id="cartCount">0</span></a>
+        <a href="#" class="nav-login">Login</a>
+        <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="#shop">Shop</a>
+    <a href="#featured">Featured</a>
+    <a href="#brand">Brand</a>
+    <a href="#about">About</a>
+    <a href="#" class="mobile-nav__login">Login</a>
+  </div>
+  <div class="mobile-nav__scrim" id="mobileNavScrim"></div>
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div>
+      <span class="hero__eyebrow">New Drop — Winter '26</span>
+      <h1 class="hero__title">Wear<br>The<br><span class="hero__accent">Warmth.</span></h1>
+      <p class="hero__sub">Heavyweight hoodies built for cold days and loud nights. Made in limited runs. Worn forever.
+      </p>
+      <div class="hero__buttons">
+        <a href="#shop" class="btn btn--primary">Shop the drop →</a>
+        <a href="#about" class="btn btn--outline">Lookbook</a>
+      </div>
+      <div class="hero__stats" id="heroStats">
+        <div>
+          <div class="hero__stat-num" data-target="12" data-suffix="k+">12k+</div>Shipped
+        </div>
+        <div>
+          <div class="hero__stat-num" data-target="4.9" data-suffix="★" data-decimal>4.9★</div>Rated
+        </div>
+        <div>
+          <div class="hero__stat-num" data-target="100" data-suffix="%">100%</div>Cotton
+        </div>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <span class="hero__bg-word">HZ</span>
+      <img class="hero__img" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80"
+        alt="Heavyweight hoodie" />
+      <span class="hero__sticker hero__sticker--new">New!</span>
+      <span class="hero__sticker hero__sticker--price">from $89</span>
+    </div>
+  </section>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__inner">
+      <ul class="ticker__list">
+        <li class="ticker__item">Free Shipping on Orders +$100</li>
+        <li class="ticker__item">★</li>
+        <li class="ticker__item">New Winter Drop</li>
+        <li class="ticker__item">★</li>
+        <li class="ticker__item">Limited Stock</li>
+        <li class="ticker__item">★</li>
+        <li class="ticker__item">Made in Egypt</li>
+        <li class="ticker__item">★</li>
+      </ul>
+      <ul class="ticker__list" aria-hidden="true">
+        <li class="ticker__item">Free Shipping on Orders +$100</li>
+        <li class="ticker__item">★</li>
+        <li class="ticker__item">New Winter Drop</li>
+        <li class="ticker__item">★</li>
+        <li class="ticker__item">Limited Stock</li>
+        <li class="ticker__item">★</li>
+        <li class="ticker__item">Made in Egypt</li>
+        <li class="ticker__item">★</li>
+      </ul>
+    </div>
+  </div>
+  <section class="slider-section" id="featured">
+    <div class="container">
+      <div class="slider-section__head reveal">
+        <span class="shop__hand">Featured</span>
+        <h2 class="slider-section__title">Trending Now.</h2>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-btn slider-btn--prev" aria-label="Previous">‹</button>
+        <div class="slider-track">
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80"
+              alt="Classic Heavyweight" loading="lazy" />
+            <div class="slider-card__label">Classic Heavyweight</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80"
+              alt="Oversized Drop" loading="lazy" />
+            <div class="slider-card__label">Oversized Drop</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?w=600&q=80"
+              alt="Acid Wash Archive" loading="lazy" />
+            <div class="slider-card__label">Acid Wash Archive</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"
+              alt="Zip-Up Essential" loading="lazy" />
+            <div class="slider-card__label">Zip-Up Essential</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80"
+              alt="Varsity Club" loading="lazy" />
+            <div class="slider-card__label">Varsity Club</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80"
+              alt="Street Fleece" loading="lazy" />
+            <div class="slider-card__label">Street Fleece</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80"
+              alt="Urban Explorer" loading="lazy" />
+            <div class="slider-card__label">Urban Explorer</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80"
+              alt="Essential Pullover" loading="lazy" />
+            <div class="slider-card__label">Essential Pullover</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80"
+              alt="Graphic Edition" loading="lazy" />
+            <div class="slider-card__label">Graphic Edition</div>
+          </article>
+          <article class="slider-card">
+            <img class="slider-card__img" src="https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?w=600&q=80"
+              alt="TUFF Series" loading="lazy" />
+            <div class="slider-card__label">TUFF Series</div>
+          </article>
+        </div>
+        <button class="slider-btn slider-btn--next" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+  <!-- Manifesto strip -->
+  <section class="manifesto-section">
+    <div class="container manifesto-section__inner reveal">
+      <p class="manifesto-section__quote">Not just a hoodie.<br><em>A statement.</em></p>
+      <p class="manifesto-section__sub">Limited drops. Heavyweight builds. Zero compromise.</p>
+      <a href="#shop" class="btn btn--primary" style="margin-top:2rem">Shop now →</a>
+    </div>
+  </section>
+
+  <section class="brand-section" id="brand"
+    style="background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1400&q=80') center/cover no-repeat">
+    <div class="brand-section__overlay"></div>
+    <div class="brand-section__content container">
+      <h2 class="brand-section__title reveal-left">Born in<br>Egypt.</h2>
+      <p class="brand-section__sub">One mill. One team. One obsession.</p>
+      <a href="#shop" class="btn btn--primary" style="margin-top:2rem">Explore the collection →</a>
+    </div>
+  </section>
+  <!--  -->
+  <section class="shop" id="shop">
+    <div class="container">
+      <div class="shop__head reveal">
+        <span class="shop__hand">The Collection</span>
+        <h2 class="shop__title">Pick your style.</h2>
+      </div>
+      <div class="products-grid" id="grid"></div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__brand">HOODIZZ</div>
+          <p class="site-footer__about">Founded in 2024 in a small studio in Egypt. Limited runs. One mill. One
+            team.</p>
+          <div class="site-footer__socials">
+            <a href="#" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Mail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="site-footer__col-title">Shop</h4>
+          <ul class="site-footer__links">
+            <li><a href="#shop">All hoodies</a></li>
+            <li><a href="#shop">New arrivals</a></li>
+            <li><a href="#shop">Limited drops</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="site-footer__col-title">Contact</h4>
+          <ul class="site-footer__links">
+            <li>hello@hoodizz.co</li>
+            <li>+212 5XX-XXXXXX</li>
+            <li>Cairo, EG</li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bot">
+        <span>© 2026 HOODIZZ. All rights reserved.</span>
+        <div class="site-footer__bot-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Returns</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    const PRODUCTS = [
+      {
+        id: 'p1', name: 'Classic Heavyweight', category: 'Hoodies', price: 89, stock: 24,
+        images: ['https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80'],
+        colors: ['#0f0f10', '#e8e0d0', '#ff4d2e'], sizes: ['XS', 'S', 'M', 'L', 'XL']
+      },
+      {
+        id: 'p2', name: 'Oversized Drop', category: 'Hoodies', price: 109, stock: 8,
+        images: ['https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80'],
+        colors: ['#6b6b6b', '#2c3e50'], sizes: ['S', 'M', 'L', 'XL', 'XXL']
+      },
+      {
+        id: 'p3', name: 'Acid Wash Archive', category: 'Limited', price: 129, stock: 3,
+        images: ['https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?w=800&q=80'],
+        colors: ['#9b8ea0'], sizes: ['S', 'M', 'L']
+      },
+      {
+        id: 'p4', name: 'Zip-Up Essential', category: 'Zip-Ups', price: 99, stock: 15,
+        images: ['https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80'],
+        colors: ['#0f0f10', '#2c3e50', '#6b6b6b'], sizes: ['XS', 'S', 'M', 'L', 'XL']
+      },
+    ];
+
+
+    const Cart = {
+      get() { try { return JSON.parse(localStorage.getItem('hz_cart')) || []; } catch { return []; } },
+      save(i) { localStorage.setItem('hz_cart', JSON.stringify(i)); updateCount(); },
+      add(product, size, color) {
+        const items = this.get();
+        const key = product.id + '__' + size;
+        const found = items.find(i => i.id + '__' + i.size === key);
+        found ? found.qty++ : items.push({ id: product.id, name: product.name, price: product.price, img: product.images[0], size, color, qty: 1 });
+        this.save(items);
+      },
+      total() { return this.get().reduce((s, i) => s + i.qty, 0); },
+    };
+
+    function updateCount() {
+      document.getElementById('cartCount').textContent = Cart.total();
+    }
+
+    function bounceCart() {
+      const btn = document.getElementById('cartBtn');
+      btn.classList.remove('cart-bounce');
+      void btn.offsetWidth;
+      btn.classList.add('cart-bounce');
+      btn.addEventListener('animationend', () => btn.classList.remove('cart-bounce'), { once: true });
+    }
+
+
+
+    function buildCard(p, index) {
+      const colors = p.colors.map((c, i) =>
+        `<button class="product-card__color${i === 0 ? ' active' : ''}"
+                style="background:${c}" data-color="${c}" aria-label="${c}"></button>`
+      ).join('');
+      const sizes = p.sizes.map((s, i) =>
+        `<button class="product-card__size${i === 0 ? ' active' : ''}" data-size="${s}">${s}</button>`
+      ).join('');
+      return `
+        <article class="product-card" data-id="${p.id}" style="--i:${index}">
+          <a href="#" class="product-card__thumb" onclick="return false">
+            <img src="${p.images[0]}" alt="${p.name}" class="product-card__img" loading="lazy" />
+            <button class="product-card__heart" aria-label="Wishlist" onclick="event.stopPropagation()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
+              </svg>
+            </button>
+          </a>
+          <div>
+            <a href="#" class="product-card__name" onclick="return false">${p.name}</a>
+            <div class="product-card__price">$${p.price}</div>
+          </div>
+          <div>
+            <div class="product-card__colors">${colors}</div>
+            <p class="product-card__error" data-err="color">Select a color</p>
+          </div>
+          <div>
+            <div class="product-card__sizes">${sizes}</div>
+            <p class="product-card__error" data-err="size">Select a size</p>
+          </div>
+           <button class="add-btn product-card__cta">Add to Cart</button>
+        </article>`;
+    }
+
+    const grid = document.getElementById('grid');
+    grid.innerHTML = PRODUCTS.map((p, i) => buildCard(p, i)).join('');
+
+    grid.addEventListener('click', e => {
+      const card = e.target.closest('.product-card');
+      if (!card) return;
+
+      if (e.target.closest('.product-card__color')) {
+        card.querySelectorAll('.product-card__color').forEach(b => b.classList.remove('active'));
+        e.target.closest('.product-card__color').classList.add('active');
+        return;
+      }
+      if (e.target.closest('.product-card__size')) {
+        card.querySelectorAll('.product-card__size').forEach(b => b.classList.remove('active'));
+        e.target.closest('.product-card__size').classList.add('active');
+        return;
+      }
+      if (e.target.closest('.add-btn')) {
+        const p = PRODUCTS.find(x => x.id === card.dataset.id);
+        const size = card.querySelector('.product-card__size.active')?.dataset.size;
+        const color = card.querySelector('.product-card__color.active')?.dataset.color;
+        const cErr = card.querySelector('[data-err="color"]');
+        const sErr = card.querySelector('[data-err="size"]');
+        let ok = true;
+        if (!color) { cErr.classList.add('visible'); ok = false; } else cErr.classList.remove('visible');
+        if (!size) { sErr.classList.add('visible'); ok = false; } else sErr.classList.remove('visible');
+        if (ok && p) {
+          Cart.add(p, size, color);
+          bounceCart();
+          const btn = e.target.closest('.add-btn');
+          btn.textContent = '✓ Added';
+          setTimeout(() => { btn.textContent = 'Add to Cart'; }, 1200);
+        }
+      }
+    });
+
+    updateCount();
+
+    // ── Scroll Progress Bar ──────────────────────────────────────
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      progressBar.style.width = (scrolled * 100) + '%';
+    }, { passive: true });
+
+    // ── Scroll Reveal ────────────────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal, .reveal-left').forEach(el => revealObserver.observe(el));
+
+    // ── Stat Counters ────────────────────────────────────────────
+    function runCounter(el) {
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const isDecimal = 'decimal' in el.dataset;
+      const duration = 1400;
+      let start = null;
+      const step = ts => {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        const val = isDecimal ? (ease * target).toFixed(1) : Math.floor(ease * target);
+        el.textContent = val + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.hero__stat-num[data-target]').forEach(runCounter);
+          statsObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    const heroStats = document.getElementById('heroStats');
+    if (heroStats) statsObserver.observe(heroStats);
+
+    // ── Active Nav on Scroll ─────────────────────────────────────
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => navObserver.observe(s));
+
+    const sliderTrack = document.querySelector('.slider-track');
+    sliderTrack.scrollLeft = (sliderTrack.scrollWidth - sliderTrack.clientWidth) / 2;
+
+    function scrollSlider(dir) {
+      const card = sliderTrack.querySelector('.slider-card');
+      if (!card) return;
+      const gap = parseFloat(getComputedStyle(sliderTrack).gap) || 24;
+      const step = card.offsetWidth + gap;
+      sliderTrack.scrollBy({ left: dir * step, behavior: 'smooth' });
+    }
+    document.querySelector('.slider-btn--prev')?.addEventListener('click', () => scrollSlider(-1));
+    document.querySelector('.slider-btn--next')?.addEventListener('click', () => scrollSlider(1));
+
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchInput = document.querySelector('.search-input');
+    searchToggle?.addEventListener('click', () => {
+      searchInput.classList.toggle('open');
+      if (searchInput.classList.contains('open')) {
+        searchInput.focus();
+      }
+    });
+    searchInput?.addEventListener('blur', () => {
+      if (!searchInput.value) {
+        searchInput.classList.remove('open');
+      }
+    });
+
+    // ── Mobile nav drawer ────────────────────────────────────────
+    const burger    = document.getElementById('navBurger');
+    const mobileNav = document.getElementById('mobileNav');
+    const scrim     = document.getElementById('mobileNavScrim');
+    const setMenu = (open) => {
+      burger?.classList.toggle('is-open', open);
+      mobileNav?.classList.toggle('is-open', open);
+      scrim?.classList.toggle('is-open', open);
+      burger?.setAttribute('aria-expanded', String(open));
+      mobileNav?.setAttribute('aria-hidden', String(!open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    burger?.addEventListener('click', () => setMenu(!mobileNav.classList.contains('is-open')));
+    scrim?.addEventListener('click', () => setMenu(false));
+    mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+
+</html>

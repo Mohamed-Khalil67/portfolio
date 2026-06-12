@@ -7,7 +7,9 @@
       "Bash(npx ng *)",
       "Bash(npm run *)",
       "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\(JSON.stringify\\(p.scripts,null,2\\)\\)\")",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "PowerShell(Move-Item *)",
+      "PowerShell(Rename-Item *)"
     ]
   }
 }

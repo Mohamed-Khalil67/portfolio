@@ -7,8 +7,8 @@
   padding: 0;
 }
 :root {
-  --color-bg: #0d0d1a;
-  --color-surface: #1a1a2e;
+  --color-bg: #1a1828;
+  --color-surface: #252338;
   --font-sans:
     "Inter",
     system-ui,
@@ -29,8 +29,6 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -39,19 +37,19 @@ body {
   background: var(--color-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.3);
 }
 :focus-visible {
-  outline: 2px solid rgba(240, 147, 251, 0.6);
+  outline: 2px solid rgba(200, 80, 192, 0.7);
   outline-offset: 3px;
   border-radius: 4px;
 }
 ::selection {
-  background: rgba(240, 147, 251, 0.28);
+  background: rgba(200, 80, 192, 0.3);
   color: #fff;
 }
 pre[class*=language-],
