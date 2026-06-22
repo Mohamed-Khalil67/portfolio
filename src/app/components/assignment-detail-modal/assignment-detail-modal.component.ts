@@ -41,6 +41,12 @@ export class AssignmentDetailModalComponent implements OnInit, OnDestroy {
     };
   }
 
+  /** True when at least one case-study field has been filled in. */
+  get hasCaseStudy(): boolean {
+    const a = this.assignment;
+    return !!(a.challenge || a.solution || a.result);
+  }
+
   close(): void { this.closed.emit(); }
 
   openInNewTab(): void { this.assignmentService.openInNewTab(this.assignment); }

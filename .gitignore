@@ -1,4 +1,26 @@
-node_modules
-claude
-angular
-dist
+# Dependencies
+node_modules/
+
+# Angular build output & cache
+dist/
+.angular/
+
+# Claude Code workspace
+.claude/
+
+# Editor & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files
+.env
+.env.local
+.env.*.local

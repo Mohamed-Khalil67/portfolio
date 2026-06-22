@@ -7,7 +7,7 @@ export class AssignmentService {
   private readonly STORAGE_KEY = 'portfolio_local_assignments';
   private readonly OVERRIDES_KEY = 'portfolio_assignment_overrides';
 
-  /** Reactive list — combines static data file assignments + localStorage ones */
+  /** Reactive list - combines static data file assignments + localStorage ones */
   readonly assignments = signal<Assignment[]>(this.loadAll());
 
   // ── Read ────────────────────────────────────────────────────────
@@ -100,7 +100,7 @@ ${html}${js ? `\n<script>\n${js}\n</script>` : ''}
 </html>`;
   }
 
-  /** Creates a temporary blob URL — call URL.revokeObjectURL() when done */
+  /** Creates a temporary blob URL - call URL.revokeObjectURL() when done */
   createBlobUrl(html = '', css = '', js = ''): string {
     const content = this.buildHtml(html, css, js);
     const blob = new Blob([content], { type: 'text/html' });
@@ -118,7 +118,7 @@ ${html}${js ? `\n<script>\n${js}\n</script>` : ''}
       const tab = window.open(url, '_blank');
       // Revoke blob URL after the new tab has had time to load
       setTimeout(() => URL.revokeObjectURL(url), 30_000);
-      if (!tab) alert('Pop-up blocked — please allow pop-ups for this site.');
+      if (!tab) alert('Pop-up blocked - please allow pop-ups for this site.');
     } else {
       window.open(assignment.previewUrl, '_blank');
     }

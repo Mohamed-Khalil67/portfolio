@@ -1,50 +1,87 @@
-<div class="starfield" aria-hidden="true">
-  <div class="stars stars-sm"></div>
-  <div class="stars stars-md"></div>
-  <div class="stars stars-lg"></div>
-  <div class="shooting shooting-1"></div>
-  <div class="shooting shooting-2"></div>
-  <div class="shooting shooting-3"></div>
+<div class="geo-bg" aria-hidden="true">
+  <span class="geo geo-ring geo-1"></span>
+  <span class="geo geo-ring geo-2"></span>
+  <span class="geo geo-diamond geo-3"></span>
+  <span class="geo geo-diamond geo-4"></span>
+  <span class="geo geo-ring geo-5"></span>
 </div>
+<div class="cursor-glow" aria-hidden="true"></div>
 
-<app-header />
+<div class="layout">
 
-<section class="about-section">
-  <div class="about-content">
-    <p class="about-text">
-      Hey there 👋 I started in automotive embedded systems writing C, where I developed a deep respect for clean, precise code.
-      I shifted to frontend development to build things people can actually see and interact with, combining logic with creativity.
-      Since then I've been learning by building: e-commerce platforms, task managers, and weather apps, each one a real attempt to improve user experience.
-      Currently focused on Angular, TypeScript, and CSS, with the goal of crafting performant, intuitive interfaces.
-    </p>
-    <div class="about-stack">
-      <span class="stack-tag">Angular</span>
-      <span class="stack-tag">TypeScript</span>
-      <span class="stack-tag">JavaScript (ES6+)</span>
-      <span class="stack-tag">HTML5</span>
-      <span class="stack-tag">CSS3</span>
-      <span class="stack-tag">Node.js</span>
-      <span class="stack-tag">REST API</span>
-      <span class="stack-tag">Python</span>
-      <span class="stack-tag">PostgreSQL</span>
-      <span class="stack-tag">Oracle PL/SQL</span>
-      <span class="stack-tag">Git</span>
-      <span class="stack-tag">GitHub</span>
-      <span class="stack-tag">GitLab</span>
-      <span class="stack-tag">Docker</span>
-      <span class="stack-tag">Firebase</span>
-      <span class="stack-tag">Linux</span>
-    </div>
+  <!-- ── Sticky left intro panel ──────────────────────────── -->
+  <app-header [active]="activeSection()" />
+
+  <!-- ── Scrolling right content ──────────────────────────── -->
+  <div class="content">
+
+    <section id="about" class="content-section">
+      <h2 class="content-heading">About</h2>
+      <p class="about-text">
+        I started out in automotive embedded systems writing C, where I learned to respect clean, precise code
+        and the cost of getting things wrong. I moved into web development to build things people can actually
+        see, use, and buy from - pairing that engineering rigor with conversion-focused design.
+        Today I build fast e-commerce sites and web products for small businesses, startups, and agencies:
+        I care about pages that load quickly, interfaces that feel effortless, and code that's easy to grow.
+      </p>
+
+      <app-value-props />
+
+      <h3 class="subsection-heading">See it in action</h3>
+      <div class="featured-work">
+        <a class="featured-preview" href="assets/ALL/landing-pages/Hoodizz/index.html"
+          target="_blank" rel="noopener" aria-label="Open the Hoodizz store demo in a new tab">
+          <iframe src="assets/ALL/landing-pages/Hoodizz/index.html" title="Hoodizz e-commerce store demo"
+            loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+          <span class="featured-open">Open live demo ↗</span>
+        </a>
+        <div class="featured-copy">
+          <span class="featured-label">Example build · E-commerce</span>
+          <h4 class="featured-title">Hoodizz - online store</h4>
+          <p class="featured-text">
+            A conversion-focused e-commerce store I designed and built - product showcases,
+            clear calls to action, and a checkout-ready layout. I can build your shop to look
+            this sharp and sell just as well.
+          </p>
+          <a class="btn-cta" href="assets/ALL/landing-pages/Hoodizz/index.html" target="_blank" rel="noopener">
+            View live demo
+          </a>
+        </div>
+      </div>
+
+      <h3 class="subsection-heading">What I work with</h3>
+      <div class="about-stack">
+        <span class="stack-tag">Angular</span>
+        <span class="stack-tag">TypeScript</span>
+        <span class="stack-tag">JavaScript (ES6+)</span>
+        <span class="stack-tag">HTML5</span>
+        <span class="stack-tag">CSS3</span>
+        <span class="stack-tag">Node.js</span>
+        <span class="stack-tag">REST API</span>
+        <span class="stack-tag">PostgreSQL</span>
+        <span class="stack-tag">Firebase</span>
+        <span class="stack-tag">Git</span>
+        <span class="stack-tag">Docker</span>
+      </div>
+    </section>
+
+    <section id="work" class="content-section">
+      <h2 class="content-heading">Selected work</h2>
+      <app-assignment-grid />
+
+      <app-testimonials />
+    </section>
+
+    <section id="contact" class="content-section">
+      <app-contact />
+    </section>
+
+    <footer class="app-footer">
+      <p>Built by Mohamed Khalil with Angular · designed &amp; coded in VS Code.</p>
+    </footer>
+
   </div>
-</section>
-
-<main>
-  <app-assignment-grid />
-</main>
-
-<footer class="app-footer">
-  <p>Mohamed Khalil · Frontend Developer · Built with Angular</p>
-</footer>
+</div>
 
 <button class="scroll-top" [class.visible]="showScrollTop()" (click)="scrollToTop()"
   aria-label="Scroll to top">

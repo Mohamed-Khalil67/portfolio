@@ -51,16 +51,14 @@
         Open
       </button>
 
-      <!-- Download all -->
-      @if (assignment.downloadFiles.length) {
-        <button class="btn btn-secondary" (click)="downloadAll($event)">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-          Download
-        </button>
-      }
+      <!-- Case-study details -->
+      <button class="btn btn-secondary" (click)="requestDetail($event)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/>
+          <line x1="12" y1="8" x2="12" y2="8"/>
+        </svg>
+        Details
+      </button>
     </div>
   </div>
 

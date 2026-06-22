@@ -1,141 +1,258 @@
-// ── Starfield Background ──────────────
-// Fixed-position cosmic layer: 3 parallax twinkle layers + diagonal shooting stars.
-// Star fields are generated with chained box-shadows on a 1px dot — no JS, no images.
-
-.starfield {
+// ── Cursor glow (follows pointer on desktop) ──────────
+.cursor-glow {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  overflow: hidden;
+  z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 20% 10%, rgba(120, 80, 200, 0.18), transparent 55%),
-    radial-gradient(ellipse at 85% 90%, rgba(240, 90, 160, 0.14), transparent 55%),
-    radial-gradient(ellipse at 50% 50%, #1a1828 0%, #0d0c1a 100%);
+    radial-gradient(
+      260px circle at var(--mx, 50%) var(--my, -20%),
+      rgba(94, 234, 212, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      620px circle at var(--mx, 50%) var(--my, -20%),
+      rgba(45, 212, 191, 0.12),
+      transparent 55%
+    );
+  transition: background 0.08s;
 }
 
-.stars {
-  position: absolute;
+// ── Geometric background ──────────────
+.geo-bg {
+  position: fixed;
   inset: 0;
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  animation: starDrift 240s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-image: radial-gradient(rgba(94, 234, 212, 0.05) 1px, transparent 1.4px);
+  background-size: 34px 34px;
 }
 
-// Small dim stars — many, slow twinkle
-.stars-sm {
-  box-shadow:
-    20px 60px #fff, 140px 220px #fff, 310px 90px #c9d4ff, 480px 410px #fff,
-    660px 150px #fff, 820px 330px #ffd9f0, 980px 80px #fff, 1180px 270px #fff,
-    1340px 460px #fff, 90px 530px #c9d4ff, 250px 700px #fff, 410px 840px #fff,
-    570px 620px #fff, 740px 780px #ffd9f0, 910px 970px #fff, 1080px 580px #fff,
-    1250px 720px #fff, 1420px 880px #c9d4ff, 50px 950px #fff, 200px 1100px #fff,
-    370px 1240px #fff, 540px 1080px #ffd9f0, 700px 1310px #fff, 870px 1180px #fff,
-    1040px 1340px #fff, 1210px 1080px #c9d4ff, 1380px 1240px #fff,
-    1500px 50px #fff, 1600px 380px #fff, 1700px 720px #ffd9f0, 1820px 1050px #fff,
-    1900px 200px #c9d4ff, 60px 1450px #fff, 290px 1560px #fff, 480px 1390px #fff,
-    680px 1500px #ffd9f0, 870px 1620px #fff, 1060px 1450px #fff, 1280px 1590px #fff,
-    1480px 1410px #c9d4ff, 1700px 1540px #fff, 1880px 1430px #fff;
-  animation: starTwinkle 5s ease-in-out infinite, starDrift 320s linear infinite;
-}
-
-// Medium stars — sparser, brighter
-.stars-md {
-  box-shadow:
-    120px 180px 1px #fff, 380px 90px 1px #fff, 620px 340px 1px #c9d4ff,
-    900px 200px 1px #fff, 1150px 410px 1px #ffd9f0, 1400px 130px 1px #fff,
-    1650px 350px 1px #fff, 1850px 580px 1px #fff, 240px 480px 1px #fff,
-    520px 660px 1px #fff, 780px 820px 1px #c9d4ff, 1020px 700px 1px #fff,
-    1280px 880px 1px #fff, 1540px 740px 1px #ffd9f0, 1780px 920px 1px #fff,
-    150px 1020px 1px #fff, 420px 1180px 1px #fff, 680px 1340px 1px #c9d4ff,
-    940px 1240px 1px #fff, 1200px 1420px 1px #fff, 1460px 1300px 1px #ffd9f0,
-    1720px 1480px 1px #fff;
-  animation: starTwinkle 7s ease-in-out infinite, starDrift 260s linear infinite;
-  animation-delay: -2s, 0s;
-}
-
-// Large bright stars with glow
-.stars-lg {
-  box-shadow:
-    260px 340px 2px #fff, 720px 180px 2px #ffd9f0, 1100px 540px 2px #fff,
-    1480px 280px 2px #c9d4ff, 1820px 720px 2px #fff, 360px 880px 2px #fff,
-    840px 760px 2px #ffd9f0, 1240px 1020px 2px #fff, 1620px 920px 2px #c9d4ff,
-    180px 1280px 2px #fff, 640px 1180px 2px #fff, 1080px 1440px 2px #ffd9f0,
-    1500px 1340px 2px #fff;
-  animation: starTwinkle 4s ease-in-out infinite, starDrift 200s linear infinite;
-  animation-delay: -1s, 0s;
-}
-
-@keyframes starTwinkle {
-  0%, 100% { opacity: 0.45; }
-  50%      { opacity: 1; }
-}
-
-@keyframes starDrift {
-  from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(-200px, -120px, 0); }
-}
-
-// ── Shooting stars ────────────────────
-// Angled streak: 2px head with a trailing white-to-transparent gradient tail.
-// Each runs on a long stagger so the sky feels alive without being noisy.
-
-.shooting {
+.geo {
   position: absolute;
-  width: 140px;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, #fff 100%);
-  border-radius: 999px;
-  opacity: 0;
-  transform: rotate(-22deg);
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+  display: block;
+  opacity: 0.6;
+}
+
+.geo-ring {
+  border: 1.5px solid rgba(94, 234, 212, 0.22);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(94, 234, 212, 0.12) inset;
+}
+
+.geo-diamond {
+  border: 1.5px solid rgba(125, 211, 252, 0.22);
+  border-radius: 6px;
+}
+
+.geo-1 { width: 240px; height: 240px; top: 6%;  right: 7%;  animation: geoFloat 13s ease-in-out infinite; }
+.geo-2 { width: 130px; height: 130px; top: 64%; left: 5%;   animation: geoFloat 16s ease-in-out infinite reverse; }
+.geo-3 { width: 90px;  height: 90px;  top: 30%; left: 8%;   transform: rotate(25deg); animation: geoSpin 26s linear infinite; }
+.geo-4 { width: 150px; height: 150px; top: 78%; right: 12%; transform: rotate(15deg); animation: geoSpin 34s linear infinite reverse; }
+.geo-5 { width: 60px;  height: 60px;  top: 16%; left: 40%;  animation: geoFloat 11s ease-in-out infinite; }
+
+@keyframes geoFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-26px); }
+}
+
+@keyframes geoSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geo { animation: none !important; }
+}
+
+// ── Two-column layout ─────────────────────────────────
+.layout {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  gap: 64px;
+  padding: 0 40px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 100px 0 80px;
+}
+
+// ── Section headings (right column) ───────────────────
+.content-section {
+  margin-bottom: 96px;
+  scroll-margin-top: 24px;
+
+  &:last-of-type { margin-bottom: 32px; }
+}
+
+.content-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin: 0 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
   &::after {
     content: '';
-    position: absolute;
-    right: -2px;
-    top: 50%;
-    width: 4px; height: 4px;
-    margin-top: -2px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 12px 2px rgba(200, 180, 255, 0.9);
+    height: 1px;
+    flex: 1;
+    background: var(--border);
   }
 }
 
-.shooting-1 { top: 12%; left: -160px; animation: shoot 7s ease-in 1s infinite; }
-.shooting-2 { top: 38%; left: -160px; animation: shoot 9s ease-in 4s infinite; }
-.shooting-3 { top: 64%; left: -160px; animation: shoot 11s ease-in 7.5s infinite; }
-
-@keyframes shoot {
-  0%   { transform: translate3d(0, 0, 0) rotate(-22deg); opacity: 0; }
-  6%   { opacity: 1; }
-  60%  { opacity: 1; }
-  100% { transform: translate3d(120vw, 60vh, 0) rotate(-22deg); opacity: 0; }
+.subsection-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 36px 0 14px;
 }
 
-// Honor reduced-motion: keep stars, kill movement
-@media (prefers-reduced-motion: reduce) {
-  .stars, .shooting { animation: none; }
-  .shooting { opacity: 0; }
+.about-text {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin: 0 0 28px;
 }
 
-// ── Scroll-to-top button ──────────────
+// ── Skills band ───────────────────────────────────────
+.about-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stack-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(94, 234, 212, 0.25);
+}
+
+// ── Mid-page CTA band ─────────────────────────────────
+// ── Featured work showcase (Hoodizz) ──
+.featured-work {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-bg-2);
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featured-preview {
+  position: relative;
+  display: block;
+  min-height: 280px;
+  background: #0f0f1a;
+  overflow: hidden;
+
+  iframe {
+    width: 200%;
+    height: 200%;
+    border: none;
+    transform: scale(0.5);
+    transform-origin: top left;
+    pointer-events: none;
+  }
+
+  .featured-open {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.22s;
+  }
+  &:hover .featured-open { opacity: 1; }
+
+  @media (max-width: 700px) { min-height: 220px; }
+}
+
+.featured-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 26px 26px 26px 4px;
+
+  @media (max-width: 700px) { padding: 4px 24px 26px; }
+}
+
+.featured-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.featured-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.featured-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0 0 4px;
+}
+
+// ── Footer ────────────────────────────────────────────
+.app-footer {
+  padding-top: 24px;
+
+  p {
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    font-family: var(--font-mono);
+  }
+}
+
+// ── Scroll-to-top button ──────────────────────────────
 .scroll-top {
   position: fixed;
   right: 22px;
   bottom: 22px;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f093fb, #f5576c);
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--accent);
   border: none;
-  color: #fff;
+  color: var(--accent-contrast);
   cursor: pointer;
   display: grid;
   place-items: center;
-  box-shadow: 0 8px 24px rgba(245, 87, 108, 0.4);
+  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.35);
   opacity: 0;
   transform: translateY(20px) scale(0.85);
   pointer-events: none;
@@ -147,78 +264,18 @@
     transform: translateY(0) scale(1);
     pointer-events: auto;
   }
-  &:hover { filter: brightness(1.12); transform: translateY(-2px) scale(1.05); }
+  &:hover { background: var(--accent-strong); transform: translateY(-2px) scale(1.05); }
 }
 
-// ── About Section ─────────────────────
-.about-section {
-  padding: 48px 24px 36px;
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.about-content {
-  max-width: 720px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.about-text {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.8;
-  margin: 0;
-}
-
-.about-skills {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.skill-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.skill-group-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.about-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.stack-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-// ── Footer ────────────────────────────
-.app-footer {
-  text-align: center;
-  padding: 32px 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-
-  p {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.85rem;
+// ── Responsive: stack the columns ─────────────────────
+@media (max-width: 900px) {
+  .layout {
+    display: block;
+    padding: 0 24px;
   }
+  .content {
+    width: auto;
+    padding: 24px 0 64px;
+  }
+  .content-section { margin-bottom: 72px; }
 }

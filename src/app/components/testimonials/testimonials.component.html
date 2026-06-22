@@ -1,0 +1,25 @@
+<section class="testimonials-section">
+  @if (hasTestimonials) {
+    <p class="section-eyebrow">Social proof</p>
+    <h2 class="section-title">What clients say</h2>
+
+    <div class="testimonials-grid">
+      @for (t of testimonials; track t.name + t.company) {
+        <figure class="testimonial-card">
+          <blockquote class="testimonial-quote">“{{ t.quote }}”</blockquote>
+          <figcaption class="testimonial-author">
+            @if (t.photo) {
+              <img class="author-photo" [src]="t.photo" [alt]="t.name" />
+            } @else {
+              <span class="author-initials" aria-hidden="true">{{ initials(t.name) }}</span>
+            }
+            <span class="author-meta">
+              <span class="author-name">{{ t.name }}</span>
+              <span class="author-role">{{ t.role }}, {{ t.company }}</span>
+            </span>
+          </figcaption>
+        </figure>
+      }
+    </div>
+  }
+</section>

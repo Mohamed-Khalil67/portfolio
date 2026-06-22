@@ -1,0 +1,70 @@
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+
+    <p class="section-eyebrow">Let's talk</p>
+    <h2 class="section-title">Start your project</h2>
+    <p class="section-subtitle">
+      Tell me what you want to build and I'll reply within 24 hours with next steps.
+      Free 20-minute consult, no commitment.
+    </p>
+
+    @if (state() === 'success') {
+      <div class="contact-success" role="status">
+        <strong>Thanks - your message is ready to send.</strong>
+        <span>
+          (Submission isn't wired to a backend yet.) In the meantime you can email me
+          directly at <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>.
+        </span>
+      </div>
+    } @else {
+      <form class="contact-form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" formControlName="name" autocomplete="name"
+            placeholder="Your name" [class.invalid]="showError('name')" />
+          @if (showError('name')) {
+            <p class="field-error">Please enter your name (at least 2 characters).</p>
+          }
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email" autocomplete="email"
+            placeholder="you@company.com" [class.invalid]="showError('email')" />
+          @if (showError('email')) {
+            <p class="field-error">Please enter a valid email address.</p>
+          }
+        </div>
+
+        <div class="field">
+          <label for="message">What do you want to build?</label>
+          <textarea id="message" rows="5" formControlName="message"
+            placeholder="A Shopify store, a custom site, a redesign…"
+            [class.invalid]="showError('message')"></textarea>
+          @if (showError('message')) {
+            <p class="field-error">Please add a few words (at least 10 characters).</p>
+          }
+        </div>
+
+        <!-- CTA placement #3 -->
+        <button type="submit" class="btn-cta btn-cta--lg contact-submit"
+          [disabled]="state() === 'submitting'">
+          {{ state() === 'submitting' ? 'Sending…' : 'Send message' }}
+        </button>
+
+        @if (state() === 'error') {
+          <p class="form-level-error" role="alert">
+            Please fix the highlighted fields above.
+          </p>
+        }
+      </form>
+
+      <p class="contact-fallback">
+        Prefer email? Reach me directly at
+        <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>.
+      </p>
+    }
+
+  </div>
+</section>
