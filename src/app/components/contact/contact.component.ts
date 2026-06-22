@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 
-type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
+type SubmitState = 'idle' | 'success';
 
 @Component({
   selector: 'app-contact',
@@ -16,12 +16,16 @@ type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  /** Plain-text email fallback shown to visitors who prefer email. */
+  /** Your inbox — also shown as the plain-text fallback. */
   readonly contactEmail = 'mohamed.khalil.ucbl@gmail.com';
 
   private fb = inject(FormBuilder);
 
   readonly state = signal<SubmitState>('idle');
+  /** True once the visitor has attempted to submit at least once. */
+  readonly submitted = signal(false);
+  /** Guards against firing the mail handler multiple times. */
+  private opening = false;
 
   readonly form = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
@@ -29,47 +33,43 @@ export class ContactComponent {
     message: ['', [Validators.required, Validators.minLength(10)]],
   });
 
-  /** Show an error on a field only once it's been touched or the form submitted. */
+  /** Show a field error once it's been touched, edited, or a submit was attempted. */
   showError(controlName: 'name' | 'email' | 'message'): boolean {
     const c = this.form.get(controlName);
-    return !!c && c.invalid && (c.touched || c.dirty || this.state() === 'error');
+    return !!c && c.invalid && (c.touched || c.dirty || this.submitted());
   }
 
-  async onSubmit(): Promise<void> {
+  onSubmit(): void {
+    this.submitted.set(true);
+
     if (this.form.invalid) {
       this.form.markAllAsTouched();
-      this.state.set('error');
       return;
     }
 
-    this.state.set('submitting');
+    // Guard: ignore repeat clicks while the mail app is being opened.
+    // (Opening it more than once is what spawned multiple tabs before.)
+    if (this.opening) return;
+    this.opening = true;
 
-    // ────────────────────────────────────────────────────────────────
-    // TODO: WIRE UP REAL SUBMISSION HERE.
-    // No email is actually sent yet - this is a stub for you to connect
-    // to your own backend or a service like Formspree. Example:
-    //
-    //   const res = await fetch('https://formspree.io/f/<your-id>', {
-    //     method: 'POST',
+    // ── Open the visitor's email app, pre-filled (no backend, no IDs) ──────
+    // Want true in-page sending later (no mail app needed)? Replace this with a
+    // POST to Formspree / EmailJS / Web3Forms, e.g.:
+    //   await fetch('https://formspree.io/f/<id>', { method: 'POST',
     //     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    //     body: JSON.stringify(this.form.value),
-    //   });
-    //   if (!res.ok) throw new Error('Submit failed');
-    //
-    // Do NOT commit secrets/API keys to the repo - use environment config.
-    // ────────────────────────────────────────────────────────────────
+    //     body: JSON.stringify(this.form.getRawValue()) });
+    const { name, email, message } = this.form.getRawValue();
+    const subject = `New project inquiry from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}\n`;
+    const mailto =
+      `mailto:${this.contactEmail}` +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
 
-    try {
-      // Simulated async so the UI flow is testable without a backend.
-      await new Promise((resolve) => setTimeout(resolve, 600));
-      console.warn(
-        '[contact] Submission stub - no backend connected yet. Payload:',
-        this.form.value,
-      );
-      this.state.set('success');
-      this.form.reset();
-    } catch {
-      this.state.set('error');
-    }
+    window.location.href = mailto;
+    this.state.set('success');
+
+    // Release the guard so they can send another later.
+    setTimeout(() => (this.opening = false), 3000);
   }
 }

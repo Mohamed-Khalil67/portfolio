@@ -4,18 +4,13 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background:
-    radial-gradient(
-      260px circle at var(--mx, 50%) var(--my, -20%),
-      rgba(94, 234, 212, 0.22),
-      transparent 60%
-    ),
-    radial-gradient(
-      620px circle at var(--mx, 50%) var(--my, -20%),
-      rgba(45, 212, 191, 0.12),
-      transparent 55%
-    );
-  transition: background 0.08s;
+  background: radial-gradient(
+    760px circle at var(--mx, 50%) var(--my, -25%),
+    rgba(126, 170, 200, 0.05),
+    transparent 60%
+  );
+  // gentle ease so the glow trails the cursor instead of snapping/flashing
+  transition: background 0.4s ease-out;
 }
 
 // ── Geometric background ──────────────

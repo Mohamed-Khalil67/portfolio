@@ -75,6 +75,13 @@
   text-align: center;
   font-size: 0.85rem;
   color: #fda4af;
+
+  a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
 }
 
 .contact-fallback {

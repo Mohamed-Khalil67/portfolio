@@ -123,17 +123,60 @@
   flex-wrap: wrap;
 }
 
+// ── Highlighted résumé pill ───────────
 .resume-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  color: var(--color-text-muted);
-  transition: color 0.2s;
-  &:hover { color: var(--accent); }
-  svg { flex-shrink: 0; }
+  color: var(--accent-contrast);
+  background: linear-gradient(135deg, #5eead4, #2dd4bf);
+  box-shadow: 0 6px 18px rgba(45, 212, 191, 0.35);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+
+  // keep label + icons above the shine sweep
+  > * { position: relative; z-index: 1; flex-shrink: 0; }
+  .resume-arrow { transition: transform 0.2s ease; }
+
+  // periodic shine sweep that catches the eye
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: skewX(-20deg);
+    z-index: 0;
+    animation: resumeShine 5s ease-in-out infinite;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 12px 28px rgba(45, 212, 191, 0.55);
+    .resume-arrow { transform: translate(2px, -2px); }
+  }
+  &:hover::before { animation-duration: 0.9s; }
+  &:active { transform: translateY(0); }
+}
+
+@keyframes resumeShine {
+  0%, 70%, 100% { left: -130%; }
+  85% { left: 160%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-link::before { animation: none; }
 }
 
 // ── Mobile: static, no sticky ─────────
