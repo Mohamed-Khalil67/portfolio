@@ -1,143 +1,131 @@
 :host { display: block; }
 
 @keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(28px); }
+  from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
+// ── Card shell (no overflow:hidden so the glow escapes) ───────────────────────
 .assignment-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  background: var(--color-surface);
-  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
   animation: fadeSlideUp 0.5s ease both;
   animation-delay: calc(var(--i, 0) * 80ms);
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
-    .preview-overlay { opacity: 1; }
-    .card-accent-bar { height: 5px; }
+  // Gradient glow layer behind the card
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 20px;
+    background: var(--accent);
+    opacity: 0;
+    filter: blur(16px);
+    transition: opacity 0.35s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    opacity: 0.6;
   }
 }
 
-.card-accent-bar {
-  height: 4px;
-  background: var(--accent);
-  transition: height 0.2s;
-}
-
+// ── Preview (contains the iframe) ─────────────────────────────────────────────
 .card-preview {
   position: relative;
-  height: 200px;
-  background: #0f0f1a;
+  z-index: 1;
+  border-radius: 16px;
   overflow: hidden;
-  cursor: pointer;
+  aspect-ratio: 16 / 10;
+  background: #0d1525;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+
+  .assignment-card:hover & {
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.55);
+  }
 
   iframe {
-    width: 200%; height: 200%;
+    width: 200%;
+    height: 200%;
     border: none;
     transform: scale(0.5);
     transform-origin: top left;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.4s;
+
     &.loaded { opacity: 1; }
   }
-
-  .preview-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.75) 100%);
-    display: flex; align-items: flex-end; justify-content: center;
-    padding-bottom: 14px;
-    opacity: 0; transition: opacity 0.22s;
-
-    .preview-cta {
-      display: flex; align-items: center; gap: 7px;
-      font-size: 0.8rem; font-weight: 600; color: #fff;
-      background: rgba(255,255,255,0.15); backdrop-filter: blur(6px);
-      padding: 6px 15px; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-  }
-
-  .preview-loader {
-    position: absolute; inset: 0; z-index: 2;
-    display: flex; align-items: center; justify-content: center;
-    transition: opacity 0.3s;
-    &.hidden { opacity: 0; pointer-events: none; }
-  }
 }
 
-.card-body {
+// ── Hover footer: title + details button ──────────────────────────────────────
+.preview-footer {
+  position: absolute;
+  inset: 0;
   display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  gap: 12px;
-  padding: 18px 20px 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.82) 100%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+
+  .assignment-card:hover & { opacity: 1; }
+}
+
+.preview-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
 }
 
-.card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.preview-detail-btn {
+  flex-shrink: 0;
+  padding: 5px 13px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.18s;
+  white-space: nowrap;
 
-.tag {
-  font-size: 0.69rem; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; padding: 3px 10px; border-radius: 999px;
-  background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.6);
-  border: 1px solid rgba(255,255,255,0.1);
-
-  &.tag-week { background: var(--accent); color: var(--accent-contrast); border: none; }
+  &:hover { background: rgba(255, 255, 255, 0.24); }
 }
 
-.card-title {
-  font-size: 1.08rem; font-weight: 700; color: #fff;
-  margin: 0; line-height: 1.3;
-}
+// ── Loading spinner ───────────────────────────────────────────────────────────
+.preview-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d1525;
+  transition: opacity 0.3s;
 
-.card-description {
-  font-size: 0.85rem; color: rgba(255,255,255,0.55);
-  line-height: 1.6; margin: 0;
-  display: -webkit-box; -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical; overflow: hidden;
-}
-
-.card-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: auto; }
-
-.btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 8px 14px; border-radius: 8px;
-  font-size: 0.81rem; font-weight: 600; border: none; cursor: pointer;
-  transition: all 0.2s; white-space: nowrap;
-
-  &.btn-primary {
-    background: var(--accent-soft); color: var(--accent);
-    border: 1px solid var(--accent);
-    &:hover { background: rgba(94, 234, 212, 0.2); transform: translateY(-1px); }
-  }
-
-  &.btn-secondary {
-    background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.75);
-    border: 1px solid rgba(255,255,255,0.12);
-    &:hover, &.active { background: rgba(255,255,255,0.13); color: #fff; }
-  }
+  &.hidden { opacity: 0; pointer-events: none; }
 }
 
 .spinner {
-  width: 24px; height: 24px;
-  border: 3px solid rgba(255,255,255,0.1);
-  border-top-color: rgba(255,255,255,0.6);
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: rgba(255, 255, 255, 0.55);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
-
-@media (max-width: 480px) {
-  .card-actions { gap: 6px; }
-  .btn { padding: 7px 12px; font-size: 0.78rem; }
-}

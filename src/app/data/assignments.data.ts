@@ -5,14 +5,13 @@ import { Assignment } from '../models/assignment.model';
 
 export const ASSIGNMENTS: Assignment[] = [
   {
-    id: "FitCoreGymLanding",
-    title: "FitCore Gym Landing",
-    description: "Landing page for a fitness gym brand, with membership highlights and a strong call to join.",
-    tags: ["HTML","CSS"],
-    previewUrl: "assets/ALL/landing-pages/FitCoreGymLanding/index.html",
+    id: "Clarity-Website",
+    title: "Clarity Website",
+    description: "",
+    tags: ["HTML"],
+    previewUrl: "assets/ALL/landing-pages/Clarity-Website/index.html",
     downloadFiles: [
-      { name: "index.html", url: "assets/ALL/landing-pages/FitCoreGymLanding/index.html" },
-      { name: "style.css", url: "assets/ALL/landing-pages/FitCoreGymLanding/style.css" },
+      { name: "index.html", url: "assets/ALL/landing-pages/Clarity-Website/index.html" },
     ],
     color: "#f093fb, #f5576c",
     category: "route-assignments",
@@ -67,6 +66,18 @@ export const ASSIGNMENTS: Assignment[] = [
       { name: "styles.css", url: "assets/ALL/landing-pages/TheUXReview-blogLanding/styles.css" },
     ],
     color: "#a18cd1, #fbc2eb",
+    category: "route-assignments",
+  },
+  {
+    id: "Video-Gaming-Tournament-Landing-Page",
+    title: "Video Gaming Tournament Landing Page",
+    description: "",
+    tags: ["HTML"],
+    previewUrl: "assets/ALL/landing-pages/Video-Gaming-Tournament-Landing-Page/index.html",
+    downloadFiles: [
+      { name: "index.html", url: "assets/ALL/landing-pages/Video-Gaming-Tournament-Landing-Page/index.html" },
+    ],
+    color: "#fd7043, #ff8a65",
     category: "route-assignments",
   },
 ];

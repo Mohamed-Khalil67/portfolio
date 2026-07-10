@@ -1,65 +1,21 @@
-<div class="assignment-card" [ngStyle]="cardStyle">
+<div class="assignment-card" [ngStyle]="cardStyle" (click)="openInNewTab($event)">
 
-  <div class="card-accent-bar"></div>
+  <div class="card-preview">
 
-  <!-- Live preview -->
-  <div class="card-preview" (click)="openInNewTab($event)">
     <div class="preview-loader" [class.hidden]="iframeLoaded">
       <div class="spinner"></div>
     </div>
+
     @if (iframeVisible) {
-    <iframe [src]="safePreviewUrl" (load)="onIframeLoad()" [class.loaded]="iframeLoaded"
-      loading="lazy" aria-hidden="true" tabindex="-1"></iframe>
-    }
-    <div class="preview-overlay">
-      <span class="preview-cta">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-        Open in new tab
-      </span>
-    </div>
-  </div>
-
-  <!-- Card body -->
-  <div class="card-body">
-    @if (assignment.week || visibleTags.length) {
-    <div class="card-tags">
-      @if (assignment.week) {
-      <span class="tag tag-week">Week {{ assignment.week }}</span>
-      }
-      @for (tag of visibleTags; track tag) {
-      <span class="tag">{{ tag }}</span>
-      }
-    </div>
+      <iframe [src]="safePreviewUrl" (load)="onIframeLoad()" [class.loaded]="iframeLoaded"
+        loading="lazy" aria-hidden="true" tabindex="-1"></iframe>
     }
 
-    <h2 class="card-title">{{ assignment.title }}</h2>
-    @if (assignment.description.trim()) {
-    <p class="card-description">{{ assignment.description }}</p>
-    }
-
-    <div class="card-actions">
-
-      <!-- Open preview -->
-      <button class="btn btn-primary" (click)="openInNewTab($event)">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-        Open
-      </button>
-
-      <!-- Case-study details -->
-      <button class="btn btn-secondary" (click)="requestDetail($event)">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/>
-          <line x1="12" y1="8" x2="12" y2="8"/>
-        </svg>
-        Details
-      </button>
+    <div class="preview-footer">
+      <span class="preview-title">{{ assignment.title }}</span>
+      <button class="preview-detail-btn" (click)="requestDetail($event)">Details</button>
     </div>
+
   </div>
 
 </div>
