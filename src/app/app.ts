@@ -11,7 +11,6 @@ import {
 import { CommonModule } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 import { HeaderComponent } from './components/header/header.component';
-import { ValuePropsComponent } from './components/value-props/value-props.component';
 import { AssignmentGridComponent } from './components/assignment-grid/assignment-grid.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -22,7 +21,6 @@ import { ContactComponent } from './components/contact/contact.component';
   imports: [
     CommonModule,
     HeaderComponent,
-    ValuePropsComponent,
     AssignmentGridComponent,
     TestimonialsComponent,
     ContactComponent,

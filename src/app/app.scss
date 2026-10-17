@@ -121,6 +121,24 @@
 
 // ── Skills band ───────────────────────────────────────
 .about-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.stack-group {
+  display: grid;
+  gap: 8px;
+}
+
+.stack-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.stack-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -138,89 +156,6 @@
   border: 1px solid rgba(94, 234, 212, 0.25);
 }
 
-// ── Mid-page CTA band ─────────────────────────────────
-// ── Featured work showcase (Hoodizz) ──
-.featured-work {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 24px;
-  align-items: stretch;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--color-bg-2);
-
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.featured-preview {
-  position: relative;
-  display: block;
-  min-height: 280px;
-  background: #0f0f1a;
-  overflow: hidden;
-
-  iframe {
-    width: 200%;
-    height: 200%;
-    border: none;
-    transform: scale(0.5);
-    transform-origin: top left;
-    pointer-events: none;
-  }
-
-  .featured-open {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 16px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #fff;
-    background: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, 0.7) 100%);
-    opacity: 0;
-    transition: opacity 0.22s;
-  }
-  &:hover .featured-open { opacity: 1; }
-
-  @media (max-width: 700px) { min-height: 220px; }
-}
-
-.featured-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 26px 26px 26px 4px;
-
-  @media (max-width: 700px) { padding: 4px 24px 26px; }
-}
-
-.featured-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.featured-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-text);
-  margin: 0;
-}
-
-.featured-text {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: var(--color-text-muted);
-  margin: 0 0 4px;
-}
 
 // ── Footer ────────────────────────────────────────────
 .app-footer {
