@@ -49,23 +49,23 @@ export class App implements AfterViewInit, OnDestroy {
 
   constructor() {
     this.title.setTitle(
-      'Mohamed Khalil - Shopify & Custom E-commerce Web Developer',
+      'Mohamed Khalil - Front-End Developer (Angular, TypeScript, CSS)',
     );
     this.meta.updateTag({
       name: 'description',
       content:
-        'I build fast, conversion-focused e-commerce websites - Shopify and ' +
-        'custom builds for small businesses, startups, and agencies. ' +
-        'Free 20-min consult, reply within 24 hours.',
+        'Front-end developer focused on the hard parts: scalable CSS, fluid ' +
+        'responsive layouts, and motion without JavaScript. Angular, TypeScript ' +
+        'and full-stack with NestJS.',
     });
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Mohamed Khalil - Shopify & Custom E-commerce Web Developer',
+      content: 'Mohamed Khalil - Front-End Developer (Angular, TypeScript, CSS)',
     });
     this.meta.updateTag({
       property: 'og:description',
       content:
-        'Fast, conversion-focused e-commerce websites that turn visitors into customers.',
+        'Hand-written CSS, responsive layouts and Angular apps, built to hold up on every screen.',
     });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
   }
