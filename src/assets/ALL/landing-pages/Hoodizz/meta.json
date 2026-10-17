@@ -1,19 +1,21 @@
 {
   "title": "Hoodizz",
-  "description": "Streetwear store landing page with a bold editorial look.",
+  "description": "Full-stack streetwear store: Angular SSR + NestJS GraphQL + Stripe. The preview is its landing-page design; the complete app is on GitHub.",
   "tags": [
     "HTML",
     "CSS"
   ],
   "color": "#4facfe, #00f2fe",
-  "challenge": "",
-  "solution": "",
-  "result": "",
+  "challenge": "Build a clothing store end to end that feels like a brand rather than a template, while handling real concerns: product variants, authenticated users, secure payments and order tracking.",
+  "solution": "An Nx monorepo with an Angular 21 SSR storefront and a NestJS GraphQL API on Prisma and PostgreSQL. Firebase tokens are verified server-side, Stripe Checkout sessions are created by the API, and a signed webhook updates order status. State lives in NgRx Signals stores. The UI is hand-written SCSS: design tokens, BEM naming, fluid clamp() type, a scroll-snap carousel and a keyframe ticker, with no CSS framework.",
+  "result": "A complete purchase flow that works in Stripe test mode: browse and filter products, pick a size and colour, sign up, pay, and see the order status update. The API is rate-limited and hardened with helmet, and the checkout, orders and products services are unit-tested with Jest.",
   "liveUrl": "",
   "detailsUrl": "",
   "highlights": [
     "Infinite marquee ticker built with @keyframes",
     "Horizontal scroll-snap carousel with an edge-fade mask-image",
     "100+ custom-property tokens and clamp() fluid type"
-  ]
+  ],
+  "order": 1,
+  "repoUrl": "https://github.com/Mohamed-Khalil67/Hoodizz"
 }

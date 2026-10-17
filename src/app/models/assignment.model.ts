@@ -17,6 +17,7 @@ export interface Assignment {
   tags: string[];
   previewUrl: string;          // path for static assets, '__local__' for dynamic
   downloadFiles: AssignmentFile[];
+  order?: number;              // lower = shown first
   highlights?: string[];       // short notes on the hard CSS techniques used
   color?: string;              // gradient accent, e.g. '#f093fb, #f5576c'
   category?: string;           // section key: 'route-assignments' | 'frontend' | 'fullstack'
@@ -30,5 +31,6 @@ export interface Assignment {
   solution?: string;           // what you built and the approach you took
   result?: string;             // measurable outcome, e.g. "+32% conversion"
   liveUrl?: string;            // public live site URL (external)
+  repoUrl?: string;            // GitHub repository
   detailsUrl?: string;         // case-study / write-up URL (external)
 }

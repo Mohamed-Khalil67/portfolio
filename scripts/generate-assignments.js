@@ -179,7 +179,7 @@ const scanFolder = (relPath, colorIndex, forcedCategory = null) => {
   // ── Case-study fields (all optional) ─────────────────────────────────────────
   // Edit these per project in its meta.json; they survive every regeneration.
   const caseStudy = {};
-  for (const key of ['challenge', 'solution', 'result', 'liveUrl', 'detailsUrl']) {
+  for (const key of ['challenge', 'solution', 'result', 'liveUrl', 'detailsUrl', 'repoUrl']) {
     if (typeof meta[key] === 'string' && meta[key].trim()) {
       caseStudy[key] = meta[key].trim();
     }
@@ -212,6 +212,7 @@ const scanFolder = (relPath, colorIndex, forcedCategory = null) => {
     color,
     category,
     highlights,
+    order: typeof meta.order === 'number' ? meta.order : 999,
     ...caseStudy,
   };
 };
@@ -268,9 +269,10 @@ const renderAssignment = (a) => {
   lines.push(`    category: ${JSON.stringify(a.category)},`);
 
   lines.push(`    highlights: ${JSON.stringify(a.highlights ?? [])},`);
+  lines.push(`    order: ${a.order ?? 999},`);
 
   // Optional case-study fields - only emitted when present in meta.json.
-  for (const key of ['challenge', 'solution', 'result', 'liveUrl', 'detailsUrl']) {
+  for (const key of ['challenge', 'solution', 'result', 'liveUrl', 'detailsUrl', 'repoUrl']) {
     if (a[key] != null) {
       lines.push(`    ${key}: ${JSON.stringify(a[key])},`);
     }

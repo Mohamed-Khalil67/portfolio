@@ -16,11 +16,12 @@ export const ASSIGNMENTS: Assignment[] = [
     color: "#f093fb, #f5576c",
     category: "route-assignments",
     highlights: ["~270 var() uses: one set of design tokens drives the whole page","Frosted sticky navigation with backdrop-filter blur","Gradient-heavy sections and a clamp() type scale"],
+    order: 999,
   },
   {
     id: "Hoodizz",
     title: "Hoodizz",
-    description: "Streetwear store landing page with a bold editorial look.",
+    description: "Full-stack streetwear store: Angular SSR + NestJS GraphQL + Stripe. The preview is its landing-page design; the complete app is on GitHub.",
     tags: ["HTML","CSS"],
     previewUrl: "assets/ALL/landing-pages/Hoodizz/index.html",
     downloadFiles: [
@@ -30,6 +31,11 @@ export const ASSIGNMENTS: Assignment[] = [
     color: "#4facfe, #00f2fe",
     category: "route-assignments",
     highlights: ["Infinite marquee ticker built with @keyframes","Horizontal scroll-snap carousel with an edge-fade mask-image","100+ custom-property tokens and clamp() fluid type"],
+    order: 1,
+    challenge: "Build a clothing store end to end that feels like a brand rather than a template, while handling real concerns: product variants, authenticated users, secure payments and order tracking.",
+    solution: "An Nx monorepo with an Angular 21 SSR storefront and a NestJS GraphQL API on Prisma and PostgreSQL. Firebase tokens are verified server-side, Stripe Checkout sessions are created by the API, and a signed webhook updates order status. State lives in NgRx Signals stores. The UI is hand-written SCSS: design tokens, BEM naming, fluid clamp() type, a scroll-snap carousel and a keyframe ticker, with no CSS framework.",
+    result: "A complete purchase flow that works in Stripe test mode: browse and filter products, pick a size and colour, sign up, pay, and see the order status update. The API is rate-limited and hardened with helmet, and the checkout, orders and products services are unit-tested with Jest.",
+    repoUrl: "https://github.com/Mohamed-Khalil67/Hoodizz",
   },
   {
     id: "Mudabbir",
@@ -44,6 +50,7 @@ export const ASSIGNMENTS: Assignment[] = [
     color: "#43e97b, #38f9d7",
     category: "route-assignments",
     highlights: ["Full right-to-left (dir=rtl) Arabic layout","CSS-only animated progress bars and charts, no JS","Frosted glass panels with backdrop-filter and 3D perspective"],
+    order: 999,
   },
   {
     id: "TheDJIMavic4",
@@ -58,6 +65,7 @@ export const ASSIGNMENTS: Assignment[] = [
     color: "#fa709a, #fee140",
     category: "route-assignments",
     highlights: ["Sticky product panel that follows the scroll","Responsive product grids using object-fit and aspect-ratio","Hard-stop two-tone gradients for accents"],
+    order: 999,
   },
   {
     id: "TheUXReview-blogLanding",
@@ -72,6 +80,7 @@ export const ASSIGNMENTS: Assignment[] = [
     color: "#a18cd1, #fbc2eb",
     category: "route-assignments",
     highlights: ["Wrapping flex layouts for article cards","Fluid headline with clamp(32px, 5vw, 52px)","Sticky header and transform-based hover states"],
+    order: 999,
   },
   {
     id: "Video-Gaming-Tournament-Landing-Page",
@@ -85,5 +94,6 @@ export const ASSIGNMENTS: Assignment[] = [
     color: "#fd7043, #ff8a65",
     category: "route-assignments",
     highlights: ["Angular cut corners with clip-path: polygon()","Fluid spacing and type with clamp() instead of breakpoint jumps","Frosted overlays (backdrop-filter) and custom @font-face fonts"],
+    order: 999,
   },
 ];

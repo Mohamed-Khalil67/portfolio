@@ -22,9 +22,19 @@
               }
             </ul>
           }
-          <button type="button" class="work-link" (click)="open(assignment)">
-            Open live demo <span aria-hidden="true">↗</span>
-          </button>
+          <div class="work-actions">
+            @if (assignment.challenge) {
+              <button type="button" class="work-link" (click)="openDetail(assignment)">Read case study</button>
+            }
+            <button type="button" class="work-link" (click)="open(assignment)">
+              Open demo <span aria-hidden="true">↗</span>
+            </button>
+            @if (assignment.repoUrl) {
+              <a class="work-link" [href]="assignment.repoUrl" target="_blank" rel="noopener">
+                Code on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            }
+          </div>
         </div>
       </article>
     }

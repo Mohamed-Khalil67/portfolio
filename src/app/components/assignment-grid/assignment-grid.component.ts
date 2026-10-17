@@ -23,7 +23,9 @@ export class AssignmentGridComponent {
   assignmentToEdit = signal<Assignment | null>(null);
   detailAssignment = signal<Assignment | null>(null);
 
-  readonly assignments = computed(() => this.assignmentService.assignments());
+  readonly assignments = computed(() =>
+    [...this.assignmentService.assignments()].sort((a, b) => (a.order ?? 999) - (b.order ?? 999)),
+  );
 
   constructor(readonly assignmentService: AssignmentService) {}
 

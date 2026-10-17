@@ -82,7 +82,14 @@
   }
 }
 
+.work-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
 .work-link {
+  text-decoration: none;
   padding: 0;
   border: none;
   background: none;
