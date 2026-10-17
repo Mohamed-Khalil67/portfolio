@@ -1,13 +1,7 @@
-Put your CV / résumé here.
-
-Drop a PDF in this folder named exactly:
-
-    Mohamed-Khalil-CV.pdf
+CV / résumé for the portfolio.
 
 The "Résumé" link in the site's left panel points to:
-    assets/cv/Mohamed-Khalil-CV.pdf
+    assets/cv/CV_Mohamed_Khalil_FrontEnd_Angular.pdf
 
-If you want a different filename, update the href in:
+To replace it, drop the new PDF in this folder. If the filename changes, update the href in:
     src/app/components/header/header.component.html  (the .resume-link anchor)
-
-Until you add the PDF, the link will 404 — that's expected.
