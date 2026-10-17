@@ -1,12 +1,19 @@
 {
   "title": "Mudabbir",
-  "description": "Landing page for Mudabbir, an Arabic personal-finance app - manage your money smartly.",
-  "tags": ["HTML", "CSS"],
+  "description": "Landing page for an Arabic personal-finance app.",
+  "tags": [
+    "HTML",
+    "CSS"
+  ],
   "color": "#43e97b, #38f9d7",
-
   "challenge": "",
   "solution": "",
   "result": "",
   "liveUrl": "",
-  "detailsUrl": ""
+  "detailsUrl": "",
+  "highlights": [
+    "Full right-to-left (dir=rtl) Arabic layout",
+    "CSS-only animated progress bars and charts, no JS",
+    "Frosted glass panels with backdrop-filter and 3D perspective"
+  ]
 }

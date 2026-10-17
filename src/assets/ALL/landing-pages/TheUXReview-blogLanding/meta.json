@@ -1,12 +1,19 @@
 {
-  "title": "The UX Review Blog",
-  "description": "Blog landing page for a UX review publication, with featured articles and newsletter sign-up.",
-  "tags": ["HTML", "CSS"],
+  "title": "The UX Review",
+  "description": "Editorial blog landing page with featured articles and newsletter sign-up.",
+  "tags": [
+    "HTML",
+    "CSS"
+  ],
   "color": "#a18cd1, #fbc2eb",
-
   "challenge": "",
   "solution": "",
   "result": "",
   "liveUrl": "",
-  "detailsUrl": ""
+  "detailsUrl": "",
+  "highlights": [
+    "Wrapping flex layouts for article cards",
+    "Fluid headline with clamp(32px, 5vw, 52px)",
+    "Sticky header and transform-based hover states"
+  ]
 }

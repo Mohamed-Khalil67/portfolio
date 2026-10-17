@@ -1,12 +1,19 @@
 {
   "title": "DJI Mavic 4",
-  "description": "Product landing page for the DJI Mavic 4 Pro drone, with feature highlights and a buy flow.",
-  "tags": ["HTML", "CSS"],
+  "description": "Product landing page for a drone, with feature highlights and a buy flow.",
+  "tags": [
+    "HTML",
+    "CSS"
+  ],
   "color": "#fa709a, #fee140",
-
   "challenge": "",
   "solution": "",
   "result": "",
   "liveUrl": "",
-  "detailsUrl": ""
+  "detailsUrl": "",
+  "highlights": [
+    "Sticky product panel that follows the scroll",
+    "Responsive product grids using object-fit and aspect-ratio",
+    "Hard-stop two-tone gradients for accents"
+  ]
 }

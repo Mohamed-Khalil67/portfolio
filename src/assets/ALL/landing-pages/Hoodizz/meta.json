@@ -1,12 +1,19 @@
 {
   "title": "Hoodizz",
-  "description": "E-commerce landing page for a streetwear hoodie brand - 'Wear the warmth'.",
-  "tags": ["HTML", "CSS"],
+  "description": "Streetwear store landing page with a bold editorial look.",
+  "tags": [
+    "HTML",
+    "CSS"
+  ],
   "color": "#4facfe, #00f2fe",
-
   "challenge": "",
   "solution": "",
   "result": "",
   "liveUrl": "",
-  "detailsUrl": ""
+  "detailsUrl": "",
+  "highlights": [
+    "Infinite marquee ticker built with @keyframes",
+    "Horizontal scroll-snap carousel with an edge-fade mask-image",
+    "100+ custom-property tokens and clamp() fluid type"
+  ]
 }

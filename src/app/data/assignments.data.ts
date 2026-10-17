@@ -6,20 +6,21 @@ import { Assignment } from '../models/assignment.model';
 export const ASSIGNMENTS: Assignment[] = [
   {
     id: "Clarity-Website",
-    title: "Clarity Website",
-    description: "",
-    tags: ["HTML"],
+    title: "Clarity",
+    description: "Digital agency landing page, about 1,600 lines of hand-written CSS.",
+    tags: ["HTML","CSS"],
     previewUrl: "assets/ALL/landing-pages/Clarity-Website/index.html",
     downloadFiles: [
       { name: "index.html", url: "assets/ALL/landing-pages/Clarity-Website/index.html" },
     ],
     color: "#f093fb, #f5576c",
     category: "route-assignments",
+    highlights: ["~270 var() uses: one set of design tokens drives the whole page","Frosted sticky navigation with backdrop-filter blur","Gradient-heavy sections and a clamp() type scale"],
   },
   {
     id: "Hoodizz",
     title: "Hoodizz",
-    description: "E-commerce landing page for a streetwear hoodie brand - 'Wear the warmth'.",
+    description: "Streetwear store landing page with a bold editorial look.",
     tags: ["HTML","CSS"],
     previewUrl: "assets/ALL/landing-pages/Hoodizz/index.html",
     downloadFiles: [
@@ -28,11 +29,12 @@ export const ASSIGNMENTS: Assignment[] = [
     ],
     color: "#4facfe, #00f2fe",
     category: "route-assignments",
+    highlights: ["Infinite marquee ticker built with @keyframes","Horizontal scroll-snap carousel with an edge-fade mask-image","100+ custom-property tokens and clamp() fluid type"],
   },
   {
     id: "Mudabbir",
     title: "Mudabbir",
-    description: "Landing page for Mudabbir, an Arabic personal-finance app - manage your money smartly.",
+    description: "Landing page for an Arabic personal-finance app.",
     tags: ["HTML","CSS"],
     previewUrl: "assets/ALL/landing-pages/Mudabbir/index.html",
     downloadFiles: [
@@ -41,11 +43,12 @@ export const ASSIGNMENTS: Assignment[] = [
     ],
     color: "#43e97b, #38f9d7",
     category: "route-assignments",
+    highlights: ["Full right-to-left (dir=rtl) Arabic layout","CSS-only animated progress bars and charts, no JS","Frosted glass panels with backdrop-filter and 3D perspective"],
   },
   {
     id: "TheDJIMavic4",
     title: "DJI Mavic 4",
-    description: "Product landing page for the DJI Mavic 4 Pro drone, with feature highlights and a buy flow.",
+    description: "Product landing page for a drone, with feature highlights and a buy flow.",
     tags: ["HTML","CSS"],
     previewUrl: "assets/ALL/landing-pages/TheDJIMavic4/index.html",
     downloadFiles: [
@@ -54,11 +57,12 @@ export const ASSIGNMENTS: Assignment[] = [
     ],
     color: "#fa709a, #fee140",
     category: "route-assignments",
+    highlights: ["Sticky product panel that follows the scroll","Responsive product grids using object-fit and aspect-ratio","Hard-stop two-tone gradients for accents"],
   },
   {
     id: "TheUXReview-blogLanding",
-    title: "The UX Review Blog",
-    description: "Blog landing page for a UX review publication, with featured articles and newsletter sign-up.",
+    title: "The UX Review",
+    description: "Editorial blog landing page with featured articles and newsletter sign-up.",
     tags: ["HTML","CSS"],
     previewUrl: "assets/ALL/landing-pages/TheUXReview-blogLanding/index.html",
     downloadFiles: [
@@ -67,17 +71,19 @@ export const ASSIGNMENTS: Assignment[] = [
     ],
     color: "#a18cd1, #fbc2eb",
     category: "route-assignments",
+    highlights: ["Wrapping flex layouts for article cards","Fluid headline with clamp(32px, 5vw, 52px)","Sticky header and transform-based hover states"],
   },
   {
     id: "Video-Gaming-Tournament-Landing-Page",
-    title: "Video Gaming Tournament Landing Page",
-    description: "",
-    tags: ["HTML"],
+    title: "Video Gaming Tournament",
+    description: "Esports tournament landing page with a sharp, angular style.",
+    tags: ["HTML","CSS"],
     previewUrl: "assets/ALL/landing-pages/Video-Gaming-Tournament-Landing-Page/index.html",
     downloadFiles: [
       { name: "index.html", url: "assets/ALL/landing-pages/Video-Gaming-Tournament-Landing-Page/index.html" },
     ],
     color: "#fd7043, #ff8a65",
     category: "route-assignments",
+    highlights: ["Angular cut corners with clip-path: polygon()","Fluid spacing and type with clamp() instead of breakpoint jumps","Frosted overlays (backdrop-filter) and custom @font-face fonts"],
   },
 ];

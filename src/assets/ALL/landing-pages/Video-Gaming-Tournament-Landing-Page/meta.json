@@ -1,0 +1,14 @@
+{
+  "title": "Video Gaming Tournament",
+  "description": "Esports tournament landing page with a sharp, angular style.",
+  "tags": [
+    "HTML",
+    "CSS"
+  ],
+  "color": "#fd7043, #ff8a65",
+  "highlights": [
+    "Angular cut corners with clip-path: polygon()",
+    "Fluid spacing and type with clamp() instead of breakpoint jumps",
+    "Frosted overlays (backdrop-filter) and custom @font-face fonts"
+  ]
+}

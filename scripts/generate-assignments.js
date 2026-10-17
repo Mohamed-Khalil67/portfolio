@@ -185,6 +185,10 @@ const scanFolder = (relPath, colorIndex, forcedCategory = null) => {
     }
   }
 
+  const highlights = Array.isArray(meta.highlights)
+    ? meta.highlights.filter((h) => typeof h === 'string' && h.trim())
+    : [];
+
   // ── Collect downloadable files ─────────────────────────────────────────────
   // Always include index.html, then scan for any known asset filenames.
   const downloadFiles = [{ name: 'index.html', url: `${urlBase}/index.html` }];
@@ -207,6 +211,7 @@ const scanFolder = (relPath, colorIndex, forcedCategory = null) => {
     downloadFiles,
     color,
     category,
+    highlights,
     ...caseStudy,
   };
 };
@@ -261,6 +266,8 @@ const renderAssignment = (a) => {
   lines.push('    ],');
   lines.push(`    color: ${JSON.stringify(a.color)},`);
   lines.push(`    category: ${JSON.stringify(a.category)},`);
+
+  lines.push(`    highlights: ${JSON.stringify(a.highlights ?? [])},`);
 
   // Optional case-study fields - only emitted when present in meta.json.
   for (const key of ['challenge', 'solution', 'result', 'liveUrl', 'detailsUrl']) {

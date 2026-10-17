@@ -20,32 +20,25 @@ interface ValueProp {
 export class ValuePropsComponent {
   readonly props: ValueProp[] = [
     {
-      title: 'E-commerce that converts',
+      title: 'CSS architecture that scales',
       description:
-        'Stores built around the buyer journey - clear product pages, frictionless checkout, and persuasive copy that turns browsers into buyers.',
+        'One set of design tokens (custom properties) drives colour, type and spacing, so a re-theme is a one-file change. Component-scoped styles and clear naming keep thousands of lines of CSS readable, with no framework doing the work for me.',
       color: '#5eead4, #2dd4bf',
-      iconPaths: [
-        'M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z',
-        'M3 6h18',
-        'M16 10a4 4 0 0 1-8 0',
-      ],
+      iconPaths: ['m16 18 6-6-6-6', 'm8 6-6 6 6 6'],
     },
     {
-      title: 'Performance-first builds',
+      title: 'Layouts that adapt, not just shrink',
       description:
-        'Fast-loading, SEO-ready sites that score high on Core Web Vitals. Speed keeps visitors engaged and lifts your search rankings and sales.',
+        'Grid and Flexbox for real layouts, clamp() for fluid type and spacing instead of breakpoint jumps, and right-to-left Arabic pages that mirror correctly. I test every page from phone to wide desktop.',
       color: '#7dd3fc, #38bdf8',
-      iconPaths: ['M13 2 3 14h9l-1 8 10-12h-9l1-8Z'],
+      iconPaths: ['M3 3h7v7H3Z', 'M14 3h7v7h-7Z', 'M14 14h7v7h-7Z', 'M3 14h7v7H3Z'],
     },
     {
-      title: 'Built for growth',
+      title: 'Motion and effects without JavaScript',
       description:
-        'Clean, maintainable code that scales with your business - easy to extend with new products, integrations, and marketing as you grow.',
+        'Keyframe tickers, scroll-snap carousels, mask and clip-path shapes, frosted glass with backdrop-filter, and CSS-only animated charts. Smooth, light on the browser, and nothing breaks if a script fails.',
       color: '#a5b4fc, #818cf8',
-      iconPaths: [
-        'M3 3v18h18',
-        'm19 9-5 5-4-4-3 3',
-      ],
+      iconPaths: ['M13 2 3 14h9l-1 8 10-12h-9l1-8Z'],
     },
   ];
 

@@ -1,0 +1,14 @@
+{
+  "title": "Clarity",
+  "description": "Digital agency landing page, about 1,600 lines of hand-written CSS.",
+  "tags": [
+    "HTML",
+    "CSS"
+  ],
+  "color": "#f093fb, #f5576c",
+  "highlights": [
+    "~270 var() uses: one set of design tokens drives the whole page",
+    "Frosted sticky navigation with backdrop-filter blur",
+    "Gradient-heavy sections and a clamp() type scale"
+  ]
+}

@@ -2,102 +2,95 @@
   padding: 0;
 }
 
-// ── Category chips ────────────────────
-.filter-chips {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 8px;
-  margin-bottom: 28px;
+.work-intro {
+  margin: 0 0 28px;
+  max-width: 52ch;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.chip {
-  padding: 7px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.18s ease;
-
-  &:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
-  &.active {
-    background: var(--accent-soft);
-    border-color: var(--accent);
-    color: var(--accent);
-    box-shadow: none;
-  }
+// One project per row: preview on one side, notes on the other.
+// auto-fit wraps the two halves into a stack on narrow screens, no breakpoint needed.
+.work-list {
+  display: grid;
+  gap: 40px;
 }
 
-// ── Section blocks ────────────────────
-.section-block {
-  margin-bottom: 56px;
+.work-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(16px, 3vw, 32px);
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   &:last-child {
-    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 }
 
-.section-heading {
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
+.work-preview {
+  min-width: 0;
+}
+
+.work-info {
+  min-width: 0;
+}
+
+.work-title {
+  margin: 0 0 6px;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
   font-weight: 800;
-  color: #fff;
-  margin: 0 0 24px;
-  padding-left: 16px;
-  border-left: 3px solid var(--accent);
   letter-spacing: -0.01em;
+  color: #fff;
 }
 
-// ── Grid ─────────────────────────────
-.assignments-grid {
+.work-desc {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.work-highlights {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
+  gap: 8px;
 
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
+  li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
   }
 }
 
-// ── Empty / no-match state ────────────
-.empty-state {
-  text-align: center;
-  padding: 80px 24px;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 24px;
-  border: 2px dashed rgba(255, 255, 255, 0.08);
-
-  .empty-icon {
-    font-size: 3.5rem;
-    margin-bottom: 16px;
-  }
-  h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #fff;
-    margin: 0 0 8px;
-  }
-  p {
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 0.92rem;
-    margin: 0 0 20px;
-  }
-}
-
-.btn-clear-filters {
-  padding: 9px 22px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.87rem;
-  font-weight: 600;
+.work-link {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--accent);
   cursor: pointer;
-  transition: all 0.18s;
-  &:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-  }
+
+  &:hover { text-decoration: underline; }
 }

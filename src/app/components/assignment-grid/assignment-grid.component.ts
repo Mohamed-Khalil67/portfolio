@@ -6,18 +6,6 @@ import { AssignmentCardComponent } from '../assignment-card/assignment-card.comp
 import { CreateAssignmentModalComponent } from '../create-assignment-modal/create-assignment-modal.component';
 import { AssignmentDetailModalComponent } from '../assignment-detail-modal/assignment-detail-modal.component';
 
-interface Section {
-  key: string;
-  label: string;
-  assignments: Assignment[];
-}
-
-const SECTION_ORDER: { key: string; label: string }[] = [
-  { key: 'route-assignments', label: 'Landing Pages' },
-  { key: 'frontend',          label: 'Front End Projects' },
-  { key: 'fullstack',         label: 'Full Stack Projects' },
-];
-
 @Component({
   selector: 'app-assignment-grid',
   standalone: true,
@@ -31,36 +19,16 @@ const SECTION_ORDER: { key: string; label: string }[] = [
   styleUrls: ['./assignment-grid.component.scss'],
 })
 export class AssignmentGridComponent {
-  readonly SECTION_ORDER = SECTION_ORDER;
-
   showEditModal    = signal(false);
   assignmentToEdit = signal<Assignment | null>(null);
   detailAssignment = signal<Assignment | null>(null);
-  activeCategory   = signal<string>('all');
 
-  private readonly filtered = computed(() => {
-    const cat = this.activeCategory();
-    return this.assignmentService.assignments().filter(
-      (a) => cat === 'all' || (a.category ?? 'route-assignments') === cat,
-    );
-  });
-
-  readonly sections = computed<Section[]>(() => {
-    const items = this.filtered();
-    return SECTION_ORDER
-      .map((s) => ({
-        ...s,
-        assignments: items.filter(
-          (a) => (a.category ?? 'route-assignments') === s.key,
-        ),
-      }))
-      .filter((s) => s.assignments.length > 0);
-  });
+  readonly assignments = computed(() => this.assignmentService.assignments());
 
   constructor(readonly assignmentService: AssignmentService) {}
 
-  setCategory(key: string): void {
-    this.activeCategory.set(key);
+  open(assignment: Assignment): void {
+    this.assignmentService.openInNewTab(assignment);
   }
 
   onEditRequested(assignment: Assignment): void {

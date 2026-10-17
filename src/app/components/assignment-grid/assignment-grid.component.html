@@ -1,37 +1,34 @@
 <section class="grid-section">
+  <p class="work-intro">
+    Every project below is hand-styled. Next to each one: the CSS that gave me the most trouble.
+  </p>
 
-  <!-- Category chips -->
-  <div class="filter-chips" role="tablist">
-    <button class="chip" [class.active]="activeCategory() === 'all'"
-      (click)="setCategory('all')" role="tab">All</button>
-    @for (cat of SECTION_ORDER; track cat.key) {
-      <button class="chip" [class.active]="activeCategory() === cat.key"
-        (click)="setCategory(cat.key)" role="tab">{{ cat.label }}</button>
+  <div class="work-list">
+    @for (assignment of assignments(); track assignment.id; let i = $index) {
+      <article class="work-row" [style.--i]="i">
+        <app-assignment-card class="work-preview" [assignment]="assignment" [index]="i"
+          (editRequested)="onEditRequested($event)"
+          (openDetail)="openDetail($event)" />
+
+        <div class="work-info">
+          <h3 class="work-title">{{ assignment.title }}</h3>
+          @if (assignment.description) {
+            <p class="work-desc">{{ assignment.description }}</p>
+          }
+          @if (assignment.highlights?.length) {
+            <ul class="work-highlights">
+              @for (h of assignment.highlights; track h) {
+                <li>{{ h }}</li>
+              }
+            </ul>
+          }
+          <button type="button" class="work-link" (click)="open(assignment)">
+            Open live demo <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </article>
     }
   </div>
-
-  <!-- Sections -->
-  @if (sections().length === 0) {
-    <div class="empty-state">
-      <div class="empty-icon">📁</div>
-      <h3>No projects in this category</h3>
-      <button class="btn-clear-filters" (click)="setCategory('all')">Show all</button>
-    </div>
-  } @else {
-    @for (section of sections(); track section.key) {
-      <div class="section-block">
-        <h3 class="section-heading">{{ section.label }}</h3>
-        <div class="assignments-grid">
-          @for (assignment of section.assignments; track assignment.id; let i = $index) {
-            <app-assignment-card [assignment]="assignment" [index]="i"
-              (editRequested)="onEditRequested($event)"
-              (openDetail)="openDetail($event)" />
-          }
-        </div>
-      </div>
-    }
-  }
-
 </section>
 
 @if (showEditModal()) {
